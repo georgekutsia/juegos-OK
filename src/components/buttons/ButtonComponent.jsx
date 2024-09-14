@@ -6,6 +6,7 @@ import { NavLink } from "react-bootstrap"
 function ButtonComponent({text, direction}) {
   return (
     <NavLink className="button1" href={direction}  rel="noopener noreferrer">{text}</NavLink>
+
     
   )
 }
