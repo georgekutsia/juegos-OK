@@ -8,6 +8,9 @@ function ButtonComponent({text, direction}) {
     <NavLink className="button1" href={direction}  rel="noopener noreferrer">{text}</NavLink>
 
     
+
+
+    
   )
 }
 
