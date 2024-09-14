@@ -1,10 +1,11 @@
 import './App.css'
+import PortfolioScreen from './screens/PortfolioScreen'
 
 function App() {
 
   return (
     <>
-<h4>bulala</h4>
+        <PortfolioScreen/>
     </>
   )
 }
