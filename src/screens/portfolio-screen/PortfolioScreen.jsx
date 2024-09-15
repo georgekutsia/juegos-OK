@@ -1,7 +1,7 @@
 // import React from 'react'
 
-import ButtonComponent from "../components/buttons/ButtonComponent"
-import ProfileComponent from "../components/profile/ProfileComponent"
+import ButtonComponent from "../../components/buttons/button-link/ButtonLinkComponent"
+import ProfileComponent from "../../components/profile/ProfileComponent"
 
 function PortfolioScreen() {
 

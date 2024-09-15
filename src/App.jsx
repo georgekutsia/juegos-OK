@@ -1,5 +1,5 @@
 import './App.css'
-import PortfolioScreen from './screens/PortfolioScreen'
+import PortfolioScreen from './screens/portfolio-screen/PortfolioScreen'
 
 function App() {
 
