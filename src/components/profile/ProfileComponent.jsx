@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 
-import ButtonComponent from "../buttons/ButtonComponent"
-
+import ButtonComponent from "../buttons/button-link/ButtonLinkComponent"
+import "./profileComponent.css"
 function ProfileComponent({name, text, img}) {
   return (
     <div>

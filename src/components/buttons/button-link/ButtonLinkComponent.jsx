@@ -2,14 +2,12 @@
 // import React from 'react'
 
 import { NavLink } from "react-bootstrap"
-
+import "./ButtonLinkComponent.css"
 function ButtonComponent({text, direction}) {
   return (
-    <NavLink className="button1" href={direction}  rel="noopener noreferrer">{text}</NavLink>
-    
-
-
-    
+    <div>
+    <NavLink className="buttonazo" href={direction}  target="_blank"   rel="noopener noreferrer">{text}</NavLink>
+    </div>
   )
 }
 
