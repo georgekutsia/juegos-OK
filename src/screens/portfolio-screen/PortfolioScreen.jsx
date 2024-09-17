@@ -1,17 +1,15 @@
 // import React from 'react'
-
-import ButtonComponent from "../../components/buttons/button-link/ButtonLinkComponent"
+import "./portfolioScreen.css"
 import ProfileComponent from "../../components/profile/ProfileComponent"
-
+import "./portfolioScreen.css"
 function PortfolioScreen() {
 
 
   return (
-    <div>
-    <ProfileComponent name={"Lizbeth"} text={"Voy a matar a George por no recordar mi nombre"} img={"dnaljnsdln"}/>
-    <ProfileComponent name={"Yeray"} text={"Hoy no puedo, mi frase favorita"} img={"hkgdfa86isab"}/>
-    <ProfileComponent name={"George"} text={"Hoy no puedo, mi frase favorita"} img={"hkgdfa86isab"}/>
-    <ButtonComponent text={"Volver a los juegos"}/>
+    <div className="profile-screen">
+    <ProfileComponent name={"Antonio"} text={"Voy a matar a George por no recordar mi nombre"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726531400/antoniopixel_b25xdd.png"}/>
+    <ProfileComponent name={"Lizbeth"} text={"Hoy no puedo, mi frase favorita"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726531401/lizbethpixel_eawhru.png"}/>
+    <ProfileComponent name={"George"} text={"Hoy no puedo, mi frase favorita"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726531646/giopixxel_q22dcc.png"}/>
     </div>
   )
 }
