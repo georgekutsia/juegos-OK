@@ -1,3 +1,28 @@
-.button1{
-  margin: 0px 10px;
+:root {
+  --white: #ffffff;
+  --light-grey: #edf0f1;
+  --dark-grey: #b1b1b1;
+  --violet: #c3bfff;
+  --red: #ffcebd;
+  --green: #b3fff5;
+  --yellow: #feddff;
+  --dark-violet: #5146e1;
+  --black: #21232a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
 }
