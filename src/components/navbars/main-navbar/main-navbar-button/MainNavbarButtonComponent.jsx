@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-function MainNavbarButtonComponent({ text, img, alt }) {
+function MainNavbarButtonComponent({ text, img, alt , onClick}) {
   return (
-    <li>
+    <li onClick={()=>onClick()}>
       <span>{text}</span>
       <img src={img} alt={alt} />
     </li>
