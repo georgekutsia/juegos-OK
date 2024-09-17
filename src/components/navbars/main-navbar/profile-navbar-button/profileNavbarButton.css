@@ -3,16 +3,32 @@
   flex-direction: column;
 }
 
-.profile-navbar-info button{
-margin: 3px;
-padding: 3px;
-border-radius: 50%;
-border: none;
+.nav-link-info{
+  margin: 3px;
+  padding: 3px;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
 }
 
-.profile-navbar-info button:hover{
-background-color: var(--dark-grey);
+.nav-link-info:hover{
+  text-shadow: 1px 1px black;
 }
-.profile-navbar-info button i{
-  font-size: 2vw;
+.nav-link-info i{
+  font-size: 1.5vw;
+}
+.nav-link-info:hover .fa-info{
+color: var(--dark-red);
+}
+.nav-link-info:hover .fa-address-card{
+  color: var(--dark-green);
+
+}
+.nav-link-info:hover .fa-gear{
+  color: var(--dark-violet);
+
+}
+.nav-link-info:hover .fa-envelope{
+  color: var(--dark-yellow);
+
 }

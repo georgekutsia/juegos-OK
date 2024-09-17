@@ -1,14 +1,33 @@
 :root {
   --white: #ffffff;
-  --light-grey: #edf0f1;
-  --dark-grey: #b1b1b1;
   --violet: #c3bfff;
   --red: #ffcebd;
   --green: #b3fff5;
   --yellow: #feddff;
   --orange: #feca72;
-  --dark-violet: #5146e1;
+  --default-game-box: #dedcff;
+  --web-background: #f3f5ff;
   --black: #21232a;
+  
+  --dark-grey: rgb(130, 130, 130);
+  --dark-blue: rgb(46, 46, 129);
+  --dark-red: rgb(152, 51, 51);
+  --dark-orange: rgb(137, 80, 16);
+  --dark-violet: rgb(113, 27, 141);
+  --dark-green: rgb(29, 114, 39);
+  --dark-yellow: rgb(147, 152, 39);
+
+
+
+  --light-grey: rgba(218, 218, 218, 0.461);
+  --light-blue: rgba(164, 251, 254, 0.284);
+  --light-red: rgba(253, 200, 201, 0.43);
+  --light-orange: rgba(252, 202, 101, 0.452);
+  --light-violet: rgba(235, 190, 250, 0.402);
+  --light-green: rgba(191, 250, 198, 0.402);
+  --light-yellow: rgba(253, 255, 209, 0.355);
+  
+  
 }
 
 * {

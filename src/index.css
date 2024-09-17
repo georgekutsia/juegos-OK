@@ -1,0 +1,12 @@
+body{
+  background-color: var(--web-background)
+}
+.screens-box{
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+  margin-top: 15vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}

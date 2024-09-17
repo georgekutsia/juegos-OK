@@ -1,18 +1,18 @@
 .mainNavbar {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: left;
   margin: auto;
-  margin-top: 40px;
+  top: 5vh; 
   padding: 20px;
   border-radius: 5px 5px 25px 25px;
   background: var(--blue);
-  box-shadow: #32325d1a 0 30px 60px -12px,
-    rgb(0 0 0 / 15%) 0 18px 36px -18px;
-    height: 2vw;
-    width: 80%;
-    transition: width 0.1s ease-in-out;
-
+  box-shadow: #32325d1a 0 30px 60px -12px, rgb(0 0 0 / 15%) 0 18px 36px -18px;
+  height: 5vh;
+  width: 80vw;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.1s ease-in-out;
 }
 
 .mainNavbar [type="checkbox"] {
@@ -46,7 +46,7 @@ width: calc(20px + 5vw);
 }
 .mainNavbarMenu li {
   position: absolute;
-  top: 25%;
+  top: 18%;
   left: 15px;
   transform: translateY(-50%);
   transition: all 0.1s;
@@ -86,7 +86,13 @@ width: calc(20px + 5vw);
 
 }
 .mainNavbarMenu li:nth-child(6) {
+  margin-top: 0.5vw;
+  padding: 10px;
   transition-delay: 0.05s;
+}
+.mainNavbarMenu li:nth-child(6):hover {
+  box-shadow: 2px 2px 2px black;
+  scale: 1;
 }
 
 .mainNavbarMenu li {

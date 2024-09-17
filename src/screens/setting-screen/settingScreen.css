@@ -1,0 +1,5 @@
+/* screen-box tiene el resto de código que afecta a los box */
+.setting-screen{
+  background-color: var(--light-violet);
+  text-align: center;
+}
