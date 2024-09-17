@@ -3,6 +3,8 @@ import MainNavbarButtonComponent from "./main-navbar-button/MainNavbarButtonComp
 import "./MainNavbar.css";
 import ProfileNavbarButtonComponent from "./profile-navbar-button/ProfileNavbarButtonComponent";
 import {Context} from "../../../shared/context"
+import { NavLink } from "react-router-dom";
+
 function MainNavbarComponent() {
 
   const {profile } = useContext(Context);
@@ -24,7 +26,7 @@ function MainNavbarComponent() {
           <ProfileNavbarButtonComponent/>
         </ul>
       </nav>
-
+          <NavLink to={"/portfolio"} >Volver al perfil</NavLink>
     </>
   );
 }
