@@ -3,9 +3,9 @@
 
 import ButtonComponent from "../buttons/button-link/ButtonLinkComponent"
 import "./profileComponent.css"
-function ProfileComponent({name, text, img}) {
+function ProfileComponent({name, text, img, aosDuration}) {
   return (
-    <div className="profile-component-box">
+    <div data-aos="fade-down" data-aos-duration={aosDuration} className="profile-component-box">
       <ButtonComponent text={"llevar a linkedin"} direction={"www.google.com"}/>
       <ButtonComponent text={"a mi portfolio"} direction={"www.linkedin.com"}/>
       <h2>{name}</h2>
