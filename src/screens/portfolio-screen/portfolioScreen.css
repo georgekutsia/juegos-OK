@@ -1,3 +1,6 @@
 .profile-screen{
   display: flex;
+  margin: auto;
+  margin-top: 20vh;
+  justify-content: space-evenly;
 }

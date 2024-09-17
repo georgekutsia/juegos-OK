@@ -1,0 +1,5 @@
+/* screen-box tiene el resto de código que afecta a los box */
+.welcome-screen{
+  background-color: var(--light-blue);
+  text-align: center;
+}

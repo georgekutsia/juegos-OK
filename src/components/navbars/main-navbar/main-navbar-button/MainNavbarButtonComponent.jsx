@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
 
-function MainNavbarButtonComponent({ text, img, alt , onClick}) {
+import { useContext } from "react";
+import { Context } from "../../../../shared/context";
+
+function MainNavbarButtonComponent({ text, img, alt, onClick }) {
+  const { t } = useContext(Context);
+
   return (
-    <li onClick={()=>onClick()}>
-      <span>{text}</span>
+    <li onClick={onClick}>
+      <span>{t(text)}</span>
       <img src={img} alt={alt} />
     </li>
   );
