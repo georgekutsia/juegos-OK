@@ -1,11 +1,10 @@
 // import React from 'react'
-import "./portfolioScreen.css";
+import "./profileScreen.css";
 import ProfileComponent from "../../components/profile/ProfileComponent";
-import "./portfolioScreen.css";
 import { Context } from "../../shared/context";
 import { useContext } from "react";
 
-function PortfolioScreen() {
+function ProfileScreen() {
   const { profile } = useContext(Context);
   return (
     <div className="profile-screen">
@@ -41,4 +40,4 @@ function PortfolioScreen() {
   );
 }
 
-export default PortfolioScreen;
+export default ProfileScreen;

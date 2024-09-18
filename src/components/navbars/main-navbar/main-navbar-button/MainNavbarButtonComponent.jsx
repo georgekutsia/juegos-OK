@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Context } from "../../../../shared/context";
 
 function MainNavbarButtonComponent({ text, img, alt, onClick }) {
-  const { t } = useContext(Context);
+  const {t  } = useContext(Context);
 
   return (
     <li onClick={onClick}>

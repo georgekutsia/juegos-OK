@@ -2,28 +2,30 @@ import { useContext } from "react";
 import MainNavbarButtonComponent from "./main-navbar-button/MainNavbarButtonComponent";
 import "./MainNavbar.css";
 import ProfileNavbarButtonComponent from "./profile-navbar-button/ProfileNavbarButtonComponent";
-import {Context} from "../../../shared/context"
+import { Context } from "../../../shared/context.js";
+
 
 function MainNavbarComponent() {
+  const {  dataNavbarName , dataNavbarImg, } = useContext(Context);
 
-  const {profile, } = useContext(Context);
 
-  const handleClick = () => {
-    profile
-  }
+
   return (
     <>
       <nav className="mainNavbar">
         <input id="mainNavbarMenu" type="checkbox" />
-        <label htmlFor="mainNavbarMenu"><img className="mainNavbarMenu-img" src="https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529846/ranita1_nhjyhu.png" alt="menu" /></label>
+        <label htmlFor="mainNavbarMenu">
+          <img className="mainNavbarMenu-img" src={dataNavbarImg[0]} alt="menu" />
+        </label>
         <ul className="mainNavbarMenu">
-          <MainNavbarButtonComponent text={"preguntasNito"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529847/ranita3_du2o6y.png"} alt={"juegos"}/>
-          <MainNavbarButtonComponent text={"cancionesCroqui"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529847/ranita2_qslknb.png"} alt={"juegos"}/>
-          <MainNavbarButtonComponent text={"deportesSalti"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726564486/ranita6_ay9nbm.png"} alt={"Información"}/>
-          <MainNavbarButtonComponent text={"dibujosPepo"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529847/ranita4_abtxpu.png"} alt={"Información"}/>
-          <MainNavbarButtonComponent text={"juegosTita"} img={"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726563884/ranita5_rpmmzq.png"} alt={"juegos"} onClick={handleClick}/>
-          <ProfileNavbarButtonComponent/>
+          <MainNavbarButtonComponent text={dataNavbarName[0]} img={dataNavbarImg[1]} alt={"juegos"} />
+          <MainNavbarButtonComponent text={dataNavbarName[1]} img={dataNavbarImg[2]} alt={"juegos"} />
+          <MainNavbarButtonComponent text={dataNavbarName[2]} img={dataNavbarImg[3]} alt={"Información"} />
+          <MainNavbarButtonComponent text={dataNavbarName[3]} img={dataNavbarImg[4]} alt={"Información"} />
+          <MainNavbarButtonComponent text={dataNavbarName[4]} img={dataNavbarImg[5]} alt={"juegos"} />
+          <ProfileNavbarButtonComponent />
         </ul>
+
       </nav>
     </>
   );

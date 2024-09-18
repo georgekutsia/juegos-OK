@@ -14,7 +14,7 @@ function ProfileNavbarButtonComponent() {
     <li>
       <div className="profile-navbar-info">
         <NavLink className={"nav-link-info"} to={"/"} ><i className="fa-solid fa-info "></i></NavLink>
-        <NavLink className={"nav-link-info"} to={"/portfolio"} ><i className="fa-regular fa-address-card "></i></NavLink>
+        <NavLink className={"nav-link-info"} to={"/profile"} ><i className="fa-regular fa-address-card "></i></NavLink>
       </div>
       <div className="profile-navbar-info">
         <NavLink className={"nav-link-info"} to={"/settings"} ><i className="fa-solid fa-gear"></i></NavLink>

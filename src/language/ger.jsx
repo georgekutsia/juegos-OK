@@ -5,5 +5,14 @@ export const ger = {
   cancionesCroqui:"Croqui's Lieder",
   deportesSalti:"Salti's Sport",
   dibujosPepo:"Pepo's Zeichnungen",
-  juegosTita:"Tita's Spiele"
+  puzlesTita:"Tita's Rätsel",
+  preguntasBenny:"Benny's Fragen",
+  cancionesOtto:"Otto's Lieder",
+  deportesCoco:"Coco's Sport",
+  dibujosTito:"Tito's Zeichnungen",
+  puzlesRufi:"Rufi's Rätsel",
+  changeBear:"Beär",
+  changeFrog:"Frosch",
+  currentPet:"aktuelles Maskottchen",
+
 };

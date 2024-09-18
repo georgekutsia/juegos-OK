@@ -11,4 +11,6 @@ export { default as ProfileNavbarButtonComponent } from "./navbars/main-navbar/p
 
 
 // buttons
+export { default as ButtonPrueba } from "./buttons/button-prueba/ButtonPrueba";
 export { default as ButtonLanguageComponent } from "./buttons/button-language/ButtonLanguageComponent";
+export { default as characterComponent } from "./settings/character/CharacterComponent";

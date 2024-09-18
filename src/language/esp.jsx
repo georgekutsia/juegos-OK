@@ -5,5 +5,14 @@ export const esp = {
   cancionesCroqui:"Canciones de Croqui",
   deportesSalti:"Deportes de Salti",
   dibujosPepo:"Dibujos de Pepo",
-  juegosTita:"Juegos de Tita"
+  puzlesTita:"Puzzles de Tita",
+  preguntasBenny:"Preguntas de Benny",
+  cancionesOtto:"Canciones de Otto",
+  deportesCoco:"Deportes de Coco",
+  dibujosTito:"Dibujos de Tito",
+  puzlesRuffi:"Puzzles de Ruffi",
+  changeBear:"Osito",
+  changeFrog:"Ranita",
+  currentPet:"Mascota actual",
+
 };
