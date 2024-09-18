@@ -2,7 +2,7 @@
 // importar 9 componentes en 9 lineas diferentes, todas se importan desde un mismo sitio y queda
 // el componente en el que se importa más limpio con una sola línea de importación
 export { default as WelcomeScreen } from "./welcome-screen/WelcomeScreen";
-export { default as PortfolioScreen } from "./portfolio-screen/PortfolioScreen";
+export { default as ProfileScreen } from "./portfolio-screen/ProfileScreen";
 export { default as ProfileComponent } from "./error-screen/Error404";
 export { default as ContactScreen } from "./contact-screen/ContactScreen";
 export { default as SettingScreen } from "./setting-screen/SettingScreen";
