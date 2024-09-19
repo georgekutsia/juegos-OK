@@ -1,8 +1,16 @@
-# React + Vite
+## Pendiente
+Ojetivo: maquetar botones de Setting:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-en el screen SettingScreen.jsx hay 2 componentes por ahora        <LanguageComponent/> <CharacterComponent/>. 
 
-Currently, two official plugins are available:
+-Hay que acomodar los componentes para que haya diferencia entre ellas, que se vea que son secciones diferentes: puedes ponerles un fondo mas oscuro o por línea que los separe o como veas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+-en los 2 componentes hay botones. en "Language" va por texto y en "Character" es mas bien fotos. 
+
+-Busca el diseño que quieras para los botones de los idiomas, incluso si le echas ganas conviértelos en banderas
+
+-y en los animales que aparezca algun tipo de relieve o sombra cuando se hace hover por encima.  En css con indicar :hover sobre la clase del componente y luego indicar un box-shadow o text-shadow según quieras, queda decente. Puedes mirar la nomenclatura en algún componente ya creado. 
+
+-En los animales, que aparecen aptrapados dentro del cuadrado del botón, Inluso quitaría el fondo y los bordes del botón para que parezca que se pulsa directamente sobre las mascotas
+
