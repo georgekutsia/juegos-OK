@@ -1,4 +1,4 @@
-import { LanguageComponent } from "../../components"
+import { ButtonNextComponent, ButtonSolutionComponent, LanguageComponent } from "../../components"
 import CharacterComponent from "../../components/settings/character/CharacterComponent"
 import "./settingScreen.css"
 function SettingScreen() {
@@ -7,6 +7,8 @@ function SettingScreen() {
       <h2>Setting Screen</h2>
       <LanguageComponent/>
       <CharacterComponent/>
+      <ButtonSolutionComponent/>
+      <ButtonNextComponent/>
     </div>
   )
 }

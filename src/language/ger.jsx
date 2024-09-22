@@ -14,5 +14,7 @@ export const ger = {
   changeBear:"Beär",
   changeFrog:"Frosch",
   currentPet:"aktuelles Maskottchen",
+  solution:"Lösung",
+  next:"Nächste"
 
 };

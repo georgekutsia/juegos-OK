@@ -14,5 +14,8 @@ export const esp = {
   changeBear:"Osito",
   changeFrog:"Ranita",
   currentPet:"Mascota actual",
+  click:"Click me",
+  solution:"Solución",
+  next:"Siguiente"
 
 };

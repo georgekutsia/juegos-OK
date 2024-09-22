@@ -8,6 +8,8 @@
   --default-game-box: #dedcff;
   --web-background: #f3f5ff;
   --black: #21232a;
+  --green:rgb(0, 236, 0);
+  --pink:#ff0081;
   
   --dark-grey: rgb(130, 130, 130);
   --dark-blue: rgb(46, 46, 129);
@@ -16,6 +18,7 @@
   --dark-violet: rgb(113, 27, 141);
   --dark-green: rgb(29, 114, 39);
   --dark-yellow: rgb(147, 152, 39);
+  --dark-pink: #c90165;
 
 
 
