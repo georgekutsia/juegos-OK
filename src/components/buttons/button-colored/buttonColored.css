@@ -1,0 +1,122 @@
+.btn-colored {
+  font-family: sans-serif;
+  color: white;
+  transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+  border-radius: 8px; /* Suaviza los bordes */
+  background-color: rgba(0, 0, 0, 0.205);
+
+}
+
+.btn-colored:hover {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada al pasar el cursor */
+  transform: translateY(-5px); /* Simula que el botón sube un poco cuando se pasa el mouse */
+  background-color: rgba(0, 0, 0, 0.205);
+  scale: 1.03;
+}
+
+.btn-colored--clicked {
+  transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+  padding: 15px 2px;
+  width: 50px;
+  color: transparent;
+  z-index: -10;
+  
+}
+
+.color-colored {
+  display: block;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: 0.8s ease;
+  border-radius: 50%;
+  background-color: transparent;
+  
+}
+
+.expanded {
+  width: 200%;
+  padding-bottom: 200%;
+  height: 50px;
+}
+
+.color--blue {
+  background-color: var(--blue);
+  transition-delay: 0.15s;
+  z-index: 5;
+}
+
+.color--orange {
+  background-color: var(--red);
+  transition-delay: 0.3s;
+  z-index: 5;
+
+}
+
+.color--green {
+  background-color: var(--green);
+  transition-delay: 0.45s;
+  z-index: 5;
+
+}
+
+.color--white {
+  background-color: var(--white);
+  transition-delay: 0.6s;
+  z-index: 5;
+
+}
+
+.color--violet {
+  background-color: var(--violet);
+  transition-delay: 0.75s;
+  z-index: 5;
+  opacity: 1;
+}
+
+.colored-img {
+  width: calc(50px + 5vw);
+  border-radius: 8px; /* Para que la imagen también tenga bordes redondeados */
+  transition: transform 0.5s ease; /* Animación suave para la imagen */
+}
+
+.containerRotate {
+  position: relative;
+  width: 10vw;
+  perspective: 1000px;
+}
+
+.imageRotate {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.left-half,
+.right-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+}
+
+.left-half {
+  left: 0;
+}
+
+.right-half {
+  right: 0;
+}
+
+.left-half:hover ~ .imageRotate {
+  transform: rotateY(-20deg);
+}
+
+.right-half:hover ~ .imageRotate {
+  transform: rotateY(20deg);
+}

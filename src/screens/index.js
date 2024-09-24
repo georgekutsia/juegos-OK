@@ -11,5 +11,5 @@ export { default as SettingScreen } from "./setting-screen/SettingScreen";
 export { default as DrawGameScreen } from "./game-screens/DrawGameScreen";
 export { default as  PuzzleGameScreen} from "./game-screens/PuzzleGameScreen";
 export { default as  QuestionGameScreen} from "./game-screens/QuestionGameScreen";
-export { default as  SongGameScreen} from "./game-screens/SongGameScreen";
+export { default as  SoundGameScreen} from "./game-screens/SoundGameScreen";
 export { default as SportGameScreen } from "./game-screens/SportGameScreen";

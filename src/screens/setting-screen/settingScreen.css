@@ -1,5 +1,13 @@
-/* screen-box tiene el resto de código que afecta a los box */
-.setting-screen{
+.screens-box {
+  position: relative; /* Asegúrate de que los elementos "absolute" se posicionen dentro de este contenedor */
+  overflow: hidden; /* Limita el desbordamiento al contenedor */
+  width: 100%; /* Ajusta el ancho según el diseño deseado */
+  height: auto; /* Ajusta la altura según el diseño deseado */
+  padding: 20px; /* Añade un padding si es necesario */
+  box-sizing: border-box;
+}
+
+.setting-screen {
   background-color: var(--light-violet);
   text-align: center;
 }

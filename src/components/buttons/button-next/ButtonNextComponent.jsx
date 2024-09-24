@@ -2,11 +2,13 @@ import { useContext, useState } from "react";
 
 import "./buttonNext.css"
 import { Context } from "../../../shared/context";
-function ButtonNextComponent() {
+// eslint-disable-next-line react/prop-types
+function ButtonNextComponent({random}) {
   const {t} = useContext(Context);
 
   const [showButton, setshowButton] = useState(true)
   const handleClick = () => {
+    random()
     setTimeout(() => {
       setshowButton(false);
     }, 400);
@@ -17,7 +19,7 @@ function ButtonNextComponent() {
   return (
     <>
     {showButton &&
-      <button data-aos="fade-up" onClick={()=>handleClick()} className="button-next">{t("next")}</button>
+      <button data-aos="fade-down" data-aos-duration="500" onClick={handleClick} className="button-next">{t("next")}</button>
     }
     </>
   )
