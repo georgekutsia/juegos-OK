@@ -27,7 +27,6 @@ function App() {
     setDataNavbarImg(dataNavbarCreatures[newCreatureType]);
     setCurrentCreatureName(newCreatureType);
     setDataNavbarName(dataNavbarCreaturesNames[newCreatureType]);
-
   };
 
   return (

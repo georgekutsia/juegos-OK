@@ -6,6 +6,7 @@
 
 // games
 export { default as ShadowGamesComponent } from "./games/shadow-game/ShadowGamesComponent";
+export { default as ElectionGamesComponent } from "./games/election-game/ElectionGamesComponent.jsx";
 
 
 

@@ -16,5 +16,8 @@ export const ger = {
   currentPet:"aktuelles Maskottchen",
   solution:"Lösung",
   next:"Nächste",
-  puzzleGame:"Rätsel"
+  puzzleGame:"Rätsel",
+  typeBlur:"Unfokussiert",
+  typeShadow:"Scherenschnitt",
+  typePart:"Teile"
 };

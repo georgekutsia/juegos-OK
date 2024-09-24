@@ -1,7 +1,11 @@
+import { ElectionGamesComponent } from '../../components';
 
 function QuestionGameScreen() {
   return (
-    <div>QuestionGameScreen</div>
+    <div className="screens-box setting-screen">
+        quest screen
+        <ElectionGamesComponent/>
+</div>
   )
 }
 

@@ -198,13 +198,12 @@ width: calc(20px + 5vw);
 
 .mainNavbarMenu li {
   margin: 0 10px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .activeButton {
   opacity: 1; /* El botón activo está completamente visible */
   transition: 0.4s ease-in-out;
-scale: 1.2;
+scale: 1.05;
 }
 
 .inactiveButton {

@@ -17,7 +17,10 @@ export const esp = {
   click:"Click me",
   solution:"Solución",
   next:"Siguiente",
-  puzzleGame:"¡Puzles!"
+  puzzleGame:"¡Puzles!",
+  typeBlur:"Desenfocado",
+  typeShadow:"Silueta",
+  typePart:"Partes"
 
 
 };
