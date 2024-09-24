@@ -1,15 +1,17 @@
-/* eslint-disable react/prop-types */
-
 import { useContext } from "react";
 import { Context } from "../../../../shared/context";
+import { NavLink } from "react-router-dom";
 
-function MainNavbarButtonComponent({ text, img, alt, onClick }) {
-  const {t  } = useContext(Context);
-
+// eslint-disable-next-line react/prop-types
+function MainNavbarButtonComponent({ text, img, alt, navLinkTo, }) {
+  const { t } = useContext(Context);
   return (
-    <li onClick={onClick}>
-      <span>{t(text)}</span>
-      <img src={img} alt={alt} />
+    <li >
+      <NavLink to={navLinkTo} className={({ isActive }) =>   isActive ? "activeButton" : "inactiveButton"
+        }>
+        <span>{t(text)}</span>
+        <img src={img} alt={alt} />
+      </NavLink>
     </li>
   );
 }

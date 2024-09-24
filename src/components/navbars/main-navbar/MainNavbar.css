@@ -6,13 +6,13 @@
   top: 5vh; 
   padding: 20px;
   border-radius: 5px 5px 25px 25px;
-  background: var(--blue);
   box-shadow: #32325d1a 0 30px 60px -12px, rgb(0 0 0 / 15%) 0 18px 36px -18px;
   height: 5vh;
   width: 80vw;
   left: 50%;
   transform: translateX(-50%);
   transition: width 0.1s ease-in-out;
+  z-index: 10;
 }
 
 .mainNavbar [type="checkbox"] {
@@ -30,15 +30,19 @@
   font-size: calc(10px + 1.2vw);
   cursor: pointer;
   z-index: 1;
-  background: var(--violet);
+  background: linear-gradient(45deg, var(--nav-violet), var(--nav-red), var(--nav-blue), var(--nav-green), var(--nav-yellow));
   border-radius: 50%;
   transform: translateY(-50%);
   transition: all 0.2s;
-  
+  padding: 1  0px;
+}
+
+.mainNavbar [type="checkbox"]:not(:checked) + label:hover {
+  background: linear-gradient(45deg, var(--violet), var(--red), var(--blue), var(--green), var(--yellow));
 }
 
 .mainNavbar [type="checkbox"] + label:hover {
-  background: var(--dark-violet);
+  box-shadow: 2px 2px black;
 }
 
 .mainNavbarMenu-img {
@@ -60,29 +64,29 @@ width: calc(20px + 5vw);
   }
 .mainNavbarMenu li:nth-child(1) {
   transition-delay: 0.3s;
-  text-shadow: 1px 1px var(--violet);
+  text-shadow: 1px 1px var(--nav-violet);
 }
 
 .mainNavbarMenu li:nth-child(2) {
   transition-delay: 0.25s;
-  text-shadow: 1px 1px var(--green);
+  text-shadow: 1px 1px var(--nav-green);
 
 }
 
 .mainNavbarMenu li:nth-child(3) {
   transition-delay: 0.2s;
-  text-shadow: 1px 1px var(--yellow);
+  text-shadow: 1px 1px var(--nav-yellow);
 
 }
 
 .mainNavbarMenu li:nth-child(4) {
   transition-delay: 0.15s;
-  text-shadow: 1px 1px var(--red);
+  text-shadow: 1px 1px var(--nav-red);
 
 }
 .mainNavbarMenu li:nth-child(5) {
   transition-delay: 0.1s;
-  text-shadow: 1px 1px var(--orange);
+  text-shadow: 1px 1px var(--nav-blue);
 
 }
 .mainNavbarMenu li:nth-child(6) {
@@ -126,7 +130,6 @@ width: calc(20px + 5vw);
 }
 .mainNavbar input:checked + label {
   background: none;
-  transform: translateY(calc(-50% + 4px));
   color: white;
 }
 
@@ -142,33 +145,33 @@ width: calc(20px + 5vw);
 .mainNavbar input:checked ~ .mainNavbarMenu li:nth-child(1) {
   left: 12vw; /* Primer elemento a la derecha */
   transition-delay: 0.1s;
-  background: var(--violet);
+  background: var(--nav-violet);
 
 }
 
 .mainNavbar input:checked ~ .mainNavbarMenu li:nth-child(2) {
   left: 24vw; /* Segundo elemento más a la derecha */
   transition-delay: 0.2s;
-  background: var(--green);
+  background: var(--nav-green);
 
 }
 
 .mainNavbar input:checked ~ .mainNavbarMenu li:nth-child(3) {
   left: 36vw; /* Tercer elemento aún más a la derecha */
   transition-delay: 0.3s;
-  background: var(--yellow);
+  background: var(--nav-yellow);
 
 }
 
 .mainNavbar input:checked ~ .mainNavbarMenu li:nth-child(4) {
   left: 48vw; /* Cuarto elemento a la derecha */
   transition-delay: 0.4s;
-  background: var(--red);
+  background: var(--nav-red);
 }
 .mainNavbar input:checked ~ .mainNavbarMenu li:nth-child(5) {
   left: 60vw; /* Cuarto elemento a la derecha */
   transition-delay: 0.5s;
-  background: var(--orange);
+  background: var(--nav-blue);
 
 }
 .mainNavbar input:checked ~ .mainNavbarMenu li:nth-child(6) {
@@ -184,3 +187,30 @@ width: calc(20px + 5vw);
 .mainNavbarMenu li:nth-child(4):hover  ~ .mainNavbarMenu li:nth-child(4){
   background-color: red;
 }
+
+
+.mainNavbarMenu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainNavbarMenu li {
+  margin: 0 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.activeButton {
+  opacity: 1; /* El botón activo está completamente visible */
+  transition: 0.4s ease-in-out;
+scale: 1.2;
+}
+
+.inactiveButton {
+  opacity: 0.5; /* Difumina los botones inactivos */
+  transition: 0.4s ease-in-out;
+scale: 1;
+
+}
+

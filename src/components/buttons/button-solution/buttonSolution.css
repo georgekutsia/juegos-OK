@@ -12,7 +12,7 @@
   border-radius: 40px;
   border: none;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
   font-weight: 600;
@@ -33,7 +33,7 @@
   display: block;
   width: 140%;
   height: 100%;
-  left: -20%;
+  left: -10%;
   z-index: -1000;
   transition: all ease-in-out 0.5s;
   background-repeat: no-repeat;
@@ -42,14 +42,15 @@
   display: none;
   top: -75%;
   background-image: radial-gradient(circle, var(--pink) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--green) 20%, transparent 30%), radial-gradient(circle, var(--pink) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--pink) 15%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--pink) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--pink) 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  background-size: 30% 30%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 30% 30%, 15% 15%, 30% 30%, 18% 18%;
+  scale: 1.5;
 }
 .bubbly-button:after {
   display: none;
   bottom: -75%;
   background-image: radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--pink) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--pink) 15%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--pink) 20%, transparent 20%), radial-gradient(circle, var(--pink) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-
+scale: 1.5;
 }
 .bubbly-button:active {
   transform: scale(0.9);

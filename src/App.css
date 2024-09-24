@@ -1,15 +1,27 @@
 :root {
   --white: #ffffff;
-  --violet: #c3bfff;
-  --red: #ffcebd;
-  --green: #b3fff5;
-  --yellow: #feddff;
-  --orange: #feca72;
+  --black: #21232a;
+  --violet: rgb(255, 0, 255);
+  --red: #ff0000;
+  --blue:rgb(0, 0, 255);
+  --yellow: rgb(255, 255, 0);
+  --orange: #ffa200;
+  --green:rgb(0, 255, 0);
+  --pink:#ff0080;
+
+
+
+
+  --nav-violet: rgb(250, 93, 250);
+  --nav-red: #ff6e6e;
+  --nav-blue:rgb(100, 100, 249);
+  --nav-yellow: rgb(255, 255, 66);
+  --nav-orange: #feca72;
+  --nav-green:rgb(0, 236, 0);
+  --nav-pink:#f771b4;
+  
   --default-game-box: #dedcff;
   --web-background: #f3f5ff;
-  --black: #21232a;
-  --green:rgb(0, 236, 0);
-  --pink:#ff0081;
   
   --dark-grey: rgb(130, 130, 130);
   --dark-blue: rgb(46, 46, 129);
@@ -48,4 +60,19 @@ a {
 }
 button{
   cursor: pointer;
+}
+
+html, body{
+  height:100%;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-size:14px;
+  background-image: linear-gradient(to bottom right, #ffa578, #ff675a);
 }

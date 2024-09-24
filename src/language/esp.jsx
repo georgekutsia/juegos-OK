@@ -16,6 +16,8 @@ export const esp = {
   currentPet:"Mascota actual",
   click:"Click me",
   solution:"Solución",
-  next:"Siguiente"
+  next:"Siguiente",
+  puzzleGame:"¡Puzles!"
+
 
 };

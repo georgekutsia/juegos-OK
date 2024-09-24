@@ -15,6 +15,6 @@ export const ger = {
   changeFrog:"Frosch",
   currentPet:"aktuelles Maskottchen",
   solution:"Lösung",
-  next:"Nächste"
-
+  next:"Nächste",
+  puzzleGame:"Rätsel"
 };
