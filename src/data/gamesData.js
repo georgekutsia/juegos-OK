@@ -72,18 +72,24 @@ const gamesData = {
 
   ],
   puzzleGames: [
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304099/Juego-sombra_cc9tlm.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304099/Juego-sombra_cc9tlm.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304099/Juego-sombra_cc9tlm.png",
+  ],
+  questionGames:[
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
+
   ],
   sounds:[
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727005554/juego-sonidos_e39l31.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304120/juego-sonidos_zomhli.png",
   ],
   election:{
     juguetes: [
@@ -129,7 +135,6 @@ const gamesData = {
       "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727215423/DALL_E_2024-09-24_21.39.57_-_A_realistic_scene_of_a_few_children_playing_in_the_snow._The_kids_are_bundled_up_in_colorful_winter_jackets_hats_gloves_and_scarves._One_child_is_b_u4j1pu.webp",
       "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727215431/DALL_E_2024-09-24_21.38.07_-_A_vibrant_playground_scene_with_colorful_play_structures_including_slides_swings_and_a_jungle_gym._The_playground_is_designed_for_children_featuri_vl95ru.webp",
       "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727215431/DALL_E_2024-09-24_21.37.19_-_A_set_of_colorful_beach_toys_placed_on_a_sandy_beach._The_toys_include_a_bright_red_bucket_a_yellow_spade_a_blue_rake_and_a_multicolored_beach_ball_oj40qr.webp",
-
     ]
   }
 };

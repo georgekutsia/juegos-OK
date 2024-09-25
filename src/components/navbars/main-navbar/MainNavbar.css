@@ -100,12 +100,13 @@ width: calc(20px + 5vw);
 }
 
 .mainNavbarMenu li {
-  width: 5vw;
-  height: 5vw;
+
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+width: calc(20px + 5vw);
+
 }
 
 .mainNavbarMenu li span {
@@ -122,11 +123,13 @@ width: calc(20px + 5vw);
   color: var(--black);
   font-weight: bold;
   text-align: center;
+  
 }
 
 .mainNavbarMenu li img {
   width: 1vw;
   transition: 0.6s ease-in-out;
+  
 }
 .mainNavbar input:checked + label {
   background: none;

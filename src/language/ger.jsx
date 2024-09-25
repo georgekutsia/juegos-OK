@@ -19,5 +19,6 @@ export const ger = {
   puzzleGame:"Rätsel",
   typeBlur:"Unfokussiert",
   typeShadow:"Scherenschnitt",
-  typePart:"Teile"
+  typePart:"Teile",
+  typeReal:"Typ der IMG",
 };

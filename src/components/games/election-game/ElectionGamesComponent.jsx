@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { ButtonNextComponent } from '../../../components';
+import { ButtonImgComponent, ButtonNextComponent } from '../../../components';
 import gamesData from '../../../data/gamesData';
 import "./electinoGame.css";
 import { Context } from "../../../shared/context.js";
@@ -35,11 +35,11 @@ function ElectionGamesComponent() {
     <div className='election-game-box'>
       <div className="images-container">
         {currentImages[0] && currentImages[1] && (
-          <>
-            <img src={currentImages[0]} alt="Juguete 1" className="election-image" />
+          <div className='election-game-box-imgs'>
+          <ButtonImgComponent img={currentImages[0]} color={"0 0px 55px rgb(0, 242, 255)"} move={"30%"}/>
             <img src={dataNavbarImg[1]} alt="Animal"className="election-image" />
-            <img src={currentImages[1]} alt="Juguete 2" className="election-image" />
-          </>
+          <ButtonImgComponent img={currentImages[1]} color={"0 0px 55px rgb(255, 255, 50)"} move={"-30%"}/>
+          </div>
         )}
       </div>
       <div className="shadow-game-buttonsNext">

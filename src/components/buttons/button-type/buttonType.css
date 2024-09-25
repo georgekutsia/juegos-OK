@@ -7,6 +7,9 @@
 .button-type-part{
   background-color: var(--pink);
 }
+.button-type-real{
+  background-color: var(--orange);
+}
 
 
 .button-ripple{

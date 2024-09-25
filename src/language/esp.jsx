@@ -20,7 +20,8 @@ export const esp = {
   puzzleGame:"¡Puzles!",
   typeBlur:"Desenfocado",
   typeShadow:"Silueta",
-  typePart:"Partes"
+  typePart:"Partes",
+  typeReal:"Tipo de IMG",
 
 
 };
