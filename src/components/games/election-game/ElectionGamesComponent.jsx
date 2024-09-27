@@ -1,10 +1,11 @@
 import { useState, useEffect, useContext } from 'react';
-import { ButtonImgComponent, ButtonNextComponent } from '../../../components';
+import { ButtonImgComponent, ButtonNextComponent, ButtonReturnComponent } from '../../../components';
 import gamesData from '../../../data/gamesData';
 import "./electinoGame.css";
 import { Context } from "../../../shared/context.js";
 
-function ElectionGamesComponent() {
+// eslint-disable-next-line react/prop-types
+function ElectionGamesComponent({returnToScreen}) {
   const [dataElection] = useState(gamesData.election.juguetes); // Asumiendo que `juguetes` es el array de fotos.
   const [currentImages, setCurrentImages] = useState([null, null]);
   const { dataNavbarImg} = useContext(Context);
@@ -33,6 +34,7 @@ function ElectionGamesComponent() {
 
   return (
     <div className='election-game-box'>
+      <ButtonReturnComponent returnToScreen={returnToScreen}/>
       <div className="images-container">
         {currentImages[0] && currentImages[1] && (
           <div className='election-game-box-imgs'>

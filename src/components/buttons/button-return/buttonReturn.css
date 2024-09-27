@@ -1,0 +1,15 @@
+.button-return {
+  width: calc(20px + 3vw);
+  height: calc(20px + 3vw);
+  border-radius: 50%;
+  font-size: calc(20px + 1vw);
+  transition: transform 1s ease; /* Suaviza el cambio de transformación */
+  background-color: var(--green);
+  color: var(--pink);
+  position: absolute;
+  left: 20px;
+}
+
+.button-return:hover {
+  transform: rotate(-150deg); /* Aplica la rotación al hacer hover */
+}

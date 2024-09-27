@@ -11,13 +11,17 @@
   text-align: center;
   transition: 0.2s ease-in-out;
   overflow: hidden;
-  box-shadow: 0 6px 25px rgba(255, 0, 130, 0.5);
+  box-shadow: 0 20px 235px var(--pink);
   border-radius: 40px;
+  border: 2px solid black;
   position: absolute;
+  z-index: 10;
+  transition: 0.3s;
+  animation: moveToPositionDown 0.5s forwards;
 }
 
 .button-next:hover {
-  box-shadow: 0px 2px 1px 5px var(--pink);
+  box-shadow: 0px 2px 1px 4px var(--pink);
   border-radius: 10px;
 }
 
@@ -45,3 +49,15 @@
   outline: 0;
   color: var(--white);
 }
+
+/* Animación para que el botón vuelva a la posición original al cargar */
+@keyframes moveToPositionDown {
+  from {
+    transform: translateY(-100px); /* Comienza 200px a la derecha */
+  }
+  to {
+    transform: translateX(0); /* Se mueve a su posición original */
+  }
+}
+
+/* Aplica la animación cuando el botón apare

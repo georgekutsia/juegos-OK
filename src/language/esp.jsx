@@ -17,11 +17,26 @@ export const esp = {
   click:"Click me",
   solution:"Solución",
   next:"Siguiente",
-  puzzleGame:"¡Puzles!",
+
+
+  puzzleGameScreen:"¡Juegos de Puzles y Adivinanzas!",
+  questionGameScreen:"¡Juegos de Elecciones y Preguntas!",
+  drawGameScreen:"¡Juegos de Dibujos y Colores!",
+  songGameScreen:"¡Juegos de Sonidos y Canciones!",
+  sportGameScreen:"¡Juegos de Movimiento y Deporte!",
+
+
+
   typeBlur:"Desenfocado",
   typeShadow:"Silueta",
   typePart:"Partes",
   typeReal:"Tipo de IMG",
 
 
+
+
+
+  electionGame:"Juego de elecciones",
+  shadowGame:"Juego de siluetas y animales",
+  animalSoundGame:"Detecta sonidos de animales"
 };

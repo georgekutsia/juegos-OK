@@ -1,9 +1,10 @@
 import './shadowGame.css';
 import animalsData from '../../../data/animalsData';
 import { useState, useEffect } from 'react';
-import { ButtonTypeComponent, ButtonSolutionComponent, ButtonNextComponent } from '../../../components';
+import { ButtonTypeComponent, ButtonSolutionComponent, ButtonNextComponent, ButtonReturnComponent } from '../../../components';
 
-function ShadowGamesComponent() {
+// eslint-disable-next-line react/prop-types
+function ShadowGamesComponent({returnToScreen}) {
   const [shuffledAnimals, setShuffledAnimals] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0); 
   const [showImg, setShowImg] = useState('');
@@ -67,6 +68,7 @@ function ShadowGamesComponent() {
 
   return (
     <div className="shadow-game-box">
+      <ButtonReturnComponent returnToScreen={returnToScreen}/>
       <div className="shadow-game-buttonsNext">
         <ButtonNextComponent random={handleNext} />
       </div>

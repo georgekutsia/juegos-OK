@@ -3,12 +3,11 @@ import './characterComponent.css';
 import { Context } from "../../../shared/context";
 
 function CharacterComponent() {
-  const {t, currentCreatureType, handleChangeCreature, dataNavbarImg } = useContext(Context);
+  const {t, handleChangeCreature } = useContext(Context);
 
   return (
     <div className="character-box">
       <h2>{t("currentPet")} 
-      <img className="character-box-h2-img" src={dataNavbarImg[0]} alt={currentCreatureType} />
       </h2>
       
       <button className="character-box-button" onClick={() => handleChangeCreature("osito")}>

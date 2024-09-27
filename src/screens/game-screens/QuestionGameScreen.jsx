@@ -6,31 +6,41 @@ import "./gamesScreen.css"
 
 function QuestionGameScreen() {
   const {t} = useContext(Context);
-  const [gameOn, setGameOn] = useState(true)
-  const [gameOn1, setGameOn1] = useState(false)
+  const [activeGame, setActiveGame] = useState(-1);
 
-  const handleGameOn = ()=> {
-    setGameOn(!gameOn)
-    setGameOn1(!gameOn1)
+  const handleGameOn = (index) => {
+    setActiveGame((prev) => prev === index ? -1 : index); // Toggle the active game
+  };
+  const handleReturn = () => {
+    setActiveGame(-1)
   }
+
   return (
     <div className="screens-box setting-screen">
-      <h2>{t("puzzleGame")}</h2>
-      {gameOn && 
-      <div className="screens-box-items">
-        {gamesData.questionGames.map((imgUrl, index) => (
-          <ButtonColoredComponent key={index} imgGame={imgUrl} handleGameOn={()=>handleGameOn()}/>
-        ))}
-      </div>
+    {activeGame === -1 &&
+      <h2>{t("questionGameScreen")}</h2>
+    }
+      {activeGame === -1 && 
+        <div className="screens-box-items">
+          {gamesData.questionGames.map((imgUrl, index) => (
+            <ButtonColoredComponent 
+              key={index} 
+              imgGame={imgUrl} 
+              handleGameOn={() => handleGameOn(index)}  
+              text={gamesData.questionGamesNames[index]}
+            />
+          ))}
+        </div>
       }
-      {gameOn1 && 
-        <ElectionGamesComponent/>
+      {activeGame === 0 && 
+        <ElectionGamesComponent returnToScreen={handleReturn}/>
       }
+      {activeGame === 1 && 
+        <ButtonColoredComponent returnToScreen={handleReturn}/>
+      }
+      {/* Add more game components as needed */}
     </div>
-  )
+  );
 }
 
-export default QuestionGameScreen
-
-
-
+export default QuestionGameScreen;

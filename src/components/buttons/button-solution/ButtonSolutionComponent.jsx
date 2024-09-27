@@ -8,14 +8,14 @@ function ButtonSolutionComponent({show}) {
 
   const [isAnimating, setIsAnimating] = useState(false);
   const [showButton, setshowButton] = useState(true)
-  const [ble, setble] = useState(true)
+  const [fadeOut, setfadeOut] = useState(true)
 
   const animateButton = () => {
     setIsAnimating(true);
-    setble(true)
+    setfadeOut(true)
 
     setTimeout(() => {
-      setble(false)
+      setfadeOut(false)
     }, 1000);
     setTimeout(() => {
       setIsAnimating(false);
@@ -33,7 +33,7 @@ function ButtonSolutionComponent({show}) {
   return (
     <>
         {showButton && 
-            <button data-aos={ble ? "":"fade-up"}  data-aos-duration="500" className={`bubbly-button ${isAnimating ? 'animate' : ''}`}  onClick={animateButton}>
+            <button className={`bubbly-button ${isAnimating ? 'animate' : ''}`}  onClick={animateButton}>
               {t("solution")}
             </button>
         }
