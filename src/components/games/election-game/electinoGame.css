@@ -20,3 +20,8 @@
   margin: 40px;
   transition: 0.3s ease-in-out;
 }
+.election-game-box-imgs{
+  display: flex;
+  margin-top: 150px;
+  justify-content: space-around;
+}

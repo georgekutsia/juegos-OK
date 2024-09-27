@@ -2,7 +2,7 @@
   font-family: 'Helvetica', 'Arial', sans-serif;
   display: inline-block;
   font-size: calc(12px + 1vw);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   margin-top: 100px;
   margin-bottom: 60px;
   -webkit-appearance: none;
@@ -14,13 +14,17 @@
   cursor: pointer;
   position: absolute;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  box-shadow: 0 20px 235px var(--pink);
   font-weight: 600;
   transition: 0.2s ease-in-out;
+  width: 150px;
+  z-index: 10;
+  border: 2px solid black;
+  animation: moveToPositionUp 0.5s ease-in-out;
 }
 .bubbly-button:hover {
   border-radius: 10px;
-  box-shadow: 0px 2px 1px 5px var(--pink);
+  box-shadow: 0px 2px 1px 4px var(--pink);
   text-shadow: 1px 1px var(--black);
 }
 .bubbly-button:focus {
@@ -87,5 +91,16 @@ scale: 1.5;
   100% {
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+
+@keyframes moveToPositionUp {
+  from {
+    transform: translateY(100px); /* Comienza 200px a la derecha */
+  }
+  to {
+    transform: translateX(0); /* Se mueve a su posición original */
   }
 }

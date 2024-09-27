@@ -16,8 +16,25 @@ export const ger = {
   currentPet:"aktuelles Maskottchen",
   solution:"Lösung",
   next:"Nächste",
-  puzzleGame:"Rätsel",
+
+
+  puzzleGameScreen:"Puzzles und Rätsel Spiele!",
+  questionGameScreen:"Wahlspiele und Fragen!",
+  drawGameScreen:"Zeichnen und Ausmalen Spiele!",
+  songGameScreen:"Klänge und Lieder Spiele!",
+  sportGameScreen:"Bewegungs- und Sportspiele!",
+
+
   typeBlur:"Unfokussiert",
   typeShadow:"Scherenschnitt",
-  typePart:"Teile"
+  typePart:"Teile",
+  typeReal:"Typ der IMG",
+
+
+
+
+  electionGame:"Spiel der Wah",
+  shadowGame:"Scherenschnitt und Tierspiel",
+  animalSoundGame:"Erkennt Tiergeräusche"
+
 };

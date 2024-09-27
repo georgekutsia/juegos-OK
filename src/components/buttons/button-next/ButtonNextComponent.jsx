@@ -19,7 +19,7 @@ function ButtonNextComponent({random}) {
   return (
     <>
     {showButton &&
-      <button data-aos="fade-down" data-aos-duration="500" onClick={handleClick} className="button-next">{t("next")}</button>
+      <button  onClick={handleClick} className="button-next">{t("next")}</button>
     }
     </>
   )
