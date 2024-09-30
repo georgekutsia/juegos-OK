@@ -28,7 +28,7 @@ export const ger = {
   typeBlur:"Unfokussiert",
   typeShadow:"Scherenschnitt",
   typePart:"Teile",
-  typeReal:"Typ der IMG",
+  typeReal:"Realismus",
 
 
 

@@ -24,7 +24,6 @@ function PuzzleGameScreen() {
           {gamesData.puzzleGames.map((imgUrl, index) => (
             <ButtonColoredComponent  key={index}  imgGame={imgUrl}  handleGameOn={() => handleGameOn(index)}  
               text={gamesData.puzzleGamesNames[index]}
-
             />
           ))}
         </div>

@@ -77,10 +77,10 @@ function ShadowGamesComponent({returnToScreen}) {
       </div>
       <div>
         <div className="shadow-game-buttonMode">
-          <ButtonTypeComponent onClick={() => handleBlur()} classN={"button-type-blur"} typeGame={"typeBlur"} />
-          <ButtonTypeComponent onClick={() => handleShadow()} classN={"button-type-shadow"} typeGame={"typeShadow"} />
-          <ButtonTypeComponent onClick={() => handlePart()} classN={"button-type-part"} typeGame={"typePart"} />
-          <ButtonTypeComponent onClick={() => toggleImageType()} classN={"button-type-real"} typeGame={"typeReal"} />
+            <ButtonTypeComponent onClick={() => handleBlur()} classN={"button-type-blur"} typeGame={"typeBlur"} />
+            <ButtonTypeComponent onClick={() => handleShadow()} classN={"button-type-shadow"} typeGame={"typeShadow"} />
+            <ButtonTypeComponent onClick={() => handlePart()} classN={"button-type-part"} typeGame={"typePart"} />
+            <ButtonTypeComponent onClick={() => toggleImageType()} classN={"button-type-real"} typeGame={"typeReal"} />
         </div>
         <div>
         </div>
@@ -89,7 +89,7 @@ function ShadowGamesComponent({returnToScreen}) {
         {shuffledAnimals.length > 0 && (
           <img
             onClick={() => handleShow()}
-            className={`${showImg} ${showAnswer}`}
+            className={`${showImg} ${showAnswer} shadow-game-img-size` }
             style={showImg === "part-game-img" ? { transform: `translate(${randomPorcentage}%, ${randomPorcentage}%)` } : {}}
             src={showRealImage ? shuffledAnimals[currentIndex].imagenReal : shuffledAnimals[currentIndex].imagenAnimada} // Cambia entre imagenAnimada e imagenReal
             alt={shuffledAnimals[currentIndex].nombre} // Usa el nombre del animal

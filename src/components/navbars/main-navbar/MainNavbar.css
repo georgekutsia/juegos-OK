@@ -2,12 +2,12 @@
   position: absolute;
   display: flex;
   justify-content: left;
-  margin: auto;
+  margin: 0.1vh auto;
   top: 5vh; 
   padding: 25px 15px;
   border-radius: 5px 5px 25px 25px;
   box-shadow: #32325d1a 0 30px 60px -12px, rgb(0 0 0 / 15%) 0 18px 36px -18px;
-  height: 5vh;
+  height: 1.5vh;
   width: 80vw;
   left: 50%;
   transform: translateX(-50%);
@@ -47,7 +47,7 @@
 }
 
 .mainNavbarMenu-img {
-width: calc(20px + 5vw);
+width: calc(30px + 5vw);
 }
 .mainNavbarMenu li {
   position: absolute;
@@ -246,4 +246,24 @@ scale: 1.05;
   );
   background-blend-mode: multiply;  /* or other modes like overlay, screen, etc. */
 
+}
+
+@media only screen and (max-width: 600px) {
+  .mainNavbar {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    margin: 0.1vh auto;
+    top: 3vh; 
+    padding: 25px 15px;
+    border-radius: 5px 5px 25px 25px;
+    box-shadow: #32325d1a 0 30px 60px -12px, rgb(0 0 0 / 15%) 0 18px 36px -18px;
+    height: 0.1vh;
+    width: 95vw;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.1s ease-in-out;
+    z-index: 10;
+    align-items: center;
+  }
 }

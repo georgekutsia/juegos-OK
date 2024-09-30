@@ -30,7 +30,7 @@ export const esp = {
   typeBlur:"Desenfocado",
   typeShadow:"Silueta",
   typePart:"Partes",
-  typeReal:"Tipo de IMG",
+  typeReal:"Realismo",
 
 
 

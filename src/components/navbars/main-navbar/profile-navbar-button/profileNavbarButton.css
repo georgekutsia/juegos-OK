@@ -15,7 +15,7 @@
   text-shadow: 1px 1px black;
 }
 .nav-link-info i{
-  font-size: 1.5vw;
+  font-size: calc(14px + 0.5vw);
 }
 .nav-link-info:hover .fa-info{
 color: var(--dark-red);
