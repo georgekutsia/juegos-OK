@@ -3,7 +3,8 @@ body{
 }
 .screens-box{
   height: 80vh;
-  width: 80vw;
+  width: 95vw;
+  max-width: 1200px;
   margin: auto;
   margin-top: 15vh;
   border: 1px solid black;

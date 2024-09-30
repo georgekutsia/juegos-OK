@@ -5,7 +5,7 @@
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra inicial */
   border-radius: 8px; /* Suaviza los bordes */
   background-color: rgba(0, 0, 0, 0.205);
-
+  width: calc(60px + 5vw);
 }
 
 .btn-colored:hover {
@@ -86,8 +86,8 @@
 
 .containerRotate {
   position: relative;
-  width: 10vw;
   perspective: 1000px;
+  
 }
 
 .imageRotate {

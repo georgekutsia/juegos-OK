@@ -3,7 +3,7 @@
   overflow: hidden; /* Limita el desbordamiento al contenedor */
   width: 100%; /* Ajusta el ancho según el diseño deseado */
   height: auto; /* Ajusta la altura según el diseño deseado */
-  padding: 20px; /* Añade un padding si es necesario */
+  padding: 10px; /* Añade un padding si es necesario */
   box-sizing: border-box;
 }
 
