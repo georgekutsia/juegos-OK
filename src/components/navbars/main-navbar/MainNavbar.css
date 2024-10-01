@@ -142,7 +142,6 @@ width: calc(30px + 5vw);
   left: 24vw; /* Segundo elemento más a la derecha */
   transition-delay: 0.2s;
   background: var(--nav-green);
-
 }
 
 .mainNavbar input:checked ~ .mainNavbarMenu li:nth-child(3) {
