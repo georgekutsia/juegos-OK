@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { ButtonColoredComponent, ElectionGamesComponent } from '../../components';
+import { ButtonColoredComponent, ElectionGamesComponent, SizeGameComponent } from '../../components';
 import gamesData from '../../data/gamesData'; 
 import { Context } from "../../shared/context";
 import "./gamesScreen.css"
@@ -36,7 +36,7 @@ function QuestionGameScreen() {
         <ElectionGamesComponent returnToScreen={handleReturn}/>
       }
       {activeGame === 1 && 
-        <ButtonColoredComponent returnToScreen={handleReturn}/>
+        <SizeGameComponent  returnToScreen={handleReturn}/>
       }
       {/* Add more game components as needed */}
     </div>

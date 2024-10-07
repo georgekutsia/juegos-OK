@@ -16,11 +16,11 @@ const gamesData = {
   ],
   questionGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728326488/taman%CC%83os-de-animales_ai1xad.png",
   ],
   questionGamesNames: [
     "electionGame", 
-    "gambuya"
+    "sizeGame"
   ],
   drawGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",

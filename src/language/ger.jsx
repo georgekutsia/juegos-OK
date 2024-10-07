@@ -34,6 +34,7 @@ export const ger = {
 
 
   electionGame:"Spiel der Wah",
+  sizeGame:"Spielen um Größe und Stärke",
   shadowGame:"Scherenschnitt und Tierspiel",
   animalSoundGame:"Erkennt Tiergeräusche"
 

@@ -66,7 +66,6 @@ width: calc(150px + 10vw);
     gap: 1vw;
     bottom: 10px;
     left: 20px;
-    background-color: blue;
     height: 50px;
   }
 }

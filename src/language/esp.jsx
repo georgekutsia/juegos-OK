@@ -37,6 +37,7 @@ export const esp = {
 
 
   electionGame:"Juego de elecciones",
+  sizeGame:"Juego de tamaños y fuerzas",
   shadowGame:"Juego de siluetas y animales",
   animalSoundGame:"Detecta sonidos de animales"
 };

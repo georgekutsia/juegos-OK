@@ -48,7 +48,7 @@ function ButtonColoredComponent({ imgGame, handleGameOn,text }) {
   return (
     <>
       <OverlayTrigger placement="bottom" delay={{ show: 50, hide: 200 }} overlay={renderTooltip}>
-          <Link className={`btn-colored ${isButtonClicked ? 'btn--clicked' : ''}`} href="#" onClick={handleButtonClick} ref={buttonRef} title="Click to activate">
+          <Link className={`btn-colored ${isButtonClicked ? 'btn-colored--clicked' : ''}`} href="#" onClick={handleButtonClick} ref={buttonRef} title="Click to activate">
             <div className="containerRotate">
               <div className="left-half"></div>
               <div className="right-half"></div>

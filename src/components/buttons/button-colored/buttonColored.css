@@ -6,6 +6,7 @@
   border-radius: 8px; /* Suaviza los bordes */
   background-color: rgba(0, 0, 0, 0.205);
   width: calc(60px + 5vw);
+  max-width: 150px;
 }
 
 .btn-colored:hover {

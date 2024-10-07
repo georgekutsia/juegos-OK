@@ -10,11 +10,11 @@ function ShadowGamesComponent({returnToScreen}) {
   const [showImg, setShowImg] = useState('');
   const [partsBoxSize, setPartsBoxSize] = useState("");
   const [showAnswer, setShowAnswer] = useState("");
-  const [randomPorcentage, setRandomPorcentage] = useState(Math.floor(Math.random() * animalsData.length));
+  const [randomAnimal, setrandomAnimal] = useState(Math.floor(Math.random() * animalsData.length));
   const [showRealImage, setShowRealImage] = useState(false); // Nuevo estado para controlar el tipo de imagen
 
   const handleRandom = () => {
-    setRandomPorcentage(Math.floor(Math.random() * (30 - (-30) + 1)) + (-30));
+    setrandomAnimal(Math.floor(Math.random() * (30 - (-30) + 1)) + (-30));
   };
 
   const shuffleArray = (array) => {
@@ -90,7 +90,7 @@ function ShadowGamesComponent({returnToScreen}) {
           <img
             onClick={() => handleShow()}
             className={`${showImg} ${showAnswer} shadow-game-img-size` }
-            style={showImg === "part-game-img" ? { transform: `translate(${randomPorcentage}%, ${randomPorcentage}%)` } : {}}
+            style={showImg === "part-game-img" ? { transform: `translate(${randomAnimal}%, ${randomAnimal}%)` } : {}}
             src={showRealImage ? shuffledAnimals[currentIndex].imagenReal : shuffledAnimals[currentIndex].imagenAnimada} // Cambia entre imagenAnimada e imagenReal
             alt={shuffledAnimals[currentIndex].nombre} // Usa el nombre del animal
           />
