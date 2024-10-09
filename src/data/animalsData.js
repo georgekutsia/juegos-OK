@@ -3,6 +3,7 @@ const animalsData = [
     nombre: "Erizo",
     altura: 300,  // mm
     peso: 1200,  // g
+    velocidad:0.3, //km/h
     fuerza: "No es particularmente fuerte, pero se defiende eficazmente al enrollarse en una bola cubierta de espinas",
     ubicacion: "Europa, Asia, África y Nueva Zelanda (introducido); prefieren hábitats como bosques, praderas y jardines",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262134/Erizo_xrhaqy.png",
@@ -12,6 +13,7 @@ const animalsData = [
     nombre: "Alce",
     altura: 2100,  // mm
     peso: 700000, // g
+    velocidad:56, //km/h
     fuerza: "Extremadamente fuerte, capaces de cargar o arrastrar grandes pesos, y con cuernos poderosos",
     ubicacion: "América del Norte, Europa y Asia, en bosques boreales y tundras",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262115/Alce_jpqx03.png",
@@ -21,6 +23,7 @@ const animalsData = [
     nombre: "Ciervo",
     altura: 1200,  // mm
     peso: 300000, // g
+    velocidad: 75, //km/h
     fuerza: "Ágiles y veloces, con cuernos fuertes en los machos que usan para defenderse y competir",
     ubicacion: "América, Europa, Asia y el norte de África, en bosques, praderas y montañas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262122/Ciervo_abzbeb.png",
@@ -30,6 +33,7 @@ const animalsData = [
     nombre: "Burro",
     altura: 1400,  // mm
     peso: 570000, // g
+    velocidad:50, //km/h
     fuerza: "Muy fuerte para su tamaño, utilizado tradicionalmente para cargar y transportar objetos pesados en terrenos difíciles",
     ubicacion: "Doméstico en todo el mundo, especialmente en áreas rurales y montañosas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262106/Burro_ov26kd.png",
@@ -39,6 +43,7 @@ const animalsData = [
     nombre: "Medusa",
     altura: 1000,  // mm
     peso: 200000, // g
+    velocidad:0.01, //km/h
     fuerza: "Dependen de su veneno en los tentáculos para paralizar a sus presas, aunque su estructura es delicada",
     ubicacion: "Océanos de todo el mundo, especialmente en aguas cálidas y templadas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262103/Medusa_rim9pb.png",
@@ -46,8 +51,9 @@ const animalsData = [
   },
   {
     nombre: "Mantis Religiosa",
-    altura: 110,  // mm
+    altura: 120,  // mm
     peso: 10,   // g
+    velocidad:0.18, //km/h
     fuerza: "Fuertes patas delanteras que usan para atrapar y sostener a sus presas. Tienen mandíbulas afiladas para desgarrar",
     ubicacion: "En todo el mundo, especialmente en regiones tropicales y templadas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262102/Mantis_Religiosa_ozbbpv.png",
@@ -57,6 +63,7 @@ const animalsData = [
     nombre: "Hipopótamo",
     altura: 1500,  // mm
     peso: 3200000, // g
+    velocidad:38.8, //km/h
     fuerza: "Extremadamente fuerte, con mandíbulas poderosas capaces de ejercer una fuerza de mordida de hasta 1,800 psi. Son animales muy territoriales y peligrosos",
     ubicacion: "África subsahariana, en ríos, lagos y áreas cercanas al agua",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262129/Hipopo%CC%81tamo_rg14r7.png",
@@ -66,6 +73,7 @@ const animalsData = [
     nombre: "Reno",
     altura: 1400,  // mm
     peso: 300000, // g
+    velocidad:60, //km/h
     fuerza: "Muy fuerte, con cuernos grandes y usados tradicionalmente como animales de carga",
     ubicacion: "Ártico y subártico, incluyendo América del Norte, Europa y Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262130/Reno_lnekjr.png",
@@ -75,6 +83,7 @@ const animalsData = [
     nombre: "Tiburón Tigre",
     altura: 5500,  // mm
     peso: 900000, // g
+    velocidad:32, //km/h
     fuerza: "Mandíbulas extremadamente poderosas y capaces de morder presas grandes. Tienen una mordida fuerte para romper conchas de tortugas",
     ubicacion: "Océanos tropicales y subtropicales en todo el mundo, especialmente cerca de arrecifes y costas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262092/TIburo%CC%81n_wpz2wi.png",
@@ -84,6 +93,7 @@ const animalsData = [
     nombre: "Tiburón Martillo",
     altura: 6000,  // mm
     peso: 450000, // g
+    velocidad:28.8, //km/h
     fuerza: "Mandíbulas fuertes y cabeza en forma de martillo, lo que les otorga una gran capacidad para detectar presas a través de campos eléctricos",
     ubicacion: "Océanos tropicales y cálidos en todo el mundo, cerca de costas y arrecifes",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262109/Tiburo%CC%81n_Martillo_bvfqo7.png",
@@ -93,6 +103,7 @@ const animalsData = [
     nombre: "Pez Espada",
     altura: 4500,  // mm
     peso: 650000, // g
+    velocidad: 97, //km/h
     fuerza: "El largo y afilado 'espada' de su hocico es extremadamente fuerte y lo usa para cazar y defenderse",
     ubicacion: "Océanos tropicales, subtropicales y templados de todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262099/Pez_Espada_iolnwr.png",
@@ -102,6 +113,7 @@ const animalsData = [
     nombre: "Cangrejo",
     altura: 500,  // mm
     peso: 4000,  // g
+    velocidad:0.36, //km/h
     fuerza: "Poseen pinzas muy fuertes que usan para defenderse y alimentarse",
     ubicacion: "Océanos, costas, ríos y manglares de todo el mundo, dependiendo de la especie",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262132/Cangrejo_wjkbe3.png",
@@ -111,6 +123,7 @@ const animalsData = [
     nombre: "Libélula",
     altura: 50,    // mm
     peso: 1.5,    // g
+    velocidad:24, //km/h
     fuerza: "Ágil voladora, capaz de volar largas distancias",
     ubicacion: "Zonas húmedas en todo el mundo excepto en áreas extremadamente frías",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261877/Libe%CC%81lula_djewmd.png",
@@ -120,6 +133,7 @@ const animalsData = [
     nombre: "Jirafa",
     altura: 6000,  // mm
     peso: 1200000, // g
+    velocidad:52, //km/h
     fuerza: "Fuertes piernas capaces de dar patadas poderosas",
     ubicacion: "Sabana africana",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261877/Jirafa_rsrqsd.png",
@@ -129,6 +143,7 @@ const animalsData = [
     nombre: "Zarigüeya",
     altura: 250,   // mm
     peso: 2000,   // g
+    velocidad:6.3, //km/h
     fuerza: "Ágiles trepadores",
     ubicacion: "América del Norte y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262093/Zarigu%CC%88ella_xogcqr.png",
@@ -138,6 +153,7 @@ const animalsData = [
     nombre: "Oso Hormiguero",
     altura: 2100,  // mm
     peso: 65000,  // g
+    velocidad:1.44, //km/h
     fuerza: "Garras fuertes para romper nidos de hormigas",
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261934/Oso_Hormiguero_lmbo22.png",
@@ -147,6 +163,7 @@ const animalsData = [
     nombre: "Elefante",
     altura: 3300,  // mm
     peso: 6000000, // g
+    velocidad: 40, //km/h
     fuerza: "Capaz de cargar objetos de más de 1,000 kg",
     ubicacion: "África y Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262089/Elefante_kibmid.png",
@@ -156,6 +173,7 @@ const animalsData = [
     nombre: "Mapache",
     altura: 700,   // mm
     peso: 9000,   // g
+    velocidad:18, //km/h
     fuerza: "Fuertes garras para trepar",
     ubicacion: "América del Norte",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261879/Mapache_jlpn6j.png",
@@ -165,6 +183,7 @@ const animalsData = [
     nombre: "Cerdo",
     altura: 900,   // mm
     peso: 300000, // g
+    velocidad:16.2, //km/h
     fuerza: "Resistentes y adaptables",
     ubicacion: "Doméstico en todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261924/Cerdo_rf1jr3.png",
@@ -174,6 +193,7 @@ const animalsData = [
     nombre: "Chimpancé",
     altura: 1700,  // mm
     peso: 70000,  // g
+    velocidad:25.2, //km/h
     fuerza: "Aproximadamente 1.5 - 2 veces más fuerte que un humano",
     ubicacion: "África central y occidental",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261876/Chimpance%CC%81_bvvuy3.png",
@@ -183,6 +203,7 @@ const animalsData = [
     nombre: "Murciélago",
     altura: 150,   // mm
     peso: 40,    // g
+    velocidad:36, //km/h
     fuerza: "Fuerte para su tamaño en términos de vuelo",
     ubicacion: "En todo el mundo excepto regiones frías",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261922/Murcie%CC%81lago_lsttie.png",
@@ -192,6 +213,7 @@ const animalsData = [
     nombre: "Serpiente",
     altura: 8000,  // mm
     peso: 150000, // g
+    velocidad:2, //km/h
     fuerza: "Las constrictoras pueden ejercer gran presión",
     ubicacion: "En casi todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262086/Serpiente_dfyctg.png",
@@ -201,6 +223,7 @@ const animalsData = [
     nombre: "Oso Pardo",
     altura: 3000,  // mm
     peso: 360000, // g
+    velocidad:56, //km/h
     fuerza: "Extremadamente fuerte, con garras poderosas",
     ubicacion: "América del Norte, Europa, Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262062/Oso_Pardo_nvki65.png",
@@ -210,6 +233,7 @@ const animalsData = [
     nombre: "Tigre",
     altura: 1200,  // mm
     peso: 300000, // g
+    velocidad:65, //km/h
     fuerza: "Gran fuerza en patas y mandíbula",
     ubicacion: "Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261868/Tigre_vlzhzw.png",
@@ -219,6 +243,7 @@ const animalsData = [
     nombre: "Pantera Negra",
     altura: 800,   // mm
     peso: 100000, // g
+    velocidad:58, //km/h
     fuerza: "Gran fuerza muscular y mandíbulas fuertes",
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261881/Pantera_jbgojc.png",
@@ -228,6 +253,7 @@ const animalsData = [
     nombre: "León",
     altura: 1200,  // mm
     peso: 250000, // g
+    velocidad:80, //km/h
     fuerza: "Muy fuerte, capaz de derribar grandes presas",
     ubicacion: "África subsahariana, India",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262060/Leo%CC%81n_qk6dxm.png",
@@ -237,7 +263,8 @@ const animalsData = [
     nombre: "Guepardo",
     altura: 900,   // mm
     peso: 70000,  // g
-    fuerza: "Más adaptado a la velocidad que a la fuerza",
+    velocidad:120, //km/h
+    fuerza: "Más adaptado a la velocidad que a la fuerza", //km/h
     ubicacion: "África y partes de Irán",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262058/Guepardo_uhykah.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167117/draw-guepardo_mydoxp.png",
@@ -246,6 +273,7 @@ const animalsData = [
     nombre: "Jaguar",
     altura: 900,   // mm
     peso: 120000, // g
+    velocidad:80, //km/h
     fuerza: "Mandíbulas extremadamente fuertes",
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261926/Jaguar_qskubz.png",
@@ -255,6 +283,7 @@ const animalsData = [
     nombre: "Kanguro",
     altura: 2000,  // mm
     peso: 90000,  // g
+    velocidad:70, //km/h
     fuerza: "Patadas poderosas",
     ubicacion: "Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262109/Canguro_iucqmd.png",
@@ -264,6 +293,7 @@ const animalsData = [
     nombre: "Caballo",
     altura: 1800,  // mm
     peso: 1000000, // g
+    velocidad:82, //km/h
     fuerza: "Extremadamente fuerte, especialmente en las patas traseras, usados tradicionalmente para trabajos de carga, transporte y competición",
     ubicacion: "Doméstico en todo el mundo, especialmente en áreas rurales, granjas y para actividades deportivas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262107/Caballo_k5uvjo.png",
@@ -273,6 +303,7 @@ const animalsData = [
     nombre: "Avestruz",
     altura: 2700,  // mm
     peso: 150000, // g
+    velocidad:70, //km/h
     fuerza: "Patadas fuertes que pueden ser mortales",
     ubicacion: "África",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262065/Avestruz_ncmyvg.png",
@@ -282,7 +313,8 @@ const animalsData = [
     nombre: "Rinoceronte",
     altura: 1800,  // mm
     peso: 3500000, // g
-    fuerza: "Muy fuerte, capaz de cargar a gran velocidad",
+    velocidad:40.6, //km/h
+    fuerza: "Muy fuerte, capaz de cargar a gran velocidad", //km/h
     ubicacion: "África y Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262101/Rinoceronte_kkbb1r.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167094/draw-rinoceronte_ecrwmb.png",
@@ -291,6 +323,7 @@ const animalsData = [
     nombre: "Pato",
     altura: 500,   // mm
     peso: 1500,   // g
+    velocidad: 90, //km/h
     fuerza: "Moderada para su tamaño",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262120/Pato_clv5xx.png",
@@ -300,6 +333,7 @@ const animalsData = [
     nombre: "Gaviota",
     altura: 600,   // mm
     peso: 1500,   // g
+    velocidad:64.2, //km/h
     fuerza: "Moderada para su tamaño",
     ubicacion: "Costas de todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262091/Gaviota_ubpisa.png",
@@ -309,6 +343,7 @@ const animalsData = [
     nombre: "Albatros",
     altura: 1300,  // mm
     peso: 12000,  // g
+    velocidad:110, //km/h
     fuerza: "Capaces de viajar largas distancias",
     ubicacion: "Océanos del hemisferio sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262111/Albatross_ynypue.png",
@@ -318,6 +353,7 @@ const animalsData = [
     nombre: "Paloma",
     altura: 350,   // mm
     peso: 400,    // g
+    velocidad:59, //km/h
     fuerza: "Moderada para su tamaño",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262128/Paloma_vkamuh.png",
@@ -327,6 +363,7 @@ const animalsData = [
     nombre: "Camaleón",
     altura: 600,   // mm
     peso: 200,    // g
+    velocidad:0.036, //km/h
     fuerza: "Poca fuerza física, gran habilidad para camuflarse",
     ubicacion: "África y Madagascar",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262123/Camaleo%CC%81n_j84ihx.png",
@@ -336,6 +373,7 @@ const animalsData = [
     nombre: "Lagarto",
     altura: 3000,  // mm
     peso: 150000, // g
+    velocidad:3.6, //km/h
     fuerza: "Algunas especies tienen mandíbulas poderosas",
     ubicacion: "En todo el mundo excepto en zonas frías",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262099/Lagarto_tct0tn.png",
@@ -345,6 +383,7 @@ const animalsData = [
     nombre: "Pelícano",
     altura: 1000,  // mm
     peso: 15000,  // g
+    velocidad:39.6, //km/h
     fuerza: "Poca fuerza física, gran capacidad para pescar",
     ubicacion: "Costas de todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262095/Peli%CC%81cano_opb0ey.png",
@@ -352,8 +391,9 @@ const animalsData = [
   },
   {
     nombre: "Loro",
-    altura: 1000,  // mm
+    altura: 200,  // mm
     peso: 1500,   // g
+    velocidad:56, //km/h
     fuerza: "Pico fuerte para romper cáscaras",
     ubicacion: "América del Sur, África y Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261922/Papagayo_l5fmon.png",
@@ -361,17 +401,29 @@ const animalsData = [
   },
   {
     nombre: "Papagayo",
-    altura: 1000,  // mm
+    altura: 700,  // mm
     peso: 1500,   // g
+    velocidad:56, //km/h
     fuerza: "Picos extremadamente fuertes capaces de romper nueces y semillas duras. Son aves muy inteligentes y ágiles",
     ubicacion: "América del Sur, África y Australia, en selvas tropicales y bosques",
-    imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261878/Loro_ge2qkx.png",
+    imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728389841/papagayo3_xd2uay.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167084/draw-loro_tpoyti.png",
+  },
+  {
+    nombre: "Águila",
+    altura: 900,  // mm
+    peso: 5000,   // g
+    velocidad:160, //km/h
+    fuerza: "Garras extremadamente poderosas y visión aguda, capaces de capturar y levantar presas grandes. Son aves rápidas y muy fuertes",
+    ubicacion: "América del Norte, Europa y Asia, en montañas, bosques y áreas abiertas",
+    imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728330301/aguilaRealista_dmsvgj.png",
+    imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728329892/aguilaInfantal_w85rzm.png",
   },
   {
     nombre: "Abeja",
     altura: 10,   // mm
     peso: 100,     // mg
+    velocidad:23.8, //km/h
     fuerza: "Pequeña, pero esenciales polinizadoras",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261878/Abeja_lqehsk.png",
@@ -381,6 +433,7 @@ const animalsData = [
     nombre: "Comadreja",
     altura: 300,   // mm
     peso: 500,    // g
+    velocidad:25, //km/h
     fuerza: "Ágil y rápida",
     ubicacion: "América del Norte, Europa, Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261881/Comadreja_erbc05.png",
@@ -390,6 +443,7 @@ const animalsData = [
     nombre: "Ciempiés",
     altura: 300,   // mm
     peso: 1,      // g
+    velocidad:0.72, //km/h
     fuerza: "Algunas especies tienen veneno fuerte",
     ubicacion: "En todo el mundo, lugares húmedos",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262116/Ciempie%CC%81s_yprhkz.png",
@@ -399,6 +453,7 @@ const animalsData = [
     nombre: "Perro",
     altura: 1100,  // mm (según la raza)
     peso: 90000,  // g (según la raza)
+    velocidad:28.8, //km/h
     fuerza: "Depende de la raza, algunas muy fuertes",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262098/Perro_b4hnso.png",
@@ -408,15 +463,26 @@ const animalsData = [
     nombre: "Rana",
     altura: 300,   // mm
     peso: 3000,   // g
+    velocidad:3, //km/h
     fuerza: "Buenas saltadoras, algunas con veneno potente",
     ubicacion: "En todo el mundo, zonas húmedas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262095/Rana_efbxcm.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167167/draw-rana_jjjwnn.png",
+  },{
+    nombre: "Búho",
+    altura: 600,  // mm
+    peso: 2000,   // g
+    velocidad:40, //km/h
+    fuerza: "Poderosas garras y una excelente visión nocturna, lo que los convierte en grandes cazadores. Su vuelo es silencioso y preciso",
+    ubicacion: "América del Norte, Europa, Asia y África, en bosques y áreas montañosas",
+    imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728374042/buhoRealista.webp_mveruh.png",
+    imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728374067/buhoInfantil.webp_zmfpvn.png",
   },
   {
     nombre: "Gusano",
     altura: 60,   // mm
     peso: 30,    // g
+    velocidad:0.018, //km/h
     fuerza: "Capaces de mover grandes cantidades de tierra",
     ubicacion: "En todo el mundo, suelos húmedos",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262064/Gusano_he4zou.png",
@@ -426,6 +492,7 @@ const animalsData = [
     nombre: "Gallo",
     altura: 700,   // mm
     peso: 5000,   // g
+    velocidad:10.8, //km/h
     fuerza: "Defiende su territorio",
     ubicacion: "Doméstico en todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262118/Gallo_f4hcvu.png",
@@ -435,6 +502,7 @@ const animalsData = [
     nombre: "Pollo",
     altura: 600,   // mm
     peso: 4000,   // g
+    velocidad:10.4, //km/h
     fuerza: "Relativamente poca fuerza, pero son ágiles y pueden correr rápido. Usados principalmente para la producción de carne y huevos",
     ubicacion: "Doméstico en todo el mundo, comúnmente en granjas y áreas rurales",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262089/Pollo_qybeu8.png",
@@ -444,6 +512,7 @@ const animalsData = [
     nombre: "Pollito",
     altura: 100,   // mm
     peso: 40,    // g
+    velocidad:0.72, //km/h
     fuerza: "Muy débil en sus primeras etapas de vida, pero rápidamente se fortalecen para caminar y alimentarse",
     ubicacion: "Doméstico en todo el mundo, en granjas y áreas rurales",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262094/Pollito_b5atbb.png",
@@ -453,6 +522,7 @@ const animalsData = [
     nombre: "Koala",
     altura: 850,   // mm
     peso: 15000,  // g
+    velocidad:2.08, //km/h
     fuerza: "Fuertes garras para trepar",
     ubicacion: "Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262117/Koala_coenjs.png",
@@ -462,6 +532,7 @@ const animalsData = [
     nombre: "Ballena",
     altura: 30000,   // mm
     peso: 200000000, // g
+    velocidad:48, //km/h
     fuerza: "Extremadamente fuerte, capaz de nadar grandes distancias y soportar inmensas presiones oceánicas",
     ubicacion: "Océanos de todo el mundo, especialmente en aguas profundas y en zonas polares y templadas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262086/Ballena_jfpp7d.png",
@@ -471,6 +542,7 @@ const animalsData = [
     nombre: "Cabra",
     altura: 800,   // mm
     peso: 140000, // g
+    velocidad:15.2, //km/h
     fuerza: "Capaces de trepar y saltar grandes distancias",
     ubicacion: "Doméstico en todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262085/Cabra_obc2bh.png",
@@ -480,6 +552,7 @@ const animalsData = [
     nombre: "Pez Payaso",
     altura: 110,   // mm
     peso: 250,    // g
+    velocidad:3.6, //km/h
     fuerza: "Adaptados a la simbiosis con anémonas",
     ubicacion: "Océanos Índico y Pacífico",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261868/Pez_Payaso_vppv5h.png",
@@ -487,8 +560,9 @@ const animalsData = [
   },
   {
     nombre: "Conejo",
-    altura: 500,   // mm
+    altura: 300,   // mm
     peso: 3000,   // g
+    velocidad: 60, //km/h
     fuerza: "Capaz de cavar madrigueras",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262131/Conejo_uyb02o.png",
@@ -498,6 +572,7 @@ const animalsData = [
     nombre: "Camello",
     altura: 2300,  // mm
     peso: 1000000, // g
+    velocidad:64.6, //km/h
     fuerza: "Muy fuerte, capaces de cargar hasta 200 kg por largas distancias en condiciones áridas",
     ubicacion: "Desiertos y regiones áridas de África del Norte, Medio Oriente y Asia Central",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262127/Camello_aoj9bj.png",
@@ -505,8 +580,9 @@ const animalsData = [
   },
   {
     nombre: "Lobo",
-    altura: 900,   // mm
+    altura: 1200,   // mm
     peso: 80000,  // g
+    velocidad:62.4, //km/h
     fuerza: "Mandíbulas poderosas",
     ubicacion: "América del Norte, Europa, Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262125/Lobo_rl7ckk.png",
@@ -516,6 +592,7 @@ const animalsData = [
     nombre: "Araña",
     altura: 20,    // mm
     peso: 50,    // g
+    velocidad:2, //km/h
     fuerza: "Telarañas extremadamente fuertes en proporción",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262059/Aran%CC%83a_pp2ifi.png",
@@ -525,6 +602,7 @@ const animalsData = [
     nombre: "Cocodrilo",
     altura: 1800,  // mm
     peso: 1200000, // g
+    velocidad:14.4, //km/h
     fuerza: "Mandíbulas extremadamente poderosas",
     ubicacion: "América, África, Asia, Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262121/Cocodrilo_ez3qj5.png",
@@ -534,6 +612,7 @@ const animalsData = [
     nombre: "Ardilla",
     altura: 300,   // mm
     peso: 500,    // g
+    velocidad:18, //km/h
     fuerza: "Ágiles y rápidas",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262105/Ardilla_yck1kl.png",
@@ -541,8 +620,9 @@ const animalsData = [
   },
   {
     nombre: "Zorro",
-    altura: 500,   // mm
+    altura: 550,   // mm
     peso: 14000,  // g
+    velocidad:45.2, //km/h
     fuerza: "Ágil y rápido",
     ubicacion: "América, Europa, Asia y África",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262124/Zorro_jh4vll.png",
@@ -552,6 +632,7 @@ const animalsData = [
     nombre: "Grillo",
     altura: 50,    // mm
     peso: 2,      // g
+    velocidad:1.9, //km/h
     fuerza: "Fuerte para su tamaño, especialmente en las patas traseras, lo que les permite saltar grandes distancias",
     ubicacion: "En todo el mundo, en áreas como campos, jardines y bosques",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262114/Grillo_ttewg8.png",
@@ -561,6 +642,7 @@ const animalsData = [
     nombre: "Pulpo",
     altura: 5000,  // mm
     peso: 100000, // g
+    velocidad:40, //km/h
     fuerza: "Tentáculos extremadamente fuertes y flexibles, con capacidad de ejercer gran fuerza en cada ventosa",
     ubicacion: "Océanos de todo el mundo, especialmente en aguas costeras y de arrecifes",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262112/Pulpo_o5agwq.png",
@@ -570,6 +652,7 @@ const animalsData = [
     nombre: "Vaca",
     altura: 1800,  // mm
     peso: 900000, // g
+    velocidad:35.4, //km/h
     fuerza: "Usadas en trabajos de carga",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262112/Vaca_w09lzq.png",
@@ -579,6 +662,7 @@ const animalsData = [
     nombre: "Armadillo",
     altura: 250,   // mm
     peso: 6000,   // g
+    velocidad:30, //km/h
     fuerza: "Fuerte para cavar",
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261921/Armadillo_kwml7v.png",
@@ -588,6 +672,7 @@ const animalsData = [
     nombre: "Oveja",
     altura: 1000,  // mm
     peso: 160000, // g
+    velocidad:29, //km/h
     fuerza: "Moderada, criadas para lana, carne y leche",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262061/Oveja_iqgabj.png",
@@ -597,6 +682,7 @@ const animalsData = [
     nombre: "Hormiga",
     altura: 25,  // mm
     peso: 5,      // mg
+    velocidad:2.72, //km/h
     fuerza: "Levantan 10 a 50 veces su peso corporal",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261894/Hormiga_krv9kg.png",
@@ -604,8 +690,9 @@ const animalsData = [
   },
   {
     nombre: "Oso Polar",
-    altura: 1600,  // mm
+    altura: 2200,  // mm
     peso: 700000, // g
+    velocidad:40, //km/h
     fuerza: "Muy fuerte, depredadores superiores",
     ubicacion: "Ártico",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262086/Oso_Polar_zdawga.png",
@@ -613,8 +700,9 @@ const animalsData = [
   },
   {
     nombre: "Oso Panda",
-    altura: 900,   // mm
+    altura: 950,   // mm
     peso: 120000, // g
+    velocidad:30.2, //km/h
     fuerza: "Mandíbulas fuertes para masticar bambú",
     ubicacion: "Bosques de bambú en China",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262061/Oso_Panda_nwpgma.png",
@@ -624,6 +712,7 @@ const animalsData = [
     nombre: "Mariposa",
     altura: 120,   // mm
     peso: 0.5,    // g
+    velocidad:11.2, //km/h
     fuerza: "Buena capacidad de vuelo para su tamaño",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262066/Mariposa_mncctj.png",
@@ -633,6 +722,7 @@ const animalsData = [
     nombre: "Mariquita",
     altura: 10,    // mm
     peso: 0.1,    // g
+    velocidad:3.6, //km/h
     fuerza: "Fuerte para su tamaño",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261882/Mariquita_fo6kxx.png",
@@ -642,6 +732,7 @@ const animalsData = [
     nombre: "Toro",
     altura: 1800,  // mm
     peso: 1000000, // g
+    velocidad:38, //km/h
     fuerza: "Extremadamente fuerte",
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261923/Toro_hnzfdj.png",

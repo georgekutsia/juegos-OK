@@ -39,7 +39,7 @@ function ElectionGamesComponent({returnToScreen}) {
         {currentImages[0] && currentImages[1] && (
           <div className='election-game-box-imgs'>
           <ButtonImgComponent img={currentImages[0]} color={"0 0px 55px rgb(0, 242, 255)"} move={"30%"}/>
-            <img src={dataNavbarImg[1]} alt="Animal"className="election-image" />
+            <img src={dataNavbarImg[1]} alt="Animal" className="election-image" />
           <ButtonImgComponent img={currentImages[1]} color={"0 0px 55px rgb(255, 255, 50)"} move={"-30%"}/>
           </div>
         )}

@@ -36,6 +36,12 @@ export const ger = {
   electionGame:"Spiel der Wah",
   sizeGame:"Spielen um Größe und Stärke",
   shadowGame:"Scherenschnitt und Tierspiel",
-  animalSoundGame:"Erkennt Tiergeräusche"
+  animalSoundGame:"Erkennt Tiergeräusche",
+
+
+// preguntas
+elMasAlto:"Welches ist das höchste oder größte Tier?",
+elMasPesado:"Welches ist das schwerste Tier?",
+elMasVeloz:"Welches ist das schnellste Tier?",
 
 };

@@ -34,10 +34,15 @@ export const esp = {
 
 
 
-
-
   electionGame:"Juego de elecciones",
   sizeGame:"Juego de tamaños y fuerzas",
   shadowGame:"Juego de siluetas y animales",
-  animalSoundGame:"Detecta sonidos de animales"
+  animalSoundGame:"Detecta sonidos de animales",
+
+
+
+// preguntas
+elMasAlto:"Cual es el animal más alto o grande?",
+elMasPesado:"Cual es el animal más pesado?",
+elMasVeloz:"Cual es el animal más rápido?",
 };

@@ -92,9 +92,9 @@
 }
 
 .imageRotate {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease;
+  /* width: 100%;
+  height: 100%; */
+  transition: transform 0.3s ease;
 }
 
 .left-half,

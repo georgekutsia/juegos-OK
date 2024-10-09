@@ -3,15 +3,78 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 10vh;
 }
 
 .animals-comparison {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 100px;
   width: 100%;
   margin-top: 20px;
+  
+}
+.size-main-image{
+  width: calc(100px + 5vw);
+  height: calc(100px + 5vw);
+  position: absolute;
+  bottom: 30px;
+}
+.size-img{
+width: calc(100px + 5vw);
+height: calc(100px + 5vw);
+
 }
 
 .animal-card {
   text-align: center;
+}
+
+.size-game-img-isbig {
+  width: calc(150px + 8vw);
+  height: calc(150px + 8vw);
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+  padding: 40px;
+  animation: border-radius-animation 1s ease-in-out forwards, border-rotate-animation 1s ease-in-out infinite;
+}
+
+@keyframes border-radius-animation {
+  0% {
+    border-radius: 0;
+  }
+  100% {
+    border-radius: 10%;
+  }
+}
+
+@keyframes border-rotate-animation {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.size-game-img-ismall2{
+  width: calc(30px + 3.5vw);
+  height: calc(30px + 3.5vw);
+  transition: 0.5s ease-in-out;
+
+}
+.size-game-img-ismall1{
+  width: calc(60px +4vw);
+  height: calc(60px +4vw);
+  transition: 0.5s ease-in-out;
+
+}
+.size-game-img-ismall0{
+  width: calc(120px +6vw);
+  height: calc(120px +6vw);
+  transition: 0.5s ease-in-out;
+
 }
