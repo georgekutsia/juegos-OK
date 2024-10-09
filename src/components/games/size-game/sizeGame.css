@@ -78,3 +78,20 @@ height: calc(100px + 5vw);
   transition: 0.5s ease-in-out;
 
 }
+
+.span-cm{
+  color: var(--green);
+  margin: 0px 10px;
+}
+.span-kg{
+  color: var(--brown);
+  margin: 0px 10px;
+
+
+}
+.span-km{
+  color: var(--red);
+  margin: 0px 10px;
+
+
+}

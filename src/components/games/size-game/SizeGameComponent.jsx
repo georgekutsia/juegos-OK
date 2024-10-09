@@ -158,13 +158,15 @@ function SizeGameComponent({ returnToScreen }) {
       <div className="animals-comparison">
       <div >
         {img1 && 
-          <h2>{selectedAnimals[0].altura/10}cm {selectedAnimals[0].peso/1000}Kg  {selectedAnimals[0].velocidad}km/h </h2>
+        
+          <h2><span className='span-cm'> {selectedAnimals[0].altura/10}cm</span> <span className='span-kg'>{selectedAnimals[0].peso/1000}Kg </span> <span className='span-km'>{selectedAnimals[0].velocidad}km/h</span> </h2>
         }
           <img  className={`size-img ${img1}`}  src={selectedAnimals[0].imagenReal}  alt={selectedAnimals[0].nombre} />
           </div>
       <div >
           {img1 &&
-              <h2>{selectedAnimals[1].altura/10}cm {selectedAnimals[1].peso/1000}Kg {selectedAnimals[1].velocidad}km/h</h2>
+            <h2><span className='span-cm'> {selectedAnimals[1].altura/10}cm</span> <span className='span-kg'>{selectedAnimals[1].peso/1000}Kg </span> <span className='span-km'>{selectedAnimals[1].velocidad}km/h</span> </h2>
+
           }
           <img  className={`size-img ${img2}`}  src={selectedAnimals[1].imagenReal}  alt={selectedAnimals[1].nombre} />
           </div>
