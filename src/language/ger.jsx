@@ -29,6 +29,7 @@ export const ger = {
   typeShadow:"Scherenschnitt",
   typePart:"Teile",
   typeReal:"Realismus",
+  typeRotate:"Rotieren",
 
 
 

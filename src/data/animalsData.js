@@ -737,6 +737,226 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261923/Toro_hnzfdj.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167117/draw-toro_rqq7ng.png",
-  }
+  },    {
+      nombre: "Cerdo salvaje",
+      altura: 750,  // mm
+      peso: 80000,  // g
+      velocidad: 48, // km/h
+      fuerza: "Posee colmillos fuertes y afilados que utiliza para defenderse y excavar",
+      ubicacion: "Bosques, selvas y áreas rurales de Europa, Asia y algunas partes de América",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465867/cerdo_salvaje_vvbo5p.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478317/cerdo_salvaje-_ohhrdw.png"
+    },
+    {
+      nombre: "Coyote",
+      altura: 600,  // mm
+      peso: 15000,  // g
+      velocidad: 64, // km/h
+      fuerza: "Gran resistencia y adaptabilidad, cazador solitario o en grupo",
+      ubicacion: "América del Norte, desde Canadá hasta México",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465863/coyote_jqadwx.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478336/coyote-_ipyxmq.png"
+    },
+    {
+      nombre: "Tortuga",
+      altura: 500,  // mm
+      peso: 50000,  // g
+      velocidad: 0.27, // km/h
+      fuerza: "Caparazón resistente que protege su cuerpo de depredadores",
+      ubicacion: "Océanos, ríos, y cuerpos de agua dulce en todo el mundo",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465871/tortuga_vvhhjx.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478318/tortuga-_q0mde3.png"
+    },
+    {
+      nombre: "Caracol",
+      altura: 50,  // mm
+      peso: 30,  // g
+      velocidad: 0.03, // km/h
+      fuerza: "Usa su baba para adherirse a superficies verticales y desplazarse",
+      ubicacion: "Zonas húmedas y templadas en todo el mundo",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465869/caracol_eqnirp.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478322/caracol-_shznol.png"
+    },
+    {
+      nombre: "Chihuahua",
+      altura: 230,  // mm
+      peso: 2500,  // g
+      velocidad: 24, // km/h
+      fuerza: "Pequeño pero valiente, tiene gran agilidad",
+      ubicacion: "Doméstico, originario de México",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465865/perro_chihuahua_c71cfz.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478323/perro_chichuahua-_m3xxqc.png"
+    },
+    {
+      nombre: "Pastor Alemán",
+      altura: 650,  // mm
+      peso: 40000,  // g
+      velocidad: 48, // km/h
+      fuerza: "Fuerte, leal y utilizado en trabajos policiales y de rescate",
+      ubicacion: "Doméstico, originario de Alemania",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465842/perro_pastor_alema%CC%81n_rflldf.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478321/perro_pastor-alema%CC%81n_jfspwu.png"
+    },
+    {
+      nombre: "Poodle",
+      altura: 450,  // mm
+      peso: 20000,  // g
+      velocidad: 35, // km/h
+      fuerza: "Inteligente y muy ágil, utilizado en competencias de agilidad",
+      ubicacion: "Doméstico, originario de Francia",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465845/perro_puddle_nyyww2.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478317/perro_puddle-_i6uz4a.png"
+    },
+    {
+      nombre: "Dálmata",
+      altura: 580,  // mm
+      peso: 32000,  // g
+      velocidad: 60, // km/h
+      fuerza: "Resistencia para correr largas distancias",
+      ubicacion: "Doméstico, originario de Croacia",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465846/perro_da%CC%81lmata_brmd6w.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478322/perro_da%CC%81lmata-_ga9nu2.png"
+    },
+    {
+      nombre: "Pug",
+      altura: 300,  // mm
+      peso: 8000,  // g
+      velocidad: 10, // km/h
+      fuerza: "Perro compacto y musculoso, conocido por su gran personalidad",
+      ubicacion: "Doméstico, originario de China",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465843/pug_loptiw.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728482852/perro_pug-_k3nlzq.png"
+    },
+    {
+      nombre: "Golden Retriever",
+      altura: 610,  // mm
+      peso: 34000,  // g
+      velocidad: 48, // km/h
+      fuerza: "Excelente nadador, utilizado en rescate acuático",
+      ubicacion: "Doméstico, originario de Reino Unido",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465841/perro_golden_retriever_es3bw0.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728482853/perro_golden-retriever-_jwergj.png"
+    },
+    {
+      nombre: "Gato siamés",
+      altura: 250,  // mm
+      peso: 4000,  // g
+      velocidad: 48, // km/h
+      fuerza: "Muy ágil y rápido para cazar",
+      ubicacion: "Doméstico, originario de Tailandia",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465840/gato_siame%CC%81s_rrkn2m.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480012/gato_siame%CC%81s-_eksq7t.png"
+    },
+    {
+      nombre: "Gato esfinge",
+      altura: 230,  // mm
+      peso: 3500,  // g
+      velocidad: 30, // km/h
+      fuerza: "Rápido y ágil a pesar de su apariencia frágil",
+      ubicacion: "Doméstico, originario de Canadá",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465839/gato_esfinje_grfci8.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480010/gato_naranja-_h0w6ls.png"
+    },
+    {
+      nombre: "Gato naranja",
+      altura: 250,  // mm
+      peso: 4500,  // g
+      velocidad: 48, // km/h
+      fuerza: "Muy juguetón y hábil para cazar",
+      ubicacion: "Doméstico, encontrado en todo el mundo",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465862/gato_naranja_bo8xlh.png",
+      imagenAnimada:""
+    },
+    {
+      nombre: "Gato persa",
+      altura: 250,  // mm
+      peso: 5000,  // g
+      velocidad: 30, // km/h
+      fuerza: "De temperamento tranquilo y cariñoso, no es un gran cazador",
+      ubicacion: "Doméstico, originario de Persia (Irán)",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465865/gato_persa_pykg3i.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480017/gato_persa-_kji2cv.png"
+    },
+    {
+      nombre: "Ratón",
+      altura: 60,  // mm
+      peso: 20,  // g
+      velocidad: 13, // km/h
+      fuerza: "Rápido y hábil, con gran capacidad para escabullirse por pequeños espacios",
+      ubicacion: "Zonas urbanas y rurales en todo el mundo",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465838/rato%CC%81n.webp_ch8dyy.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480013/rato%CC%81n-c%CC%A7_o0zz39.png"
+    },
+    {
+      nombre: "Zebra",
+      altura: 1500,  // mm
+      peso: 350000,  // g
+      velocidad: 65, // km/h
+      fuerza: "Resistente y rápida, capaz de correr largas distancias",
+      ubicacion: "África, en sabanas y pastizales",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465846/zebra_yrrubj.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480006/zebra-_hlt3sg.png"
+    },
+    {
+      nombre: "Pingüino",
+      altura: 1100,  // mm
+      peso: 35000,  // g
+      velocidad: 12, // km/h (en agua)
+      fuerza: "Gran nadador, capaz de bucear a grandes profundidades",
+      ubicacion: "Regiones polares y costeras del hemisferio sur",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465838/Pingu%CC%88ino_sijl2l.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480007/pingu%CC%88ino-_t62b70.png"
+    },
+    {
+      nombre: "Nutria",
+      altura: 600,  // mm
+      peso: 15000,  // g
+      velocidad: 10.9, // km/h (en agua)
+      fuerza: "Gran habilidad para nadar y cazar peces",
+      ubicacion: "Ríos y lagos de Europa, América y Asia",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465848/nutria_e0ie9q.png",
+      imagenAnimada:""
+    },
+    {
+      nombre: "Mosca",
+      altura: 6,  // mm
+      peso: 0.005,  // g
+      velocidad: 8, // km/h
+      fuerza: "Rápidos reflejos y vuelo ágil",
+      ubicacion: "En todo el mundo, especialmente en zonas cálidas",
+      imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477893/moscaReal_qv8wyb.png",
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480008/mosca-g_ei4boc.png"
+    },
+      {
+        nombre: "Mosquito",
+        altura: 10,  // mm
+        peso: 0.01,  // g
+        velocidad: 2, // km/h
+        fuerza: "Sus antenas detectan el dióxido de carbono exhalado por sus presas a varios metros de distancia",
+        ubicacion: "Zonas húmedas y cálidas, especialmente en áreas tropicales y subtropicales",
+        imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477892/mosquitoReal_xqwwd7.png",
+        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728479997/mosquito-_i88va7.png"
+      },
+      {
+        nombre: "Bisonte",
+        altura: 1800,  // mm
+        peso: 900000,  // g
+        velocidad: 56, // km/h
+        fuerza: "Cuerpo robusto y musculoso, capaz de correr rápido y atacar con su poderosa cornamenta",
+        ubicacion: "Praderas y bosques de América del Norte y Europa",
+        imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477893/bisonteReal_dytyyd.png",
+        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480009/bisonte-_ufajkg.png"
+      },
+      {
+        nombre: "Cucaracha",
+        altura: 15,  // mm
+        peso: 0.3,  // g
+        velocidad: 5, // km/h
+        fuerza: "Extremadamente resistente, capaz de sobrevivir en condiciones muy adversas",
+        ubicacion: "Presente en todo el mundo, especialmente en áreas urbanas",
+        imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477892/cucarachaReal_tauvik.png",
+        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480007/cucaracha-_tm9sbe.png"
+      }    
+  
 ]
 export default animalsData;

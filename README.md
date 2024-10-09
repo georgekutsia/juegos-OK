@@ -15,20 +15,7 @@ Ojetivo: maquetar botones de Setting:
 -En los animales, que aparecen aptrapados dentro del cuadrado del botón, Inluso quitaría el fondo y los bordes del botón para que parezca que se pulsa directamente sobre las mascotas
 
 
---una imágen nueva de loro realista
---de cerdo salvaje
---coyote
---perro salvaje y de más tipos
---tortuga  0.4
---snail  0.1
---ratón
---zebra
---pinguino
---otter
---mosca
--mosquito
--libélula
---murcielago brazilian free-tailed
+que salga el nombre de los animales cuando se revela la respuesta y hacerlo en alemán también
+
 --serpientes
 -- lagartos spiny-tailed iguana
---bisonte

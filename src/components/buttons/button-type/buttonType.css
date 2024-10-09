@@ -10,7 +10,15 @@
 .button-type-real{
   background-color: var(--orange);
 }
+.button-type-rotate{
+  background-color: var(--dark-green);
+}
+.small-button{
+  width: 50px;
+  margin: auto;
+  background-color: var(--black);
 
+}
 
 .button-ripple{
   position: relative;

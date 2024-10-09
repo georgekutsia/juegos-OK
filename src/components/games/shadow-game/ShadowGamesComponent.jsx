@@ -12,6 +12,7 @@ function ShadowGamesComponent({returnToScreen}) {
   const [showAnswer, setShowAnswer] = useState("");
   const [randomAnimal, setrandomAnimal] = useState(Math.floor(Math.random() * animalsData.length));
   const [showRealImage, setShowRealImage] = useState(false); // Nuevo estado para controlar el tipo de imagen
+  const [rotation, setrotation] = useState(0)
 
   const handleRandom = () => {
     setrandomAnimal(Math.floor(Math.random() * (30 - (-30) + 1)) + (-30));
@@ -61,6 +62,28 @@ function ShadowGamesComponent({returnToScreen}) {
     setPartsBoxSize("shadow-game-img-box");
     setShowAnswer("");
   };
+  const setRandomRotation = () => {
+    let rotation;
+    const random = Math.random();
+    if (random < 0.5) {
+      rotation = Math.floor(Math.random() * (120 - 20)) - 120;
+    } else {
+      rotation = Math.floor(Math.random() * (120 - 20)) + 120;
+    }
+    setrotation(rotation);
+  };
+  
+  const handleRotate = () => {
+    setShowAnswer("");
+    setRandomRotation()
+  };
+  const handleReset = () => {
+    setShowAnswer("");
+    setrotation(0)
+    setShowAnswer("show-game-img");
+    setPartsBoxSize("");
+    setShowImg("")
+  };
 
   const toggleImageType = () => {
     setShowRealImage((prevShowRealImage) => !prevShowRealImage); // Cambia entre imagen real y animada
@@ -80,7 +103,9 @@ function ShadowGamesComponent({returnToScreen}) {
             <ButtonTypeComponent onClick={() => handleBlur()} classN={"button-type-blur"} typeGame={"typeBlur"} />
             <ButtonTypeComponent onClick={() => handleShadow()} classN={"button-type-shadow"} typeGame={"typeShadow"} />
             <ButtonTypeComponent onClick={() => handlePart()} classN={"button-type-part"} typeGame={"typePart"} />
+            <ButtonTypeComponent onClick={() => handleRotate()} classN={"button-type-rotate"} typeGame={"typeRotate"} />
             <ButtonTypeComponent onClick={() => toggleImageType()} classN={"button-type-real"} typeGame={"typeReal"} />
+            <ButtonTypeComponent onClick={() => handleReset()} classN={"button-type-reset"} typeGame={"typeReset"} icon ={` fa-rotate-left`} otherClass={"small-button"} />
         </div>
         <div>
         </div>
@@ -90,7 +115,7 @@ function ShadowGamesComponent({returnToScreen}) {
           <img
             onClick={() => handleShow()}
             className={`${showImg} ${showAnswer} shadow-game-img-size` }
-            style={showImg === "part-game-img" ? { transform: `translate(${randomAnimal}%, ${randomAnimal}%)` } : {}}
+            style={showImg === "part-game-img" ? { transform: `translate(${randomAnimal}%, ${randomAnimal}%) rotate(${rotation}deg)` } :{ transform: `rotate(${rotation}deg)` }}
             src={showRealImage ? shuffledAnimals[currentIndex].imagenReal : shuffledAnimals[currentIndex].imagenAnimada} // Cambia entre imagenAnimada e imagenReal
             alt={shuffledAnimals[currentIndex].nombre} // Usa el nombre del animal
           />

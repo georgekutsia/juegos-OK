@@ -6,7 +6,7 @@ import animalsData from '../../../data/animalsData';
 import { Context } from "../../../shared/context.js";
 import ButtonSolutionComponent from '../../buttons/button-solution/ButtonSolutionComponent';
 import ButtonNextComponent from '../../buttons/button-next/ButtonNextComponent';
-
+import "../../spinners.css"
 function SizeGameComponent({ returnToScreen }) {
   const [selectedAnimals, setSelectedAnimals] = useState([]);
   const { dataNavbarImg } = useContext(Context);
@@ -14,8 +14,10 @@ function SizeGameComponent({ returnToScreen }) {
   const [img2, setimg2] = useState("")
   const [toggleQuestion, setToggleQuestion] = useState(0)
   const { t } = useContext(Context);
-
- 
+  const [loading, setLoading] = useState(true); 
+  const handleImageLoad = () => {
+    setLoading(false); // Deja de mostrar el spinner cuando la imagen ha cargado
+  };
   const selectRandomAnimals = () => {
     const randomAnimals = [];
     while (randomAnimals.length < 2) {
@@ -143,30 +145,31 @@ function SizeGameComponent({ returnToScreen }) {
     return <div>Cargando animales...</div>; 
   }
 
-  return (
+  return (    
     <div className="size-game-box">
       <ButtonReturnComponent returnToScreen={returnToScreen} />
       {toggleQuestion === 0 &&
       <h3>     {t("elMasAlto")}</h3>
       }
       {toggleQuestion === 1 &&
-      <h3>cual es el animal mas pesado?</h3>
+        <h3>     {t("elMasPesado")}</h3>
+
       }
       {toggleQuestion === 2 &&
-      <h3>cual es el animal mas veloz?</h3>
+        <h3>     {t("elMasVeloz")}</h3>
+
       }
       <div className="animals-comparison">
       <div >
-        {img1 && 
-        
-          <h2><span className='span-cm'> {selectedAnimals[0].altura/10}cm</span> <span className='span-kg'>{selectedAnimals[0].peso/1000}Kg </span> <span className='span-km'>{selectedAnimals[0].velocidad}km/h</span> </h2>
+        {img1 &&
+          <h2><span className='span-cm'> {selectedAnimals[0].altura/10}cm</span> <span className='span-kg'>{selectedAnimals[0].peso/1000}Kg </span> <span className='span-km'>{selectedAnimals[0].velocidad}km/h</span> </h2> 
         }
-          <img  className={`size-img ${img1}`}  src={selectedAnimals[0].imagenReal}  alt={selectedAnimals[0].nombre} />
+        {loading && <div className="spinner1"></div>}
+          <img onLoad={handleImageLoad} className={`size-img ${img1}`}  src={selectedAnimals[0].imagenReal}  alt={selectedAnimals[0].nombre} />
           </div>
       <div >
           {img1 &&
             <h2><span className='span-cm'> {selectedAnimals[1].altura/10}cm</span> <span className='span-kg'>{selectedAnimals[1].peso/1000}Kg </span> <span className='span-km'>{selectedAnimals[1].velocidad}km/h</span> </h2>
-
           }
           <img  className={`size-img ${img2}`}  src={selectedAnimals[1].imagenReal}  alt={selectedAnimals[1].nombre} />
           </div>
@@ -195,8 +198,3 @@ SizeGameComponent.propTypes = {
 };
 
 export default SizeGameComponent;
-
-// ok estoy mirando si hago el tamaño de la solución que cargue el tamaño según el dato que guarda de altura de cada animal, pero hay 
-//demasiada diferencia y queda feo en pantalla...
-//otra opción es que calcule la altura y al resultado del mas grande, que lo dejaré con tamaño fijo, le restaré el del pequeño, para hacer
-//ver la diferencia entre ellos mejor en la pantalla

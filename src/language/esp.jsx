@@ -31,6 +31,7 @@ export const esp = {
   typeShadow:"Silueta",
   typePart:"Partes",
   typeReal:"Realismo",
+  typeRotate:"Rotar",
 
 
 

@@ -62,10 +62,11 @@ width: calc(150px + 10vw);
     position: absolute;
     display: flex;
     flex-direction: row;
-    justify-content:end;
+    flex-wrap: wrap;
     gap: 1vw;
-    bottom: 10px;
+    bottom: 10vh;
     left: 20px;
     height: 50px;
+    width: 50vw;
   }
 }
