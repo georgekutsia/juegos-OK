@@ -2,8 +2,8 @@
 }
 
 .sound-game-btn {
-  width: 250px; 
-  height: 250px;
+  width: calc(100px + 6vw); 
+  height: calc(100px + 6vw);
   height: auto;
   filter: drop-shadow(0px 4px 10px black); 
   position: absolute;
@@ -16,4 +16,8 @@
   height: 240px;
 
 
+}
+
+.sound-solution-img{
+  width: calc(100px + 10vw);
 }

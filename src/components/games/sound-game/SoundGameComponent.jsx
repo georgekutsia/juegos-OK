@@ -23,9 +23,11 @@ function SoundGameComponent({ returnToScreen }) {
 
   const handlePlaySound = () => {
     if (selectedAnimal) {
-      const randomSound = selectedAnimal[Math.floor(Math.random() * selectedAnimal.length)];
+      let bla = selectedAnimal.sonido
+      const indiceAleatorio = Math.floor(Math.random() * bla.length);
       setCurrentAnimal(selectedAnimal.imagenReal)
-      const animalSound = new Audio(randomSound);
+      console.log(indiceAleatorio)
+      const animalSound = new Audio(selectedAnimal.sonido[0]);
       animalSound.play();
     }
   };
@@ -46,7 +48,7 @@ function SoundGameComponent({ returnToScreen }) {
         <>
         <h3>{}</h3>
         {showSolution && 
-        <img src={currentAnimal} alt="imagen" />
+        <img className="sound-solution-img" src={currentAnimal} alt="imagen" />
         }
           <img
             className="sound-game-btn"
