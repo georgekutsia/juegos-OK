@@ -8,6 +8,7 @@ const animalsData = [
     ubicacion: "Europa, Asia, África y Nueva Zelanda (introducido); prefieren hábitats como bosques, praderas y jardines",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262134/Erizo_xrhaqy.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167094/draw-erizo_urm4ht.png",
+    
   },  
   {
     nombre: "Alce",
@@ -18,6 +19,7 @@ const animalsData = [
     ubicacion: "América del Norte, Europa y Asia, en bosques boreales y tundras",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262115/Alce_jpqx03.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167094/draw-alce_owmr2b.png",
+    
   },
   {
     nombre: "Ciervo",
@@ -28,6 +30,7 @@ const animalsData = [
     ubicacion: "América, Europa, Asia y el norte de África, en bosques, praderas y montañas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262122/Ciervo_abzbeb.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167091/draw-ciervo_skayyp.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510215/deer_yyh6v9.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510215/deer-bleats_psdhby.mp3"]
   },
   {
     nombre: "Burro",
@@ -38,6 +41,7 @@ const animalsData = [
     ubicacion: "Doméstico en todo el mundo, especialmente en áreas rurales y montañosas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262106/Burro_ov26kd.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167089/draw-burro_kviwrw.png",
+    
   },
   {
     nombre: "Medusa",
@@ -48,6 +52,7 @@ const animalsData = [
     ubicacion: "Océanos de todo el mundo, especialmente en aguas cálidas y templadas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262103/Medusa_rim9pb.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167084/draw-medusa_smzuqh.png",
+    
   },
   {
     nombre: "Mantis Religiosa",
@@ -58,6 +63,7 @@ const animalsData = [
     ubicacion: "En todo el mundo, especialmente en regiones tropicales y templadas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262102/Mantis_Religiosa_ozbbpv.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167090/draw-mantis_dqg65i.png",
+    
   },
   {
     nombre: "Hipopótamo",
@@ -68,6 +74,7 @@ const animalsData = [
     ubicacion: "África subsahariana, en ríos, lagos y áreas cercanas al agua",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262129/Hipopo%CC%81tamo_rg14r7.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167088/draw-hipopotamo_vfrtxf.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728506289/Hipopotamo1_tlghpm.mp3"]
   },
   {
     nombre: "Reno",
@@ -78,6 +85,7 @@ const animalsData = [
     ubicacion: "Ártico y subártico, incluyendo América del Norte, Europa y Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262130/Reno_lnekjr.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167093/draw-reno_uphqeu.png",
+    
   },
   {
     nombre: "Tiburón Tigre",
@@ -88,6 +96,7 @@ const animalsData = [
     ubicacion: "Océanos tropicales y subtropicales en todo el mundo, especialmente cerca de arrecifes y costas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262092/TIburo%CC%81n_wpz2wi.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167087/draw-tiburo%CC%81n_foofnd.png",
+    
   },
   {
     nombre: "Tiburón Martillo",
@@ -98,6 +107,7 @@ const animalsData = [
     ubicacion: "Océanos tropicales y cálidos en todo el mundo, cerca de costas y arrecifes",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262109/Tiburo%CC%81n_Martillo_bvfqo7.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167087/draw-tiburo%CC%81nmartillo_yegxen.png",
+    
   },
   {
     nombre: "Pez Espada",
@@ -108,6 +118,7 @@ const animalsData = [
     ubicacion: "Océanos tropicales, subtropicales y templados de todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262099/Pez_Espada_iolnwr.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167086/draw-tiburo%CC%81nespada_kf9ves.png",
+    
   },
   {
     nombre: "Cangrejo",
@@ -118,6 +129,7 @@ const animalsData = [
     ubicacion: "Océanos, costas, ríos y manglares de todo el mundo, dependiendo de la especie",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262132/Cangrejo_wjkbe3.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167090/draw-cangrejo_ofaevg.png",
+    
   },
   {
     nombre: "Libélula",
@@ -128,6 +140,7 @@ const animalsData = [
     ubicacion: "Zonas húmedas en todo el mundo excepto en áreas extremadamente frías",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261877/Libe%CC%81lula_djewmd.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167165/draw-libelula_gppi2a.png",
+    
   },
   {
     nombre: "Jirafa",
@@ -138,6 +151,7 @@ const animalsData = [
     ubicacion: "Sabana africana",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261877/Jirafa_rsrqsd.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167164/draw-jirafa_fpfyrq.png",
+    
   },
   {
     nombre: "Zarigüeya",
@@ -148,6 +162,7 @@ const animalsData = [
     ubicacion: "América del Norte y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262093/Zarigu%CC%88ella_xogcqr.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167164/draw-zariguella_crhuu1.png",
+    
   },
   {
     nombre: "Oso Hormiguero",
@@ -158,6 +173,7 @@ const animalsData = [
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261934/Oso_Hormiguero_lmbo22.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167163/draw-osohormiguero_a0pyns.png",
+    
   },
   {
     nombre: "Elefante",
@@ -168,6 +184,7 @@ const animalsData = [
     ubicacion: "África y Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262089/Elefante_kibmid.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167162/draw-elefante_csvily.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510236/elefante1_wtixcq.mp3"]
   },
   {
     nombre: "Mapache",
@@ -178,6 +195,7 @@ const animalsData = [
     ubicacion: "América del Norte",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261879/Mapache_jlpn6j.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167160/draw-mapache_das9l2.png",
+    
   },
   {
     nombre: "Cerdo",
@@ -188,6 +206,7 @@ const animalsData = [
     ubicacion: "Doméstico en todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261924/Cerdo_rf1jr3.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167160/draw-cerdo_rlw3va.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510239/cerdo3_ejhjcy.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510238/cerdo2_ihsoqj.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510237/cerdo1_zbhcdo.mp3"]
   },
   {
     nombre: "Chimpancé",
@@ -198,6 +217,7 @@ const animalsData = [
     ubicacion: "África central y occidental",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261876/Chimpance%CC%81_bvvuy3.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167159/draw-chimpance_ghmz7c.png",
+    
   },
   {
     nombre: "Murciélago",
@@ -208,6 +228,7 @@ const animalsData = [
     ubicacion: "En todo el mundo excepto regiones frías",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261922/Murcie%CC%81lago_lsttie.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167158/draw-murcielago_ajcazk.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510241/murcielagos2_my41dk.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510242/murcielagos1_gsrwwr.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510215/animals093_rxxsk2.mp3"]
   },
   {
     nombre: "Serpiente",
@@ -218,6 +239,7 @@ const animalsData = [
     ubicacion: "En casi todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262086/Serpiente_dfyctg.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167156/draw-serpiente_duwclv.png",
+    
   },
   {
     nombre: "Oso Pardo",
@@ -228,6 +250,7 @@ const animalsData = [
     ubicacion: "América del Norte, Europa, Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262062/Oso_Pardo_nvki65.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167158/draw-osopardo_bfonmk.png",
+    
   },
   {
     nombre: "Tigre",
@@ -238,6 +261,7 @@ const animalsData = [
     ubicacion: "Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261868/Tigre_vlzhzw.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167083/draw-tigre_du6ov6.png",
+    
   },
   {
     nombre: "Pantera Negra",
@@ -248,6 +272,7 @@ const animalsData = [
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261881/Pantera_jbgojc.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167152/draw-pantera_dfkqdk.png",
+    
   },
   {
     nombre: "León",
@@ -258,6 +283,7 @@ const animalsData = [
     ubicacion: "África subsahariana, India",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262060/Leo%CC%81n_qk6dxm.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167152/draw-leon_zjivis.png",
+    
   },
   {
     nombre: "Guepardo",
@@ -268,6 +294,7 @@ const animalsData = [
     ubicacion: "África y partes de Irán",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262058/Guepardo_uhykah.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167117/draw-guepardo_mydoxp.png",
+    
   },
   {
     nombre: "Jaguar",
@@ -278,6 +305,7 @@ const animalsData = [
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261926/Jaguar_qskubz.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727269782/draw-jaguar_xsubli.png",
+    
   },
   {
     nombre: "Kanguro",
@@ -288,6 +316,7 @@ const animalsData = [
     ubicacion: "Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262109/Canguro_iucqmd.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167116/draw-kanguro_dhtzie.png",
+    
   },
   {
     nombre: "Caballo",
@@ -298,6 +327,7 @@ const animalsData = [
     ubicacion: "Doméstico en todo el mundo, especialmente en áreas rurales, granjas y para actividades deportivas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262107/Caballo_k5uvjo.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167092/draw-caballo_vfyds7.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510244/caballo1_rcnihg.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510243/caballo3_krjr4d.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510243/caballo2_fzlsjv.mp3",]
   },
   {
     nombre: "Avestruz",
@@ -308,6 +338,7 @@ const animalsData = [
     ubicacion: "África",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262065/Avestruz_ncmyvg.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167116/draw-avestruz_lyjnsw.png",
+    
   },
   {
     nombre: "Rinoceronte",
@@ -318,6 +349,7 @@ const animalsData = [
     ubicacion: "África y Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262101/Rinoceronte_kkbb1r.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167094/draw-rinoceronte_ecrwmb.png",
+    
   },
   {
     nombre: "Pato",
@@ -328,6 +360,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262120/Pato_clv5xx.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167115/draw-pato_fjbbo5.png",
+    
   },
   {
     nombre: "Gaviota",
@@ -338,6 +371,7 @@ const animalsData = [
     ubicacion: "Costas de todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262091/Gaviota_ubpisa.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167085/draw-gaviota_p1k1vs.png",
+    
   },
   {
     nombre: "Albatros",
@@ -348,6 +382,7 @@ const animalsData = [
     ubicacion: "Océanos del hemisferio sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262111/Albatross_ynypue.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167086/draw-albatros_jk5kbg.png",
+    
   },
   {
     nombre: "Paloma",
@@ -358,6 +393,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262128/Paloma_vkamuh.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167085/draw-paloma_cuyv19.png",
+    
   },
   {
     nombre: "Camaleón",
@@ -368,6 +404,7 @@ const animalsData = [
     ubicacion: "África y Madagascar",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262123/Camaleo%CC%81n_j84ihx.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167085/draw-camaleon_wx8imk.png",
+    
   },
   {
     nombre: "Lagarto",
@@ -378,6 +415,7 @@ const animalsData = [
     ubicacion: "En todo el mundo excepto en zonas frías",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262099/Lagarto_tct0tn.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167084/draw-lagarto_mh1rbo.png",
+    
   },
   {
     nombre: "Pelícano",
@@ -388,6 +426,7 @@ const animalsData = [
     ubicacion: "Costas de todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262095/Peli%CC%81cano_opb0ey.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727269780/draw-peli%CC%81cano_goacru.png",
+    
   },
   {
     nombre: "Loro",
@@ -398,6 +437,7 @@ const animalsData = [
     ubicacion: "América del Sur, África y Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261922/Papagayo_l5fmon.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727269785/draw-loro_tkazis.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510226/loro_tn5meb.mp3"]
   },
   {
     nombre: "Papagayo",
@@ -408,6 +448,7 @@ const animalsData = [
     ubicacion: "América del Sur, África y Australia, en selvas tropicales y bosques",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728389841/papagayo3_xd2uay.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167084/draw-loro_tpoyti.png",
+    
   },
   {
     nombre: "Águila",
@@ -418,6 +459,7 @@ const animalsData = [
     ubicacion: "América del Norte, Europa y Asia, en montañas, bosques y áreas abiertas",
     imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728330301/aguilaRealista_dmsvgj.png",
     imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728329892/aguilaInfantal_w85rzm.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510224/Aguila5_khh2jn.mp3"]
   },
   {
     nombre: "Abeja",
@@ -428,6 +470,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261878/Abeja_lqehsk.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167084/draw-abeja_fgzt7v.png",
+    
   },
   {
     nombre: "Comadreja",
@@ -438,6 +481,7 @@ const animalsData = [
     ubicacion: "América del Norte, Europa, Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261881/Comadreja_erbc05.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167083/draw-comadreja_z6fylp.png",
+    
   },
   {
     nombre: "Ciempiés",
@@ -448,6 +492,7 @@ const animalsData = [
     ubicacion: "En todo el mundo, lugares húmedos",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262116/Ciempie%CC%81s_yprhkz.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167168/draw-cienpie%CC%81s_oxy8sy.png",
+    
   },
   {
     nombre: "Perro",
@@ -458,6 +503,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262098/Perro_b4hnso.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167168/draw-perro_iejbwl.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510240/perro1_pbssrh.mp3", "https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510235/perro4_ravjxq.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510235/perro2_bva9cu.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510234/perro3_o0eeaf.mp3"]
   },
   {
     nombre: "Rana",
@@ -468,6 +514,7 @@ const animalsData = [
     ubicacion: "En todo el mundo, zonas húmedas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262095/Rana_efbxcm.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167167/draw-rana_jjjwnn.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510239/rana_yiu0ho.mp3"]
   },{
     nombre: "Búho",
     altura: 600,  // mm
@@ -477,6 +524,7 @@ const animalsData = [
     ubicacion: "América del Norte, Europa, Asia y África, en bosques y áreas montañosas",
     imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728374042/buhoRealista.webp_mveruh.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728374067/buhoInfantil.webp_zmfpvn.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510225/buho5_vf4wzt.mp3"]
   },
   {
     nombre: "Gusano",
@@ -487,6 +535,7 @@ const animalsData = [
     ubicacion: "En todo el mundo, suelos húmedos",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262064/Gusano_he4zou.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167166/draw-gusano_obhop5.png",
+    
   },
   {
     nombre: "Gallo",
@@ -497,6 +546,7 @@ const animalsData = [
     ubicacion: "Doméstico en todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262118/Gallo_f4hcvu.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167172/draw-gallo_vbsrzn.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510232/gallo2_wh0z6i.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510231/gallo1_oi0ibz.mp3"]
   },
   {
     nombre: "Pollo",
@@ -507,6 +557,7 @@ const animalsData = [
     ubicacion: "Doméstico en todo el mundo, comúnmente en granjas y áreas rurales",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262089/Pollo_qybeu8.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167171/draw-pollo_kbg5sf.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510232/pollo_hojaiy.mp3"]
   },
   {
     nombre: "Pollito",
@@ -517,6 +568,7 @@ const animalsData = [
     ubicacion: "Doméstico en todo el mundo, en granjas y áreas rurales",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262094/Pollito_b5atbb.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167162/draw-pollito_xtmglt.png",
+    
   },
   {
     nombre: "Koala",
@@ -527,6 +579,7 @@ const animalsData = [
     ubicacion: "Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262117/Koala_coenjs.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167171/draw-koala_kym6lu.png",
+    
   },
   {
     nombre: "Ballena",
@@ -537,6 +590,7 @@ const animalsData = [
     ubicacion: "Océanos de todo el mundo, especialmente en aguas profundas y en zonas polares y templadas",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262086/Ballena_jfpp7d.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167086/draw-ballena_bueqg2.png",
+    
   },
   {
     nombre: "Cabra",
@@ -547,6 +601,7 @@ const animalsData = [
     ubicacion: "Doméstico en todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262085/Cabra_obc2bh.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167170/draw-cabra_qui0c8.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510234/goat2_dec4ra.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510233/GOAT_dw1n6w.mp3"]
   },
   {
     nombre: "Pez Payaso",
@@ -557,6 +612,7 @@ const animalsData = [
     ubicacion: "Océanos Índico y Pacífico",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261868/Pez_Payaso_vppv5h.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727267551/draw-pez_djxdpr.png",
+    
   },
   {
     nombre: "Conejo",
@@ -567,6 +623,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262131/Conejo_uyb02o.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167175/draw-conejo_wk1tyi.png",
+    
   },
   {
     nombre: "Camello",
@@ -577,6 +634,7 @@ const animalsData = [
     ubicacion: "Desiertos y regiones áridas de África del Norte, Medio Oriente y Asia Central",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262127/Camello_aoj9bj.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167089/draw-camello_d0e5ic.png",
+    
   },
   {
     nombre: "Lobo",
@@ -587,6 +645,7 @@ const animalsData = [
     ubicacion: "América del Norte, Europa, Asia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262125/Lobo_rl7ckk.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167174/draw-lobo_kyni1g.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510231/lobo2_s59clz.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510230/lobo1_dcoemm.mp3"]
   },
   {
     nombre: "Araña",
@@ -597,6 +656,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262059/Aran%CC%83a_pp2ifi.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727267555/draw-aran%CC%83a_bllmta.png",
+    
   },
   {
     nombre: "Cocodrilo",
@@ -607,6 +667,7 @@ const animalsData = [
     ubicacion: "América, África, Asia, Australia",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262121/Cocodrilo_ez3qj5.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167178/draw-cocodrilo_hqcqxm.png",
+    
   },
   {
     nombre: "Ardilla",
@@ -617,6 +678,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262105/Ardilla_yck1kl.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167177/draw-ardilla_fyy1n8.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510228/ardilla2_bevitm.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510228/ardilla_qdy4di.mp3"]
   },
   {
     nombre: "Zorro",
@@ -627,6 +689,7 @@ const animalsData = [
     ubicacion: "América, Europa, Asia y África",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262124/Zorro_jh4vll.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167176/draw-zorro_wvzjy8.png",
+    
   },
   {
     nombre: "Grillo",
@@ -637,6 +700,7 @@ const animalsData = [
     ubicacion: "En todo el mundo, en áreas como campos, jardines y bosques",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262114/Grillo_ttewg8.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727267550/draw-grillo_ia2ajk.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510227/grillos2_gmpmdz.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510226/grillos_q64vs7.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510225/grillo45_qvcejp.mp3"]
   },
   {
     nombre: "Pulpo",
@@ -647,6 +711,7 @@ const animalsData = [
     ubicacion: "Océanos de todo el mundo, especialmente en aguas costeras y de arrecifes",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262112/Pulpo_o5agwq.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167089/draw-pulpo_iz4rsn.png",
+    
   },
   {
     nombre: "Vaca",
@@ -657,6 +722,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262112/Vaca_w09lzq.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167176/draw-vaca_d2wpwn.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510230/vaca3_aip9z5.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510229/vaca2_huzmyx.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510228/vaca1_qn4noq.mp3"]
   },
   {
     nombre: "Armadillo",
@@ -667,6 +733,7 @@ const animalsData = [
     ubicacion: "América Central y del Sur",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261921/Armadillo_kwml7v.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167156/draw-armadillo_x68x1u.png",
+    
   },
   {
     nombre: "Oveja",
@@ -677,6 +744,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262061/Oveja_iqgabj.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167153/draw-oveja_uahsro.png",
+    
   },
   {
     nombre: "Hormiga",
@@ -687,6 +755,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261894/Hormiga_krv9kg.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167153/draw-hormiga_txi99m.png",
+    
   },
   {
     nombre: "Oso Polar",
@@ -697,6 +766,7 @@ const animalsData = [
     ubicacion: "Ártico",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262086/Oso_Polar_zdawga.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167157/draw-osopolar_xxxhvy.png",
+    
   },
   {
     nombre: "Oso Panda",
@@ -707,6 +777,7 @@ const animalsData = [
     ubicacion: "Bosques de bambú en China",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262061/Oso_Panda_nwpgma.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167093/draw-osopanda_wkghwo.png",
+    
   },
   {
     nombre: "Mariposa",
@@ -717,6 +788,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727262066/Mariposa_mncctj.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167153/draw-mariposa_tg25kl.png",
+    
   },
   {
     nombre: "Mariquita",
@@ -727,6 +799,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261882/Mariquita_fo6kxx.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167153/draw-mariquita_ad7cxg.png",
+    
   },
   {
     nombre: "Toro",
@@ -737,6 +810,7 @@ const animalsData = [
     ubicacion: "En todo el mundo",
     imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261923/Toro_hnzfdj.png",
     imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727167117/draw-toro_rqq7ng.png",
+    
   },    {
       nombre: "Cerdo salvaje",
       altura: 750,  // mm
@@ -745,7 +819,8 @@ const animalsData = [
       fuerza: "Posee colmillos fuertes y afilados que utiliza para defenderse y excavar",
       ubicacion: "Bosques, selvas y áreas rurales de Europa, Asia y algunas partes de América",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465867/cerdo_salvaje_vvbo5p.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478317/cerdo_salvaje-_ohhrdw.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478317/cerdo_salvaje-_ohhrdw.png",
+      
     },
     {
       nombre: "Coyote",
@@ -755,7 +830,8 @@ const animalsData = [
       fuerza: "Gran resistencia y adaptabilidad, cazador solitario o en grupo",
       ubicacion: "América del Norte, desde Canadá hasta México",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465863/coyote_jqadwx.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478336/coyote-_ipyxmq.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478336/coyote-_ipyxmq.png",
+      
     },
     {
       nombre: "Tortuga",
@@ -765,7 +841,8 @@ const animalsData = [
       fuerza: "Caparazón resistente que protege su cuerpo de depredadores",
       ubicacion: "Océanos, ríos, y cuerpos de agua dulce en todo el mundo",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465871/tortuga_vvhhjx.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478318/tortuga-_q0mde3.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478318/tortuga-_q0mde3.png",
+      
     },
     {
       nombre: "Caracol",
@@ -775,7 +852,8 @@ const animalsData = [
       fuerza: "Usa su baba para adherirse a superficies verticales y desplazarse",
       ubicacion: "Zonas húmedas y templadas en todo el mundo",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465869/caracol_eqnirp.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478322/caracol-_shznol.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478322/caracol-_shznol.png",
+      
     },
     {
       nombre: "Chihuahua",
@@ -785,7 +863,8 @@ const animalsData = [
       fuerza: "Pequeño pero valiente, tiene gran agilidad",
       ubicacion: "Doméstico, originario de México",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465865/perro_chihuahua_c71cfz.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478323/perro_chichuahua-_m3xxqc.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478323/perro_chichuahua-_m3xxqc.png",
+      
     },
     {
       nombre: "Pastor Alemán",
@@ -795,7 +874,8 @@ const animalsData = [
       fuerza: "Fuerte, leal y utilizado en trabajos policiales y de rescate",
       ubicacion: "Doméstico, originario de Alemania",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465842/perro_pastor_alema%CC%81n_rflldf.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478321/perro_pastor-alema%CC%81n_jfspwu.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478321/perro_pastor-alema%CC%81n_jfspwu.png",
+      
     },
     {
       nombre: "Poodle",
@@ -805,7 +885,8 @@ const animalsData = [
       fuerza: "Inteligente y muy ágil, utilizado en competencias de agilidad",
       ubicacion: "Doméstico, originario de Francia",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465845/perro_puddle_nyyww2.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478317/perro_puddle-_i6uz4a.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478317/perro_puddle-_i6uz4a.png",
+      
     },
     {
       nombre: "Dálmata",
@@ -815,7 +896,8 @@ const animalsData = [
       fuerza: "Resistencia para correr largas distancias",
       ubicacion: "Doméstico, originario de Croacia",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465846/perro_da%CC%81lmata_brmd6w.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478322/perro_da%CC%81lmata-_ga9nu2.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728478322/perro_da%CC%81lmata-_ga9nu2.png",
+      
     },
     {
       nombre: "Pug",
@@ -825,7 +907,8 @@ const animalsData = [
       fuerza: "Perro compacto y musculoso, conocido por su gran personalidad",
       ubicacion: "Doméstico, originario de China",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465843/pug_loptiw.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728482852/perro_pug-_k3nlzq.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728482852/perro_pug-_k3nlzq.png",
+      
     },
     {
       nombre: "Golden Retriever",
@@ -835,7 +918,8 @@ const animalsData = [
       fuerza: "Excelente nadador, utilizado en rescate acuático",
       ubicacion: "Doméstico, originario de Reino Unido",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465841/perro_golden_retriever_es3bw0.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728482853/perro_golden-retriever-_jwergj.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728482853/perro_golden-retriever-_jwergj.png",
+      
     },
     {
       nombre: "Gato siamés",
@@ -845,7 +929,8 @@ const animalsData = [
       fuerza: "Muy ágil y rápido para cazar",
       ubicacion: "Doméstico, originario de Tailandia",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465840/gato_siame%CC%81s_rrkn2m.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480012/gato_siame%CC%81s-_eksq7t.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480012/gato_siame%CC%81s-_eksq7t.png",
+      
     },
     {
       nombre: "Gato esfinge",
@@ -855,7 +940,8 @@ const animalsData = [
       fuerza: "Rápido y ágil a pesar de su apariencia frágil",
       ubicacion: "Doméstico, originario de Canadá",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465839/gato_esfinje_grfci8.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480010/gato_naranja-_h0w6ls.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480010/gato_naranja-_h0w6ls.png",
+      
     },
     {
       nombre: "Gato naranja",
@@ -865,7 +951,8 @@ const animalsData = [
       fuerza: "Muy juguetón y hábil para cazar",
       ubicacion: "Doméstico, encontrado en todo el mundo",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465862/gato_naranja_bo8xlh.png",
-      imagenAnimada:""
+      imagenAnimada:"",
+      sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510223/gato8_aptdez.mp3"]
     },
     {
       nombre: "Gato persa",
@@ -875,7 +962,8 @@ const animalsData = [
       fuerza: "De temperamento tranquilo y cariñoso, no es un gran cazador",
       ubicacion: "Doméstico, originario de Persia (Irán)",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465865/gato_persa_pykg3i.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480017/gato_persa-_kji2cv.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480017/gato_persa-_kji2cv.png",
+      
     },
     {
       nombre: "Ratón",
@@ -885,7 +973,8 @@ const animalsData = [
       fuerza: "Rápido y hábil, con gran capacidad para escabullirse por pequeños espacios",
       ubicacion: "Zonas urbanas y rurales en todo el mundo",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465838/rato%CC%81n.webp_ch8dyy.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480013/rato%CC%81n-c%CC%A7_o0zz39.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480013/rato%CC%81n-c%CC%A7_o0zz39.png",
+      
     },
     {
       nombre: "Zebra",
@@ -895,7 +984,8 @@ const animalsData = [
       fuerza: "Resistente y rápida, capaz de correr largas distancias",
       ubicacion: "África, en sabanas y pastizales",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465846/zebra_yrrubj.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480006/zebra-_hlt3sg.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480006/zebra-_hlt3sg.png",
+      
     },
     {
       nombre: "Pingüino",
@@ -905,7 +995,8 @@ const animalsData = [
       fuerza: "Gran nadador, capaz de bucear a grandes profundidades",
       ubicacion: "Regiones polares y costeras del hemisferio sur",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465838/Pingu%CC%88ino_sijl2l.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480007/pingu%CC%88ino-_t62b70.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480007/pingu%CC%88ino-_t62b70.png",
+      
     },
     {
       nombre: "Nutria",
@@ -915,7 +1006,8 @@ const animalsData = [
       fuerza: "Gran habilidad para nadar y cazar peces",
       ubicacion: "Ríos y lagos de Europa, América y Asia",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728465848/nutria_e0ie9q.png",
-      imagenAnimada:""
+      imagenAnimada:"",
+      
     },
     {
       nombre: "Mosca",
@@ -925,7 +1017,8 @@ const animalsData = [
       fuerza: "Rápidos reflejos y vuelo ágil",
       ubicacion: "En todo el mundo, especialmente en zonas cálidas",
       imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477893/moscaReal_qv8wyb.png",
-      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480008/mosca-g_ei4boc.png"
+      imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480008/mosca-g_ei4boc.png",
+      sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510225/mosca52_i3bznd.mp3"]
     },
       {
         nombre: "Mosquito",
@@ -935,7 +1028,8 @@ const animalsData = [
         fuerza: "Sus antenas detectan el dióxido de carbono exhalado por sus presas a varios metros de distancia",
         ubicacion: "Zonas húmedas y cálidas, especialmente en áreas tropicales y subtropicales",
         imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477892/mosquitoReal_xqwwd7.png",
-        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728479997/mosquito-_i88va7.png"
+        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728479997/mosquito-_i88va7.png",
+        
       },
       {
         nombre: "Bisonte",
@@ -945,7 +1039,8 @@ const animalsData = [
         fuerza: "Cuerpo robusto y musculoso, capaz de correr rápido y atacar con su poderosa cornamenta",
         ubicacion: "Praderas y bosques de América del Norte y Europa",
         imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477893/bisonteReal_dytyyd.png",
-        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480009/bisonte-_ufajkg.png"
+        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480009/bisonte-_ufajkg.png",
+        
       },
       {
         nombre: "Cucaracha",
@@ -955,8 +1050,21 @@ const animalsData = [
         fuerza: "Extremadamente resistente, capaz de sobrevivir en condiciones muy adversas",
         ubicacion: "Presente en todo el mundo, especialmente en áreas urbanas",
         imagenReal: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728477892/cucarachaReal_tauvik.png",
-        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480007/cucaracha-_tm9sbe.png"
-      }    
+        imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728480007/cucaracha-_tm9sbe.png",
+        
+      },
+      {
+        nombre: "Gorila",
+        altura: 1700,  // mm (Promedio de los machos)
+        peso: 180000,  // g (Promedio de los machos)
+        velocidad: 40, // km/h (en carrera corta)
+        fuerza: "Los gorilas pueden levantar hasta 10 veces su peso corporal",
+        ubicacion: "Selvas tropicales de África central",
+        imagenReal: "",
+        imagenAnimada: "",
+        sonido: ["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510241/gorila2_l42xd7.mp3","https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510240/gorila1_qosalm.mp3",]
+    }
+    
   
 ]
 export default animalsData;

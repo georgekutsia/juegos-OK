@@ -16,6 +16,7 @@
 }
 .election-image{
   width: 150px;
+  height: 150px;
   margin: 40px;
   transition: 0.3s ease-in-out;
 }
@@ -23,4 +24,24 @@
   display: flex;
   margin-top: 150px;
   justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+  .election-image{
+    position: absolute;
+    bottom: 1vh;
+    left: 20vw;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 0px;
+  }
+  .election-game-box-imgs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    gap: 10px;
+    background-color: blue;
+  }
+
 }

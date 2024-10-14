@@ -4,8 +4,6 @@
   cursor: pointer;
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  /* box-shadow: 0 0px 55px rgb(0, 242, 255); */
-  /* box-shadow: 0 0px 55px rgb(255, 255, 0); */
   transition: 0.2s ease-in-out;
   padding: 0;
   margin: 0;
@@ -93,4 +91,17 @@
   margin: 0;
   vertical-align: top; /* Add this */
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .bubbly-button-img img{
+    width: cover;
+    max-width: 190px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    vertical-align: top; /* Add this */
+    border-radius: 8px;
+
+  }
 }

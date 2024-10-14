@@ -6,7 +6,7 @@ import { Context } from "../../../shared/context.js";
 
 // eslint-disable-next-line react/prop-types
 function ElectionGamesComponent({returnToScreen}) {
-  const [dataElection] = useState(gamesData.election.juguetes); // Asumiendo que `juguetes` es el array de fotos.
+  const [dataElection, setDataElection] = useState(gamesData.election.juguetes); // Asumiendo que `juguetes` es el array de fotos.
   const [currentImages, setCurrentImages] = useState([null, null]);
   const { dataNavbarImg} = useContext(Context);
 
@@ -24,11 +24,24 @@ function ElectionGamesComponent({returnToScreen}) {
   };
 
   const handleNext = () => {
+    const random = Math.random();
+    if (random < 0.5) {
+    setDataElection(gamesData.election.juguetes)
+    } else {
+    setDataElection(gamesData.election.comida)
+    }
     const [img1, img2] = getTwoDifferentImages();
     setCurrentImages([img1, img2]);
   };
 
   useEffect(() => {
+    const random = Math.random();
+    if (random < 0.5) {
+    setDataElection(gamesData.election.juguetes)
+    } else {
+    setDataElection(gamesData.election.comida)
+    }
+
     handleNext();
   }, []);
 
@@ -38,9 +51,9 @@ function ElectionGamesComponent({returnToScreen}) {
       <div className="images-container">
         {currentImages[0] && currentImages[1] && (
           <div className='election-game-box-imgs'>
-          <ButtonImgComponent img={currentImages[0]} color={"0 0px 55px rgb(0, 242, 255)"} move={"30%"}/>
+          <ButtonImgComponent img={currentImages[0]} color={"0 0px 55px rgb(0, 242, 255)"} move={"5vw"}/>
             <img src={dataNavbarImg[1]} alt="Animal" className="election-image" />
-          <ButtonImgComponent img={currentImages[1]} color={"0 0px 55px rgb(255, 255, 50)"} move={"-30%"}/>
+          <ButtonImgComponent img={currentImages[1]} color={"0 0px 55px rgb(255, 255, 50)"} move={"-5vw"}/>
           </div>
         )}
       </div>

@@ -19,3 +19,6 @@ que salga el nombre de los animales cuando se revela la respuesta y hacerlo en a
 
 --serpientes
 -- lagartos spiny-tailed iguana
+
+
+-sonidos de pajaros hay que buscar los pajaros
