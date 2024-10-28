@@ -408,8 +408,8 @@ const animalsData = [
   },
   {
     nombre: "Lagarto",
-    altura: 3000,  // mm
-    peso: 150000, // g
+    altura: 200,  // mm
+    peso: 150, // g
     velocidad:3.6, //km/h
     fuerza: "Algunas especies tienen mandíbulas poderosas",
     ubicacion: "En todo el mundo excepto en zonas frías",
@@ -727,7 +727,7 @@ const animalsData = [
   {
     nombre: "Armadillo",
     altura: 250,   // mm
-    peso: 6000,   // g
+    peso: 35000,   // g
     velocidad:30, //km/h
     fuerza: "Fuerte para cavar",
     ubicacion: "América Central y del Sur",
