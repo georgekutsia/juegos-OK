@@ -9,6 +9,7 @@ export { default as ShadowGamesComponent } from "./games/shadow-game/ShadowGames
 export { default as ElectionGamesComponent } from "./games/election-game/ElectionGamesComponent.jsx";
 export { default as SizeGameComponent } from "./games/size-game/SizeGameComponent.jsx";
 export { default as SoundGameComponent } from "./games/sound-game/SoundGameComponent.jsx";
+export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 
 
 

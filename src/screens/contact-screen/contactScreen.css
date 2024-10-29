@@ -1,5 +1,9 @@
 /* screen-box tiene el resto de código que afecta a los box */
-.contact-screen{
+.contact-screen {
   background-color: var(--light-yellow);
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
 }

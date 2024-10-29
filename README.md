@@ -23,6 +23,8 @@ que salga el nombre de los animales cuando se revela la respuesta y hacerlo en a
 
 -sonidos de pajaros hay que buscar los pajaros
 
+buscar velocidad papagayo
 
 
---imagen lobo realista , vaca, 
+--imagen realista   
+--imagen animada 

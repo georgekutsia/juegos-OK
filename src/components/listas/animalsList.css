@@ -1,0 +1,64 @@
+.animal-card{
+  width: 250px;
+  height: 350px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.299), rgba(242, 255, 0, 0.447));
+}
+
+.animal-card-img{
+  width: 98%;
+  height: 50%;
+  object-fit: cover;
+  margin: auto;
+  margin-top: 1px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.299), rgba(0, 255, 247, 0.447));
+}
+
+
+.animal-card-title{
+  width: 98%;
+  height: 14%;
+  object-fit: cover;
+  margin: auto;
+  margin-top: 1px;
+  padding-top: 5px ;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.196), rgba(0, 255, 247, 0.235));
+}
+.animal-card-title-data{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin: 3px;
+}
+.animal-card-text{
+  width: 98%;
+  height: 31%;
+  object-fit: cover;
+  margin: auto;
+  margin-top: 1px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.196), rgba(0, 255, 247, 0.235));
+  overflow: scroll;
+}
+.animal-card-text p{
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  text-indent: 5px;
+  font-size: calc(10px + 0.3vw);
+}
+.animal-card-img img{
+  margin-top: 10%;
+  width: 45%;
+}
+
+.animal-card-img h2{
+position: absolute;
+margin: 10px;
+text-shadow: 1px 1px 8px white;
+}
