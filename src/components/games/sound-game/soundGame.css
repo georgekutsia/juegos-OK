@@ -13,8 +13,7 @@
 }
 .sound-game-btn:hover {
   filter: drop-shadow(0px 4px 5px black); 
-  height: 240px;
-
+  height: calc(90px + 6vw);
 
 }
 

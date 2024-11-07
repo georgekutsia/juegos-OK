@@ -1,11 +1,9 @@
-import { useContext, useState } from 'react';
-import { ButtonColoredComponent, SoundGameComponent } from '../../components';
+import {  useState } from 'react';
+import { ButtonColoredComponent, ScreenTitleComponent, SoundGameComponent } from '../../components';
 import gamesData from '../../data/gamesData'; 
-import { Context } from "../../shared/context";
 import "./gamesScreen.css";
 
 function SoundGameScreen() {
-  const { t } = useContext(Context);
   const [activeGame, setActiveGame] = useState(-1);
   
   const handleGameOn = (index) => {
@@ -20,7 +18,9 @@ function SoundGameScreen() {
 
   return (
     <div className="screens-box setting-screen">
-      {activeGame === -1 && <h2>{t("songGameScreen")}</h2>}
+      {activeGame === -1 && 
+        <ScreenTitleComponent text={"songGameScreen"} />
+      }
       {activeGame === -1 && 
         <div className="screens-box-items">
           {gamesData.soundGames.map((imgUrl, index) => (

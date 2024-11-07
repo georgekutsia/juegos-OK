@@ -13,6 +13,13 @@
 .button-type-rotate{
   background-color: var(--dark-green);
 }
+.button-type-number{
+  background-color: var(--black);
+}
+.button-type-text{
+  background-color: var(--orange);
+  color: black;
+}
 .small-button{
   width: 50px;
   margin: auto;

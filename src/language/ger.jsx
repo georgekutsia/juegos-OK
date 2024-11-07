@@ -16,7 +16,8 @@ export const ger = {
   currentPet:"aktuelles Maskottchen",
   solution:"Lösung",
   next:"Nächste",
-
+  letsStart:"¡wir beginnen!",
+  timesUp:"DIE ZEIT IST UM",
 
   puzzleGameScreen:"Puzzles und Rätsel Spiele!",
   questionGameScreen:"Wahlspiele und Fragen!",

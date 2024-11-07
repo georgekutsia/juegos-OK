@@ -1,0 +1,6 @@
+.button-box-run-color{
+  width: calc(200px + 20vw);
+  height: calc(200px + 20vw);
+  border-radius: 60px;
+  font-size: calc(20px + 3vw);
+}

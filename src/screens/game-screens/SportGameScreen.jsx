@@ -1,12 +1,10 @@
 
-import { useContext, useState } from 'react';
-import { ButtonColoredComponent,  } from '../../components';
+import { useState } from 'react';
+import { ButtonColoredComponent, RuntocolorGameComponent, ScreenTitleComponent,  } from '../../components';
 import gamesData from '../../data/gamesData'; 
-import { Context } from "../../shared/context";
 import "./gamesScreen.css"
 
 function SportGameScreen() {
-  const { t } = useContext(Context);
   const [activeGame, setActiveGame] = useState(-1);
   
   const handleGameOn = (index) => {
@@ -18,8 +16,7 @@ function SportGameScreen() {
   return (
     <div className="screens-box setting-screen">
     {activeGame === -1 &&
-
-      <h2>{t("sportGameScreen")}</h2>
+      <ScreenTitleComponent text={"sportGameScreen"} />
     }
       {activeGame === -1 && 
         <div className="screens-box-items">
@@ -31,7 +28,7 @@ function SportGameScreen() {
         </div>
       }
       {activeGame === 0 && 
-        {/* <SoundGameScreen /> */}
+        <RuntocolorGameComponent returnToScreen={handleReturn} />
       }
     </div>
   );

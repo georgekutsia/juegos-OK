@@ -1,21 +1,21 @@
-.shadow-game-box{
+.shadow-game-box {
   background-size: cover;
   display: flex;
   justify-content: center;
   margin-top: 10vh;
 }
 
-.shadow-game-buttonsNext{
+.button-next-game {
   position: absolute;
   top: 10px;
   right: calc(90px + 5vw);
 }
-.shadow-game-buttonsSolution{
+.button-solution-game {
   position: absolute;
   bottom: 200px;
   right: calc(90px + 5vw);
 }
-.shadow-game-buttonMode{
+.shadow-game-buttonMode {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -24,41 +24,39 @@
   left: 20px;
 }
 
-.shadow-game-img{
+.shadow-game-img {
   filter: brightness(0);
-width: calc(150px + 10vw);
+  width: calc(150px + 10vw);
 }
 
-.blur-game-img{
+.blur-game-img {
   filter: blur(15px);
 }
 
-.part-game-img{
+.part-game-img {
   scale: 1.3;
 }
 
-.shadow-game-img-box{
+.shadow-game-img-box {
   overflow: hidden;
   width: calc(120px + 10vw);
   height: calc(120px + 10vw);
   border: 10px inset rgb(64, 4, 50);
 }
 
-.show-game-img{
+.show-game-img {
   transition: 0.3s ease-in-out;
   scale: 1;
   filter: blur(0px);
   filter: brightness(1);
-  
 }
 
-
-.shadow-game-img-size{
+.shadow-game-img-size {
   width: calc(200px + 20vw);
 }
 
 @media only screen and (max-width: 600px) {
-  .shadow-game-buttonMode{
+  .shadow-game-buttonMode {
     position: absolute;
     display: flex;
     flex-direction: row;

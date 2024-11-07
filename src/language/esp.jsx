@@ -17,6 +17,8 @@ export const esp = {
   click:"Click me",
   solution:"Solución",
   next:"Siguiente",
+  letsStart:"¡Empecemos!",
+  timesUp:"TIEMPO!",
 
 
   puzzleGameScreen:"¡Juegos de Puzles y Adivinanzas!",

@@ -8,6 +8,7 @@
 export { default as ShadowGamesComponent } from "./games/shadow-game/ShadowGamesComponent";
 export { default as ElectionGamesComponent } from "./games/election-game/ElectionGamesComponent.jsx";
 export { default as SizeGameComponent } from "./games/size-game/SizeGameComponent.jsx";
+export { default as RuntocolorGameComponent } from "./games/runtocolor-game/RuntocolorGameComponent.jsx";
 export { default as SoundGameComponent } from "./games/sound-game/SoundGameComponent.jsx";
 export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 
@@ -19,6 +20,7 @@ export { default as ProfileComponent } from "./profile/ProfileComponent";
 export { default as MainNavbarComponent } from "./navbars/main-navbar/MainNavbarComponent";
 export { default as MainNavbarButtonComponent } from "./navbars/main-navbar/main-navbar-button/MainNavbarButtonComponent";
 export { default as ProfileNavbarButtonComponent } from "./navbars/main-navbar/profile-navbar-button/ProfileNavbarButtonComponent";
+export { default as ScreenTitleComponent } from "./screen-title/ScreenTitleComponent.jsx";
 
 
 
