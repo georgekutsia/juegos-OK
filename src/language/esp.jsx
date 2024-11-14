@@ -50,14 +50,14 @@ export const esp = {
   typePart:"Partes",
   typeReal:"Realismo",
   typeRotate:"Rotar",
-typeReset:"Restablecer",
+  typeReset:"Restablecer",
 
 
   electionGame:"Juego de elecciones",
   sizeGame:"Juego de tamaños y fuerzas",
   shadowGame:"Juego de siluetas y animales",
   animalSoundGame:"Detecta sonidos de animales",
-
+  colorRun:"Colores, ¡a correr!",
 
 
 // preguntas

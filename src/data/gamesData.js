@@ -23,19 +23,18 @@ const gamesData = {
     "sizeGame"
   ],
   drawGames: [
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
+    // "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
+    // "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
   ],
   drawGamesNames: [
     "draw1", 
     "draw2"
   ],
   sportGames: [
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1731607203/colorGame_sh3qsa.png",
   ],
   sportGamesNames: [
-    "sport1", 
+    "colorRun", 
     "sport2"
   ],
   soundGames: [

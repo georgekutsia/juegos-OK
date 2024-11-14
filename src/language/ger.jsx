@@ -57,6 +57,7 @@ export const ger = {
   sizeGame:"Spielen um Größe und Stärke",
   shadowGame:"Scherenschnitt und Tierspiel",
   animalSoundGame:"Erkennt Tiergeräusche",
+  colorRun: "Farben, los geht's!",
 
 
 // preguntas

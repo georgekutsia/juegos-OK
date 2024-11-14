@@ -24,14 +24,25 @@ function DrawGameScreen() {
     </>
       }
       {activeGame === -1 && 
-        <div className="screens-box-items">
-          {gamesData.drawGames.map((imgUrl, index) => (
-            <ButtonColoredComponent  key={index}  imgGame={imgUrl}  handleGameOn={() => handleGameOn(index)}  
-              text={gamesData.drawGamesNames[index]}
-            />
-          ))}
-        </div>
-      }
+  <div className="screens-box-items">
+    {gamesData.drawGames && gamesData.drawGames.length > 0 ? (
+      gamesData.drawGames.map((imgUrl, index) => (
+        <ButtonColoredComponent  
+          key={index}  
+          imgGame={imgUrl}  
+          handleGameOn={() => handleGameOn(index)}  
+          text={gamesData.drawGamesNames[index]}
+        />
+      ))
+    ) : (
+      <div className='loaderTime-box'>
+        <div className="loaderTime"></div>
+        <div className='loaderTime-text'>Juegos en desarrollo</div>
+      </div>
+    )}
+  </div>
+}
+
       {activeGame === 0 && 
         {/* <ShadowGamesComponent  returnToScreen={handleReturn}/> */}
 

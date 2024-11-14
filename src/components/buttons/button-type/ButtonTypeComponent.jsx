@@ -3,7 +3,7 @@ import "./buttonType.css";
 import { Context } from "../../../shared/context";
 import PropTypes from "prop-types"
 // eslint-disable-next-line react/prop-types
-function ButtonTypeComponent({ classN, onClick, typeGame, icon, otherClass, setActiveIndex, activeIndex, thisIndex }) {
+function ButtonTypeComponent({ classN, onClick, typeGame, icon, otherClass, setActiveIndex, activeIndex, thisIndex, backColor }) {
   const { t } = useContext(Context);
   const [myIndex] = useState(thisIndex)
 
@@ -15,6 +15,7 @@ const handleClicks = () => {
   return (
     <button
       onClick={()=>handleClicks()}
+      style={{backgroundColor:backColor}}
       className={`${classN} button-ripple ${otherClass} ${
         myIndex ===  activeIndex ? "button-clicked" : ""
       }`}

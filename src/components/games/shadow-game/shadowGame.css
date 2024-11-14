@@ -20,10 +20,11 @@
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  top: 100px;
   left: 20px;
 }
-
+.buttonMode-runtocolor{
+  margin-top: 100px;
+}
 .shadow-game-img {
   filter: brightness(0);
   width: calc(150px + 10vw);
@@ -63,9 +64,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1vw;
-    bottom: 10vh;
+    bottom: 100px;
     left: 20px;
     height: 50px;
-    width: 50vw;
+    width: 80vw;
   }
+
 }
