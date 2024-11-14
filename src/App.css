@@ -10,9 +10,6 @@
   --pink:#ff0080;
   --brown:rgb(165, 42, 42);
 
-
-
-
   --nav-violet: rgb(250, 93, 250);
   --nav-red: #ff6e6e;
   --nav-blue:rgb(100, 100, 249);
@@ -32,8 +29,7 @@
   --dark-green: rgb(29, 114, 39);
   --dark-yellow: rgb(147, 152, 39);
   --dark-pink: #c90165;
-
-
+  background-color: linear-gradient(to bottom,violet, red, orange, yellow, green, blue);
 
   --light-white: rgba(255, 255, 255, 0.461);
   --light-grey: rgba(218, 218, 218, 0.461);
@@ -43,13 +39,12 @@
   --light-violet: rgba(235, 190, 250, 0.402);
   --light-green: rgba(191, 250, 198, 0.402);
   --light-yellow: rgba(253, 255, 209, 0.355);
-  
-  
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Sour Gummy", sans-serif;
 }
 
 ul {

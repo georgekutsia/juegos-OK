@@ -19,8 +19,8 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 3vw;
-  bottom: 15px;
+  gap: 1vw;
+  top: 100px;
   left: 20px;
 }
 
@@ -49,10 +49,11 @@
   scale: 1;
   filter: blur(0px);
   filter: brightness(1);
+  transform: rotate(0deg);
 }
 
 .shadow-game-img-size {
-  width: calc(200px + 20vw);
+  width: calc(100px + 20vw);
 }
 
 @media only screen and (max-width: 600px) {

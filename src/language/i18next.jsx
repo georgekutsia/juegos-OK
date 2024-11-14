@@ -9,9 +9,9 @@ const resources = {
   esp:{
     translation:esp
   },
-ger:{
-  translation: ger
-}
+  ger:{
+    translation: ger
+  }
 }
 
 i18n.use(initReactI18next).init({

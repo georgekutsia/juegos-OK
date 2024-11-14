@@ -4,3 +4,11 @@
   justify-content: space-evenly;
 }
 
+
+.buttons-position-absolute{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+}

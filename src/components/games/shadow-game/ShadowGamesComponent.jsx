@@ -1,25 +1,28 @@
 /* eslint-disable react/prop-types */
 import './shadowGame.css'
-import animalsData from '../../../data/animalsData'
-import { useState, useEffect } from 'react'
+// import animalsData from '../../../data/animalsDataEsp'
+import { useState, useEffect, useContext } from 'react'
+import { Context } from "./../../../shared/context";
 import {
   ButtonTypeComponent,
   ButtonSolutionComponent,
   ButtonNextComponent,
-  ButtonReturnComponent
+  ButtonReturnComponent,
+  InfoComponent,
+  TypingTextComponent
 } from '../../../components'
-
 function ShadowGamesComponent({ returnToScreen }) {
-  const [shuffledAnimals, setShuffledAnimals] = useState([])
+  const { animalList} = useContext(Context);
+  const [shuffledAnimals, setShuffledAnimals] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showImg, setShowImg] = useState('')
   const [partsBoxSize, setPartsBoxSize] = useState('')
   const [showAnswer, setShowAnswer] = useState('')
   const [showRealImage, setShowRealImage] = useState(false) // Nuevo estado para controlar el tipo de imagen
   const [rotation, setRotation] = useState(0)
+  const [activeIndex, setactiveIndex] = useState(0)
 
   const handleRandom = () => {
-    // Genera un índice aleatorio en el rango de 0 a shuffledAnimals.length - 1
     const randomIndex = Math.floor(Math.random() * shuffledAnimals.length)
     setCurrentIndex(randomIndex)
   }
@@ -29,11 +32,10 @@ function ShadowGamesComponent({ returnToScreen }) {
   }
 
   useEffect(() => {
-    const shuffled = shuffleArray([...animalsData])
-    setShuffledAnimals(shuffled)
-    // Genera un animal aleatorio al cargar el componente
-    handleRandom()
-  }, [])
+    const shuffled = shuffleArray([...animalList]);
+    setShuffledAnimals(shuffled);
+    handleRandom();
+  }, [animalList]); // depende de animalList
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
@@ -48,8 +50,9 @@ function ShadowGamesComponent({ returnToScreen }) {
   }
 
   const handleShow = () => {
-    setShowAnswer('show-game-img')
+    setShowAnswer('show-game-img') //esa clase contiene los elementos que resetean todo los valores y al darle a siguiente, sigue el juego con las modificaciones
     setPartsBoxSize('')
+    setRotation(0)
   }
 
   const handleBlur = () => {
@@ -97,7 +100,10 @@ function ShadowGamesComponent({ returnToScreen }) {
 
   return (
     <div className='shadow-game-box'>
+    <div className='buttons-position-absolute'>
+      <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"}   text1={"shadowGameI"} listOfGames li1={"shadowGame1li1"} li2={"shadowGame1li2"} li3={"shadowGame1li3"} />
       <ButtonReturnComponent returnToScreen={returnToScreen} />
+    </div>
       <div className='button-next-game'>
         <ButtonNextComponent random={handleNext} />
       </div>
@@ -110,38 +116,57 @@ function ShadowGamesComponent({ returnToScreen }) {
             onClick={handleBlur}
             classN='button-type-blur'
             typeGame='typeBlur'
+            thisIndex= {1}
+            setActiveIndex={setactiveIndex}
+            activeIndex={activeIndex}
           />
           <ButtonTypeComponent
             onClick={handleShadow}
             classN='button-type-shadow'
             typeGame='typeShadow'
+            thisIndex= {2}
+            setActiveIndex={setactiveIndex}
+            activeIndex={activeIndex}
           />
           <ButtonTypeComponent
             onClick={handlePart}
             classN='button-type-part'
             typeGame='typePart'
+            thisIndex= {3}
+            setActiveIndex={setactiveIndex}
+            activeIndex={activeIndex}
           />
           <ButtonTypeComponent
             onClick={handleRotate}
             classN='button-type-rotate'
             typeGame='typeRotate'
+            thisIndex= {4}
+            setActiveIndex={setactiveIndex}
+            activeIndex={activeIndex}
           />
           <ButtonTypeComponent
             onClick={toggleImageType}
             classN='button-type-real'
             typeGame='typeReal'
+            thisIndex= {5}
+            setActiveIndex={setactiveIndex}
+            activeIndex={activeIndex}
           />
           <ButtonTypeComponent
             onClick={handleReset}
             classN='button-type-reset'
             typeGame='typeReset'
-            icon='fa-rotate-left'
-            otherClass='small-button'
+            // icon='fa-delete-left'
+            // otherClass='small-button'
+            thisIndex= {0}
+            setActiveIndex={setactiveIndex}
+            activeIndex={activeIndex}
           />
         </div>
       </div>
       <div className={partsBoxSize}>
         {shuffledAnimals.length > 0 && (
+          <>
           <img
             onClick={handleShow}
             className={`${showImg} ${showAnswer} shadow-game-img-size`}
@@ -152,7 +177,7 @@ function ShadowGamesComponent({ returnToScreen }) {
                       Math.random() * 100 - 50
                     }%) rotate(${rotation}deg)`
                   }
-                : { transform: `rotate(${rotation}deg)` }
+                : { transform: `translate(0, 0)  rotate(${rotation}deg) `  }
             }
             src={
               showRealImage
@@ -161,6 +186,10 @@ function ShadowGamesComponent({ returnToScreen }) {
             }
             alt={shuffledAnimals[currentIndex].nombre}
           />
+          {showAnswer === "show-game-img" &&
+          <TypingTextComponent text={shuffledAnimals[currentIndex].nombre}/>
+          }
+          </>
         )}
       </div>
     </div>

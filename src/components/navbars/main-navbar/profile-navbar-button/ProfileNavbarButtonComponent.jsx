@@ -1,10 +1,13 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
 import "./profileNavbarButton.css";
 // import {Context} from "../../../../shared/context"
 // import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 
-function ProfileNavbarButtonComponent() {
+function ProfileNavbarButtonComponent({setshowSettings, showSettings}) {
   // const {profile, setProfile} = useContext(Context)
 
   // const handleClickProfile = () => {
@@ -17,9 +20,10 @@ function ProfileNavbarButtonComponent() {
         <NavLink className={"nav-link-info"} to={"/profile"} ><i className="fa-regular fa-address-card "></i></NavLink>
       </div>
       <div className="profile-navbar-info">
-        <NavLink className={"nav-link-info"} to={"/settings"} ><i className="fa-solid fa-gear"></i></NavLink>
-        <NavLink className={"nav-link-info"} to={"/contact"} ><i className="fa-regular fa-envelope"></i></NavLink>
+        <NavLink className={"nav-link-info"} onClick={()=>setshowSettings(!showSettings)}><i className="fa-solid fa-gear"></i></NavLink>
+        <NavLink className={"nav-link-info"} to={"/contact"} ><i className="fa-solid fa-table-list"></i></NavLink>
       </div>
+
     </li>
   );
 }

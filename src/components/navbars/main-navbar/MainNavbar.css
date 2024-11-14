@@ -220,29 +220,18 @@ scale: 1.05;
   font-size: 1rem;
   background: 
   linear-gradient(90deg, 
-    var(--nav-violet), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--light-blue), 
-    var(--nav-violet)
-    ),
-    linear-gradient(0deg, 
-    var(--nav-violet), 
-    var(--white), 
-    var(--white), 
-    var(--nav-violet)
+    var(--nav-violet) 0%, 
+    var(--light-blue) 5%, 
+    var(--light-blue) 95%, 
+    var(--nav-violet) 100%
+  ),
+  linear-gradient(0deg, 
+    var(--nav-violet) 0%, 
+    var(--white) 10%, 
+    var(--white) 90%, 
+    var(--nav-violet) 100%
   );
+
   background-blend-mode: multiply;  /* or other modes like overlay, screen, etc. */
 
 }
@@ -265,4 +254,13 @@ scale: 1.05;
     z-index: 10;
     align-items: center;
   }
+}
+
+.navbar-setting-box{
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  background: linear-gradient(to bottom right, rgb(247, 123, 123), rgb(121, 121, 255), rgb(249, 249, 156) );
+  border-radius: 20px;
+  z-index: 160;
 }

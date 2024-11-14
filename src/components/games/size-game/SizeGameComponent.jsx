@@ -2,11 +2,12 @@ import { useState, useEffect, useContext } from 'react'
 import ButtonReturnComponent from '../../buttons/button-return/ButtonReturnComponent'
 import './sizeGame.css'
 import PropTypes from 'prop-types'
-import animalsData from '../../../data/animalsData'
+import animalsData from '../../../data/animalsDataEsp.js'
 import { Context } from '../../../shared/context.js'
 import ButtonSolutionComponent from '../../buttons/button-solution/ButtonSolutionComponent'
 import ButtonNextComponent from '../../buttons/button-next/ButtonNextComponent'
 import '../../spinners.css'
+import InfoComponent from '../../info/InfoComponent.jsx'
 function SizeGameComponent({ returnToScreen }) {
   const [selectedAnimals, setSelectedAnimals] = useState([])
   const { dataNavbarImg } = useContext(Context)
@@ -134,7 +135,10 @@ function SizeGameComponent({ returnToScreen }) {
 
   return (
     <div className='size-game-box'>
+    <div className='buttons-position-absolute'>
+      <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"} text1={"animalSizeWeightGameI1"}  listOfGames li1={"animalSizeWeightGameI1li1"}  li2={"animalSizeWeightGameI1li2"}/>
       <ButtonReturnComponent returnToScreen={returnToScreen} />
+    </div>
       {toggleQuestion === 0 && <h3> {t('elMasAlto')}</h3>}
       {toggleQuestion === 1 && <h3> {t('elMasPesado')}</h3>}
       {toggleQuestion === 2 && <h3> {t('elMasVeloz')}</h3>}

@@ -1,14 +1,13 @@
 .button-return {
-  width: calc(20px + 3vw);
-  height: calc(20px + 3vw);
+  width: calc(15px + 2vw);
+  height: calc(15px + 2vw);
   border-radius: 50%;
   font-size: calc(20px + 1vw);
   transition: transform 1s ease; /* Suaviza el cambio de transformación */
-  background-color: var(--green);
+  background: conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red), conic-gradient(from 90deg, red, yellow, lime, aqua, blue, fuchsia, red);
+  background-blend-mode: overlay, normal;
   color: var(--pink);
-  position: absolute;
-  left: 20px;
-  top: 20px;
+  text-shadow: 1px 1px 1px black;
 }
 
 .button-return:hover {

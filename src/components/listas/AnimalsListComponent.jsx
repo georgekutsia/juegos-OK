@@ -4,11 +4,10 @@ import "./animalsList.css"
 
 // eslint-disable-next-line no-unused-vars
 function AnimalsListComponent({fotoR, fotoD, nombre, altura, peso, velocidad, habilidad, ubicacion, index}) {
-
   return (
           <div className="animal-card">
             <div className="animal-card-img">
-              <h2>{index}</h2>
+              <h2>{index+1}</h2>
               <img src={fotoR} alt="real" />
               <img src={fotoD} alt="animada" />
             </div>

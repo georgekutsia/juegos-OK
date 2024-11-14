@@ -4,7 +4,7 @@
 export { default as WelcomeScreen } from "./welcome-screen/WelcomeScreen";
 export { default as ProfileScreen } from "./portfolio-screen/ProfileScreen";
 export { default as ProfileComponent } from "./error-screen/Error404";
-export { default as ContactScreen } from "./contact-screen/ContactScreen";
+export { default as AllListsScreen } from "./contact-screen/AllListsScreen";
 export { default as SettingScreen } from "./setting-screen/SettingScreen";
 
 // screens de juegos

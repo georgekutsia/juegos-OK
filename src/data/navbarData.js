@@ -9,7 +9,7 @@ const navbarCreatures = {
   ],
   osito:[
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651457/osito7_seokvo.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651459/osito5_dlm11v.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1731190489/osito5_tg3cxl.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651459/osito6_dqu3e2.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651461/osito2_dsteoz.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651463/osito4_duwopo.png",

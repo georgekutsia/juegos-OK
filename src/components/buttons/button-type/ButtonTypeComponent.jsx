@@ -1,19 +1,32 @@
-import { useContext } from "react";
-import "./buttonType.css"
+import { useContext, useState } from "react";
+import "./buttonType.css";
 import { Context } from "../../../shared/context";
-
+import PropTypes from "prop-types"
 // eslint-disable-next-line react/prop-types
-function ButtonTypeComponent({classN, onClick, typeGame, icon, otherClass}) {
+function ButtonTypeComponent({ classN, onClick, typeGame, icon, otherClass, setActiveIndex, activeIndex, thisIndex }) {
+  const { t } = useContext(Context);
+  const [myIndex] = useState(thisIndex)
 
-  const {t} = useContext(Context);
-
-  return (
-      <button onClick={onClick} className={`${classN} button-ripple ${otherClass}`}>
-      {icon ?  <i className={`fa-solid  ${icon}`}></i>:
-        t(typeGame)
-      }
-      </button>
-  )
+const handleClicks = () => {
+  onClick()
+  setActiveIndex(myIndex)
 }
 
-export default ButtonTypeComponent
+  return (
+    <button
+      onClick={()=>handleClicks()}
+      className={`${classN} button-ripple ${otherClass} ${
+        myIndex ===  activeIndex ? "button-clicked" : ""
+      }`}
+    >
+      {icon ? <i className={`fa-solid ${icon}`}></i> : t(typeGame)}
+    </button>
+  );
+}
+ButtonTypeComponent.propTypes = {
+  returnToScreen: PropTypes.func,
+  thisIndex: PropTypes.number
+}
+
+
+export default ButtonTypeComponent;

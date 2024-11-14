@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ButtonColoredComponent, ScreenTitleComponent, ShadowGamesComponent } from '../../components';
+import { ButtonColoredComponent, InfoComponent, ScreenTitleComponent, ShadowGamesComponent } from '../../components';
 import gamesData from '../../data/gamesData'; 
 import "./gamesScreen.css"
 
@@ -15,7 +15,12 @@ function PuzzleGameScreen() {
   return (
     <div className="screens-box setting-screen">
       {activeGame === -1 && 
+        <>
         <ScreenTitleComponent text={"puzzleGameScreen"} />
+      <div className='buttons-position-absolute'>
+        <InfoComponent title1={"typeOfGameI"}  title2={"objectiveOfGameI"} text1={"puzzleGameI1"} text2={"puzzleGameI2"}/>
+      </div>
+    </>
       }
       {activeGame === -1 && 
         <div className="screens-box-items">

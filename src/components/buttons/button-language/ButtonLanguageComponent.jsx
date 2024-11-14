@@ -8,7 +8,7 @@ function ButtonLanguageComponent({text, language}) {
 
   return (
     <div>
-    <button onClick={() => changeLanguage((language))}> {t(text)}</button>
+    <button onClick={() => changeLanguage(language)}> {t(text)}</button>
     </div>
   )
 }

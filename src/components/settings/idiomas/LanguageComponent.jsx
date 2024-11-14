@@ -6,10 +6,12 @@ function LanguageComponent() {
   const {t } = useContext(Context);
 
   return (
-    <div>
+    <div className="language-box">
     <h3>{t("lang_ger")}</h3>
-    <ButtonLanguageComponent text={"lang_ger"} language={"ger"}/>
-    <ButtonLanguageComponent text={"lang_esp"} language={"esp"}/>
+    <div className="language-box-election">
+      <ButtonLanguageComponent text={"lang_ger"} language={"ger"}/>
+      <ButtonLanguageComponent text={"lang_esp"} language={"esp"}/>
+    </div>
     </div>
   )
 }

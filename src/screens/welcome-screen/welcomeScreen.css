@@ -3,3 +3,13 @@
   background-color: var(--light-blue);
   text-align: center;
 }
+
+.welcome-screen-box{
+  display: flex;
+  justify-content: center;
+  gap: calc(10px + 2vw);
+}
+
+.welcome-screen-img{
+  width: calc(30px + 7vw);
+}

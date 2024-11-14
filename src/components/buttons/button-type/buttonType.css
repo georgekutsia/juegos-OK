@@ -1,37 +1,8 @@
-.button-type-blur{
-  background-color: var(--blue);
-}
-.button-type-shadow{
-  background-color: var(--red);
-}
-.button-type-part{
-  background-color: var(--pink);
-}
-.button-type-real{
-  background-color: var(--orange);
-}
-.button-type-rotate{
-  background-color: var(--dark-green);
-}
-.button-type-number{
-  background-color: var(--black);
-}
-.button-type-text{
-  background-color: var(--orange);
-  color: black;
-}
-.small-button{
-  width: 50px;
-  margin: auto;
-  background-color: var(--black);
-
-}
-
 .button-ripple{
   position: relative;
   border-radius: 4em;
   font-size: calc(12px + 0.5vw);
-  color: white;
+  color: var(--white);
   padding: 8px 10px;
   cursor:pointer;
   user-select:none;
@@ -58,11 +29,11 @@
   height: 100%;
   opacity: 0;
   transition: all 0.5s;
-  box-shadow: 0 0 10px 20px white;
+  box-shadow: 0 0 10px 20px var(--white);
 }
 
 .button-ripple:active:after {
-  box-shadow: 0 0 0 0 white;
+  box-shadow: 0 0 0 0 var(--white);
   position: absolute;
   border-radius: 4em;
   left: 0;
@@ -72,8 +43,47 @@
 }
 
 .button-ripple:active {
-  top: 1px;
+  background-color: var(--white); /* Fondo blanco al hacer clic */
+  color: black; /* Texto negro para contrastar */
 }
 
+.button-ripple:active:after {
+  box-shadow: 0 0 0 0 var(--white);
+  opacity: 1;
+  transition: 0s;
+}
+.button-clicked {
+border-radius: 3px;
+border-color: var(--white);
+}
 
-
+.button-type-blur{
+  background-color: var(--blue);
+}
+.button-type-shadow{
+  background-color: var(--red);
+}
+.button-type-part{
+  background-color: var(--pink);
+}
+.button-type-real{
+  background-color: var(--orange);
+}
+.button-type-rotate{
+  background-color: var(--dark-green);
+}
+.button-type-number{
+  background-color: var(--black);
+}
+.button-type-reset{
+  color: black;
+}
+.button-type-text{
+  background-color: var(--orange);
+  color: black;
+}
+.small-button{
+  width: 50px;
+  margin: auto;
+  background-color: var(--black);
+}

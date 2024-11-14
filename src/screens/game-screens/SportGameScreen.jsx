@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ButtonColoredComponent, RuntocolorGameComponent, ScreenTitleComponent,  } from '../../components';
+import { ButtonColoredComponent, InfoComponent, RuntocolorGameComponent, ScreenTitleComponent,  } from '../../components';
 import gamesData from '../../data/gamesData'; 
 import "./gamesScreen.css"
 
@@ -16,7 +16,13 @@ function SportGameScreen() {
   return (
     <div className="screens-box setting-screen">
     {activeGame === -1 &&
+    <>
       <ScreenTitleComponent text={"sportGameScreen"} />
+    <div className='buttons-position-absolute'>
+    <InfoComponent title1={"typeOfGameI"}  title2={"objectiveOfGameI"} text1={"sportGameI1"} text2={"sportGameI2"}/>
+
+    </div>
+    </>
     }
       {activeGame === -1 && 
         <div className="screens-box-items">

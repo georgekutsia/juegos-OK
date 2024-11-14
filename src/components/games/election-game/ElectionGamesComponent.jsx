@@ -2,7 +2,8 @@ import { useState, useEffect, useContext } from 'react'
 import {
   ButtonImgComponent,
   ButtonNextComponent,
-  ButtonReturnComponent
+  ButtonReturnComponent,
+  InfoComponent
 } from '../../../components'
 import gamesData from '../../../data/gamesData'
 import './electinoGame.css'
@@ -51,7 +52,10 @@ function ElectionGamesComponent({ returnToScreen }) {
 
   return (
     <div className='election-game-box'>
+    <div className='buttons-position-absolute'>
+      <InfoComponent text1={"electionGameI1"} text2={"electionGameI1"}/>
       <ButtonReturnComponent returnToScreen={returnToScreen} />
+    </div>
       <div className='images-container'>
         {currentImages[0] && currentImages[1] && (
           <div className='election-game-box-imgs'>

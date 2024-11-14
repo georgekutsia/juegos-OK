@@ -1,11 +1,12 @@
 import {
   ButtonNextComponent,
   ButtonReturnComponent,
-  ButtonSolutionComponent
+  ButtonSolutionComponent,
+  InfoComponent
 } from '../../../components'
 import './soundGame.css'
 import PropTypes from 'prop-types'
-import animalsData from '../../../data/animalsData'
+import animalsData from '../../../data/animalsDataEsp'
 import { useState, useEffect } from 'react'
 
 function SoundGameComponent({ returnToScreen }) {
@@ -64,7 +65,10 @@ function SoundGameComponent({ returnToScreen }) {
             src='https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728509085/Sound-btn-_svs90u.png'
             alt='button'
           />
+        <div className='buttons-position-absolute'>
+          <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"} text1={"animalSoundGameI1"}  listOfGames li1={"animalSoundGameI1li1"}  li2={"animalSoundGameI1li2"} />
           <ButtonReturnComponent returnToScreen={returnToScreen} />
+        </div>
           <div className='button-next-game'>
             <ButtonNextComponent random={handleNext} />
           </div>

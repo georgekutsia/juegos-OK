@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Error404 from "./screens/error-screen/Error404.jsx";
-import { ContactScreen, DrawGameScreen, ProfileScreen, PuzzleGameScreen, QuestionGameScreen, SettingScreen, SoundGameScreen, SportGameScreen, WelcomeScreen } from "./screens/index.js";
+import { AllListsScreen, DrawGameScreen, ProfileScreen, PuzzleGameScreen, QuestionGameScreen, SettingScreen, SoundGameScreen, SportGameScreen, WelcomeScreen } from "./screens/index.js";
 
 
 function Routers() {
@@ -9,7 +9,7 @@ function Routers() {
       <Routes>
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/" element={<WelcomeScreen />} />
-        <Route path="/contact" element={<ContactScreen />} />
+        <Route path="/contact" element={<AllListsScreen />} />
         <Route path="/settings" element={<SettingScreen />} />
         <Route path="/questions" element={<QuestionGameScreen />} />
         <Route path="/sounds" element={<SoundGameScreen />} />

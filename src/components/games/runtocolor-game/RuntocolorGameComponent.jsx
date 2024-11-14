@@ -7,6 +7,7 @@ import "./runtocolorGame.css"
 import { useContext, useState } from 'react'
 import { Context } from "../../../shared/context";
 import ButtonTypeComponent from '../../buttons/button-type/ButtonTypeComponent'
+import InfoComponent from '../../info/InfoComponent'
 
 function RuntocolorGameComponent({ returnToScreen }) {
   const [color, setColor] = useState("red")
@@ -52,7 +53,10 @@ function RuntocolorGameComponent({ returnToScreen }) {
 
   return (
     <div>
+    <div className='buttons-position-absolute'>
+      <InfoComponent/>
       <ButtonReturnComponent returnToScreen={returnToScreen} />
+    </div>
       <div className='button-next-game'>
         <ButtonNextComponent random={handleNext} />
       </div>

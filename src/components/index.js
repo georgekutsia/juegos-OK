@@ -12,7 +12,9 @@ export { default as RuntocolorGameComponent } from "./games/runtocolor-game/Runt
 export { default as SoundGameComponent } from "./games/sound-game/SoundGameComponent.jsx";
 export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 
-
+export { default as SettingComponent } from "./settings/SettingComponent.jsx";
+export { default as InfoComponent } from "./info/InfoComponent.jsx";
+export { default as TypingTextComponent } from "./typing-text/TypingTextComponent.jsx";
 
 
 export { default as LanguageComponent } from "./settings/idiomas/LanguageComponent";
@@ -21,6 +23,7 @@ export { default as MainNavbarComponent } from "./navbars/main-navbar/MainNavbar
 export { default as MainNavbarButtonComponent } from "./navbars/main-navbar/main-navbar-button/MainNavbarButtonComponent";
 export { default as ProfileNavbarButtonComponent } from "./navbars/main-navbar/profile-navbar-button/ProfileNavbarButtonComponent";
 export { default as ScreenTitleComponent } from "./screen-title/ScreenTitleComponent.jsx";
+export { default as BigTitleComponent } from "./big-title/BigTitleComponent.jsx";
 
 
 

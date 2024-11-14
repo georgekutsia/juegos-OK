@@ -10,11 +10,12 @@
   bottom: 10vh;
   left: 50%;
   transform: translate(-50%);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .sound-game-btn:hover {
   filter: drop-shadow(0px 4px 5px black); 
   height: calc(90px + 6vw);
-
 }
 
 .sound-solution-img{

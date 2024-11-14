@@ -3,6 +3,9 @@ import MainNavbarComponent from './components/navbars/main-navbar/MainNavbarComp
 import { Context } from "./shared/context";
 import { useState } from "react";
 import Routers from "./Routers";
+import animalsDataEsp from './data/animalsDataEsp'
+import animalsDataGer from './data/animalsDataGer'
+
 import { useTranslation } from 'react-i18next';
 import dataNavbarCreatures from './data/navbarData'; 
 import dataNavbarCreaturesNames from './data/navbarNamesData'; 
@@ -13,6 +16,7 @@ function App() {
 
   const creatureTypes = Object.keys(dataNavbarCreatures);
   const creatureNames = Object.keys(dataNavbarCreaturesNames);
+  const [animalList, setanimalList] = useState(animalsDataEsp)
   const [currentCreatureType, setCurrentCreatureType] = useState(creatureTypes[0]); 
   const [currentCreatureName, setCurrentCreatureName] = useState(creatureNames[0]); 
   const [dataNavbarImg, setDataNavbarImg] = useState(dataNavbarCreatures[currentCreatureType]);
@@ -20,6 +24,12 @@ function App() {
 
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
+    console.log(i18n)
+    if(code === "esp"){
+    setanimalList(animalsDataEsp)
+    } else if( code === "ger"){
+    setanimalList(animalsDataGer)
+    }
   };
 
   const handleChangeCreature = (newCreatureType) => {
@@ -31,7 +41,7 @@ function App() {
 
   return (
     <div className='app-box'>
-      <Context.Provider value={{ t,  changeLanguage,  profile,  setProfile, currentCreatureType,  handleChangeCreature,  dataNavbarImg, currentCreatureName, dataNavbarName }}>
+      <Context.Provider value={{ t, changeLanguage,  profile,  setProfile, currentCreatureType, handleChangeCreature,  dataNavbarImg, currentCreatureName, dataNavbarName, animalList, setanimalList }}>
         <MainNavbarComponent />
         <Routers />
       </Context.Provider>

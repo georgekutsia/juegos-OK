@@ -1,0 +1,22 @@
+.typing-slider{
+  overflow: hidden;
+  width: 0px;
+  animation: showText 1s forwards;  
+margin: auto;
+text-align: center;
+}
+
+.typing-slider h3{
+  font-size: calc(16px + 1vw);
+  animation: showText 1s forwards;  
+  letter-spacing: 1.4px;
+}
+
+@keyframes showText {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 250px;
+  }
+}
