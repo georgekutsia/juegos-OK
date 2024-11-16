@@ -3,6 +3,7 @@
   height: calc(200px + 20vw);
   border-radius: 60px;
   font-size: calc(20px + 3vw);
+  position: relative;
 }
 .colorArray-list{
   display: flex;
@@ -15,4 +16,22 @@
   width: 20px;
   border: 1px solid black;
   border-radius: 20px;
+}
+.colorTimedown-display{
+  position: absolute;
+  top: 0;
+  left: 50px;
+  opacity: 0.5;
+}
+.position-absolute-alert{
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(30px + 1vw);
+  font-weight: bold;
+  color: red;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  text-shadow: 1px 1px 1px var(--black);
 }

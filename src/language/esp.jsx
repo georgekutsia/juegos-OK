@@ -58,6 +58,7 @@ export const esp = {
   shadowGame:"Juego de siluetas y animales",
   animalSoundGame:"Detecta sonidos de animales",
   colorRun:"Colores, ¡a correr!",
+  noColor:"No hay colores elegidos",
 
 
 // preguntas
@@ -69,7 +70,7 @@ elMasVeloz:"Cual es el animal más rápido?",
 welcome: "¡Bienvenidos!", 
 welcomeTo: "Diviérte y aprende con tus amigos con los juegos de ",
 showAllAnimalTitle:"Todos los animales jugables",
-
+nocolorAlert:"¡Necesitas algún color!",
 
 
 // infos

@@ -10,9 +10,9 @@ function DrawGameScreen() {
   const handleGameOn = (index) => {
     setActiveGame((prev) => prev === index ? -1 : index);  
   };
-  const handleReturn = () => {
-    setActiveGame(-1)
-  }
+  // const handleReturn = () => {
+  //   setActiveGame(-1)
+  // }
   return (
     <div className="screens-box setting-screen">
       {activeGame === -1 && 

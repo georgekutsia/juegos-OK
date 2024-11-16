@@ -58,6 +58,7 @@ export const ger = {
   shadowGame:"Scherenschnitt und Tierspiel",
   animalSoundGame:"Erkennt Tiergeräusche",
   colorRun: "Farben, los geht's!",
+  noColor:"Es sind keine Farben ausgewählt",
 
 
 // preguntas
@@ -68,6 +69,7 @@ elMasVeloz:"Welches ist das schnellste Tier?",
 welcome: "Willkommen!", 
 welcomeTo: "Habt Spaß und lernt zusammen mit euren Freunden mit den Spielen von ",
 showAllAnimalTitle:"Alle spielbaren Tiere",
+nocolorAlert:"Du brauchst etwas Farbe!",
 
 
 
