@@ -95,7 +95,7 @@ function RuntocolorGameComponent({ returnToScreen }) {
   return (
     <div>
       <div className="buttons-position-absolute">
-        <InfoComponent />
+      <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"}   text1={"colorRunGameI"} listOfGames li1={"colorRunGameIli1"} li2={"colorRunGameIli2"} li3={"colorRunGameIli3"} />
         <ButtonReturnComponent returnToScreen={returnToScreen} />
       </div>
       <div className="button-next-game">

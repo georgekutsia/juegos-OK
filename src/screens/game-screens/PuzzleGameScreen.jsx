@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ButtonColoredComponent, InfoComponent, ScreenTitleComponent, ShadowGamesComponent } from '../../components';
+import { ButtonColoredComponent, InfoComponent, MissingGameComponent, ScreenTitleComponent, ShadowGamesComponent } from '../../components';
 import gamesData from '../../data/gamesData'; 
 import "./gamesScreen.css"
 
@@ -33,6 +33,9 @@ function PuzzleGameScreen() {
       }
       {activeGame === 0 && 
         <ShadowGamesComponent  returnToScreen={handleReturn}/>
+      }
+      {activeGame === 1 && 
+        <MissingGameComponent  returnToScreen={handleReturn}/>
       }
     </div>
   );

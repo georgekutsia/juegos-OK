@@ -2,11 +2,12 @@ const gamesData = {
 
   puzzleGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1731849843/missingGame_h3xess.png",
 
   ],
   puzzleGamesNames: [
     "shadowGame",
-    "puzzle1",
+    "missingGame",
     "puzzle2",
     "puzzle3",
     "puzzle4",
@@ -14,6 +15,7 @@ const gamesData = {
     "puzzle6",
     "puzzle6",
   ],
+
   questionGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728326488/taman%CC%83os-de-animales_ai1xad.png",
@@ -22,6 +24,7 @@ const gamesData = {
     "electionGame", 
     "sizeGame"
   ],
+
   drawGames: [
     // "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
     // "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
@@ -30,6 +33,7 @@ const gamesData = {
     "draw1", 
     "draw2"
   ],
+
   sportGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1731607203/colorGame_sh3qsa.png",
   ],
@@ -37,6 +41,7 @@ const gamesData = {
     "colorRun", 
     "sport2"
   ],
+
   soundGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304120/juego-sonidos_zomhli.png",
   ],
@@ -44,6 +49,7 @@ const gamesData = {
     "animalSoundGame", 
     "sound2"
   ],
+
   election: {
     juguetes: [
       "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727215445/DALL_E_2024-09-24_22.10.08_-_A_set_of_colorful_LEGO_bricks_scattered_on_a_flat_surface._The_LEGO_pieces_come_in_various_shapes_and_sizes_including_blocks_wheels_and_specialty_p_uchiqa.webp",

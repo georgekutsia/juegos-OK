@@ -4,6 +4,8 @@
   border-radius: 60px;
   font-size: calc(20px + 3vw);
   position: relative;
+  color: var(--black);
+
 }
 .colorArray-list{
   display: flex;
@@ -22,6 +24,7 @@
   top: 0;
   left: 50px;
   opacity: 0.5;
+  color: var(--black);
 }
 .position-absolute-alert{
   position: absolute;

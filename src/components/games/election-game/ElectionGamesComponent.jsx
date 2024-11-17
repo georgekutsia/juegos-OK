@@ -53,7 +53,7 @@ function ElectionGamesComponent({ returnToScreen }) {
   return (
     <div className='election-game-box'>
     <div className='buttons-position-absolute'>
-      <InfoComponent text1={"electionGameI1"} text2={"electionGameI1"}/>
+      <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"} text1={"electionGameI"} listOfGames li1={"electionGame1li1"} li2={"electionGame1li2"}  />
       <ButtonReturnComponent returnToScreen={returnToScreen} />
     </div>
       <div className='images-container'>

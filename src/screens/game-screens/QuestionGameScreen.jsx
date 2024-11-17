@@ -16,8 +16,8 @@ function QuestionGameScreen() {
   return (
     <div className="screens-box setting-screen">
       {activeGame === -1 && 
-        <>
-        <ScreenTitleComponent text={"questionGameScreen"} />
+    <>
+      <ScreenTitleComponent text={"questionGameScreen"} />
       <div className='buttons-position-absolute'>
         <InfoComponent title1={"typeOfGameI"}  title2={"objectiveOfGameI"} text1={"questionGameI1"} text2={"questionGameI2"}/>
       </div>

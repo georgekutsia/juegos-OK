@@ -5,7 +5,7 @@ export const esp = {
   // animalitos
   changeFrog:"Ranita",
   preguntasNito:"Preguntas de Nito",
-  cancionesCroqui:"Canciones de Croqui",
+  cancionesCroqui:"Sonidos de Croqui",
   deportesSalti:"Deportes de Salti",
   dibujosPepo:"Dibujos de Pepo",
   puzlesTita:"Puzzles de Tita",
@@ -17,7 +17,7 @@ export const esp = {
 
   changeBear:"Osito",
   preguntasBenny:"Preguntas de Benny",
-  cancionesOtto:"Canciones de Otto",
+  cancionesOtto:"Sonidos de Otto",
   deportesCoco:"Deportes de Coco",
   dibujosTito:"Dibujos de Tito",
   puzlesRuffi:"Puzzles de Ruffi",
@@ -53,13 +53,14 @@ export const esp = {
   typeReset:"Restablecer",
 
 
+  // nombres de juegos
   electionGame:"Juego de elecciones",
   sizeGame:"Juego de tamaños y fuerzas",
   shadowGame:"Juego de siluetas y animales",
   animalSoundGame:"Detecta sonidos de animales",
   colorRun:"Colores, ¡a correr!",
   noColor:"No hay colores elegidos",
-
+  missingGame:"Imágen desaparecida",
 
 // preguntas
 elMasAlto:"Cual es el animal más alto o grande?",
@@ -104,4 +105,14 @@ shadowGameI:"Hay distintas opciones para ocultar al animal. Algunas incluso se p
 shadowGame1li1:"Se oculta el animal tras algún efecto y los niños intentan adivinar qué animal es.",
 shadowGame1li2:"Los niños deben hacer el sonido del animal que piensan que es, sin decir el nombre.",
 shadowGame1li3:"Se puede jugar con efectos o sin. Se elige a alguien que se pone de espaldas a la pantalla. El resto de los niños deben imitar los gestos del animal, quizás con algunos sonidos, para dar pistas sobre cual es y sólo ese niño que está de espaldas a la tele puede decir cual es el animal",
+
+
+colorRunGameI:"Se delimitan zonas por colores y los niños tienen que correr hacia el color que sale en la pantalla antes de que la cuenta atrás llegue a 0. Recomiendo mínimo 3 colores para que sea entretenido y según la distancia y cantidad de niños, se ajusta el tiempo.",
+colorRunGameIli1:"Los niños deben buscar al menos 3 (o la cantidad que se desee) objetos de ese color por la habitación o aula y juntarlos en el centro de la habitación",
+colorRunGameIli2:"En lugar de zonas de colores, se pueden elegir  objetos de ese color (pelota, cubo, globo) que sugetarán los niños y los demás deben tocar el objeto en el tiempo. Este juego hará que necesiten ser más hábiles y conscientes de sus alrededores y dejar espacio a sus compañeros ",
+colorRunGameIli3:"Los niños se colocan en una fila. Se activa la cuenta atrás. El primer niño de la fila debe decir un objeto que tenga ese color y correr a la parte de atrás de la fila. Luego le toca al siguiente niño y así hasta que acabe el tiempo. Luego se cambia el color y sigue el juego.",
+
+electionGameI:"Se elige un niño que se separa del resto. Luego se enseñan dos opciones en la pantalla. Los niños deben adivinar cual de las opciones le gusta más al niño elegido. Después se muestra la opción correcta.",
+electionGame1li1:"El niño elegido puede compartir la respuesta correcta con el adulto en secreto y también los niños pueden separarse por grupos según su elección. Así cuando se muestre la respuesta correcta tendrá mayor impacto",
+electionGame1li2:"En lugar de tener un niño elegido, se divide la sala en 2 zonas. Cada vez que salgan las elecciones, según si les gusta la opción azul (izquierda) o amarilla (derecha), corren a un lado o a otro.",
 };
