@@ -1,0 +1,31 @@
+.spining-missing-box{
+  width: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  align-items: center;
+}
+.missing-box { /* Si necesitas centrarlo dentro de un contenedor padre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Hace que el contenedor ocupe toda la pantalla */
+}
+.spining-missing-box img{
+  width: calc(100px + 5vw);
+  height: calc(100px + 5vw);
+  border-radius: 50%;
+  animation: spinL 5s infinite linear;
+
+}
+.spinning-on{
+  animation: spin 5s infinite linear;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spinL {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
