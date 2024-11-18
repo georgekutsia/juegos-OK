@@ -71,6 +71,7 @@ welcome: "Willkommen!",
 welcomeTo: "Habt Spaß und lernt zusammen mit euren Freunden mit den Spielen von ",
 showAllAnimalTitle:"Alle spielbaren Tiere",
 nocolorAlert:"Du brauchst etwas Farbe!",
+bulala: "Rotationsgeschwindigkeit",
 
 
 

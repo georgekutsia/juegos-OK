@@ -6,16 +6,16 @@ import ButtonNextComponent from "../../buttons/button-next/ButtonNextComponent";
 import ButtonReturnComponent from "../../buttons/button-return/ButtonReturnComponent";
 import ButtonSolutionComponent from "../../buttons/button-solution/ButtonSolutionComponent";
 import InfoComponent from "../../info/InfoComponent";
+import { Form } from "react-bootstrap";
 import "./missingGame.css";
 
 function MissingGameComponent({ returnToScreen }) {
-  const { animalList } = useContext(Context);
+  const {t, animalList } = useContext(Context);
+  const [rotationSpeed, setRotationSpeed] = useState(15); // Velocidad en segundos
 
   const initialImages = [
-    "https://cards.scryfall.io/normal/front/5/f/5f03c944-1929-4cb2-a373-d57eefa29ed1.jpg?1591228198",
-    "https://cards.scryfall.io/normal/front/3/8/38806934-dd9c-4ad4-a59c-a16dce03a14a.jpg?1730488762",
-    "https://cards.scryfall.io/normal/front/3/8/38806934-dd9c-4ad4-a59c-a16dce03a14a.jpg?1730488762",
-    "https://cards.scryfall.io/normal/front/5/f/5f03c944-1929-4cb2-a373-d57eefa29ed1.jpg?1591228198",
+    animalList[0].imagenReal,
+    animalList[1].imagenReal,
   ];
 
   const [listOfImgs, setListOfImgs] = useState(initialImages);
@@ -29,7 +29,7 @@ function MissingGameComponent({ returnToScreen }) {
         newOrder.unshift(lastImage); // Añádela al principio
         return newOrder;
       });
-    }, 3000); // Cada 5 segundos
+    }, 3000); // Cada 3 segundos
 
     return () => clearInterval(interval); // Limpia el intervalo al desmontar
   }, []);
@@ -62,10 +62,20 @@ function MissingGameComponent({ returnToScreen }) {
       <div className="button-solution-game">
         <ButtonSolutionComponent show={handleShow} />
       </div>
-      {/* Muestra las imágenes rotando cada 5 segundos */}
-      <section className="spining-missing-box spinning-on">
+      <div className="rotation-speed-control">
+        <Form.Label>{t("bulala")} {rotationSpeed}s</Form.Label>
+        <Form.Range min="2" max="30" step="1" value={rotationSpeed} style={{ width: "50%", height: "10px", padding: "0" }}
+          onChange={(e) => setRotationSpeed(e.target.value)} 
+        />
+      </div>
+      <section className="spining-missing-box spinning-on" style={{ animationDuration: `${rotationSpeed}s` }}>
         {listOfImgs.map((img, index) => (
-          <img src={img} alt={`Image ${index}`} key={index} />
+          <img
+            src={img}
+            alt={`Image ${index}`}
+            key={index}
+            style={{ animationDuration: `${rotationSpeed}s` }}
+          />
         ))}
       </section>
     </div>

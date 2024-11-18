@@ -15,11 +15,12 @@
   width: calc(100px + 5vw);
   height: calc(100px + 5vw);
   border-radius: 50%;
-  animation: spinL 5s infinite linear;
+  animation: spinL  infinite linear;
 
 }
 .spinning-on{
-  animation: spin 5s infinite linear;
+  animation: spin  infinite linear;
+
 }
 @keyframes spin {
   0% { transform: rotate(0deg); }

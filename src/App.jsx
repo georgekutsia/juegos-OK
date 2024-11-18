@@ -5,6 +5,7 @@ import { useState } from "react";
 import Routers from "./Routers";
 import animalsDataEsp from './data/animalsDataEsp'
 import animalsDataGer from './data/animalsDataGer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { useTranslation } from 'react-i18next';
 import dataNavbarCreatures from './data/navbarData'; 
