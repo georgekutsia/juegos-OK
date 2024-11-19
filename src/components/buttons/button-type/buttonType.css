@@ -11,8 +11,8 @@
   cursor: pointer;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s; /* Safari */
-  min-width: 50px;
-  min-height: 50px;
+  min-width: 60px;
+  min-height: 60px;
 }
 
 .button-ripple:hover {

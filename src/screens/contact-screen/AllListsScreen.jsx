@@ -21,6 +21,7 @@ function AllListsScreen() {
             altura={hey.altura}
             peso={hey.peso}
             velocidad={hey.velocidad}
+            armas={hey.armas}
             habilidad={hey.habilidad}
             ubicacion={hey.ubicacion}
           />

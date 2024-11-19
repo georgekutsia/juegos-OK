@@ -156,8 +156,6 @@ function ShadowGamesComponent({ returnToScreen }) {
             onClick={handleReset}
             classN='button-type-reset'
             typeGame='typeReset'
-            // icon='fa-delete-left'
-            // otherClass='small-button'
             thisIndex= {0}
             setActiveIndex={setactiveIndex}
             activeIndex={activeIndex}

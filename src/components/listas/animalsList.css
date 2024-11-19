@@ -1,6 +1,6 @@
 .animal-card{
   width: 270px;
-  height: 350px;
+  height: 450px;
   border: 2px solid black;
   border-radius: 10px;
   background: linear-gradient(to bottom,rgba(0, 0, 0, 0.299), rgba(242, 255, 0, 0.447));
@@ -8,7 +8,7 @@
 
 .animal-card-img{
   width: 98%;
-  height: 50%;
+  height: 40%;
   object-fit: cover;
   margin: auto;
   margin-top: 1px;
@@ -20,7 +20,7 @@
 
 .animal-card-title{
   width: 98%;
-  height: 14%;
+  height: 11%;
   object-fit: cover;
   margin: auto;
   margin-top: 1px;
@@ -37,7 +37,7 @@
 }
 .animal-card-text{
   width: 98%;
-  height: 31%;
+  height: 46%;
   object-fit: cover;
   margin: auto;
   margin-top: 1px;
@@ -51,6 +51,9 @@
   padding: 3px 10px;
   text-indent: 5px;
   font-size: calc(10px + 0.3vw);
+}
+.animal-card-text p i{
+margin-right: 10px;
 }
 .animal-card-img img{
   margin-top: 10%;
