@@ -16,7 +16,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "esp"
+  lng: "esp",
 })
 
 export default i18n

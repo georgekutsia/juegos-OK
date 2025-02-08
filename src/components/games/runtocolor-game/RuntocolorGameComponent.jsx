@@ -75,14 +75,14 @@ function RuntocolorGameComponent({ returnToScreen }) {
     setColorArray((prevColors) => {
       if (prevColors.length > 1) {
         if (prevColors.includes(color)) {
-          return prevColors.filter((c) => c !== color); // Elimina el color
+          return prevColors.filter((c) => c !== color); // Elimina el color si ya hay en el array
         } else {
-          return [...prevColors, color]; // Agrega el color
+          return [...prevColors, color]; // Agrega el color al array
         }
       }
 
       if (prevColors.includes(color) && prevColors.length === 1) {
-        // Alerta si intentas eliminar el único color
+        // Alerta si intentas eliminar el único color, porque sin colores eso da fallo
         setshowAlert(true);
         setTimeout(() => setshowAlert(false), 2000);
         return prevColors;
@@ -118,6 +118,11 @@ function RuntocolorGameComponent({ returnToScreen }) {
             typeGame="15s"
             onClick={() => setTimeAmount(15)}
           />
+          <ButtonTypeComponent
+            classN="button-type-number"
+            typeGame="25s"
+            onClick={() => setTimeAmount(25)}
+          />
         </div>
         <div>
           <ButtonTypeComponent
@@ -134,6 +139,11 @@ function RuntocolorGameComponent({ returnToScreen }) {
             classN="button-type-number"
             backColor="var(--blue)"
             onClick={() => handleColor("var(--blue)")}
+          />
+          <ButtonTypeComponent
+            classN="button-type-number"
+            backColor="var(--grey)"
+            onClick={() => handleColor("var(--grey)")}
           />
         </div>
         <div>
@@ -152,6 +162,11 @@ function RuntocolorGameComponent({ returnToScreen }) {
             backColor="var(--violet)"
             onClick={() => handleColor("var(--violet)")}
           />
+          <ButtonTypeComponent
+            classN="button-type-number"
+            backColor="var(--darkGreen)"
+            onClick={() => handleColor("var(--darkGreen)")}
+          />
         </div>
         <div>
           <ButtonTypeComponent
@@ -168,6 +183,11 @@ function RuntocolorGameComponent({ returnToScreen }) {
             classN="button-type-number"
             backColor="var(--red)"
             onClick={() => handleColor("var(--red)")}
+          />
+          <ButtonTypeComponent
+            classN="button-type-number"
+            backColor="var(--black)"
+            onClick={() => handleColor("var(--black)")}
           />
         </div>
       </div>

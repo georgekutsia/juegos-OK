@@ -8,13 +8,17 @@ import ButtonSolutionComponent from "../../buttons/button-solution/ButtonSolutio
 import InfoComponent from "../../info/InfoComponent";
 import { Form } from "react-bootstrap";
 import "./missingGame.css";
+import ButtonTypeComponent from "../../buttons/button-type/ButtonTypeComponent";
 
 function MissingGameComponent({ returnToScreen }) {
   const { t, animalList } = useContext(Context);
   const [rotationSpeed, setRotationSpeed] = useState(5); 
   const [imgChangeSpeed, setImgChangeSpeed] = useState(5000); 
   const [listOfImgs, setListOfImgs] = useState([]);
-  
+  const [showSolution, setshowSolution] = useState(false);
+  const [removedImage, setRemovedImage] = useState([])
+  const [showRemoved, setshowRemoved] = useState(false)
+
   const handleRandom = () => {
     const randomIndexes = Array.from({ length: 3 }, () =>
       Math.floor(Math.random() * animalList.length)
@@ -41,12 +45,30 @@ function MissingGameComponent({ returnToScreen }) {
   
   const handleNext = () => {
     handleRandom();
+    setRemovedImage([]);
+    setshowRemoved(false);
   };
+
   const handleShow = () => {
-    setListOfImgs((prevImages) => prevImages.slice(0, -1));
+    if (listOfImgs.length > 2) {
+      setListOfImgs((prevImages) => {
+        const updatedImages = [...prevImages];
+        const lastRemoved = updatedImages.pop(); // Elimina y guarda la última imagen
+        setRemovedImage(lastRemoved); // Actualiza el estado de la imagen eliminada
+        setshowSolution(true)
+        return updatedImages;
+      });
+    }
   };
+  const handleSolution = () => {
+    setshowRemoved(true)
+    setshowSolution(false)
+
+  }
+
+  
   return (
-    <div className="missing-box">
+    <section className="missing-box">
       <div className="buttons-position-absolute">
         <InfoComponent title1={"ruleOfGameI"} title2={"modeOfGameI"} text1={"shadowGameI"} listOfGames li1={"shadowGame1li1"} li2={"shadowGame1li2"} li3={"shadowGame1li3"}/>
         <ButtonReturnComponent returnToScreen={returnToScreen} />
@@ -54,9 +76,11 @@ function MissingGameComponent({ returnToScreen }) {
       <div className="button-next-game">
         <ButtonNextComponent random={handleNext} />
       </div>
+      {showSolution &&
       <div className="button-solution-game">
-        <ButtonSolutionComponent show={handleShow} />
+        <ButtonSolutionComponent show={handleSolution} />
       </div>
+      }
       <section className="form-missing-box">
         <div className="rotation-speed-control">
           <Form.Label>
@@ -72,12 +96,12 @@ function MissingGameComponent({ returnToScreen }) {
           />
         </div>
         <div>
-          <Form>
+          <Form >
             {["radio"].map((type) => (
-              <div key={`inline-${type}`} className="mb-3">
+              <div key={`inline-${type}`} className="mb-3 rotation-control-radio">
                 <Form.Check inline label=" 1s" name="group1" type={type} id={`inline-${type}-1`} onClick={() => setImgChangeSpeed(1000)} />
                 <Form.Check inline label=" 3s" name="group1" type={type} id={`inline-${type}-1`} onClick={() => setImgChangeSpeed(3000)} />
-                <Form.Check inline label=" 5s" name="group1" type={type} id={`inline-${type}-2`} onClick={() => setImgChangeSpeed(5000)} />
+                <Form.Check inline label=" 5s" name="group1" type={type} id={`inline-${type}-2`} onClick={() => setImgChangeSpeed(5000)} defaultChecked/>
                 <Form.Check inline label=" 9s " name="group1" type={type} id={`inline-${type}-3`} onClick={() => setImgChangeSpeed(9000)} />
               </div>
             ))}
@@ -91,9 +115,23 @@ function MissingGameComponent({ returnToScreen }) {
         {listOfImgs.map((img, index) => (
           <img src={img} alt={`Image ${index}`} key={index} style={{ animationDuration: `${rotationSpeed}s` }} />
         ))}
-            {console.log("speed", rotationSpeed)}
       </section>
-    </div>
+      <section className="removed-image-box">
+      {showRemoved && (
+            <img src={removedImage} alt="Removed" />
+        )}
+    </section>
+        <div className="shadow-game-buttonMode buttonMode-runtocolor">
+        <div>
+          <ButtonTypeComponent
+            classN="button-type-number"
+            typeGame="esconder"
+            backColor={"var(--nav-blue)"}
+            onClick={handleShow}
+          />
+          </div>
+          </div>
+    </section>
   );
 }
 

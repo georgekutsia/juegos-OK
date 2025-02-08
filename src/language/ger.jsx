@@ -28,9 +28,20 @@ export const ger = {
   osito5:"Rufi",
 
 
+  changeFish:"Pezi",
+  preguntasNepto:"Nepto's Fragen",
+  cancionesCoral:"Coral's Klänge",
+  deportesMaris:"Maris's Sport",
+  dibujosMarlin:"Marlin's Zeichnungen",
+  puzlesPerlo:"Perlo's Rätsel",
+  osito1:"Nepto",
+  osito2:"Coral",
+  osito3:"Maris",
+  osito4:"Marlin",
+  osito5:"Perlo",
 
   
-  currentPet:"aktuelles Maskottchen",
+  currentPet:"Verfügbare Haustiere",
   solution:"Lösung",
   next:"Nächste",
   letsStart:"¡wir beginnen!",
@@ -57,7 +68,12 @@ export const ger = {
   sizeGame:"Spielen um Größe und Stärke",
   shadowGame:"Scherenschnitt und Tierspiel",
   animalSoundGame:"Erkennt Tiergeräusche",
+  citySoundGame:"Stadtklänge",
+  secretSoundGame:"Kette der Geheimnisse",
+  drawShapes:"Formen zeichnen",
+  drawInTeams:"Zeichnen im Team",
   colorRun: "Farben, los geht's!",
+  postures:"Imitiert Körperhaltungen",
   noColor:"Es sind keine Farben ausgewählt",
   missingGame:"Bild verschwunden",
 
@@ -73,6 +89,7 @@ showAllAnimalTitle:"Alle spielbaren Tiere",
 nocolorAlert:"Du brauchst etwas Farbe!",
 bulala: "Rotationsgeschwindigkeit",
 
+esconder:"Verstecken",
 
 
 

@@ -64,10 +64,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1vw;
-    bottom: 100px;
-    left: 20px;
+    bottom: 220px;
     height: 50px;
     width: 80vw;
+    justify-content: center;
   }
 
 }

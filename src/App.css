@@ -1,12 +1,14 @@
 :root {
   --white: #ffffff;
   --black: #21232a;
+  --grey: #8d8d8d;
   --violet: rgb(255, 0, 255);
   --red: #ff0000;
   --blue:rgb(0, 0, 255);
   --yellow: rgb(255, 255, 0);
   --orange: #ffa200;
   --green:rgb(0, 255, 0);
+  --darkGreen:rgb(15, 104, 15);
   --pink:#ff0080;
   --brown:rgb(165, 42, 42);
 

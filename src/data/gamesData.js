@@ -26,28 +26,34 @@ const gamesData = {
   ],
 
   drawGames: [
-    // "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
-    // "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727002064/Juego-sombra_orsub7.png",
+"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iForms_pghwjf.png",
+"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968964/iShowDraw_ihckfo.png"
   ],
   drawGamesNames: [
-    "draw1", 
-    "draw2"
+    "drawShapes", 
+    "drawInTeams",
+    "draw3",
   ],
 
   sportGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1731607203/colorGame_sh3qsa.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738969654/iPostures_ac4azv.png"
   ],
   sportGamesNames: [
     "colorRun", 
-    "sport2"
+    "postures"
   ],
 
   soundGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304120/juego-sonidos_zomhli.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iSounds_m6dfmd.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iSecret_idibci.png"
   ],
   soundGamesNames: [
     "animalSoundGame", 
-    "sound2"
+    "citySoundGame",
+    "secretSoundGame",
+    "sound4",
   ],
 
   election: {

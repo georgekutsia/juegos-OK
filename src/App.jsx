@@ -13,6 +13,7 @@ import dataNavbarCreaturesNames from './data/navbarNamesData';
 function App() {
   const { t, i18n } = useTranslation(["translation"]);
   const [profile, setProfile] = useState(true);
+  console.log("bulala", t)
 
   const creatureTypes = Object.keys(dataNavbarCreatures);
   const creatureNames = Object.keys(dataNavbarCreaturesNames);
@@ -24,7 +25,7 @@ function App() {
 
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
-    console.log(i18n)
+    console.log("...--SS", i18n)
     if(code === "esp"){
     setanimalList(animalsDataEsp)
     } else if( code === "ger"){

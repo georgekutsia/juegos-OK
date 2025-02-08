@@ -28,8 +28,21 @@ export const esp = {
   osito5:"Rufi",
 
 
+  changeFish:"Pezi",
+  preguntasNepto:"Preguntas de Nepto",
+  cancionesCoral:"Sonidos de Coral",
+  deportesMaris:"Deportes de Maris",
+  dibujosMarlin:"Dibujos de Marlin",
+  puzlesPerlo:"Puzzles de Perlo",
+  osito1:"Nepto",
+  osito2:"Coral",
+  osito3:"Maris",
+  osito4:"Marlin",
+  osito5:"Perlo",
 
-  currentPet:"Mascota actual",
+
+
+  currentPet:"Mascotas disponibles",
   click:"Click me",
   solution:"Solución",
   next:"Siguiente",
@@ -57,8 +70,13 @@ export const esp = {
   electionGame:"Juego de elecciones",
   sizeGame:"Juego de tamaños y fuerzas",
   shadowGame:"Juego de siluetas y animales",
-  animalSoundGame:"Detecta sonidos de animales",
+  animalSoundGame:"Sonidos de animales",
+  citySoundGame:"Sonidos de ciudad",
+  secretSoundGame:"Cadena de secretos",
+  drawShapes:"Dibuja formas",
+  drawInTeams:"Dibuja en equipo",
   colorRun:"Colores, ¡a correr!",
+  postures:"Imita las posturas",
   noColor:"No hay colores elegidos",
   missingGame:"Imágen desaparecida",
 
@@ -73,6 +91,9 @@ welcomeTo: "Diviérte y aprende con tus amigos con los juegos de ",
 showAllAnimalTitle:"Todos los animales jugables",
 nocolorAlert:"¡Necesitas algún color!",
 bulala:"Velocidad de rotación",
+
+
+esconder:"Esconder",
 
 // infos
 // infos

@@ -12,6 +12,13 @@ const navbarCreatures = {
     "deportesCoco",
     "dibujosTito",
     "puzlesRuffi",
+  ],
+  pezi:[
+    "preguntasNepto",
+    "cancionesCoral",
+    "deportesMaris",
+    "dibujosMarlin",
+    "puzlesPerlo",
   ]
 }
   

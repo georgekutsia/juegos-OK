@@ -80,9 +80,9 @@ const animalsDataEsp = [
   },
   {
     nombre: "Reno",
-    altura: 1400,  //mm
+    altura: 1600,  //mm
     peso: 300000, //g
-    velocidad:60, // km/h
+    velocidad:70, // km/h
     habilidad: "Muy fuerte, con cuernos grandes y usados tradicionalmente como animales de carga",
     armas:"Sus astas sirven tanto para defensa como para competir por territorio y parejas.",
     ubicacion: "Ártico y subártico, incluyendo América del Norte, Europa y Asia",

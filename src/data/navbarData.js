@@ -14,6 +14,14 @@ const navbarCreatures = {
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651461/osito2_dsteoz.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651463/osito4_duwopo.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726651460/osito3_ig4crg.png",
+  ],
+  pezi:[
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054897/Pezi_n3jtaz.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054895/NeptoDudas_g2lclh.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054897/coralCanta_u2jjzj.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054896/MarisJuega_vtogws.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054896/MarlinDibuja_efvg6i.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054896/PerloPuzzle_fgqtqr.png"
   ]
 }
   
