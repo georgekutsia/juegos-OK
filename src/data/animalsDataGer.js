@@ -424,7 +424,19 @@ const animalsData = [
     imagenAnimada: "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727269780/draw-peli%CC%81cano_goacru.png",
   },
   {
-    nombre: "Papagei",
+    nombre: "Papagai",
+    altura: 200,  //mm
+    peso: 500,   //g
+    velocidad:70, // km/h
+    habilidad: "Pico fuerte para romper cáscaras",
+    armas:"Su pico fuerte puede infligir mordiscos defensivos.",
+    ubicacion: "América del Sur, África y Australia",
+    imagenReal:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727261922/Papagayo_l5fmon.png",
+    imagenAnimada:"https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727269785/draw-loro_tkazis.png",
+    sonido:["https://res.cloudinary.com/dtv1oj9bq/video/upload/v1728510226/loro_tn5meb.mp3"]
+  },
+  {
+    nombre: "Papagei Grosser",
     altura: 200,  //mm
     peso: 1500,   //g
     velocidad: 70, // km/h

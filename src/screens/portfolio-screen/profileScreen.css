@@ -3,4 +3,5 @@
   margin: auto;
   margin-top: 20vh;
   justify-content: space-evenly;
+  gap: 20px;
 }

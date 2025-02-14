@@ -14,23 +14,23 @@ function WelcomeScreen() {
         <ScreenTitleComponent text={"welcomeTo"}/>
         <section className="welcome-screen-box">
           <figure>
-            <img className="welcome-screen-img" src={t(dataNavbarImg[0])} alt={currentCreatureName} />
+            <img className="welcome-screen-img" src={t(dataNavbarImg[1])} alt={currentCreatureName} />
             <h3>{t(`${currentCreatureName}1`)} </h3>
           </figure>
           <figure>
-            <img className="welcome-screen-img" src={t(dataNavbarImg[1])} alt={currentCreatureName} />
+            <img className="welcome-screen-img" src={t(dataNavbarImg[2])} alt={currentCreatureName} />
             <h3>{t(`${currentCreatureName}2`)} </h3>
           </figure>
           <figure>
-            <img className="welcome-screen-img" src={t(dataNavbarImg[2])} alt={currentCreatureName} />
+            <img className="welcome-screen-img" src={t(dataNavbarImg[3])} alt={currentCreatureName} />
             <h3>{t(`${currentCreatureName}3`)} </h3>
           </figure>
           <figure>
-            <img className="welcome-screen-img" src={t(dataNavbarImg[3])} alt={currentCreatureName} />
+            <img className="welcome-screen-img" src={t(dataNavbarImg[4])} alt={currentCreatureName} />
             <h3>{t(`${currentCreatureName}4`)} </h3>
           </figure>
           <figure>
-            <img className="welcome-screen-img" src={t(dataNavbarImg[4])} alt={currentCreatureName} />
+            <img className="welcome-screen-img" src={t(dataNavbarImg[5])} alt={currentCreatureName} />
             <h3>{t(`${currentCreatureName}5`)} </h3>
           </figure>
           </section>

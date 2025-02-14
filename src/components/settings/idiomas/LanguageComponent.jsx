@@ -7,7 +7,7 @@ function LanguageComponent() {
 
   return (
     <div className="language-box">
-    <h3>{t("lang_ger")}</h3>
+    <h2>{t("lang_actual")}</h2>
     <div className="language-box-election">
       <ButtonLanguageComponent text={"lang_ger"} language={"ger"}/>
       <ButtonLanguageComponent text={"lang_esp"} language={"esp"}/>

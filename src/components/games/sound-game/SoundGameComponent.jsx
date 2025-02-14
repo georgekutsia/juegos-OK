@@ -45,6 +45,7 @@ function SoundGameComponent({ returnToScreen }) {
 
   const handleSolution = () => {
     setshowSolution(true)
+    handlePlaySound()
   }
 
   return (

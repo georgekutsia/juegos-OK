@@ -426,7 +426,7 @@ const animalsDataEsp = [
   {
     nombre: "Loro",
     altura: 200,  //mm
-    peso: 1500,   //g
+    peso: 500,   //g
     velocidad:70, // km/h
     habilidad: "Pico fuerte para romper cáscaras",
     armas:"Su pico fuerte puede infligir mordiscos defensivos.",

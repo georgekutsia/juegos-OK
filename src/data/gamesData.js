@@ -1,8 +1,8 @@
 const gamesData = {
 
   puzzleGames: [
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304689/juego-sombras_ed3mlt.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1731849843/missingGame_h3xess.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739521729/Juego-sombra_cc9tlm_c21gqe.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739521729/missingGame_h3xess_eqaqyz.png",
 
   ],
   puzzleGamesNames: [
@@ -17,8 +17,8 @@ const gamesData = {
   ],
 
   questionGames: [
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304083/ElectionGame_z2wzf9.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1728326488/taman%CC%83os-de-animales_ai1xad.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739521729/ElectionGame_z2wzf9_nqwg0q.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739521729/taman%CC%83os-de-animales_ai1xad_xwdtte.png",
   ],
   questionGamesNames: [
     "electionGame", 
@@ -36,7 +36,7 @@ const gamesData = {
   ],
 
   sportGames: [
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1731607203/colorGame_sh3qsa.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739521729/colorGame_sh3qsa_aozq4f.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738969654/iPostures_ac4azv.png"
   ],
   sportGamesNames: [
@@ -45,7 +45,7 @@ const gamesData = {
   ],
 
   soundGames: [
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1727304120/juego-sonidos_zomhli.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739521729/juego-sonidos_zomhli_zzpspo.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iSounds_m6dfmd.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iSecret_idibci.png"
   ],

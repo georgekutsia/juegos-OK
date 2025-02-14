@@ -16,7 +16,9 @@ function ProfileScreen() {
             img={
               "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726531646/giopixxel_q22dcc.png"
             }
-            aosDuration={300}
+            aosDelay={100}
+            extraInfo
+
           />
           <ProfileComponent
             name={"Oscar"}
@@ -24,7 +26,7 @@ function ProfileScreen() {
             img={
               "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1729880791/osc_pbvo6n.png"
             }
-            aosDuration={600}
+            aosDelay={300}
           />
           <ProfileComponent
             name={"Oliver"}
@@ -32,9 +34,9 @@ function ProfileScreen() {
             img={
               "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1729880785/ali_kkpyw8.png"
             }
-            aosDuration={700}
+            aosDelay={500}
+
           />
- 
         </>
       )}
     </div>

@@ -16,7 +16,7 @@ function CharacterComponent() {
       {t("changeFrog")}</button>
       <button className="character-box-button" onClick={() => handleChangeCreature("pezi")}>
       <img className="character-box-button-img" src="https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054897/Pezi_n3jtaz.png" alt="Pezi mascota" />
-      {t("changeFrog")}</button>
+      {t("changeFish")}</button>
 
     </div>
   );

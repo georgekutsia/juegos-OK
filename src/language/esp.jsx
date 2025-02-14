@@ -1,6 +1,7 @@
 export const esp = {
   lang_ger: "Alemán",
   lang_esp: "Español",
+  lang_actual: "Selecciona un idioma",
 
   // animalitos
   changeFrog:"Ranita",

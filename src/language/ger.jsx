@@ -1,6 +1,7 @@
 export const ger = {
   lang_ger: "Deutsch",
   lang_esp: "Spanisch",
+  lang_actual: "Eine Sprache auswählen",
 
   // animalitos
   changeFrog:"Frosch",
