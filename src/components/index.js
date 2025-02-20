@@ -14,11 +14,16 @@ export { default as MissingGameComponent } from "./games/missing-game/MissingGam
 export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 
 export { default as SettingComponent } from "./settings/SettingComponent.jsx";
+export { default as ColorsComponent } from "./settings/colors/ColorsComponent.jsx";
+export { default as BackgroundDirectionComponent } from "./settings/colors/BackgroundDirectionComponent.jsx";
+export { default as PicColorComponent } from "./settings/colors/PicColorComponent.jsx";
+export { default as PredetColorComponent } from "./settings/colors/PredetColorComponent.jsx";
+export { default as LanguageComponent } from "./settings/idiomas/LanguageComponent";
+export { default as CharacterComponent } from "./settings/character/CharacterComponent";
+
 export { default as InfoComponent } from "./info/InfoComponent.jsx";
 export { default as TypingTextComponent } from "./typing-text/TypingTextComponent.jsx";
 
-
-export { default as LanguageComponent } from "./settings/idiomas/LanguageComponent";
 export { default as ProfileComponent } from "./profile/ProfileComponent";
 export { default as MainNavbarComponent } from "./navbars/main-navbar/MainNavbarComponent";
 export { default as MainNavbarButtonComponent } from "./navbars/main-navbar/main-navbar-button/MainNavbarButtonComponent";
@@ -33,7 +38,6 @@ export { default as ButtonPrueba } from "./buttons/button-prueba/ButtonPrueba";
 export { default as ButtonReturnComponent } from "./buttons/button-return/ButtonReturnComponent.jsx";
 export { default as ButtonImgComponent } from "./buttons/button-img/ButtonImgComponent.jsx";
 export { default as ButtonLanguageComponent } from "./buttons/button-language/ButtonLanguageComponent";
-export { default as characterComponent } from "./settings/character/CharacterComponent";
 export { default as ButtonSolutionComponent } from "./buttons/button-solution/ButtonSolutionComponent";
 export { default as ButtonNextComponent } from "./buttons/button-next/ButtonNextComponent";
 export { default as ButtonColoredComponent } from "./buttons/button-colored/ButtonColoredComponent";

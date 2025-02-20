@@ -31,7 +31,7 @@
   --dark-green: rgb(29, 114, 39);
   --dark-yellow: rgb(147, 152, 39);
   --dark-pink: #c90165;
-  background-color: linear-gradient(to bottom,violet, red, orange, yellow, green, blue);
+  /* background-color: linear-gradient(to bottom,violet, red, orange, yellow, green, blue); */
 
   --light-white: rgba(255, 255, 255, 0.461);
   --light-grey: rgba(218, 218, 218, 0.461);
@@ -66,15 +66,16 @@ html, body{
   margin: 0;
 }
 
-body{
+.body{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Jost", sans-serif;
   font-size:14px;
-  background-image: linear-gradient(to bottom right, #ffa578, #ff675a);
+  height: 100vh;
 }
+
 
 
 .loaderTime-box {

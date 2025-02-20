@@ -38,3 +38,6 @@
   backdrop-filter: blur(10px);
   text-shadow: 1px 1px 1px var(--black);
 }
+.choosecolor-div{
+  width: 250px;
+}

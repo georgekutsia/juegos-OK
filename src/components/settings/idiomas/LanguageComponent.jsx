@@ -11,6 +11,10 @@ function LanguageComponent() {
     <div className="language-box-election">
       <ButtonLanguageComponent text={"lang_ger"} language={"ger"}/>
       <ButtonLanguageComponent text={"lang_esp"} language={"esp"}/>
+      {/* <ButtonLanguageComponent text={"Inglés"} language={"esp"}/>
+      <ButtonLanguageComponent text={"Ruso"} language={"esp"}/>
+      <ButtonLanguageComponent text={"Francés"} language={"esp"}/>
+      <ButtonLanguageComponent text={"Italiano"} language={"esp"}/> */}
     </div>
     </div>
   )

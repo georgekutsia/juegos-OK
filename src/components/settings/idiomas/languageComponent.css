@@ -1,9 +1,10 @@
 .language-box{
   text-align: center;
   margin-top: 20px;
+  padding: 5px;
 }
 .language-box-election{
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
