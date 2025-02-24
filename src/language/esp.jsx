@@ -71,6 +71,7 @@ export const esp = {
   animalSoundGame: 'Sonidos de animales',
   citySoundGame: 'Sonidos de ciudad',
   secretSoundGame: 'Cadena de secretos',
+  storyGame: 'Cuentos y anventuras',
   drawShapes: 'Dibuja formas',
   drawInTeams: 'Dibuja en equipo',
   colorRun: 'Colores, ¡a correr!',

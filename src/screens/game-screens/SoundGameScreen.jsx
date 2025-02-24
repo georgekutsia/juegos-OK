@@ -1,5 +1,5 @@
 import {  useState } from 'react';
-import { ButtonColoredComponent, InfoComponent, ScreenTitleComponent, SoundGameComponent } from '../../components';
+import { ButtonColoredComponent, InfoComponent, ScreenTitleComponent, SoundGameComponent, StoriesBookComponent, StoryGameComponent } from '../../components';
 import gamesData from '../../data/gamesData'; 
 import "./gamesScreen.css";
 
@@ -39,6 +39,7 @@ function SoundGameScreen() {
         </div>
       }
       {activeGame === 0 && <SoundGameComponent returnToScreen={handleReturn} />}
+      {activeGame === 1 && <StoriesBookComponent returnToScreen={handleReturn} ind={activeGame} indSet={setActiveGame} />}
     </div>
   );
 }

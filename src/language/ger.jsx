@@ -70,6 +70,7 @@ export const ger = {
   animalSoundGame: 'Erkennt Tiergeräusche',
   citySoundGame: 'Stadtklänge',
   secretSoundGame: 'Kette der Geheimnisse',
+  storyGame: 'Märchen und Abenteuer',
   drawShapes: 'Formen zeichnen',
   drawInTeams: 'Zeichnen im Team',
   colorRun: "Farben, los geht's!",

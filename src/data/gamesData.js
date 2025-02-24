@@ -46,14 +46,15 @@ const gamesData = {
 
   soundGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739521729/juego-sonidos_zomhli_zzpspo.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1740140243/cuentoGame_zlvevf.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iSounds_m6dfmd.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iSecret_idibci.png"
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1738968963/iSecret_idibci.png",
   ],
   soundGamesNames: [
     "animalSoundGame", 
+    "storyGame",
     "citySoundGame",
     "secretSoundGame",
-    "sound4",
   ],
 
   election: {

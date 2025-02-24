@@ -1,5 +1,3 @@
-.sound-game-box{
-}
 
 .sound-game-btn {
   width: calc(100px + 6vw); 
@@ -20,4 +18,12 @@
 
 .sound-solution-img{
   width: calc(100px + 10vw);
+  transition: 10s;
+
+}
+.sound-solution-img:hover{
+  scale: 3;
+}
+.sound-question{
+  font-size: 10rem;
 }

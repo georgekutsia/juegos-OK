@@ -41,6 +41,7 @@ function SoundGameComponent({ returnToScreen }) {
     const newAnimal = getRandomAnimalWithSound()
     setSelectedAnimal(newAnimal)
     setshowSolution(false)
+
   }
 
   const handleSolution = () => {
@@ -53,13 +54,13 @@ function SoundGameComponent({ returnToScreen }) {
       {selectedAnimal && (
         <>
           <h3>{}</h3>
-          {showSolution && (
+          {showSolution ?(
             <img
               className='sound-solution-img'
               src={currentAnimal}
               alt='imagen'
             />
-          )}
+          ):(<i className="fa-solid fa-question fa-fade sound-question"></i>)}
           <img
             className='sound-game-btn'
             onClick={handlePlaySound}

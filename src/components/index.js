@@ -10,6 +10,8 @@ export { default as ElectionGamesComponent } from "./games/election-game/Electio
 export { default as SizeGameComponent } from "./games/size-game/SizeGameComponent.jsx";
 export { default as RuntocolorGameComponent } from "./games/runtocolor-game/RuntocolorGameComponent.jsx";
 export { default as SoundGameComponent } from "./games/sound-game/SoundGameComponent.jsx";
+export { default as StoryGameComponent } from "./games/story-game/StoryGameComponent.jsx";
+export { default as StoriesBookComponent } from "./games/stories-book-component/StoriesBookComponent.jsx";
 export { default as MissingGameComponent } from "./games/missing-game/MissingGameComponent.jsx";
 export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 

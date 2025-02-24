@@ -1,0 +1,64 @@
+.book {
+  position: relative;
+  width: calc(100px + 10vw);
+  height: calc(100px + 12vw);
+  border-radius: 1vw 3px 12px 2vw;
+  margin: 1vw 1.5vw;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: 0px;     
+  right: 0;
+  width: 1px;   
+  height: 93%;  
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.book:after {
+  box-sizing: inherit; 
+  content: ""; 
+  position: absolute; 
+  height: calc(2px + 1vw);
+  width: calc(100px + 9.1vw); 
+  bottom: 3px;
+  right: 0px;
+  border-radius: 32px 4px 4px 32px;
+  background-color: rgb(163, 163, 163);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    white 0,
+    white 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.book:hover{
+  transform: scale(1.05);
+}
+
+.story-box{
+position: relative;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+margin: 5vw auto;
+
+}
+.book-title{
+  padding-top: 1vw;
+  font-style: italic;
+  width: calc(85px + 6vw);
+  margin: auto;
+  margin-left: 20%;
+  font-size: calc(8px + 0.8vw);
+}
+.book-img{
+  width: calc(50px + 5vw);
+  transform: translate(-50%, 20%);
+  position: absolute;
+}
