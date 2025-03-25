@@ -136,7 +136,7 @@ const animalsDataEsp = [
   {
     nombre: "Libélula",
     altura: 50,    //mm
-    peso: 1.5,    //g
+    peso: 0.15,    //g
     velocidad:24, // km/h
     habilidad: "Ágil voladora, capaz de volar largas distancias",
     armas:"Aunque inofensiva, puede volar con agilidad y huir rápidamente de depredadores.",

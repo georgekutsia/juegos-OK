@@ -40,7 +40,9 @@ function SoundGameScreen() {
       }
       {activeGame === 0 && <SoundGameComponent returnToScreen={handleReturn} />}
       {activeGame === 1 && <StoriesBookComponent returnToScreen={handleReturn} ind={activeGame} indSet={setActiveGame} />}
+      
     </div>
+    
   );
 }
 

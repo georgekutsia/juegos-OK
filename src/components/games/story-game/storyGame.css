@@ -5,6 +5,15 @@
   overflow: scroll;
   height: 65vh;
 }
+.story-game-img-principal{
+  position: absolute;
+  width: 15vw;
+  left: 1vw;
+  top: 20vh;
+}
+
+
+
 
 .story-game-btn {
   width: calc(50px + 4vw); 
@@ -60,6 +69,16 @@
   animation: storyImg 0.5s forwards;
   img{
     height: 43vh;
+    width:  auto;
+  }
+}
+.story-image-last{
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  animation: storyImg 0.5s forwards;
+  img{
+    height: 60vh;
     width:  auto;
   }
 }

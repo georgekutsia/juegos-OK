@@ -87,6 +87,7 @@ export const ger = {
   welcomeTo:
     'Habt Spaß und lernt zusammen mit euren Freunden mit den Spielen von ',
   showAllAnimalTitle: 'Alle spielbaren Tiere',
+  showAllObjectsTitle: 'Alle Objekte',
   nocolorAlert: 'Du brauchst etwas Farbe!',
   bulala: 'Rotationsgeschwindigkeit',
 

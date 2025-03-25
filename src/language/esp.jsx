@@ -87,6 +87,7 @@ export const esp = {
   welcome: '¡Bienvenidos!',
   welcomeTo: 'Diviérte y aprende con tus amigos con los juegos de ',
   showAllAnimalTitle: 'Todos los animales jugables',
+  showAllObjectsTitle: 'Todos los objetos',
   nocolorAlert: '¡Necesitas algún color!',
   bulala: 'Velocidad de rotación',
 

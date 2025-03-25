@@ -136,7 +136,7 @@ const animalsData = [
   {
     nombre: "Libelle",
     altura: 50,    //mm
-    peso: 1.5,    //g
+    peso: 0.15,    //g
     velocidad: 24, // km/h
     habilidad: "Geschickte Flieger, in der Lage, große Entfernungen zurückzulegen",
     armas:" Obwohl harmlos, kann sie sehr flink fliegen und schnell vor Angreifern fliehen.",

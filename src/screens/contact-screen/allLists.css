@@ -6,3 +6,18 @@
   justify-content: space-evenly;
   gap: 20px;
 }
+
+.list-nav{
+  display: flex;
+  justify-content: space-evenly;
+  img{
+    width: 100px;
+  }
+}
+.contact-img-objects{
+  transition: all 0.5s ease-in-out;
+  width: 100px;
+}
+.contact-img-objects:hover{
+  transform: scale(1.2);
+}

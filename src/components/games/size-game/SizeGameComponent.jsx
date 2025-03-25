@@ -98,6 +98,7 @@ function SizeGameComponent({ returnToScreen }) {
   }
   const handleSolutionAltura = () => {
     let diff = 0
+    console.log(selectedAnimals[0].altura, selectedAnimals[1].altura)
     if (selectedAnimals[0].altura > selectedAnimals[1].altura) {
       setimg1('size-game-img-isbig')
       diff = selectedAnimals[0].altura - selectedAnimals[1].altura

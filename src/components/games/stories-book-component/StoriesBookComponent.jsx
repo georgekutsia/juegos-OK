@@ -1,4 +1,4 @@
-import { ButtonReturnComponent, InfoComponent, StoryGameComponent } from '../../../components'
+import { ButtonReturnComponent, InfoComponent, SpecialStoryGameComponent, StoryGameComponent } from '../../../components'
 import './stories-books.css'
 import PropTypes from 'prop-types'
 import storyData from '../../../data/storyData.js'
@@ -69,7 +69,8 @@ function StoriesBookComponent({ returnToScreen, ind, indSet }) {
       </div>
       </>
       }
-       {activeGame === 0 && <StoryGameComponent returnToScreen={handleReturn} />}
+       {activeGame === 0 && <SpecialStoryGameComponent returnToScreen={handleReturn} />}
+       {activeGame === 1 && <StoryGameComponent returnToScreen={handleReturn} />}
 
     </div>
   )

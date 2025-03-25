@@ -3,6 +3,7 @@ import MainNavbarComponent from './components/navbars/main-navbar/MainNavbarComp
 import { Context } from './shared/context'
 import { useState } from 'react'
 import Routers from './Routers'
+import objectsDataList from './data/objectsData'
 import animalsDataEsp from './data/animalsDataEsp'
 import animalsDataGer from './data/animalsDataGer'
 
@@ -21,6 +22,7 @@ function App() {
 
   const creatureTypes = Object.keys(dataNavbarCreatures)
   const creatureNames = Object.keys(dataNavbarCreaturesNames)
+  const [objectsData, setobjectsData] = useState(objectsDataList)
   const [animalList, setanimalList] = useState(animalsDataEsp)
   const [currentCreatureType, setCurrentCreatureType] = useState(
     creatureTypes[0]
@@ -65,6 +67,8 @@ function App() {
         dataNavbarName,
         animalList,
         setanimalList,
+        objectsData,
+        setobjectsData,
         primaryColor, // Añadir primaryColor al contexto
         primaryColor,
         setPrimaryColor,
