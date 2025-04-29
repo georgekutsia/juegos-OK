@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ButtonColoredComponent, InfoComponent, RuntocolorGameComponent, ScreenTitleComponent,  } from '../../components';
+import { ButtonColoredComponent, InfoComponent, RuntocolorGameComponent, ScreenTitleComponent, SearchRoomGame,  } from '../../components';
 import gamesData from '../../data/gamesData'; 
 import "./gamesScreen.css"
 
@@ -35,6 +35,9 @@ function SportGameScreen() {
       }
       {activeGame === 0 && 
         <RuntocolorGameComponent returnToScreen={handleReturn} />
+      }
+      {activeGame === 1 && 
+        <SearchRoomGame returnToScreen={handleReturn} />
       }
     </div>
   );

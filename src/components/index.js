@@ -9,6 +9,7 @@ export { default as ShadowGamesComponent } from "./games/shadow-game/ShadowGames
 export { default as ElectionGamesComponent } from "./games/election-game/ElectionGamesComponent.jsx";
 export { default as SizeGameComponent } from "./games/size-game/SizeGameComponent.jsx";
 export { default as RuntocolorGameComponent } from "./games/runtocolor-game/RuntocolorGameComponent.jsx";
+export { default as SearchRoomGame } from "./games/searchroom-game/SearchRoomGame.jsx";
 export { default as SoundGameComponent } from "./games/sound-game/SoundGameComponent.jsx";
 export { default as StoryGameComponent } from "./games/story-game/StoryGameComponent.jsx";
 export { default as StoriesBookComponent } from "./games/stories-book-component/StoriesBookComponent.jsx";

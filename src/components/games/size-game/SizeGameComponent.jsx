@@ -140,9 +140,9 @@ function SizeGameComponent({ returnToScreen }) {
       <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"} text1={"animalSizeWeightGameI1"}  listOfGames li1={"animalSizeWeightGameI1li1"}  li2={"animalSizeWeightGameI1li2"}/>
       <ButtonReturnComponent returnToScreen={returnToScreen} />
     </div>
-      {toggleQuestion === 0 && <h3> {t('elMasAlto')}</h3>}
-      {toggleQuestion === 1 && <h3> {t('elMasPesado')}</h3>}
-      {toggleQuestion === 2 && <h3> {t('elMasVeloz')}</h3>}
+      {toggleQuestion === 0 && <h3 className='sizing-h3'> {t('elMasAlto')}</h3>}
+      {toggleQuestion === 1 && <h3 className='sizing-h3'> {t('elMasPesado')}</h3>}
+      {toggleQuestion === 2 && <h3 className='sizing-h3'> {t('elMasVeloz')}</h3>}
       <div className='animals-comparison'>
         <div>
           {img1 && (
@@ -157,6 +157,9 @@ function SizeGameComponent({ returnToScreen }) {
               <span className='span-km'>
                 {selectedAnimals[0].velocidad}km/h
               </span>{' '}
+              <h2 className='sizing-h2'>
+              {selectedAnimals[0].nombre}
+              </h2>
             </h2>
           )}
           {loading && <div className='spinner1'></div>}
@@ -180,6 +183,9 @@ function SizeGameComponent({ returnToScreen }) {
               <span className='span-km'>
                 {selectedAnimals[1].velocidad}km/h
               </span>{' '}
+              <h2 className='sizing-h2'>
+              {selectedAnimals[1].nombre}
+              </h2>
             </h2>
           )}
           <img

@@ -75,6 +75,8 @@ export const ger = {
   drawInTeams: 'Zeichnen im Team',
   colorRun: "Farben, los geht's!",
   postures: 'Imitiert Körperhaltungen',
+  searchroom: 'Schatzsuche',
+  // info random
   noColor: 'Es sind keine Farben ausgewählt',
   missingGame: 'Bild verschwunden',
 
@@ -106,6 +108,13 @@ export const ger = {
   soundGameI2: `Das Ziel ist es, den Hörsinn und die Aufmerksamkeitsspanne zu verbessern`,
   sportGameI1: `Hier finden Sie Spiele, bei denen es um Körperbewegung, Beweglichkeit, Schnelligkeit, Reflexe usw. geht`,
   sportGameI2: `Ziel ist es, die Fein- und Grobmotorik zu verbessern und so neue körperliche Fähigkeiten zu erwerben und zu verbessern`,
+  searchRoom1:
+    'Die Kinder müssen so schnell wie möglich den Gegenstand finden, der auf dem Bild erscheint.',
+  searchRoom2:
+    'Statt die Bilder einzeln zu zeigen, können mehrere Bilder hintereinander gezeigt werden und die Kinder müssen alle finden, an die sie sich erinnern.',
+  searchRoom3:
+    'Die Bilder können auch verwendet werden, um das Zimmer aufzuräumen. Anstatt nach dem abgebildeten Gegenstand zu suchen, kann man sagen, dass alle Gegenstände dieser Art aufgeräumt werden sollen. Wenn zum Beispiel ein Auto gezeigt wird, sollen alle Spielzeugautos so schnell wie möglich aufgeräumt werden.',
+
   drawGameI1: `Hier finden Sie Spiele, bei denen die Kinder Geschichten vervollständigen, sich durch nonverbale Methoden ausdrücken und ihre Zeichen- und Schreibfähigkeiten verbessern müssen`,
   drawGameI2: `Das Ziel ist es, die Vorstellungskraft, die Kreativität und die Fähigkeit zu improvisieren und sich anzupassen zu verbessern`,
   puzzleGameI1: `Hier finden Sie Spiele, bei denen die Kinder Logik und Einfallsreichtum anwenden müssen, um die richtige Antwort zu finden.`,

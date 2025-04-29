@@ -41,3 +41,13 @@
 .choosecolor-div{
   width: 250px;
 }
+.slider-time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+input[type='range'] {
+  width: 80%;
+  accent-color: var(--pink); /* cambia este color a tu preferencia */
+}

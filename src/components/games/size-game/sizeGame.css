@@ -5,7 +5,12 @@
   justify-content: center;
   padding-top: 10vh;
 }
-
+.sizing-h3{
+  font-size: calc(15px + 1vw);
+}
+.sizing-h2{
+  font-size: calc(12px + 0.8vw);
+}
 .animals-comparison {
   display: flex;
   justify-content: center;

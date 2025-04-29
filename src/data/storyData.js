@@ -14,8 +14,12 @@ const storyData = {
       title: 'Pingüino trotamundo'
     },
     {
+      img: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1745785110/MamCang_ooygu7.png',
+      title: 'Canguro valiente'
+    },
+    {
       img: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1740265206/jifiHedgehog_xujsap.png',
-      title: 'El erizo acróbata'
+      title: 'El erizo asustado'
     },
 
     {

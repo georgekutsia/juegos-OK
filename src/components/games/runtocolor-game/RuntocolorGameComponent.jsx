@@ -14,12 +14,17 @@ function RuntocolorGameComponent({ returnToScreen }) {
   const [timeAmount, setTimeAmount] = useState(5)
   const [isCountdownActive, setIsCountdownActive] = useState(false)
   const [colorArray, setColorArray] = useState(['var(--white)'])
-  const [showAlert, setshowAlert] = useState(false) // Control para mostrar alertas
-  const intervalRef = useRef(null) // Referencia para gestionar intervalos
+  const [showAlert, setshowAlert] = useState(false)
+  const intervalRef = useRef(null)
   const { t } = useContext(Context)
-  const audioRef = useRef(new Audio(finalRing)) // Referencia al sonido final
+  const audioRef = useRef(new Audio(finalRing))
 
-  // Limpia cualquier intervalo existente
+  const colorGroups = [
+    ['var(--orange)', 'var(--pink)', 'var(--blue)', 'var(--grey)'],
+    ['var(--white)', 'var(--brown)', 'var(--violet)', 'var(--darkGreen)'],
+    ['var(--yellow)', 'var(--green)', 'var(--red)', 'var(--black)']
+  ]
+
   const clearExistingInterval = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current)
@@ -27,9 +32,8 @@ function RuntocolorGameComponent({ returnToScreen }) {
     }
   }
 
-  // Inicia la cuenta atrás
   const countDown = () => {
-    clearExistingInterval() // Limpia intervalos previos
+    clearExistingInterval()
     setCountdown(timeAmount)
     setIsCountdownActive(true)
 
@@ -38,7 +42,7 @@ function RuntocolorGameComponent({ returnToScreen }) {
         if (typeof prevCountdown === 'string' || prevCountdown <= 1) {
           clearExistingInterval()
           setIsCountdownActive(false)
-          audioRef.current.play() // Reproduce el sonido final
+          audioRef.current.play()
           return t('timesUp')
         }
         return prevCountdown - 1
@@ -46,17 +50,15 @@ function RuntocolorGameComponent({ returnToScreen }) {
     }, 1000)
   }
 
-  // Maneja el evento "Siguiente"
   const handleNext = () => {
     if (isCountdownActive) {
-      clearExistingInterval() // Detiene la cuenta activa si se hace clic
+      clearExistingInterval()
       setCountdown(t('timesUp'))
       setIsCountdownActive(false)
       return
     }
 
     if (colorArray.length === 0) {
-      // Alerta si solo queda un color
       setshowAlert(true)
       setTimeout(() => setshowAlert(false), 2000)
       return
@@ -66,34 +68,32 @@ function RuntocolorGameComponent({ returnToScreen }) {
     let newColor
     do {
       newColor = colorArray[Math.floor(Math.random() * colorArray.length)]
-    } while (newColor === color && colorArray.length > 1) // Evita repetir colores
+    } while (newColor === color && colorArray.length > 1)
     setColor(newColor)
   }
 
-  // Maneja la lógica de agregar o eliminar colores
   const handleColor = (color) => {
     setColorArray((prevColors) => {
       if (prevColors.length > 1) {
         if (prevColors.includes(color)) {
-          return prevColors.filter((c) => c !== color) // Elimina el color si ya hay en el array
+          return prevColors.filter((c) => c !== color)
         } else {
-          return [...prevColors, color] // Agrega el color al array
+          return [...prevColors, color]
         }
       }
 
       if (prevColors.includes(color) && prevColors.length === 1) {
-        // Alerta si intentas eliminar el único color, porque sin colores eso da fallo
         setshowAlert(true)
         setTimeout(() => setshowAlert(false), 2000)
         return prevColors
       }
 
-      return [...prevColors, color] // Agrega el color si no está
+      return [...prevColors, color]
     })
   }
 
   return (
-    <div>
+    <>
       <div className='buttons-position-absolute'>
         <InfoComponent
           title1={'ruleOfGameI'}
@@ -109,113 +109,59 @@ function RuntocolorGameComponent({ returnToScreen }) {
       <div className='button-next-game'>
         <ButtonNextComponent random={handleNext} />
       </div>
+
       <div className='shadow-game-buttonMode buttonMode-runtocolor'>
         <h3>{t('chooseDuration')}</h3>
-        <div>
-          <ButtonTypeComponent
-            classN='button-type-number'
-            typeGame='5s'
-            onClick={() => setTimeAmount(5)}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            typeGame='10s'
-            onClick={() => setTimeAmount(10)}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            typeGame='15s'
-            onClick={() => setTimeAmount(15)}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            typeGame='25s'
-            onClick={() => setTimeAmount(25)}
+        <div className='slider-time-container'>
+          <input
+            type='range'
+            min='5'
+            max='120'
+            step='5'
+            value={timeAmount}
+            onChange={(e) => setTimeAmount(Number(e.target.value))}
           />
         </div>
+
         <div className='choosecolor-div'>
           <h3>{t('chooseColors1')}</h3>
           <h3>{t('chooseColors2')}</h3>
         </div>
-        <div>
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--orange)'
-            onClick={() => handleColor('var(--orange)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--pink)'
-            onClick={() => handleColor('var(--pink)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--blue)'
-            onClick={() => handleColor('var(--blue)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--grey)'
-            onClick={() => handleColor('var(--grey)')}
-          />
-        </div>
-        <div>
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--white)'
-            onClick={() => handleColor('var(--white)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--brown)'
-            onClick={() => handleColor('var(--brown)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--violet)'
-            onClick={() => handleColor('var(--violet)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--darkGreen)'
-            onClick={() => handleColor('var(--darkGreen)')}
-          />
-        </div>
-        <div>
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--yellow)'
-            onClick={() => handleColor('var(--yellow)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--green)'
-            onClick={() => handleColor('var(--green)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--red)'
-            onClick={() => handleColor('var(--red)')}
-          />
-          <ButtonTypeComponent
-            classN='button-type-number'
-            backColor='var(--black)'
-            onClick={() => handleColor('var(--black)')}
-          />
-        </div>
+
+        {colorGroups.map((group, groupIndex) => (
+          <div key={groupIndex}>
+            {group.map((color, index) => (
+              <ButtonTypeComponent
+                key={index}
+                classN='button-type-number'
+                backColor={color}
+                onClick={() => handleColor(color)}
+                isSelected={colorArray.includes(color)} 
+              />
+            ))}
+          </div>
+        ))}
       </div>
+
       {showAlert && (
         <div className='position-absolute-alert'>{t('nocolorAlert')}</div>
       )}
+
       <div className='colorArray-list'>
         {colorArray.length > 0 ? (
           colorArray.map((color, index) => (
-            <div style={{ backgroundColor: color }} key={index}></div>
+            <div
+              style={{ backgroundColor: color }}
+              key={index}
+              onClick={() => handleColor(color)} // <- Añadido para que al hacer clic, lo quite
+              title={color}
+            ></div>
           ))
         ) : (
           <h1>{t('noColor')}</h1>
         )}
       </div>
+
       <button
         className='button-box-run-color'
         style={{ backgroundColor: color }}
@@ -225,7 +171,7 @@ function RuntocolorGameComponent({ returnToScreen }) {
         <h6 className='colorTimedown-display'>{timeAmount}s</h6>
         {typeof countdown === 'number' ? countdown : t(countdown)}
       </button>
-    </div>
+    </>
   )
 }
 

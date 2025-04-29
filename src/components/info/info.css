@@ -16,7 +16,7 @@ left: 5px; */
 }
 
 .info-tooltip-span{
-  font-size: calc(12px + 1vw);
+  font-size: calc(12px + 0.2vw);
   background-color: white;
   border: 1px solid black;
   padding: 10px 10px;
@@ -24,7 +24,7 @@ left: 5px; */
   border-radius: 20px;
 }
 .info-tooltip-span p{
-font-size: calc(10px + 0.3vw);
+font-size: calc(12px + 0.3vw);
 }
 
 .info-tooltip-span h6{

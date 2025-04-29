@@ -76,6 +76,8 @@ export const esp = {
   drawInTeams: 'Dibuja en equipo',
   colorRun: 'Colores, ¡a correr!',
   postures: 'Imita las posturas',
+  searchroom: '¡Busca el tesoro!',
+  // info random
   noColor: 'No hay colores elegidos',
   missingGame: 'Imágen desaparecida',
 
@@ -109,6 +111,13 @@ export const esp = {
     'Aquí encontrarás juegos relacionados con el movimiento del cuerpo, agilidad, velocidad, reflejos etc.',
   sportGameI2:
     'El objetivo es mejorar la motricidad fina y gruesa y así adquirir y mejorar habilidades físicas nuevas.',
+  searchRoom1:
+    'Los niños deben buscar lo más rápido posible el objeto que aparece en la imágen',
+  searchRoom2:
+    'En lugar de mostrar las imágenes de uno en uno, se pueden mostrar varias imágenes seguidas y los niños deben encontrar todas las que se acuerden',
+  searchRoom3:
+    'Se pueden usar las imágenes para ordenar la habitación. En lugar de buscar lo que aparece en la imágen, se puede decir que se pueden ordenar todos los objetos de ese tipo. Si se muestra un coche, todos los juguetes de cochecito se deben ordenar lo más rápido posible',
+
   drawGameI1:
     'Aquí encontraras juegos donde los niños tendrán que completar historias, expresarse a través de métodos no verbales y mejorar sus habilidades de dibujo y escritura.',
   drawGameI2:

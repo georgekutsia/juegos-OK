@@ -37,11 +37,13 @@ const gamesData = {
 
   sportGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1739521729/colorGame_sh3qsa_aozq4f.png",
-    "https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1738969654/iPostures_ac4azv.png"
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1745090923/roomsearch_ugfvob.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1738969654/iPostures_ac4azv.png",
   ],
   sportGamesNames: [
     "colorRun", 
-    "postures"
+    "searchroom",
+    "postures",
   ],
 
   soundGames: [
