@@ -107,6 +107,10 @@ export const esp = {
   questionGameI2: `El objetivo es premiar el conocimiento, conocer mejor a sus amigos, recordar información cultural general y hacer que quieran aprender más`,
   soundGameI1: `Aquí encontrarás juegos basados en sonidos donde los  niños tienen que hablar, hacer ruido o crear música.`,
   soundGameI2: `El objetivo es mejorar el sentido del oído y capacidad de atención.`,
+  temporalName:
+  'Pendiente de título',
+  temporalName:
+  'Pendiente de título',
   sportGameI1:
     'Aquí encontrarás juegos relacionados con el movimiento del cuerpo, agilidad, velocidad, reflejos etc.',
   sportGameI2:
