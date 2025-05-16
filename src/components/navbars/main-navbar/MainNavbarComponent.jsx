@@ -6,11 +6,30 @@ import { Context } from "../../../shared/context.js";
 import SettingComponent from "../../settings/SettingComponent.jsx";
 
 function MainNavbarComponent() {
-  const { dataNavbarName, dataNavbarImg } = useContext(Context);
+  const { dataNavbarName, dataNavbarImg, handleChangeCreature } = useContext(Context);
   const [showSettings, setshowSettings] = useState(false);
-  const settingsRef = useRef(null); // Referencia para SettingComponent
+  const [menuIcon, setMenuIcon] = useState(dataNavbarImg[0]); // Estado para el ícono del menú
+  const settingsRef = useRef(null);
 
-  // Cierra el menú al hacer clic fuera de SettingComponent
+  // ✅ Recuperar el valor de LocalStorage al cargar
+  useEffect(() => {
+    const savedCreature = localStorage.getItem("selectedCreature");
+    if (savedCreature) {
+      handleChangeCreature(savedCreature);
+    }
+  }, [handleChangeCreature]);
+
+  // ✅ Recuperar el icono desde el LocalStorage
+  useEffect(() => {
+    const savedIconIndex = localStorage.getItem("selectedCreatureIndex");
+    if (savedIconIndex) {
+      setMenuIcon(dataNavbarImg[parseInt(savedIconIndex)]);
+    } else {
+      setMenuIcon(dataNavbarImg[0]); // Valor por defecto si no hay en localStorage
+    }
+  }, [dataNavbarImg]);
+
+  // ✅ Manejo del clic fuera del componente
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (settingsRef.current && !settingsRef.current.contains(event.target)) {
@@ -33,7 +52,7 @@ function MainNavbarComponent() {
           onClick={() => setshowSettings(false)}
         />
         <label htmlFor="mainNavbarMenu">
-          <img className="mainNavbarMenu-img" src={dataNavbarImg[0]} alt="menu" />
+          <img className="mainNavbarMenu-img" src={menuIcon} alt="menu" />
         </label>
         <ul className="mainNavbarMenu">
           <MainNavbarButtonComponent

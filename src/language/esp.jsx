@@ -2,7 +2,15 @@ export const esp = {
   lang_ger: 'Alemán',
   lang_esp: 'Español',
   lang_actual: 'Selecciona un idioma',
-
+  timer: {
+    times: 'Сохранённые',
+    noTimes: 'Пусто',
+    start: 'Старт',
+    stop: 'Стоп',
+    restart: 'Перезапустить',
+    saveTime: 'Сохранить время',
+    deleteAll: 'Удалить сохранённые времена'
+  },
   // animalitos
   changeFrog: 'Ranita',
   preguntasNito: 'Preguntas de Nito',
@@ -34,11 +42,33 @@ export const esp = {
   deportesMaris: 'Deportes de Maris',
   dibujosMarlin: 'Dibujos de Marlin',
   puzlesPerlo: 'Puzzles de Perlo',
-  osito1: 'Nepto',
-  osito2: 'Coral',
-  osito3: 'Maris',
-  osito4: 'Marlin',
-  osito5: 'Perlo',
+  pezi1: 'Nepto',
+  pezi2: 'Coral',
+  pezi3: 'Maris',
+  pezi4: 'Marlin',
+  pezi5: 'Perlo',
+
+  changeLeon: "Leon",
+  preguntasLeandro: 'Preguntas de Leandro',
+  cancionesRoro: 'Canciones de Roro',
+  deportesLeo: 'Deportes de Leo',
+  dibujosAmbu: 'Dibujos de Ambu',
+  puezlesZarpa: 'Puezles de Zarpa',
+  leon1: 'Leandro',
+  leon2: 'Roro',
+  leon3: 'Leo',
+  leon4: 'Ambu',
+  leon5: 'Zarpa',
+  // timer
+timer:{
+  times:"Guardados",
+  noTimes:"Vacío",
+  start:"Contar",
+  stop:"Detener",
+  restart:"Reiniciar",
+  saveTime:"Guardar tiempo",
+  deleteAll:"Borrar tiempos guardados"
+},
 
   currentPet: 'Mascotas disponibles',
   click: 'Click me',

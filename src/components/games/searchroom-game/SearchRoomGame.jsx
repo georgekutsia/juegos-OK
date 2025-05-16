@@ -1,14 +1,32 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './searchRoom.css'
 import {
   InfoComponent,
   ButtonReturnComponent,
+  TimerComponent
 } from '../../../components'
 import searchRoomData from '../../../data/searchRoomData'
-
+import './searchRoom.css'
 function SearchRoomGame({ returnToScreen }) {
   const [selectedImg, setSelectedImg] = useState(null)
+  const imageRef = useRef(null)
 
+  const handleFullscreen = () => {
+    if (imageRef.current) {
+      if (imageRef.current.requestFullscreen) {
+        imageRef.current.requestFullscreen()
+      } else if (imageRef.current.webkitRequestFullscreen) {
+        // Safari
+        imageRef.current.webkitRequestFullscreen()
+      } else if (imageRef.current.msRequestFullscreen) {
+        // IE/Edge
+        imageRef.current.msRequestFullscreen()
+      }
+    }
+  }
+  const handleSmallScreen = () => {
+      document.exitFullscreen()
+  }
   return (
     <>
       <div className='buttons-position-absolute'>
@@ -32,11 +50,16 @@ function SearchRoomGame({ returnToScreen }) {
             className='searchroom-img'
           />
         ))}
-        <img
-          src={selectedImg || 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529846/ranita1_nhjyhu.png'}
-          alt='Selected'
-          className='selected-image-display'
-        />
+        <div className='selected-image-display'>
+          <i className='fa-solid fa-expand' onClick={handleFullscreen} ></i>
+          <img
+            src={selectedImg || 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529846/ranita1_nhjyhu.png'}
+            alt='Selected'
+            ref={imageRef}
+            onDoubleClick={handleSmallScreen}
+          />
+        </div>
+        <TimerComponent timerClass={'one'} />
       </div>
     </>
   )

@@ -19,6 +19,13 @@ const navbarCreatures = {
     "deportesMaris",
     "dibujosMarlin",
     "puzlesPerlo",
+  ],
+  leon:[
+    "preguntasLeandro",
+    "cancionesRoro",
+    "deportesLeo",
+    "dibujosAmbu",
+    "puezlesZarpa"
   ]
 }
   

@@ -1,7 +1,7 @@
 import './App.css'
 import MainNavbarComponent from './components/navbars/main-navbar/MainNavbarComponent'
 import { Context } from './shared/context'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Routers from './Routers'
 import objectsDataList from './data/objectsData'
 import animalsDataEsp from './data/animalsDataEsp'
@@ -14,28 +14,27 @@ import dataNavbarCreaturesNames from './data/navbarNamesData'
 function App() {
   const { t, i18n } = useTranslation(['translation'])
   const [profile, setProfile] = useState(true)
-  const [primaryColor, setPrimaryColor] = useState('#ffa578'); 
-  const [secondaryColor, setSecondaryColor] = useState('#eac0ab'); 
-  const [vertical, setvertical] = useState('bottom'); 
-  const [horizontal, sethorizontal] = useState('right'); 
 
+  // 🔄 Recuperar colores y dirección desde LocalStorage
+  const savedPrimaryColor = localStorage.getItem('primaryColor') || '#ffa578';
+  const savedSecondaryColor = localStorage.getItem('secondaryColor') || '#eac0ab';
+  const savedVertical = localStorage.getItem('vertical') || 'bottom';
+  const savedHorizontal = localStorage.getItem('horizontal') || 'right';
+
+  const [primaryColor, setPrimaryColor] = useState(savedPrimaryColor); 
+  const [secondaryColor, setSecondaryColor] = useState(savedSecondaryColor); 
+  const [vertical, setvertical] = useState(savedVertical);
+  const [horizontal, sethorizontal] = useState(savedHorizontal);
 
   const creatureTypes = Object.keys(dataNavbarCreatures)
   const creatureNames = Object.keys(dataNavbarCreaturesNames)
   const [objectsData, setobjectsData] = useState(objectsDataList)
   const [animalList, setanimalList] = useState(animalsDataEsp)
-  const [currentCreatureType, setCurrentCreatureType] = useState(
-    creatureTypes[0]
-  )
-  const [currentCreatureName, setCurrentCreatureName] = useState(
-    creatureNames[0]
-  )
-  const [dataNavbarImg, setDataNavbarImg] = useState(
-    dataNavbarCreatures[currentCreatureType]
-  )
-  const [dataNavbarName, setDataNavbarName] = useState(
-    dataNavbarCreaturesNames[currentCreatureName]
-  )
+
+  const [currentCreatureType, setCurrentCreatureType] = useState(creatureTypes[0])
+  const [currentCreatureName, setCurrentCreatureName] = useState(creatureNames[0])
+  const [dataNavbarImg, setDataNavbarImg] = useState(dataNavbarCreatures[currentCreatureType])
+  const [dataNavbarName, setDataNavbarName] = useState(dataNavbarCreaturesNames[currentCreatureName])
 
   const changeLanguage = (code) => {
     i18n.changeLanguage(code)
@@ -69,7 +68,6 @@ function App() {
         setanimalList,
         objectsData,
         setobjectsData,
-        primaryColor, // Añadir primaryColor al contexto
         primaryColor,
         setPrimaryColor,
         secondaryColor,

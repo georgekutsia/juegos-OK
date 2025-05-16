@@ -15,7 +15,16 @@ export const ger = {
   ranita3: 'Salti',
   ranita4: 'Pepo',
   ranita5: 'Tita',
-
+  // timer
+  timer: {
+    times: 'Gespeichert',
+    noTimes: 'Leer',
+    start: 'Starten',
+    stop: 'Stopp',
+    restart: 'Neustarten',
+    saveTime: 'Zeit speichern',
+    deleteAll: 'Gespeicherte Zeiten löschen'
+  },
   changeBear: 'Beär',
   preguntasBenny: "Benny's Fragen",
   cancionesOtto: "Otto's Klänge",

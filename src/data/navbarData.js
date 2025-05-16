@@ -22,6 +22,14 @@ const navbarCreatures = {
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054896/MarisJuega_vtogws.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054896/MarlinDibuja_efvg6i.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1739054896/PerloPuzzle_fgqtqr.png"
+  ],
+  leon:[
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747387542/leon1_ty9fu3.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747387538/leon2_cx1ouq.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747387535/leon3_scwrep.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747387541/leon4_skwhpx.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747387543/leon5_zjbecp.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747387538/leon6_rzpv3f.png",
   ]
 }
   
