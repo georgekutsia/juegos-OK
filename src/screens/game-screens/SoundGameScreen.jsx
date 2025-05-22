@@ -6,7 +6,8 @@ import {
   SoundGameComponent,
   StoriesBookComponent,
   StoryGameComponent,
-  LoaderCarComponent
+  LoaderCarComponent,
+  ChooseStoryComponent
 } from '../../components';
 
 import gamesData from '../../data/gamesData';
@@ -23,11 +24,8 @@ function SoundGameScreen() {
 
   const gameComponents = [
     <SoundGameComponent returnToScreen={handleReturn} />,
-    <StoriesBookComponent
-      returnToScreen={handleReturn}
-      ind={activeGame}
-      indSet={setActiveGame}
-    />
+    <StoriesBookComponent returnToScreen={handleReturn} ind={activeGame} indSet={setActiveGame}/>,
+    <ChooseStoryComponent returnToScreen={handleReturn} />
     // Puedes seguir añadiendo más componentes aquí si necesitas
   ];
 

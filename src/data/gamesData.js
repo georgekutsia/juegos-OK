@@ -139,6 +139,7 @@ const gamesData = {
   soundGames: [
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1739521729/juego-sonidos_zomhli_zzpspo.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1740140243/cuentoGame_zlvevf.png",
+    "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747688614/iAmigosHisgt_kmvwcp.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1738968963/iSounds_m6dfmd.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/q_auto:low/v1738968963/iSecret_idibci.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1746140109/iTemporalmem_p1nxjt.png",
@@ -151,6 +152,7 @@ const gamesData = {
   soundGamesNames: [
     "animalSoundGame", 
     "storyGame",
+    "friendStoryGame",
     "citySoundGame",
     "secretSoundGame",
     "temporalName",

@@ -99,6 +99,7 @@ timer:{
   sizeGame: 'Juego de tamaños y fuerzas',
   shadowGame: 'Juego de siluetas y animales',
   animalSoundGame: 'Sonidos de animales',
+  friendStoryGame: 'Historias de los amigos Okina',
   citySoundGame: 'Sonidos de ciudad',
   secretSoundGame: 'Cadena de secretos',
   storyGame: 'Cuentos y anventuras',

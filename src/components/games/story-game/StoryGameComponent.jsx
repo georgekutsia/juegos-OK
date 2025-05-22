@@ -79,12 +79,6 @@ function StoryGameComponent({ returnToScreen }) {
     setShowImage(false)
   }
 
-  const handleNext = () => {
-    const newAnimal = getRandomAnimalWithSound()
-    setStory(newAnimal)
-    setStoryCount(0)
-    setShowImage(false)
-  }
 
   return (
     <div className='story-game-box'>
@@ -167,9 +161,7 @@ function StoryGameComponent({ returnToScreen }) {
             />
             <ButtonReturnComponent returnToScreen={returnToScreen} />
           </div>
-          <div className='button-next-game'>
-            <ButtonNextComponent random={handleNext} />
-          </div>
+
         </>
       )}
     </div>

@@ -20,6 +20,8 @@ export { default as LoaderCarComponent } from "./loaders/LoaderCarComponent.jsx"
 export { default as TimerComponent } from "./timer/TimerComponent.jsx";
 export { default as TimerButtonComponent } from "./timer/TimerButtonComponent.jsx";
 export { default as RedLight } from "./redlight/RedLight.jsx";
+export { default as ChooseStoryComponent } from "./stories/choose-storie/ChooseStorieComponent.jsx";
+export { default as ChooseStoryComp } from "./stories/choose-storie/ChooseStoryComp.jsx";
 
 export { default as SettingComponent } from "./settings/SettingComponent.jsx";
 export { default as ColorsComponent } from "./settings/colors/ColorsComponent.jsx";
