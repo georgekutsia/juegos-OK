@@ -1,17 +1,16 @@
 const storyTree = {
   start: {
     id: 'start',
-    // sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949130/Lea1.L_z8juqi.wav',
-      sound:'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949780/SIlencioso_lkhjhj.mp3',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949130/Lea1.L_z8juqi.wav',
+      // sound:'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949780/SIlencioso_lkhjhj.mp3',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747862469/Leandro-perfil_jmwtj0.png',
   },
   options1: [
     {
-      // id: 'vestirUniforme',
-      id: 'aLaClase',
-      // sound:'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949150/Lea2.L_vlthvw.wav',
-      sound:'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949780/SIlencioso_lkhjhj.mp3',
-
+      id: 'vestirUniforme',
+      // id: 'parqueElige',
+      sound:'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949150/Lea2.L_vlthvw.wav',
+      // sound:'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747949780/SIlencioso_lkhjhj.mp3',
       image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747866031/option0-a_dao1rr.png',
       displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747866103/option0-resa_xh7a5i.png'
     },
@@ -230,7 +229,7 @@ comedor:[
   },
   {
     id: 'parqueElige',
-    sound: '',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747952757/lea16-pollo-cortol_cjMTIVNR_fmj0mk.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747875677/op10-d_emkl4c.png',
     displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876621/opt10-resa_tn4je6.png',
   },
@@ -242,7 +241,7 @@ comedor:[
   },
   {
     id: 'parqueElige',
-    sound: '',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747952755/lea16-salchichal_kxNJMQmi_rpcfxg.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747875684/op10-a_ro6s7r.png',
     displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876621/opt10-resa_tn4je6.png',
   },
@@ -250,41 +249,50 @@ comedor:[
 parqueElige:[
   {
     id: 'vueltaAClase',
-    sound: '',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747953293/lea17-columpiol_YSYUiKk3-_AudioTrimmer.com_nlusis.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876033/opt11-b_hqdqow.png',
     displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876342/opt11-resb_zomptf.png',
   },
   {
     id: 'vueltaAClase',
-    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1740404849/JifiAu2.R_lgp1z3.wav',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747953286/lea17-bicil_wQ2FifF5_fru7op.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876030/opt11-a_xpa0yu.png',
     displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876349/opt11-resa_wgjwxs.png',
   },
   {
     id: 'vueltaAClase',
-    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1740404849/JifiAu2.R_lgp1z3.wav',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747953289/lea17-arenal_IDT8TAyo_aqfkwy.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876029/opt11-c_mbaz2d.png',
     displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876344/opt11-resc_xhe5es.png',
   },
   {
     id: 'vueltaAClase',
-    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1740404849/JifiAu2.R_lgp1z3.wav',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747953285/lea17-tizasl_uT3J44ZM_gja8k6.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876219/opt11-d_dimsqu.png',
     displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747876343/opt11-resd_jdrtap.png',
   },
 ],
 vueltaAClase:[
   {
-    id: 'vueltaAClase',
-    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1740404849/JifiAu2.R_lgp1z3.wav',
+    id: 'dormido',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747953608/Lea18-dormido.R_serhda.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747878011/opt12-a_rwyhdi.png',
     displayImage: '',
   },
   {
-    id: 'vueltaAClase',
-    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1740404849/JifiAu2.R_lgp1z3.wav',
+    id: 'dormido',
+    sound: 'https://res.cloudinary.com/dtv1oj9bq/video/upload/v1747953608/Lea18-dormido.R_serhda.wav',
     image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747878565/opt12-b_buug92.png',
     displayImage: '',
+  },
+],
+
+dormido:[
+  {
+    id: 'dormido',
+    sound: '',
+    image: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747953738/leandro_dormido_t3qaxc.png',
+    displayImage: 'https://res.cloudinary.com/dtv1oj9bq/image/upload/v1747953738/leandro_dormido_t3qaxc.png',
   },
 ]
 

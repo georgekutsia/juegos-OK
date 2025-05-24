@@ -82,7 +82,6 @@ function ChooseStoryComp({ returnToScreen, data }) {
         />
         <ButtonReturnComponent returnToScreen={returnToScreen} />
       </div>
-
       {/* Imagen activa de una opción */}
       {activeImage && (
         <div className='story-active-image-box'>
