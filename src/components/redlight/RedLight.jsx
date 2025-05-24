@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import './RedLight.css';
+import './redlight.css';
 
 function RedLight() {
   const [position, setPosition] = useState('center');
