@@ -6,7 +6,7 @@ import { useContext, useRef, useState } from 'react'
 import { Context } from '../../../shared/context'
 import ButtonTypeComponent from '../../buttons/button-type/ButtonTypeComponent'
 import InfoComponent from '../../info/InfoComponent'
-import finalRing from '../../../../public/audio/beep-warning-6387.mp3'
+import finalRing from '../../../../src/audio/beep-warning-6387.mp3'
 
 function RuntocolorGameComponent({ returnToScreen }) {
   const [color, setColor] = useState('red')
@@ -96,8 +96,10 @@ function RuntocolorGameComponent({ returnToScreen }) {
     <>
       <div className='buttons-position-absolute'>
         <InfoComponent
+          title0={'objectiveOfGameI'}
           title1={'ruleOfGameI'}
           title2={'modeOfGameI'}
+          text0={'colorRunGameObjective'}
           text1={'colorRunGameI'}
           listOfGames
           li1={'colorRunGameIli1'}

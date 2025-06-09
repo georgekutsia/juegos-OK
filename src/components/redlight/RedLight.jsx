@@ -4,7 +4,7 @@ import './redlight.css';
 function RedLight() {
   const [position, setPosition] = useState('center');
   const [showButton, setShowButton] = useState(false);
-  const audioRef = useRef("../../../public/audio/¡Chuchuwa _ Chu Chu Uá _ Canciones y clásicos infantiles _ Canciones Infantiles LooLoo.mp3");
+  const audioRef = useRef("../../../src/audio/¡Chuchuwa _ Chu Chu Uá _ Canciones y clásicos infantiles _ Canciones Infantiles LooLoo.mp3");
 
   useEffect(() => {
     const timeouts = [
@@ -48,7 +48,7 @@ function RedLight() {
           <i className="fa-solid fa-play"></i>
         </button>
       )}
-      <audio ref={audioRef} src="../../../public/audio/¡Chuchuwa _ Chu Chu Uá _ Canciones y clásicos infantiles _ Canciones Infantiles LooLoo.mp3"  />
+      <audio ref={audioRef} src="../../../src/audio/¡Chuchuwa _ Chu Chu Uá _ Canciones y clásicos infantiles _ Canciones Infantiles LooLoo.mp3"  />
     </div>
   );
 }

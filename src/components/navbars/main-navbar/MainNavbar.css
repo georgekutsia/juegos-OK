@@ -204,6 +204,8 @@ scale: 1.05;
 
 #button-tooltip{
   z-index: 11;
+  max-height: 50vh;
+  overflow-y: scroll;
 }
 
 .mainNavbarMenu-li-span {

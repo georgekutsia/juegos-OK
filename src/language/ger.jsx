@@ -43,11 +43,11 @@ export const ger = {
   deportesMaris: "Maris's Sport",
   dibujosMarlin: "Marlin's Zeichnungen",
   puzlesPerlo: "Perlo's Rätsel",
-  osito1: 'Nepto',
-  osito2: 'Coral',
-  osito3: 'Maris',
-  osito4: 'Marlin',
-  osito5: 'Perlo',
+  pezi1: 'Nepto',
+  pezi2: 'Coral',
+  pezi3: 'Maris',
+  pezi4: 'Marlin',
+  pezi5: 'Perlo',
 
   currentPet: 'Verfügbare Haustiere',
   solution: 'Lösung',
@@ -152,6 +152,9 @@ export const ger = {
   shadowGame1li3:
     'Man kann mit oder ohne Effekte spielen. Eine Person wird ausgewählt und dreht dem Bildschirm den Rücken zu. Die anderen Kinder imitieren die Bewegungen des Tieres, vielleicht mit einigen Lauten, um Hinweise zu geben, welches Tier es ist. Nur das Kind, das mit dem Rücken zur Leinwand steht, darf sagen, welches Tier es ist.',
 
+
+    colorRunGameObjective:
+    'Reaktionsfähigkeit, Denk- und visuelle Geschwindigkeit trainieren. Das Spiel eignet sich auch zur Arbeit an Farben und Aufmerksamkeit. Es kann allein oder in Gruppen gespielt werden.',
   colorRunGameI:
     'Es werden Zonen mit Farben abgegrenzt, und die Kinder müssen zu der Farbe laufen, die auf dem Bildschirm angezeigt wird, bevor der Countdown bei 0 endet. Es wird empfohlen, mindestens 3 Farben zu verwenden, damit das Spiel spannend bleibt. Je nach Distanz und Anzahl der Kinder kann die Zeit angepasst werden.',
   colorRunGameIli1:

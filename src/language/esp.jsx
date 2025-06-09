@@ -2,15 +2,6 @@ export const esp = {
   lang_ger: 'Alemán',
   lang_esp: 'Español',
   lang_actual: 'Selecciona un idioma',
-  timer: {
-    times: 'Сохранённые',
-    noTimes: 'Пусто',
-    start: 'Старт',
-    stop: 'Стоп',
-    restart: 'Перезапустить',
-    saveTime: 'Сохранить время',
-    deleteAll: 'Удалить сохранённые времена'
-  },
   // animalitos
   changeFrog: 'Ranita',
   preguntasNito: 'Preguntas de Nito',
@@ -140,8 +131,6 @@ timer:{
   soundGameI2: `El objetivo es mejorar el sentido del oído y capacidad de atención.`,
   temporalName:
   'Pendiente de título',
-  temporalName:
-  'Pendiente de título',
   sportGameI1:
     'Aquí encontrarás juegos relacionados con el movimiento del cuerpo, agilidad, velocidad, reflejos etc.',
   sportGameI2:
@@ -176,6 +165,7 @@ timer:{
   animalSizeWeightGameI1li2:
     'Tendrán que describir, individualmente o en grupos o eligiendo un delegado, cual animal ganaría en una pelea y por qué. Al pulsar sobre cada animal sale pequeña información sobre sus armas principales y formas de ataque o defensa.',
 
+  
   shadowGameI:
     'Hay distintas opciones para ocultar al animal. Algunas incluso se pueden combinar.',
   shadowGame1li1:
@@ -185,6 +175,8 @@ timer:{
   shadowGame1li3:
     'Se puede jugar con efectos o sin. Se elige a alguien que se pone de espaldas a la pantalla. El resto de los niños deben imitar los gestos del animal, quizás con algunos sonidos, para dar pistas sobre cual es y sólo ese niño que está de espaldas a la tele puede decir cual es el animal',
 
+    colorRunGameObjective:
+    'Entrenar los reflejos, la velocidad de pensamiento y visual. También se puede usar para trabajar los colores y la atención. Se puede jugar en solitario o en grupos',
   colorRunGameI:
     'Se delimitan zonas por colores y los niños tienen que correr hacia el color que sale en la pantalla antes de que la cuenta atrás llegue a 0. Recomiendo mínimo 3 colores para que sea entretenido y según la distancia y cantidad de niños, se ajusta el tiempo.',
   colorRunGameIli1:

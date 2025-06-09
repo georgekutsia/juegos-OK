@@ -12,7 +12,6 @@ function ButtonColoredComponent({ imgGame, handleGameOn,text }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const buttonRef = useRef(null);
 
-  console.log(text)
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" className="mainNavbarMenu-li-span" {...props}>
      {t(text)}

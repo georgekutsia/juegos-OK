@@ -22,20 +22,18 @@ function ShadowGamesComponent({ returnToScreen }) {
   const [rotation, setRotation] = useState(0)
   const [activeIndex, setactiveIndex] = useState(0)
 
-  const handleRandom = () => {
-    const randomIndex = Math.floor(Math.random() * shuffledAnimals.length)
-    setCurrentIndex(randomIndex)
-  }
 
   const shuffleArray = (array) => {
     return array.sort(() => Math.random() - 0.5)
   }
 
-  useEffect(() => {
-    const shuffled = shuffleArray([...animalList]);
-    setShuffledAnimals(shuffled);
-    handleRandom();
-  }, [animalList]); // depende de animalList
+useEffect(() => {
+  const shuffled = shuffleArray([...animalList]);
+  setShuffledAnimals(shuffled);
+  const randomIndex = Math.floor(Math.random() * shuffled.length);
+  setCurrentIndex(randomIndex);
+}, [animalList]);
+
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
@@ -101,8 +99,9 @@ function ShadowGamesComponent({ returnToScreen }) {
   return (
     <div className='shadow-game-box'>
     <div className='buttons-position-absolute'>
-      <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"}   text1={"shadowGameI"} listOfGames li1={"shadowGame1li1"} li2={"shadowGame1li2"} li3={"shadowGame1li3"} />
+      <InfoComponent title1={"ruleOfGameI"}  title2={"modeOfGameI"}  text1={"shadowGameI"} listOfGames li1={"shadowGame1li1"} li2={"shadowGame1li2"} li3={"shadowGame1li3"} />
       <ButtonReturnComponent returnToScreen={returnToScreen} />
+      
     </div>
       <div className='button-next-game'>
         <ButtonNextComponent random={handleNext} />
