@@ -1,3 +1,16 @@
+.screens-box,
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.screens-box::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 .screens-box{
   height: 80vh;
   width: 95vw;
