@@ -4,12 +4,40 @@ import "./MainNavbar.css";
 import ProfileNavbarButtonComponent from "./profile-navbar-button/ProfileNavbarButtonComponent";
 import { Context } from "../../../shared/context.js";
 import SettingComponent from "../../settings/SettingComponent.jsx";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function MainNavbarComponent() {
   const { dataNavbarName, dataNavbarImg, handleChangeCreature } = useContext(Context);
   const [showSettings, setshowSettings] = useState(false);
   const [menuIcon, setMenuIcon] = useState(dataNavbarImg[0]); // Estado para el ícono del menú
   const settingsRef = useRef(null);
+  const menuRef = useRef(null);
+  const lastTouchTimeRef = useRef(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavbarDoubleClick = () => {
+    navigate("/");
+  };
+
+  const handleNavbarTouchEnd = (event) => {
+    const now = Date.now();
+
+    if (now - lastTouchTimeRef.current < 350) {
+      event.preventDefault();
+      navigate("/");
+      lastTouchTimeRef.current = 0;
+      return;
+    }
+
+    lastTouchTimeRef.current = now;
+  };
+
+  useEffect(() => {
+    if (location.state?.openNavbar && menuRef.current) {
+      menuRef.current.checked = true;
+    }
+  }, [location]);
 
   // ✅ Recuperar el valor de LocalStorage al cargar
   useEffect(() => {
@@ -49,9 +77,15 @@ function MainNavbarComponent() {
         <input
           id="mainNavbarMenu"
           type="checkbox"
+          ref={menuRef}
           onClick={() => setshowSettings(false)}
         />
-        <label htmlFor="mainNavbarMenu">
+        <label
+          htmlFor="mainNavbarMenu"
+          onDoubleClick={handleNavbarDoubleClick}
+          onTouchEnd={handleNavbarTouchEnd}
+          title="Doble clic para volver al inicio"
+        >
           <img className="mainNavbarMenu-img" src={menuIcon} alt="menu" />
         </label>
         <ul className="mainNavbarMenu">

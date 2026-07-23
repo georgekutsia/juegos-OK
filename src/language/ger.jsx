@@ -95,6 +95,7 @@ export const ger = {
   elMasVeloz: 'Welches ist das schnellste Tier?',
 
   welcome: 'Willkommen!',
+  mobileWarning: 'Diese Spiele sind für die Nutzung auf einem großen Bildschirm gedacht und nicht für das Spielen auf Mobilgeräten geeignet.',
   welcomeTo:
     'Habt Spaß und lernt zusammen mit euren Freunden mit den Spielen von ',
   showAllAnimalTitle: 'Alle spielbaren Tiere',

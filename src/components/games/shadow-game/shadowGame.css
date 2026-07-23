@@ -71,3 +71,17 @@
   }
 
 }
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .buttonMode-runtocolor{
+    margin-top: 70px;
+  }
+
+  .shadow-game-buttonMode{
+    gap: 0.5vw;
+  }
+
+  .button-next-game{
+    top: 5px;
+  }
+}

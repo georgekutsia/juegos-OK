@@ -109,6 +109,7 @@ timer:{
   elMasVeloz: 'Cual es el animal más rápido?',
 
   welcome: '¡Bienvenidos!',
+  mobileWarning: 'Estos juegos están pensados para ser usados en pantalla grande, no están preparados para ser jugados en móviles.',
   welcomeTo: 'Diviérte y aprende con tus amigos con los juegos de ',
   showAllAnimalTitle: 'Todos los animales jugables',
   showAllObjectsTitle: 'Todos los objetos',

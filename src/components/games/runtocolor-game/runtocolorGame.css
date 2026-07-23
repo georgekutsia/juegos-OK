@@ -51,3 +51,61 @@ input[type='range'] {
   width: 80%;
   accent-color: var(--pink); /* cambia este color a tu preferencia */
 }
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .buttonMode-runtocolor{
+    left: 3%;
+    bottom: 0;
+    width: 38%;
+    margin-top: 0;
+    gap: 0;
+  }
+
+  .buttonMode-runtocolor > div:not(.slider-time-container):not(.choosecolor-div){
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttonMode-runtocolor h3{
+    font-size: min(3.5vh, 2.2vw);
+  }
+
+  .slider-time-container{
+    margin: 0.25rem 0;
+  }
+
+  .choosecolor-div{
+    width: 100%;
+  }
+
+  .buttonMode-runtocolor .button-ripple{
+    min-width: 48px;
+    min-height: 48px;
+    padding: 4px;
+  }
+
+  .button-box-run-color{
+    width: min(42vh, 30vw);
+    height: min(42vh, 30vw);
+    margin-left: 12vw;
+    border-radius: 35px;
+    font-size: min(5vh, 4vw);
+  }
+
+  .colorTimedown-display{
+    left: 12%;
+  }
+
+  .colorArray-list{
+    margin-bottom: 8px;
+  }
+
+  .colorArray-list div{
+    height: 18px;
+    width: 18px;
+  }
+
+  .position-absolute-alert{
+    font-size: min(7vh, 5vw);
+  }
+}

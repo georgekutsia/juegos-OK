@@ -45,7 +45,7 @@ function ButtonColoredComponent({ imgGame, handleGameOn,text }) {
   };
 
   return (
-    <>
+    <div className="game-button-item">
       <OverlayTrigger placement="bottom" delay={{ show: 50, hide: 200 }} overlay={renderTooltip}>
           <Link className={`btn-colored ${isButtonClicked ? 'btn-co--clicked' : ''}`} href="#" onClick={handleButtonClick} ref={buttonRef} title="Click to activate">
             <div className="containerRotate">
@@ -55,6 +55,7 @@ function ButtonColoredComponent({ imgGame, handleGameOn,text }) {
             </div>
           </Link>
         </OverlayTrigger>
+      <p className="mobile-game-description">{t(text)}</p>
       <span className={`color-colored color--blue ${isExpanded ? 'expanded' : ''}`} data-value="1"
       ></span>
       <span className={`color-colored color--orange ${isExpanded ? 'expanded' : ''}`} data-value="1"
@@ -65,7 +66,7 @@ function ButtonColoredComponent({ imgGame, handleGameOn,text }) {
       ></span>
       <span className={`color-colored color--violet ${isExpanded ? 'expanded' : ''}`} data-value="1"
       ></span>
-    </>
+    </div>
   );
 }
 
