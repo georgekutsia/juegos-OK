@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prueba de juego"
+  short_description: "Recorre la app y detecta fallos reales"
+  default_prompt: "Use $game-playtest to test the new puzzle game end to end."

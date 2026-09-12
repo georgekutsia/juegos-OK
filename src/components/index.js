@@ -15,6 +15,7 @@ export { default as StoryGameComponent } from "./games/story-game/StoryGameCompo
 export { default as StoriesBookComponent } from "./games/stories-book-component/StoriesBookComponent.jsx";
 export { default as SpecialStoryGameComponent } from "./games/special-story-game/SpecialStoryGameComponent.jsx";
 export { default as MissingGameComponent } from "./games/missing-game/MissingGameComponent.jsx";
+export { default as MemoryGameComponent } from "./games/memory-game/MemoryGameComponent.jsx";
 export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 export { default as LoaderCarComponent } from "./loaders/LoaderCarComponent.jsx";
 export { default as TimerComponent } from "./timer/TimerComponent.jsx";

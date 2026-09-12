@@ -1,0 +1,4 @@
+interface:
+  display_name: "Calidad de juegos"
+  short_description: "Comprueba flujos, accesos, lint y build"
+  default_prompt: "Use $game-quality to verify the latest game change before release."

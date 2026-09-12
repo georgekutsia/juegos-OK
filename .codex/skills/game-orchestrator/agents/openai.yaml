@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orquestador de juegos"
+  short_description: "Crea juegos completos desde una sola idea"
+  default_prompt: "Use $game-orchestrator to create a new animal memory game in the puzzles category."

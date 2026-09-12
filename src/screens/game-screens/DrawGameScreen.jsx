@@ -31,9 +31,10 @@ function DrawGameScreen() {
           {gamesData.drawGames.map((imgUrl, index) => (
             <ButtonColoredComponent
               key={index}
-              imgGame={imgUrl}
-              handleGameOn={() => handleGameOn(index)}
-              text={gamesData.drawGamesNames[index]}
+                imgGame={imgUrl}
+                handleGameOn={() => handleGameOn(index)}
+                text={gamesData.drawGamesNames[index]}
+                disabled={!gameComponents[index]}
             />
           ))}
         </div>

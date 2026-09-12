@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accesibilidad infantil"
+  short_description: "Hace los juegos claros y usables para niños"
+  default_prompt: "Use $accessibility-kids to review this game's controls and instructions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Arte para juegos"
+  short_description: "Genera imágenes infantiles para los juegos"
+  default_prompt: "Use $game-art to create a square game card for an animal memory game."

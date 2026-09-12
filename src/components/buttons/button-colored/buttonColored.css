@@ -1,5 +1,7 @@
 .btn-colored {
   font-family: sans-serif;
+  border: 0;
+  padding: 0;
   color: white;
   transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra inicial */
@@ -9,9 +11,25 @@
   max-width: 150px;
 }
 
+.btn-colored--disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.btn-colored-tooltip-target {
+  display: inline-block;
+}
+
+.btn-colored--disabled:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transform: none;
+  scale: 1;
+}
+
 .mobile-game-description {
   display: none;
 }
+
 
 .btn-colored:hover {
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada al pasar el cursor */
@@ -87,6 +105,13 @@
   width: calc(50px + 5vw);
   border-radius: 8px; /* Para que la imagen también tenga bordes redondeados */
   transition: transform 0.5s ease; /* Animación suave para la imagen */
+}
+
+.colored-img--placeholder {
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle at 30% 30%, var(--light-violet), transparent 42%),
+    linear-gradient(135deg, var(--nav-blue), var(--nav-violet));
 }
 
 .containerRotate {

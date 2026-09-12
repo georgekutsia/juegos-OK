@@ -46,6 +46,7 @@ function QuestionGameScreen() {
                 imgGame={imgUrl}
                 handleGameOn={() => handleGameOn(index)}
                 text={gamesData.questionGamesNames[index]}
+                disabled={!gameComponents[index]}
               />
             ))}
           </div>

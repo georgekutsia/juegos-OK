@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recursos de juego"
+  short_description: "Gestiona imágenes, audio y tarjetas de juegos"
+  default_prompt: "Use $content-assets to add and verify the new game's card image and sound."

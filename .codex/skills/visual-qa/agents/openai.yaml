@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual QA"
+  short_description: "Consistencia visual, CSS y responsive"
+  default_prompt: "Use $visual-qa to review the page visual consistency after these changes."

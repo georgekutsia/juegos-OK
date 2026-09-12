@@ -1,0 +1,4 @@
+interface:
+  display_name: "Estado y ajustes"
+  short_description: "Cuida preferencias, estado y persistencia"
+  default_prompt: "Use $state-settings to verify the saved character and color preferences."

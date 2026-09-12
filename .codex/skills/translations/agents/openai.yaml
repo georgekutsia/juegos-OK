@@ -1,0 +1,4 @@
+interface:
+  display_name: "Traducciones"
+  short_description: "Sincroniza el contenido en español y alemán"
+  default_prompt: "Use $translations to add the new game's text in Spanish and German."

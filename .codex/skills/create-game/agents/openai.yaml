@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crear juegos"
+  short_description: "Crea y conecta juegos correctamente"
+  default_prompt: "Use $create-game to add a new puzzle game to this project."

@@ -49,6 +49,7 @@ function SoundGameScreen() {
                 imgGame={imgUrl}
                 handleGameOn={() => handleGameOn(index)}
                 text={gamesData.soundGamesNames[index]}
+                disabled={!gameComponents[index]}
               />
             ))}
           </div>

@@ -46,6 +46,7 @@ function SportGameScreen() {
                 imgGame={imgUrl}
                 handleGameOn={() => handleGameOn(index)}
                 text={gamesData.sportGamesNames[index]}
+                disabled={!gameComponents[index]}
               />
             ))}
           </div>
