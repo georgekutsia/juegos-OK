@@ -27,7 +27,25 @@ const getPuzzleForLevel = (level) => {
 };
 
 const isSolved = (board) => board.every((tile, index) => tile === (index === board.length - 1 ? null : index));
-const isImageSolved = (board, imageTiles) => imageTiles.every((tile) => board[tile] === tile);
+const isImageSolved = (board, imageTiles) => {
+  const [referenceTile, ...otherTiles] = imageTiles;
+  const referencePosition = board.indexOf(referenceTile);
+  const referenceRow = Math.floor(referencePosition / BOARD_SIZE);
+  const referenceColumn = referencePosition % BOARD_SIZE;
+  const targetReferenceRow = Math.floor(referenceTile / BOARD_SIZE);
+  const targetReferenceColumn = referenceTile % BOARD_SIZE;
+
+  return otherTiles.every((tile) => {
+    const currentPosition = board.indexOf(tile);
+    const currentRow = Math.floor(currentPosition / BOARD_SIZE);
+    const currentColumn = currentPosition % BOARD_SIZE;
+    const targetRow = Math.floor(tile / BOARD_SIZE);
+    const targetColumn = tile % BOARD_SIZE;
+
+    return currentRow - referenceRow === targetRow - targetReferenceRow
+      && currentColumn - referenceColumn === targetColumn - targetReferenceColumn;
+  });
+};
 
 const shuffleBoard = (shuffleMoves, imageTiles) => {
   const board = [...Array(BOARD_SIZE * BOARD_SIZE - 1).keys(), null];
