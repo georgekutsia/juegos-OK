@@ -342,6 +342,37 @@
   color: var(--dark-violet);
 }
 
+@media (min-width: 601px) and (max-width: 1100px) {
+  .memory-game {
+    width: 100%;
+    padding: 76px 20px 30px;
+  }
+
+  .memory-game-board {
+    width: min(100%, 60dvh, 560px);
+    margin-top: 14px;
+  }
+
+  .memory-option-trigger,
+  .memory-complete button {
+    min-height: 42px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) and (orientation: landscape) {
+  .memory-game {
+    padding-top: 64px;
+  }
+
+  .memory-options-toolbar {
+    margin-top: 10px;
+  }
+
+  .memory-game-board {
+    width: min(100%, 52dvh, 440px);
+  }
+}
+
 @media (max-width: 600px) {
   .memory-game {
     padding: 72px 12px 28px;

@@ -13,13 +13,16 @@
 
 .screens-box{
   height: 80vh;
+  height: 80dvh;
   width: 95vw;
   max-width: 1200px;
   margin: auto;
   margin-top: 15vh;
+  margin-top: 15dvh;
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
+  box-sizing: border-box;
   overflow-y: scroll;
   text-align: center;
 }
@@ -27,7 +30,9 @@
 @media (orientation: landscape) and (max-height: 600px) {
   .screens-box{
     height: calc(85vh - 5px);
+    height: calc(85dvh - 5px);
     margin-top: 15vh;
+    margin-top: 15dvh;
     overflow-x: hidden;
     overflow-y: auto;
     width: calc(100vw - 10px);
