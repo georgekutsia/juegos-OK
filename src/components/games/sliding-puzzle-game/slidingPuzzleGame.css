@@ -210,6 +210,35 @@
   }
 }
 
+@media (min-width: 601px) and (max-width: 900px) {
+  .sliding-puzzle-game {
+    width: 100%;
+    padding: 80px 20px 32px;
+  }
+
+  .sliding-puzzle-content {
+    flex-direction: column-reverse;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .sliding-puzzle-board {
+    width: min(72vw, 68vh, 560px);
+  }
+
+  .sliding-puzzle-reference {
+    grid-template-columns: auto 92px;
+    align-items: center;
+    width: min(100%, 360px);
+    text-align: left;
+  }
+
+  .sliding-puzzle-level,
+  .sliding-puzzle-complete button {
+    min-height: 42px;
+  }
+}
+
 @media (max-width: 600px) {
   .sliding-puzzle-game {
     padding: 72px 12px 28px;
