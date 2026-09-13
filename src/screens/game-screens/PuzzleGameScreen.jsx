@@ -6,7 +6,8 @@ import {
   MemoryGameComponent,
   MissingGameComponent,
   ScreenTitleComponent,
-  ShadowGamesComponent
+  ShadowGamesComponent,
+  SlidingPuzzleGameComponent
 } from '../../components';
 
 import { Context } from '../../shared/context';
@@ -22,6 +23,7 @@ function PuzzleGameScreen() {
 
   const interactiveGames = [
     { key: 'interactiveMemory', image: '/img/games/memory/memory-card.png', description: 'interactiveMemoryDescription' },
+    { key: 'interactiveSlidingPuzzle', image: '/img/games/sliding-puzzle/sliding-puzzle-card.png', description: 'interactiveSlidingPuzzleDescription' },
     { key: 'interactiveShoot', image: '/img/games/shoot/shoot-card.png', description: 'interactiveShootDescription' },
     { key: 'interactiveGap', image: '/img/games/gap/gap-card.png', description: 'interactiveGapDescription' },
     { key: 'interactiveBliblin' },
@@ -49,6 +51,7 @@ function PuzzleGameScreen() {
 
   const interactiveGameComponents = {
     interactiveMemory: <MemoryGameComponent returnToScreen={handleReturn} />,
+    interactiveSlidingPuzzle: <SlidingPuzzleGameComponent returnToScreen={handleReturn} />,
   };
 
   return (
