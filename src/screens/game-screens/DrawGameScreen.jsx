@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   ButtonColoredComponent,
+  ButtonReturnComponent,
   InfoComponent,
   LoaderCarComponent,
   RedLight,
@@ -50,7 +51,7 @@ function DrawGameScreen() {
   };
 
   return (
-    <div className="screens-box setting-screen">
+    <div className={`screens-box setting-screen game-screen ${activeGame !== -1 ? 'game-screen--playing' : ''}`}>
       {activeGame === -1 ? (
         <>
           <ScreenTitleComponent text="drawGameScreen" />
@@ -65,7 +66,12 @@ function DrawGameScreen() {
           {renderGameButtons()}
         </>
       ) : (
-        gameComponents[activeGame] || <LoaderCarComponent />
+        <>
+          <div className="buttons-position-absolute redlight-return">
+            <ButtonReturnComponent returnToScreen={handleReturn} />
+          </div>
+          {gameComponents[activeGame] || <LoaderCarComponent />}
+        </>
       )}
     </div>
   );

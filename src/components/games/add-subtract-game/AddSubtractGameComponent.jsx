@@ -378,23 +378,31 @@ function AddSubtractGameComponent({ returnToScreen }) {
           </button>
           <MathCar vehicle="blueStandard" className="addition-setup__car" />
           <h2 id="addition-setup-title">{t('addSubtractAddition')} — {t(selectedDifficulty?.nameKey)}</h2>
-          <p>{t('additionChooseMaximum')}</p>
-          <div className="addition-setup__maximums" aria-label={t('additionChooseMaximum')}>
-            {additionMaximumOptions.map((option) => (
-              <button
-                key={option}
-                className={maximum === option ? 'addition-setup__maximum addition-setup__maximum--selected' : 'addition-setup__maximum'}
-                type="button"
-                onClick={() => setMaximum(option)}
-                aria-pressed={maximum === option}
-              >
-                {option}
-              </button>
-            ))}
+          <div className="addition-setup__field">
+            <p>{t('additionChooseMaximum')}</p>
+            <select className="addition-setup__compact-select addition-setup__maximum-select" aria-label={t('additionChooseMaximum')} value={maximum} onChange={(event) => setMaximum(Number(event.target.value))}>
+              {additionMaximumOptions.map((option) => <option key={option} value={option}>{option}</option>)}
+            </select>
+            <div className="addition-setup__maximums" aria-label={t('additionChooseMaximum')}>
+              {additionMaximumOptions.map((option) => (
+                <button
+                  key={option}
+                  className={maximum === option ? 'addition-setup__maximum addition-setup__maximum--selected' : 'addition-setup__maximum'}
+                  type="button"
+                  onClick={() => setMaximum(option)}
+                  aria-pressed={maximum === option}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
           </div>
           {isCompetitiveRace && (
-            <>
+            <div className="addition-setup__field">
               <h3 className="addition-setup__opponent-title">{t(isHardRace ? 'additionChooseCarsSpeed' : 'additionChooseOpponentSpeed')}</h3>
+              <select className="addition-setup__compact-select" aria-label={t(isHardRace ? 'additionChooseCarsSpeed' : 'additionChooseOpponentSpeed')} value={opponentSpeed} onChange={(event) => setOpponentSpeed(event.target.value)}>
+                {additionOpponentSpeeds.map(({ id, nameKey }) => <option key={id} value={id}>{t(nameKey)}</option>)}
+              </select>
               <div className="addition-setup__opponent-speeds" aria-label={t(isHardRace ? 'additionChooseCarsSpeed' : 'additionChooseOpponentSpeed')}>
                 {additionOpponentSpeeds.map(({ id, nameKey }) => (
                   <button
@@ -408,23 +416,28 @@ function AddSubtractGameComponent({ returnToScreen }) {
                   </button>
                 ))}
               </div>
-            </>
+            </div>
           )}
           {isHardRace && (
             <>
-              <h3 className="addition-setup__opponent-title">{t('additionChooseTimeLimit')}</h3>
-              <div className="addition-setup__opponent-speeds" aria-label={t('additionChooseTimeLimit')}>
-                {additionAnswerTimeLimits.map(({ id, nameKey }) => (
-                  <button
-                    key={id}
-                    className={answerTimeLimit === id ? 'addition-setup__opponent-speed addition-setup__opponent-speed--selected' : 'addition-setup__opponent-speed'}
-                    type="button"
-                    onClick={() => setAnswerTimeLimit(id)}
-                    aria-pressed={answerTimeLimit === id}
-                  >
-                    {t(nameKey)}
-                  </button>
-                ))}
+              <div className="addition-setup__field">
+                <h3 className="addition-setup__opponent-title">{t('additionChooseTimeLimit')}</h3>
+                <select className="addition-setup__compact-select" aria-label={t('additionChooseTimeLimit')} value={answerTimeLimit} onChange={(event) => setAnswerTimeLimit(event.target.value)}>
+                  {additionAnswerTimeLimits.map(({ id, nameKey }) => <option key={id} value={id}>{t(nameKey)}</option>)}
+                </select>
+                <div className="addition-setup__opponent-speeds" aria-label={t('additionChooseTimeLimit')}>
+                  {additionAnswerTimeLimits.map(({ id, nameKey }) => (
+                    <button
+                      key={id}
+                      className={answerTimeLimit === id ? 'addition-setup__opponent-speed addition-setup__opponent-speed--selected' : 'addition-setup__opponent-speed'}
+                      type="button"
+                      onClick={() => setAnswerTimeLimit(id)}
+                      aria-pressed={answerTimeLimit === id}
+                    >
+                      {t(nameKey)}
+                    </button>
+                  ))}
+                </div>
               </div>
               <p className="addition-setup__hard-rule">{t('additionHardRule')}</p>
             </>
@@ -452,7 +465,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
                 {t('additionTimeRemaining', { seconds: timeRemaining ?? answerTimeLimitConfig.seconds })}
               </p>
             )}
-            <p aria-live="polite">{problem.firstNumber} <span aria-hidden="true">+</span> {problem.secondNumber} <span aria-hidden="true">=</span></p>
+            <p className="addition-race__operation" aria-live="polite">{problem.firstNumber} <span aria-hidden="true">+</span> {problem.secondNumber} <span aria-hidden="true">=</span></p>
             <label htmlFor="addition-answer">{t('additionAnswerLabel')}</label>
             <div className="addition-race__answer-row">
               <input

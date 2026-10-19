@@ -27,7 +27,7 @@ function QuestionGameScreen() {
   ];
 
   return (
-    <div className="screens-box setting-screen">
+    <div className={`screens-box setting-screen game-screen ${activeGame !== -1 ? 'game-screen--playing' : ''}`}>
       {activeGame === -1 ? (
         <>
           <ScreenTitleComponent text="questionGameScreen" />

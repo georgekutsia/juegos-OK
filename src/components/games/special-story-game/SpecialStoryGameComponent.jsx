@@ -30,17 +30,12 @@ function SpecialStoryGameComponent({ returnToScreen }) {
   const animalSound1 = new Audio(story.OkinaSound[storyCount - 1])
   const animalSound2 = new Audio(story.OkinaSound[storyCount])
 
-  const animalSound3= new Audio(story[`part${storyCount}`])
-
   animalSound1.onended = () => {
     setShowImage(true)
     setPlayingIndex(null)
     setPlaying(false)
     setpointer1('')
     setallOptionsShown(true);
-  }
-  const handleSound = () => {
-    animalSound3.play()
   }
   animalSound2.onended = () => {
     setShowImage(true)
@@ -53,7 +48,6 @@ function SpecialStoryGameComponent({ returnToScreen }) {
   const handleCountImg = () => {
     setimgCount(prev => prev + 1)
     if(imgCount >= story[`part${storyCount}`].length-2){ //para que aparezcan los botones de reproducir sonido que desaparecen mientras haya opciones de respuesta
-        alert("hey")
         setallOptionsShown(false);
       }
   }
@@ -98,15 +92,19 @@ function SpecialStoryGameComponent({ returnToScreen }) {
   }
 
   const handleNext = () => {
-    const newAnimal = getRandomAnimalWithSound()
-    setStory(newAnimal)
+    setStory(storyDataObs)
     setStoryCount(0)
+    setimgCount(0)
+    setallOptionsShown(false)
+    setPlaying(false)
+    setPlayingIndex(null)
+    setpointer1('')
+    setpointer2('')
     setShowImage(false)
   }
 
   return (
     <div className='story-game-box'>
-    <button onClick={()=>handleSound()}>sljbdsljbnadljb</button>
       {story && (
         <>
           <h2>

@@ -1,0 +1,44 @@
+# Revisión de juegos en móvil — 19/10/2026
+
+Se revisaron primero las sumas fácil, media y difícil y después todos los juegos accesibles del catálogo actual. Los cambios se aplican a teléfonos verticales de hasta 600 px de ancho y a pantallas horizontales de hasta 600 px de alto. En móvil, la navegación principal se oculta durante el juego; el botón de retorno permite recuperar el catálogo y la navegación.
+
+## Cobertura
+
+| Juego | Ajuste y comprobación |
+| --- | --- |
+| Sumas: fácil, medio y difícil | Menú, configuración, pistas, operación, temporizador y respuesta. Configuración compacta con selectores; pista y respuesta en columnas en horizontal. |
+| Memory | Tablero limitado por la altura disponible, controles y puntuaciones compactos; opciones abiertas contenidas en la pantalla. |
+| Rompecabezas deslizante | Tablero, imagen de referencia, instrucciones y niveles; movimiento de una pieza. |
+| Elecciones | Dos opciones dentro del ancho disponible; personaje en su propia fila. |
+| Tamaño, peso y velocidad | Comparación en dos columnas y solución; imágenes y datos dentro de cada columna. |
+| Siluetas y efectos | Fila de herramientas independiente de la imagen; solución y botones de avance. |
+| Animal que falta | Grupo giratorio contenido, controles de velocidad y botón de ocultar separados. |
+| Sonidos de animales | Imagen de solución, reproducción y retorno dentro del espacio disponible. |
+| Cuentos narrados y cuento de opciones | Escenas, controles de audio y opciones; capítulos en una fila desplazable. Se eliminó un botón de depuración y se corrigió la función inexistente usada por «Siguiente» en el cuento especial. |
+| Corre al color | Configuración y área de juego apiladas en vertical y en columnas en horizontal. |
+| Busca por la sala | Miniaturas, imagen seleccionada y temporizador separados. |
+| Luz roja | Vista y retorno al catálogo; se añadió el botón de retorno que faltaba. |
+
+## Pruebas
+
+- Chrome con emulación móvil: 320 × 568, 390 × 844, 568 × 320, 667 × 375 y 844 × 390. Comprobación adicional de escritorio a 1280 × 800.
+- Verificación final de los casos más estrechos: 320 × 568 y 568 × 320. Menú, configuración y carrera de sumas comprobados en español y alemán, sin desbordamiento horizontal ni vertical.
+- En el nivel difícil se completaron cinco respuestas correctas, victoria, reinicio, respuesta incorrecta y retorno al catálogo en ambos idiomas y orientaciones.
+- Se comprobaron opciones abiertas de Memory, movimiento de puzle, soluciones de animales, selección de imagen en busca por la sala y retorno desde luz roja.
+- Se midió también el desbordamiento durante la animación del botón de solución y se contuvo su decoración para evitar que amplíe la pantalla.
+- Para comprobar las escenas y opciones de los cuentos se simularon los eventos de fin de audio en el navegador. Esto verifica la distribución visual, no la reproducción completa del audio.
+- `npm run build`: correcto. Queda el aviso previo sobre el tamaño del paquete JavaScript.
+- ESLint de los componentes de sumas, cuento especial y entrada de la aplicación: correcto. El análisis global conserva 46 errores y 8 avisos previos en otros componentes y pantallas; no se han ocultado mediante desactivaciones de reglas.
+
+## Límites
+
+Los catálogos de libros conservan desplazamiento vertical y los capítulos desplazamiento horizontal. También se permite desplazar contenido cuando se amplía el texto o el espacio disponible resulta excepcionalmente pequeño. Se mantiene el tamaño utilizable de los controles.
+
+Falta validar en un teléfono físico, especialmente Safari y el teclado virtual. Se añadió la indicación de redimensionar el contenido al abrir el teclado en navegadores compatibles. La emulación de Chrome no reproduce todos los comportamientos de iOS ni garantiza los tiempos de carga de las imágenes externas.
+
+## Capturas
+
+- [Configuración de sumas en vertical](qa/mobile/sumas-vertical.png)
+- [Carrera de sumas en horizontal](qa/mobile/sumas-horizontal.png)
+- [Opciones de Memory en horizontal](qa/mobile/memory-horizontal.png)
+- [Escena de cuento en vertical](qa/mobile/cuento-vertical.png)

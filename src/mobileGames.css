@@ -1,0 +1,161 @@
+/* Phone layouts share a viewport budget, including the navigation above games.
+   Keep scrolling available for enlarged text and unusually small viewports. */
+@media (max-width: 600px), (orientation: landscape) and (max-height: 600px) {
+  .body { min-height: 100dvh; height: auto; }
+  .body > div:last-child { width: 100%; }
+  .screens-box.game-screen {
+    --game-height: calc(100dvh - 100px);
+    position: relative;
+    width: calc(100% - 12px);
+    height: var(--game-height);
+    margin: 90px auto 10px;
+    padding: 6px;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+  .body:has(.game-screen--playing) .mainNavbar { display: none; }
+  .screens-box.game-screen--playing {
+    --game-height: calc(100dvh - 12px);
+    height: var(--game-height);
+    margin: 6px auto;
+  }
+  .game-screen *, .game-screen *::before, .game-screen *::after { box-sizing: border-box; }
+  .game-screen .button-return,
+  .game-screen .info-component-box img,
+  .game-screen .puzzle-view-toggle { width: 44px; height: 44px; flex-shrink: 0; }
+  .game-screen .buttons-position-absolute { top: 4px; left: 4px; gap: 6px; z-index: 6; }
+  .game-screen .button-next-game { top: 4px; right: 4px; }
+  .game-screen .button-next { position: static; min-height: 44px; padding: 6px 12px; }
+  .game-screen .button-solution-game { top: auto; bottom: 0; right: 0; z-index: 5; padding: 8px; contain: paint; }
+  .game-screen .button-solution-game .bubbly-button { position: static; min-height: 44px; margin: 0; padding: 6px 12px; }
+  .game-screen .button-ripple { min-width: 44px; min-height: 44px; padding: 6px 8px; }
+  .game-screen .button-ripple i { font-size: 1.5rem; }
+  .game-screen button:focus-visible { outline: 3px solid var(--dark-blue); outline-offset: 2px; }
+  .game-screen .redlight-return { position: fixed; top: 12px; left: 12px; z-index: 2001; }
+
+  .searchroom-img-container { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: 100%; max-width: 100%; margin-top: 52px; gap: 8px; justify-items: center; }
+  .searchroom-img { width: 44px; height: 44px; object-fit: contain; }
+  .selected-image-display { position: relative; top: auto; left: auto; transform: none; grid-column: 1 / -1; grid-row: 1; width: 100%; text-align: center; }
+  .selected-image-display img { width: 100%; max-height: 28dvh; object-fit: contain; background: var(--white); }
+  .searchroom-img-container .timer-comp-box-one { grid-column: 1 / -1; margin-top: 4px; padding: 8px; }
+
+  /* Memory: constrain the square by the remaining vertical space. */
+  .game-screen .memory-game { padding: 50px 4px 8px; }
+  .memory-game-header h2 { font-size: 1.25rem; }
+  .memory-game-header > p { margin: 4px 0; }
+  .memory-options-toolbar { gap: 4px; margin: 8px 0; }
+  .memory-option-trigger { min-width: 0; min-height: 44px; }
+  .memory-option-menu { position: static; }
+  .memory-options-toolbar { position: relative; }
+  .memory-option-panel { position: fixed; top: 56px; left: 50%; width: min(340px, calc(100vw - 32px)); max-width: calc(100vw - 32px); max-height: calc(100dvh - 80px); overflow: auto; }
+  .game-screen .memory-game-board { width: min(100%, max(180px, calc(var(--game-height) - 280px))); margin-top: 8px; }
+  .memory-card-front { font-size: clamp(1rem, 6vw, 3rem); }
+  .memory-players { gap: 4px; margin-top: 6px; }
+  .memory-game .memory-player { width: auto; padding: 4px 6px; font-size: 0.8rem; }
+  .memory-complete { margin: 12px auto; padding: 12px; }
+
+  /* Sliding puzzle: reference and board stay within their container. */
+  .game-screen .sliding-puzzle-game { padding: 50px 4px 8px; }
+  .sliding-puzzle-header h2 { font-size: 1.25rem; }
+  .sliding-puzzle-header > p { margin: 4px 0; }
+  .sliding-puzzle-levels { margin: 8px 0; gap: 6px; }
+  .sliding-puzzle-level { min-width: 0; min-height: 44px; padding: 6px 8px; font-size: 0.85rem; }
+  .sliding-puzzle-content { gap: 8px; margin-top: 8px; }
+  .game-screen .sliding-puzzle-board { width: min(100%, max(160px, calc(var(--game-height) - 310px))); flex-shrink: 0; }
+  .sliding-puzzle-reference { font-size: 0.9rem; }
+
+  /* Choices and comparisons. */
+  .election-game-box { padding-top: 56px; }
+  .game-screen .election-game-box-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0; background: transparent; align-items: center; }
+  .election-game-box .images-container { width: 100%; }
+  .game-screen .election-image { position: static; grid-column: 1 / -1; grid-row: 2; width: 64px; height: 64px; margin: 8px auto; }
+  .election-game-box .bubbly-button-img { width: 100%; height: auto; min-width: 0; }
+  .election-game-box .bubbly-button-img img { width: 100%; max-width: 100%; max-height: 40dvh; object-fit: contain; }
+  .size-game-box { padding: 56px 4px 60px; }
+  .animals-comparison { gap: 12px; margin-top: 8px; }
+  .animals-comparison > div { width: calc(50% - 6px); min-width: 0; }
+  .animals-comparison h2 { font-size: 1rem; overflow-wrap: anywhere; }
+  .animals-comparison .size-img { max-width: 100%; object-fit: contain; }
+  .animals-comparison .size-game-img-isbig { padding: 12px; width: 100%; height: min(28dvh, 180px); }
+  .size-main-image { display: none; }
+
+  /* Silhouettes: tools occupy their own row instead of covering the image. */
+  .shadow-game-box { flex-direction: column; align-items: center; gap: 12px; margin: 0; padding: 56px 8px 60px; }
+  .shadow-game-box > div { max-width: 100%; }
+  .shadow-game-box .shadow-game-buttonMode { position: static; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; width: auto; height: auto; }
+  .shadow-game-img-size { width: min(54vw, 30dvh); }
+  .shadow-game-img-box { width: min(54vw, 30dvh); height: min(54vw, 30dvh); }
+
+  /* Missing animal: the rotating group fits inside a square at every angle. */
+  .missing-box { height: auto; min-height: 100%; flex-direction: column; gap: 8px; padding: 56px 4px 60px; }
+  .form-missing-box { position: static; }
+  .rotation-control-radio { gap: 4px; flex-wrap: wrap; }
+  .spining-missing-box { width: min(60vw, 27dvh); aspect-ratio: 1; flex-shrink: 0; }
+  .spining-missing-box img { width: 30%; height: auto; aspect-ratio: 1; object-fit: contain; }
+  .missing-box .buttonMode-runtocolor { position: static; width: auto; height: auto; margin: 0; }
+  .removed-image-box { position: static; width: auto; }
+  .removed-image-box img { width: min(24vw, 15dvh); }
+
+  /* Animal sounds and narrated stories. */
+  .sound-game-box { padding-top: 52px; }
+  .sound-game-box .sound-game-box { padding-top: 0; }
+  .sound-game-box .sound-question { display: block; font-size: min(22dvh, 8rem); }
+  .sound-solution-img { width: min(60vw, 30dvh); height: 30dvh; object-fit: contain; }
+  .sound-solution-img:hover { scale: 1; }
+  .sound-game-btn { width: 76px; bottom: 60px; }
+  .story-game-box { padding-top: 0; }
+  .story-game-box:has(.story-game-btn-box) { position: static; display: grid; grid-template-rows: auto minmax(100px, 1fr) auto; height: calc(var(--game-height) - 70px); }
+  .story-game-btn-box { height: auto; min-height: 100px; overflow: visible; }
+  .story-image, .story-image-last, .story-image-sounding { width: 100%; left: 0; margin-left: 0; transform: none; }
+  .story-image, .story-image-last { top: 94px; }
+  .story-image img, .story-image-last img { width: 100%; height: calc(var(--game-height) - 260px); min-height: 90px; object-fit: contain; }
+  .story-image-sounding img { width: min(24vw, 24dvh); }
+  .story-game-allbtns { flex-wrap: nowrap; justify-content: flex-start; gap: 6px; overflow-x: auto; max-width: 100%; padding: 4px; scrollbar-width: thin; }
+  .story-game-allbtns button { width: 44px; height: 44px; flex: 0 0 44px; }
+  .story-choice-images-box { position: static; margin: 56px 0 0; width: 100%; gap: 8px; }
+  .story-choice-images-box img { width: min(38vw, 28dvh); max-width: 100%; }
+  .story-active-image-box img { max-width: 75vw; max-height: 45dvh; object-fit: contain; }
+
+  /* Run to a colour: stack settings above the playable colour. */
+  .game-screen:has(.button-box-run-color) { padding-top: 56px; }
+  .game-screen:has(.button-box-run-color) > .buttonMode-runtocolor { position: static; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%; height: auto; margin: 0; gap: 4px; }
+  .buttonMode-runtocolor .choosecolor-div { width: 100%; }
+  .buttonMode-runtocolor h3 { margin: 0; font-size: 1rem; }
+  .slider-time-container { margin: 4px 0; }
+  .colorArray-list { margin: 8px 0; flex-wrap: wrap; }
+  .button-box-run-color { width: min(52vw, 24dvh); height: min(52vw, 24dvh); margin: 0; border-radius: 24px; font-size: 1.1rem; overflow-wrap: anywhere; }
+  .colorTimedown-display { left: 12px; }
+  .position-absolute-alert { top: 52px; width: 90%; font-size: 1.2rem; transform: translateX(-50%); }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .screens-box.game-screen { --game-height: calc(100dvh - 78px); margin-top: 72px; margin-bottom: 6px; }
+  .screens-box.game-screen--playing { --game-height: calc(100dvh - 12px); margin: 6px auto; }
+  .game-screen .memory-game { display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 1fr); align-items: center; gap: 12px; }
+  .game-screen .memory-game-board { width: min(100%, calc(var(--game-height) - 72px)); margin: 0 auto; }
+  .memory-game-header > p { font-size: 0.85rem; }
+  .memory-game .memory-complete { grid-column: 1 / -1; }
+  .game-screen .sliding-puzzle-game { display: grid; grid-template-columns: minmax(180px, 1fr) minmax(0, 1.3fr); gap: 12px; align-items: center; }
+  .game-screen .sliding-puzzle-content { flex-direction: row; margin: 0; gap: 8px; }
+  .game-screen .sliding-puzzle-board { width: min(70%, calc(var(--game-height) - 72px)); }
+  .game-screen .sliding-puzzle-reference { display: flex; flex-direction: column; width: 25%; }
+  .sliding-puzzle-complete { margin: 0 auto; padding: 8px; }
+  .sliding-puzzle-complete img { max-height: 22dvh; width: auto; }
+  .shadow-game-box { flex-direction: row; justify-content: space-evenly; }
+  .shadow-game-box > div:has(.shadow-game-buttonMode) { width: 45%; }
+  .shadow-game-img-size, .shadow-game-img-box { width: 32dvh; }
+  .shadow-game-img-box { height: 32dvh; }
+  .missing-box { display: grid; grid-template-columns: 1fr 1fr; justify-items: center; }
+  .form-missing-box { grid-column: 1; }
+  .spining-missing-box { grid-column: 2; grid-row: 1 / 3; width: 32dvh; }
+  .game-screen:has(.button-box-run-color) { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8px; }
+  .game-screen:has(.button-box-run-color) > .buttonMode-runtocolor { grid-row: 1 / 3; }
+  .game-screen .button-box-run-color { width: 30dvh; height: 30dvh; justify-self: center; }
+  .colorArray-list { margin: 0; }
+  .story-game-box:has(.story-game-btn-box) .story-game-btn-box { width: 40%; margin-left: 60%; }
+  .story-image, .story-image-last, .story-image-sounding { top: 90px; left: 8px; width: 58%; }
+  .story-image img, .story-image-last img { height: calc(var(--game-height) - 174px); min-height: 0; }
+  .searchroom-img-container { width: 58%; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .selected-image-display { position: absolute; top: 56px; right: 8px; left: auto; width: 38%; }
+  .selected-image-display img { max-height: calc(var(--game-height) - 80px); }
+}

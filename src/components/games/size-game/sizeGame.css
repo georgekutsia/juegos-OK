@@ -72,14 +72,14 @@ height: calc(100px + 5vw);
 
 }
 .size-game-img-ismall1{
-  width: calc(60px +4vw);
-  height: calc(60px +4vw);
+  width: calc(60px + 4vw);
+  height: calc(60px + 4vw);
   transition: 0.5s ease-in-out;
 
 }
 .size-game-img-ismall0{
-  width: calc(120px +6vw);
-  height: calc(120px +6vw);
+  width: calc(120px + 6vw);
+  height: calc(120px + 6vw);
   transition: 0.5s ease-in-out;
 
 }
