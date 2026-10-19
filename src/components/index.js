@@ -55,3 +55,5 @@ export { default as ButtonSolutionComponent } from "./buttons/button-solution/Bu
 export { default as ButtonNextComponent } from "./buttons/button-next/ButtonNextComponent";
 export { default as ButtonColoredComponent } from "./buttons/button-colored/ButtonColoredComponent";
 export { default as ButtonTypeComponent } from "./buttons/button-type/ButtonTypeComponent";
+
+export { default as SubtractionCraneScene } from './games/add-subtract-game/SubtractionCraneScene';

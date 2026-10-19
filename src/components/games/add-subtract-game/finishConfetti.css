@@ -1,0 +1,23 @@
+.finish-confetti-piece {
+  opacity: 0;
+  transform: translate(-50%, 5px) rotate(0deg) scale(0.2);
+  animation: addition-confetti-burst 1100ms cubic-bezier(0.18, 0.68, 0.3, 1) both;
+  animation-delay: var(--confetti-delay);
+  pointer-events: none;
+}
+
+@keyframes addition-confetti-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 5px) rotate(0deg) scale(0.2);
+  }
+  16%, 76% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--confetti-x)), calc(5px + var(--confetti-y))) rotate(var(--confetti-rotation)) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .finish-confetti-piece { animation: none; }
+}

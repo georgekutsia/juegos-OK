@@ -12,7 +12,7 @@ export const mathVehicles = {
 
 export const mathGameModes = [
   { id: 'addition', nameKey: 'addSubtractAddition', vehicle: 'blueStandard' },
-  { id: 'subtraction', nameKey: 'addSubtractSubtraction', vehicle: 'blueStandard' },
+  { id: 'subtraction', nameKey: 'addSubtractSubtraction', illustration: 'crane' },
   { id: 'multiplication', nameKey: 'addSubtractMultiplication', vehicle: 'blueStandard' },
   { id: 'division', nameKey: 'addSubtractDivision', vehicle: 'blueStandard' },
 ];
@@ -25,6 +25,28 @@ export const mathDifficultyLevels = [
 
 export const additionMaximumOptions = [10, 20, 30, 50, 100];
 export const mathRaceSteps = 5;
+export const additionPlayerMoveDurationMs = 1920;
+export const subtractionBalloonCount = 30;
+export const subtractionCrowCount = 10;
+export const subtractionCrowFlightMs = 900;
+export const subtractionCrowLandingMs = 200;
+export const subtractionRopeFallMs = 800;
+
+export const getSubtractionCrowPhase = (index, elapsedMs, durationMs) => {
+  const landsAt = ((index + 1) * durationMs) / subtractionCrowCount;
+  return Math.max(0, Math.min(1, (elapsedMs - landsAt + subtractionCrowFlightMs) / subtractionCrowFlightMs));
+};
+
+// Reserve at least one balloon for each remaining question, and enough capacity
+// to use all 30 by the fifth answer, even with the smallest maximum (10).
+export const createSubtractionProblem = (maximum, remainingBalloons, completedRounds) => {
+  const futureRounds = mathRaceSteps - completedRounds - 1;
+  const minimumAnswer = Math.max(1, remainingBalloons - futureRounds * (maximum - 1));
+  const maximumAnswer = Math.min(maximum - 1, remainingBalloons - futureRounds);
+  const answer = minimumAnswer + Math.floor(Math.random() * (maximumAnswer - minimumAnswer + 1));
+  const firstNumber = answer + 1 + Math.floor(Math.random() * (maximum - answer));
+  return { firstNumber, secondNumber: firstNumber - answer, answer };
+};
 
 export const additionOpponentSpeeds = [
   { id: 'slow', durationMs: 120000, nameKey: 'additionOpponentSlow' },
