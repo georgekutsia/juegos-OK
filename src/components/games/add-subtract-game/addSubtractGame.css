@@ -69,6 +69,9 @@
   gap: 8px;
 }
 
+.add-subtract-game__coming-soon { grid-column: 1 / -1; margin: 4px 0 0; color: var(--dark-violet); font-size: 0.85rem; font-weight: 700; }
+.add-subtract-game__level:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
+
 .add-subtract-game__level,
 .addition-setup__maximum,
 .addition-setup__opponent-speed,
@@ -554,7 +557,9 @@
   .add-subtract-game { padding: 48px 4px 6px; }
   .add-subtract-game__mode-picker { padding: 8px; }
   .add-subtract-game__mode-picker > header > p { margin: 4px 0 8px; }
-  .add-subtract-game__modes { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .add-subtract-game__modes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .add-subtract-game__levels { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .add-subtract-game__level:last-child { grid-column: auto; }
   .add-subtract-game__mode { padding: 4px; }
   .add-subtract-game__mode .math-car { display: none; }
   .add-subtract-game__level { padding: 4px 3px; }

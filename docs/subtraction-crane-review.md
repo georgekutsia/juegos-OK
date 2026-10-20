@@ -10,6 +10,8 @@ Al ganar los niveles medio o difícil, los cuervos presentes se transforman en c
 
 Cada respuesta correcta hace explotar tantos globos como su resultado y eleva la carga un quinto del recorrido. La siguiente resta aparece de inmediato, mientras continúa el movimiento. Al quinto acierto no quedan globos y la carga llega arriba. El reinicio restaura el tablón y los 30 globos.
 
+En pantallas grandes, la resta y el recuadro de respuesta comparten una línea. La etiqueta sigue disponible para lectores de pantalla. La escena de la grúa ocupa la altura liberada, hasta 320 px, conservándose por encima de la operación. La regla se limita a contenedores de al menos 900 px de ancho y 421 px de alto; las distribuciones móviles y las sumas mantienen su comportamiento.
+
 Las restas tienen resultados positivos. Para que los globos alcancen exactamente hasta el quinto acierto, las cinco respuestas suman 30; se reservan globos para las preguntas restantes. El máximo de 10, 20, 30, 50 o 100 limita los operandos.
 
 Se mantienen los tres niveles:
@@ -43,6 +45,8 @@ Se mantienen los tres niveles:
 Las pruebas son de navegador con emulación móvil; no sustituyen la comprobación del teclado virtual en un teléfono físico.
 
 ## Capturas
+
+- [Resta y respuesta en línea con la grúa ampliada](qa/subtraction/desktop-inline-answer.png)
 
 - [Grúa inicial con 30 globos](qa/subtraction/crane-desktop.png)
 - [Nivel difícil en móvil horizontal](qa/subtraction/crane-landscape.png)

@@ -64,6 +64,7 @@
   .sliding-puzzle-content { gap: 8px; margin-top: 8px; }
   .game-screen .sliding-puzzle-board { width: min(100%, max(160px, calc(var(--game-height) - 310px))); flex-shrink: 0; }
   .sliding-puzzle-reference { font-size: 0.9rem; }
+  .sliding-puzzle-complete { margin-bottom: 0; }
 
   /* Choices and comparisons. */
   .election-game-box { padding-top: 56px; }
@@ -141,7 +142,7 @@
   .game-screen .sliding-puzzle-board { width: min(70%, calc(var(--game-height) - 72px)); }
   .game-screen .sliding-puzzle-reference { display: flex; flex-direction: column; width: 25%; }
   .sliding-puzzle-complete { margin: 0 auto; padding: 8px; }
-  .sliding-puzzle-complete img { max-height: 22dvh; width: auto; }
+  .sliding-puzzle-complete .sliding-puzzle-artwork { width: min(180px, 22dvh); }
   .shadow-game-box { flex-direction: row; justify-content: space-evenly; }
   .shadow-game-box > div:has(.shadow-game-buttonMode) { width: 45%; }
   .shadow-game-img-size, .shadow-game-img-box { width: 32dvh; }

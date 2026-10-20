@@ -18,6 +18,7 @@ export { default as MissingGameComponent } from "./games/missing-game/MissingGam
 export { default as MemoryGameComponent } from "./games/memory-game/MemoryGameComponent.jsx";
 export { default as SlidingPuzzleGameComponent } from "./games/sliding-puzzle-game/SlidingPuzzleGameComponent.jsx";
 export { default as AddSubtractGameComponent } from "./games/add-subtract-game/AddSubtractGameComponent.jsx";
+export { default as MultiplyDivideGameComponent } from "./games/multiply-divide-game/MultiplyDivideGameComponent.jsx";
 export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 export { default as LoaderCarComponent } from "./loaders/LoaderCarComponent.jsx";
 export { default as TimerComponent } from "./timer/TimerComponent.jsx";

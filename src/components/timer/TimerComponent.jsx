@@ -16,6 +16,7 @@ function TimerComponent({timerClass=""}) {
     }
   })
   const intervalRef = useRef(null)
+  useEffect(() => () => clearInterval(intervalRef.current), [])
   useEffect(() => {
     localStorage.setItem(`savedTimes${timerClass}`, JSON.stringify(savedTimes))
   }, [savedTimes])

@@ -14,8 +14,8 @@ function ButtonReturnComponent({returnToScreen, rotateClass}) {
   );
   return (
     <OverlayTrigger placement="bottom" delay={{ show: 800, hide: 200 }} overlay={renderTooltip}>
-    <button className={ rotateClass ? `${rotateClass}` :`button-return `} onClick={()=>returnToScreen()}>
-    <i className="fa-solid fa-rotate-left"></i>
+    <button type="button" aria-label={t('returnText')} className={ rotateClass ? `${rotateClass}` :`button-return `} onClick={()=>returnToScreen()}>
+    <i className="fa-solid fa-rotate-left" aria-hidden="true"></i>
     </button>
     </OverlayTrigger>
 

@@ -3,10 +3,11 @@ import './buttonColored.css';
 import { Context } from "../../../shared/context";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
-function ButtonColoredComponent({ imgGame, handleGameOn, text, disabled = false, statusText, descriptionText }) {
+function ButtonColoredComponent({ imgGame, to, text, disabled = false, statusText, descriptionText }) {
+  const navigate = useNavigate();
   const { t } = useContext(Context);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -28,7 +29,7 @@ function ButtonColoredComponent({ imgGame, handleGameOn, text, disabled = false,
 
       const expandTimeout = setTimeout(() => {
         setIsExpanded(false);
-    handleGameOn()
+        navigate(to);
 
       }, 1100);
 
@@ -37,9 +38,10 @@ function ButtonColoredComponent({ imgGame, handleGameOn, text, disabled = false,
         clearTimeout(expandTimeout);
       };
     }
-  }, [isButtonClicked, disabled, handleGameOn]);
+  }, [isButtonClicked, disabled, navigate, to]);
 
   const handleButtonClick = (e) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     if (disabled) return;
     setIsButtonClicked(true);
@@ -70,7 +72,7 @@ function ButtonColoredComponent({ imgGame, handleGameOn, text, disabled = false,
         </OverlayTrigger>
       ) : (
         <OverlayTrigger placement="bottom" delay={{ show: 50, hide: 200 }} overlay={renderTooltip}>
-          <Link className={`btn-colored ${isButtonClicked ? 'btn-co--clicked' : ''}`} href="#" onClick={handleButtonClick} ref={buttonRef} title="Click to activate">
+          <Link className={`btn-colored ${isButtonClicked ? 'btn-co--clicked' : ''}`} to={to} onClick={handleButtonClick} ref={buttonRef} aria-label={t(text)}>
             <div className="containerRotate">
               <div className="left-half"></div>
               <div className="right-half"></div>

@@ -15,6 +15,7 @@ import {
   subtractionRopeFallMs,
   mathDifficultyLevels,
   mathGameModes,
+  mathGameGroups,
   mathRaceSteps,
   mathVehicles,
 } from '../../../data/addSubtractGameData';
@@ -53,8 +54,10 @@ function MathCar({ vehicle, className = '', style, isMoving = false, isEngineRun
   );
 }
 
-function AddSubtractGameComponent({ returnToScreen }) {
+function AddSubtractGameComponent({ returnToScreen, gameGroup = 'addSubtract', initialMode = null, initialLevel = null, onSelectLevel, onReturnToMenu }) {
   const { t } = useContext(Context);
+  const currentGroup = mathGameGroups[gameGroup] ?? mathGameGroups.addSubtract;
+  const visibleModes = mathGameModes.filter(({ id }) => currentGroup.modes.includes(id));
   const answerInputRef = useRef(null);
   const feedbackTimerRef = useRef(null);
   const movementTimerRef = useRef(null);
@@ -69,9 +72,9 @@ function AddSubtractGameComponent({ returnToScreen }) {
   const opponentProgressRef = useRef(0);
   const orangePenaltyRef = useRef(0);
   const lilacPenaltyRef = useRef(0);
-  const [view, setView] = useState('menu');
-  const [selectedMode, setSelectedMode] = useState(null);
-  const [selectedLevel, setSelectedLevel] = useState(null);
+  const [view, setView] = useState(initialMode ? 'additionSetup' : 'menu');
+  const [selectedMode, setSelectedMode] = useState(initialMode);
+  const [selectedLevel, setSelectedLevel] = useState(initialLevel);
   const [maximum, setMaximum] = useState(20);
   const [opponentSpeed, setOpponentSpeed] = useState('fast');
   const [answerTimeLimit, setAnswerTimeLimit] = useState('7');
@@ -313,9 +316,14 @@ function AddSubtractGameComponent({ returnToScreen }) {
     setAnswer('');
     setTimeRemaining(null);
     setView('menu');
+    onReturnToMenu?.();
   };
 
   const selectLevel = (mode, level) => {
+    if (onSelectLevel) {
+      onSelectLevel(mode, level);
+      return;
+    }
     setSelectedMode(mode);
     setSelectedLevel(level);
     if (mode === 'addition' || mode === 'subtraction') setView('additionSetup');
@@ -702,11 +710,11 @@ function AddSubtractGameComponent({ returnToScreen }) {
       </div>
       <div className="add-subtract-game__mode-picker">
         <header>
-          <h2 id="add-subtract-game-title">{t('interactiveAddSubtract')}</h2>
+          <h2 id="add-subtract-game-title">{t(currentGroup.titleKey)}</h2>
           <p>{t('addSubtractChooseMode')}</p>
         </header>
         <div className="add-subtract-game__modes">
-          {mathGameModes.map(({ id, nameKey, vehicle, illustration }) => (
+          {visibleModes.map(({ id, nameKey, vehicle, illustration, available = true }) => (
             <article key={id} className="add-subtract-game__mode">
               <h3>{t(nameKey)}</h3>
               {illustration === 'crane' ? <span className="math-car math-crane-preview"><SubtractionCraneScene preview label={t('subtractionCraneDescription')} /></span> : <MathCar vehicle={vehicle} />}
@@ -716,6 +724,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
                     key={levelId}
                     className={selectedMode === id && selectedLevel === levelId ? 'add-subtract-game__level add-subtract-game__level--selected' : 'add-subtract-game__level'}
                     type="button"
+                    disabled={!available}
                     onClick={() => selectLevel(id, levelId)}
                     aria-pressed={selectedMode === id && selectedLevel === levelId}
                   >
@@ -723,6 +732,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
                   </button>
                 ))}
               </div>
+              {!available && <p className="add-subtract-game__coming-soon">{t('interactiveGameComingSoon')}</p>}
             </article>
           ))}
         </div>

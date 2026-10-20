@@ -7,9 +7,11 @@ import './storyGame.css'
 
 import PropTypes from 'prop-types'
 import storyData from '../../../data/storyData'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import useGameAudio from '../../../shared/useGameAudio'
 
 function StoryGameComponent({ returnToScreen }) {
+  const createAudio = useGameAudio()
   const [story, setStory] = useState(storyData)
   const [storyCount, setStoryCount] = useState(0)
   const [showImage, setShowImage] = useState(false)
@@ -26,8 +28,10 @@ function StoryGameComponent({ returnToScreen }) {
     })
   }, [story])
 
-  const animalSound1 = new Audio(story.jirafaSound[storyCount - 1])
-  const animalSound2 = new Audio(story.jirafaSound[storyCount])
+  const [animalSound1, animalSound2] = useMemo(() => [
+    createAudio(story.jirafaSound[storyCount - 1]),
+    createAudio(story.jirafaSound[storyCount]),
+  ], [createAudio, story, storyCount])
 
   animalSound1.onended = () => {
     setShowImage(true)
@@ -66,7 +70,7 @@ function StoryGameComponent({ returnToScreen }) {
   }
 
   const handlePlaySoundSpecific = (ind) => {
-    const specificSound = new Audio(story.jirafaSound[ind])
+    const specificSound = createAudio(story.jirafaSound[ind])
     specificSound.play()
     setStoryCount(ind + 1)
     specificSound.onended = () => {

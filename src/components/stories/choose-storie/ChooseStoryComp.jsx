@@ -4,8 +4,10 @@ import {
   InfoComponent
 } from '../../../components'
 import PropTypes from 'prop-types'
+import useGameAudio from '../../../shared/useGameAudio'
 
 function ChooseStoryComp({ returnToScreen, data }) {
+  const createAudio = useGameAudio()
   const [story] = useState(data)
   const [playing, setPlaying] = useState(false)
   const [showImages, setShowImages] = useState(false)
@@ -24,7 +26,7 @@ function ChooseStoryComp({ returnToScreen, data }) {
     } else {
       setActiveImage(lastImage)
     }
-    const audio = new Audio(lastSound)
+    const audio = createAudio(lastSound)
     audio.play()
     audio.onended = () => {
       setPlaying(false)
@@ -51,7 +53,7 @@ function ChooseStoryComp({ returnToScreen, data }) {
     setLastImage(imageToShow)
     setLastSound(option.sound)
 
-    const audio = new Audio(option.sound)
+    const audio = createAudio(option.sound)
     audio.play()
     audio.onended = () => {
       setPlaying(false)

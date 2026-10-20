@@ -1,30 +1,13 @@
-import { useState } from 'react';
 import {
   ButtonColoredComponent,
-  ButtonReturnComponent,
   InfoComponent,
-  LoaderCarComponent,
-  RedLight,
   ScreenTitleComponent,
-  // ShadowGamesComponent,
-  // SoundGameScreen,
 } from '../../components';
 import gamesData from '../../data/gamesData';
+import { gameRoutes } from '../../data/gameRoutes';
 import './gamesScreen.css';
 
 function DrawGameScreen() {
-  const [activeGame, setActiveGame] = useState(-1);
-
-  const handleGameOn = (index) => {
-    setActiveGame((prev) => (prev === index ? -1 : index));
-  };
-
-  const handleReturn = () => setActiveGame(-1);
-
-  const gameComponents = [
-    <RedLight />,
-  ];
-
   const renderGameButtons = () => {
     if (gamesData.drawGames && gamesData.drawGames.length > 0) {
       return (
@@ -33,9 +16,9 @@ function DrawGameScreen() {
             <ButtonColoredComponent
               key={index}
                 imgGame={imgUrl}
-                handleGameOn={() => handleGameOn(index)}
+                to={gameRoutes[gamesData.drawGamesNames[index]]?.path}
                 text={gamesData.drawGamesNames[index]}
-                disabled={!gameComponents[index]}
+                disabled={!gameRoutes[gamesData.drawGamesNames[index]]}
             />
           ))}
         </div>
@@ -51,28 +34,17 @@ function DrawGameScreen() {
   };
 
   return (
-    <div className={`screens-box setting-screen game-screen ${activeGame !== -1 ? 'game-screen--playing' : ''}`}>
-      {activeGame === -1 ? (
-        <>
-          <ScreenTitleComponent text="drawGameScreen" />
-          <div className="buttons-position-absolute">
-            <InfoComponent
-              title1="typeOfGameI"
-              title2="objectiveOfGameI"
-              text1="drawGameI1"
-              text2="drawGameI2"
-            />
-          </div>
-          {renderGameButtons()}
-        </>
-      ) : (
-        <>
-          <div className="buttons-position-absolute redlight-return">
-            <ButtonReturnComponent returnToScreen={handleReturn} />
-          </div>
-          {gameComponents[activeGame] || <LoaderCarComponent />}
-        </>
-      )}
+    <div className="screens-box setting-screen game-screen">
+      <ScreenTitleComponent text="drawGameScreen" />
+      <div className="buttons-position-absolute">
+        <InfoComponent
+          title1="typeOfGameI"
+          title2="objectiveOfGameI"
+          text1="drawGameI1"
+          text2="drawGameI2"
+        />
+      </div>
+      {renderGameButtons()}
     </div>
   );
 }

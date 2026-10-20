@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import ButtonReturnComponent from '../../buttons/button-return/ButtonReturnComponent'
 import ButtonNextComponent from '../../buttons/button-next/ButtonNextComponent'
 import './runtocolorGame.css'
-import { useContext, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { Context } from '../../../shared/context'
 import ButtonTypeComponent from '../../buttons/button-type/ButtonTypeComponent'
 import InfoComponent from '../../info/InfoComponent'
@@ -16,8 +16,18 @@ function RuntocolorGameComponent({ returnToScreen }) {
   const [colorArray, setColorArray] = useState(['var(--white)'])
   const [showAlert, setshowAlert] = useState(false)
   const intervalRef = useRef(null)
+  const alertTimerRef = useRef(null)
   const { t } = useContext(Context)
   const audioRef = useRef(new Audio(finalRing))
+
+  useEffect(() => {
+    const audio = audioRef.current
+    return () => {
+      clearInterval(intervalRef.current)
+      clearTimeout(alertTimerRef.current)
+      audio.pause()
+    }
+  }, [])
 
   const colorGroups = [
     ['var(--orange)', 'var(--pink)', 'var(--blue)', 'var(--grey)'],
@@ -60,7 +70,8 @@ function RuntocolorGameComponent({ returnToScreen }) {
 
     if (colorArray.length === 0) {
       setshowAlert(true)
-      setTimeout(() => setshowAlert(false), 2000)
+      clearTimeout(alertTimerRef.current)
+      alertTimerRef.current = setTimeout(() => setshowAlert(false), 2000)
       return
     }
 
@@ -84,7 +95,8 @@ function RuntocolorGameComponent({ returnToScreen }) {
 
       if (prevColors.includes(color) && prevColors.length === 1) {
         setshowAlert(true)
-        setTimeout(() => setshowAlert(false), 2000)
+        clearTimeout(alertTimerRef.current)
+        alertTimerRef.current = setTimeout(() => setshowAlert(false), 2000)
         return prevColors
       }
 

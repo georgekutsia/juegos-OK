@@ -6,9 +6,11 @@ import {
 import './special-story.css'
 import PropTypes from 'prop-types'
 import storyDataObs from '../../../data/randomStoryData'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import useGameAudio from '../../../shared/useGameAudio'
 
 function SpecialStoryGameComponent({ returnToScreen }) {
+  const createAudio = useGameAudio()
   const [story, setStory] = useState(storyDataObs)
   const [storyCount, setStoryCount] = useState(0)
   const [imgCount, setimgCount] = useState(0)
@@ -27,8 +29,10 @@ function SpecialStoryGameComponent({ returnToScreen }) {
     })
   }, [story])
 
-  const animalSound1 = new Audio(story.OkinaSound[storyCount - 1])
-  const animalSound2 = new Audio(story.OkinaSound[storyCount])
+  const [animalSound1, animalSound2] = useMemo(() => [
+    createAudio(story.OkinaSound[storyCount - 1]),
+    createAudio(story.OkinaSound[storyCount]),
+  ], [createAudio, story, storyCount])
 
   animalSound1.onended = () => {
     setShowImage(true)
@@ -78,7 +82,7 @@ function SpecialStoryGameComponent({ returnToScreen }) {
   }
 
   const handlePlaySoundSpecific = (ind) => {
-    const specificSound = new Audio(story.OkinaSound[ind])
+    const specificSound = createAudio(story.OkinaSound[ind])
     specificSound.play()
     setStoryCount(ind + 1)
     specificSound.onended = () => {

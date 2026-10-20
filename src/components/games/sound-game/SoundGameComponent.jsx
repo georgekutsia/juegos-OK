@@ -8,8 +8,10 @@ import './soundGame.css'
 import PropTypes from 'prop-types'
 import animalsData from '../../../data/animalsDataEsp'
 import { useState, useEffect } from 'react'
+import useGameAudio from '../../../shared/useGameAudio'
 
 function SoundGameComponent({ returnToScreen }) {
+  const createAudio = useGameAudio()
   const [selectedAnimal, setSelectedAnimal] = useState(null)
   const [currentAnimal, setCurrentAnimal] = useState(null)
   const [showSolution, setshowSolution] = useState(false)
@@ -32,7 +34,7 @@ function SoundGameComponent({ returnToScreen }) {
       const indiceAleatorio = Math.floor(Math.random() * bla.length)
       setCurrentAnimal(selectedAnimal.imagenReal)
       console.log(indiceAleatorio)
-      const animalSound = new Audio(selectedAnimal.sonido[0])
+      const animalSound = createAudio(selectedAnimal.sonido[0])
       animalSound.play()
     }
   }

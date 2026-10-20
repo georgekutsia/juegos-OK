@@ -5,19 +5,21 @@ import { Context } from '../../../shared/context';
 import './slidingPuzzleGame.css';
 
 const BOARD_SIZE = 3;
+// Artwork offsets and scale are fractions of the board, keeping the complete
+// drawing inside its image tiles. Tile 8 is reserved for the empty space.
 const LEVELS = {
   3: {
     variants: [
       { image: '/img/games/sliding-puzzle/levels/crayon-3.png', imageTiles: [1, 4, 7], shuffleMoves: 40 },
       { image: '/img/games/sliding-puzzle/levels/chair-3.png', imageTiles: [0, 3, 4], shuffleMoves: 40 },
-      { image: '/img/games/sliding-puzzle/levels/train-3.png', imageTiles: [3, 4, 5], shuffleMoves: 40 },
+      { image: '/img/games/sliding-puzzle/levels/train-3.png', imageTiles: [3, 4, 5], artwork: { scale: 0.9, x: 0.05, y: 0.32 }, shuffleMoves: 40 },
       { image: '/img/games/sliding-puzzle/levels/caterpillar-3.png', imageTiles: [0, 1, 4], shuffleMoves: 40 },
-      { image: '/img/games/sliding-puzzle/levels/bus-3.png', imageTiles: [6, 7, 8], shuffleMoves: 40 },
-      { image: '/img/games/sliding-puzzle/levels/rocket-3.png', imageTiles: [1, 4, 7], shuffleMoves: 40 },
+      { image: '/img/games/sliding-puzzle/levels/bus-3.png', imageTiles: [3, 4, 5], artwork: { scale: 1, x: 0, y: -1 / 3 }, shuffleMoves: 40 },
+      { image: '/img/games/sliding-puzzle/levels/rocket-3.png', imageTiles: [1, 4, 7], artwork: { scale: 0.78, x: 0.11, y: 0.11 }, shuffleMoves: 40 },
     ],
   },
   4: { image: '/img/games/sliding-puzzle/levels/apple-tree-4.png', imageTiles: [0, 1, 3, 4], shuffleMoves: 65 },
-  5: { image: '/img/games/sliding-puzzle/levels/butterfly-flower-5.png', imageTiles: [1, 3, 4, 5, 7], shuffleMoves: 90 },
+  5: { image: '/img/games/sliding-puzzle/levels/butterfly-flower-5.png', imageTiles: [1, 3, 4, 5, 7], artwork: { scale: 0.68, x: 0.16, y: 0.21 }, shuffleMoves: 90 },
 };
 
 const getPuzzleForLevel = (level) => {
@@ -113,11 +115,22 @@ function SlidingPuzzleGameComponent({ returnToScreen }) {
   const getTilePosition = (tile) => {
     const row = Math.floor(tile / BOARD_SIZE);
     const column = tile % BOARD_SIZE;
+    const { scale = 1, x = 0, y = 0 } = puzzle.artwork ?? {};
+    const imageSize = BOARD_SIZE * scale;
     return {
       backgroundImage: `url(${puzzle.image})`,
-      backgroundPosition: `${(column * 100) / (BOARD_SIZE - 1)}% ${(row * 100) / (BOARD_SIZE - 1)}%`,
-      backgroundSize: `${BOARD_SIZE * 100}% ${BOARD_SIZE * 100}%`,
+      backgroundPosition: `${((column - BOARD_SIZE * x) * 100) / (imageSize - 1)}% ${((row - BOARD_SIZE * y) * 100) / (imageSize - 1)}%`,
+      backgroundSize: `${imageSize * 100}% ${imageSize * 100}%`,
     };
+  };
+
+  // Use the same framing in the tiles, reference and completed picture.
+  const renderArtwork = (className = '') => {
+    const { scale = 1, x = 0, y = 0 } = puzzle.artwork ?? {};
+    return <svg className={`sliding-puzzle-artwork ${className}`.trim()} viewBox="0 0 3 3" width="300" height="300" aria-hidden="true">
+      <rect width="3" height="3" fill="#fff8e4" />
+      <image href={puzzle.image} x={BOARD_SIZE * x} y={BOARD_SIZE * y} width={BOARD_SIZE * scale} height={BOARD_SIZE * scale} />
+    </svg>;
   };
 
   return (
@@ -154,7 +167,7 @@ function SlidingPuzzleGameComponent({ returnToScreen }) {
           <div className="sliding-puzzle-confetti" aria-hidden="true">
             {Array.from({ length: 12 }, (_, index) => <span key={index} />)}
           </div>
-          <img className="sliding-puzzle-complete-image" src={puzzle.image} alt="" />
+          {renderArtwork('sliding-puzzle-complete-image')}
           <p>{t('slidingPuzzleComplete')}</p>
           <button type="button" onClick={() => resetGame()}>{t('slidingPuzzlePlayAgain')}</button>
         </div>
@@ -188,7 +201,7 @@ function SlidingPuzzleGameComponent({ returnToScreen }) {
           </div>
           <aside className="sliding-puzzle-reference" aria-label={t('slidingPuzzleReference')}>
             <span>{t('slidingPuzzleReference')}</span>
-            <img src={puzzle.image} alt="" />
+            {renderArtwork()}
           </aside>
         </div>
       )}

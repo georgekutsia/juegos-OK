@@ -16,6 +16,17 @@
 .add-subtract-game.add-subtract-game--subtraction.add-subtract-game--race { padding: 46px 4px 2px; }
 .add-subtract-game--subtraction .addition-race { gap: 4px; padding: 8px; }
 
+@container addition-game-viewport (min-width: 900px) and (min-height: 421px) {
+  .add-subtract-game--subtraction .addition-race--number-pad .subtraction-stage { height: min(clamp(96px, calc(100cqh - 330px), 320px), 42cqw); }
+  .add-subtract-game--subtraction .addition-race__question { grid-template-columns: max-content max-content; column-gap: 16px; justify-content: center; }
+  .add-subtract-game--subtraction .addition-race__question label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .add-subtract-game--subtraction .addition-race__operation { grid-column: 1; grid-row: 1; align-self: center; }
+  .add-subtract-game--subtraction .addition-race__answer-row { grid-column: 2; grid-row: 1; }
+  .add-subtract-game--subtraction .addition-race__timer { grid-column: 1 / -1; grid-row: 2; }
+  .add-subtract-game--subtraction .addition-race__feedback { grid-column: 1 / -1; grid-row: 3; }
+  .add-subtract-game--subtraction .addition-number-pad { grid-column: 1 / -1; grid-row: 4; }
+}
+
 @keyframes subtraction-balloon-pop {
   0% { transform: scale(1); opacity: 1; }
   40% { transform: scale(1.35); opacity: 1; }

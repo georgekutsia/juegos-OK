@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Error404 from "./screens/error-screen/Error404.jsx";
+import GameScreen from './screens/game-screens/GameScreen.jsx';
 import { AllListsScreen, DrawGameScreen, ProfileScreen, PuzzleGameScreen, QuestionGameScreen, SettingScreen, SoundGameScreen, SportGameScreen, WelcomeScreen } from "./screens/index.js";
 
 
@@ -16,6 +17,9 @@ function Routers() {
         <Route path="/sports" element={<SportGameScreen />} />
         <Route path="/drawings" element={<DrawGameScreen />} />
         <Route path="/puzzles" element={<PuzzleGameScreen />} />
+        {['questions', 'sounds', 'sports', 'drawings', 'puzzles'].map(category => (
+          <Route key={category} path={`/${category}/:gameId/*`} element={<GameScreen />} />
+        ))}
         <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
