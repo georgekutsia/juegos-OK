@@ -503,7 +503,9 @@
   .add-subtract-game__mode h3 { text-align: center; font-size: 0.9rem; line-height: 1.2; overflow-wrap: anywhere; }
   .add-subtract-game__mode .math-car { width: 64px; }
   .add-subtract-game__level { min-height: 44px; padding: 4px 5px; font-size: 0.85rem; }
-  .add-subtract-game__levels { gap: 4px; }
+  .add-subtract-game__levels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+  .add-subtract-game__level { min-width: 0; padding: 4px 2px; font-size: 0.8rem; }
+  .add-subtract-game__level:last-child { grid-column: 1 / -1; }
   .addition-setup__car { width: 90px; min-width: 0; }
   .add-subtract-game__back { min-height: 44px; margin-bottom: 4px; }
   .addition-setup__field > p { margin: 6px 0 10px; }
@@ -548,6 +550,7 @@
 }
 
 @media (orientation: landscape) and (max-height: 600px) {
+  .game-screen .add-subtract-game:has(> .add-subtract-game__mode-picker) { padding-top: 46px; padding-bottom: 4px; }
   .add-subtract-game { padding: 48px 4px 6px; }
   .add-subtract-game__mode-picker { padding: 8px; }
   .add-subtract-game__mode-picker > header > p { margin: 4px 0 8px; }
@@ -628,6 +631,8 @@
 .add-subtract-game--race .addition-race--lost h2 { margin: 0; font-size: clamp(1.1rem, 4cqh, 1.6rem); }
 
 @container addition-game-viewport (max-height: 420px) {
+  .addition-setup--crow-limit .addition-setup__hard-rule { grid-column: 1 / -1; }
+  .addition-setup--crow-limit .addition-setup__start { grid-column: 3; grid-row: 2; }
   .add-subtract-game--race .addition-race { gap: 4px; padding: 8px; }
   .add-subtract-game--race .addition-race__tracks { gap: 4px; }
   .add-subtract-game--race .addition-race__track { --addition-track-height: clamp(32px, 12cqh, 48px); }
@@ -691,6 +696,22 @@
 .addition-number-pad .addition-number-pad__enter { background: #d8f7df; color: #195c32; font-size: 0.85rem; }
 .addition-number-pad .addition-number-pad__erase { background: #fff0dc; }
 
+/* Reserve room for the keypad before sizing the crane scene. */
+.addition-race--number-pad .subtraction-stage { height: min(clamp(44px, calc(100cqh - 470px), 200px), 42cqw); }
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .game-screen .add-subtract-game__mode-picker { padding: 6px; }
+  .add-subtract-game__mode-picker > header > p { margin: 2px 0 4px; font-size: 0.8rem; }
+  .add-subtract-game__mode .math-crane-preview { height: 46px; }
+}
+
+@container addition-game-viewport (max-height: 640px) {
+  .addition-race--number-pad .addition-number-pad { grid-template-columns: repeat(6, minmax(0, 1fr)); width: min(100%, 384px); }
+  .addition-race--number-pad .addition-number-pad__erase { grid-column: 6; grid-row: 1; }
+  .addition-race--number-pad .addition-number-pad__zero { grid-column: 5; grid-row: 2; }
+  .addition-race--number-pad .addition-number-pad__enter { grid-column: 6; grid-row: 2; font-size: 0.75rem; }
+}
+
 @container addition-game-viewport (max-height: 420px) {
   .game-screen .add-subtract-game:has(.addition-race--number-pad) { padding-top: 46px; padding-bottom: 4px; }
   .add-subtract-game--race .addition-race--number-pad { gap: 4px; padding: 6px; }
@@ -700,6 +721,14 @@
   .addition-race--number-pad .addition-number-pad__zero { grid-column: 5; grid-row: 2; }
   .addition-race--number-pad .addition-number-pad__enter { grid-column: 6; grid-row: 2; }
   .add-subtract-game--race .addition-race--number-pad .addition-race__track { --addition-track-height: clamp(28px, 10cqh, 42px); }
+  .add-subtract-game--race .addition-race--number-pad .addition-race__track--hard { --addition-track-height: clamp(44px, 14cqh, 60px); }
   .add-subtract-game--race .addition-race--number-pad .addition-race__answer-row { min-height: 34px; }
   .add-subtract-game--race .addition-race--number-pad .addition-race__answer { height: 34px; }
+  .addition-race--number-pad .addition-race__question { grid-template-columns: minmax(0, 1fr) auto; column-gap: 8px; width: min(100%, 384px); justify-self: center; }
+  .addition-race--number-pad .addition-race__question label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .addition-race--number-pad .addition-race__operation { grid-column: 1; grid-row: 1; }
+  .addition-race--number-pad .addition-race__answer-row { grid-column: 2; grid-row: 1; }
+  .add-subtract-game--race .addition-race--number-pad .addition-race__timer { grid-column: 1 / -1; grid-row: 2; padding: 0 6px; font-size: 0.75rem; line-height: 1.1; }
+  .add-subtract-game--race .addition-race--number-pad .addition-race__feedback { grid-column: 1 / -1; grid-row: 3; min-height: 1.2em; font-size: 0.75rem; }
+  .addition-race--number-pad .addition-number-pad { grid-column: 1 / -1; grid-row: 4; }
 }

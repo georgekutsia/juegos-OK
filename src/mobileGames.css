@@ -24,6 +24,7 @@
   .game-screen .info-component-box img,
   .game-screen .puzzle-view-toggle { width: 44px; height: 44px; flex-shrink: 0; }
   .game-screen .buttons-position-absolute { top: 4px; left: 4px; gap: 6px; z-index: 6; }
+  .game-screen > .screen-title-box { margin-top: 52px; margin-bottom: 24px; }
   .game-screen .button-next-game { top: 4px; right: 4px; }
   .game-screen .button-next { position: static; min-height: 44px; padding: 6px 12px; }
   .game-screen .button-solution-game { top: auto; bottom: 0; right: 0; z-index: 5; padding: 8px; contain: paint; }

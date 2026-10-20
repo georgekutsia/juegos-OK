@@ -9,6 +9,8 @@ import {
   createSubtractionProblem,
   subtractionBalloonCount,
   subtractionCrowCount,
+  subtractionHardCrowLimit,
+  subtractionCrowFlightMs,
   subtractionCrowLandingMs,
   subtractionRopeFallMs,
   mathDifficultyLevels,
@@ -59,6 +61,8 @@ function AddSubtractGameComponent({ returnToScreen }) {
   const ropeTimerRef = useRef(null);
   const crowEndingRef = useRef(false);
   const playerCompletedRef = useRef(false);
+  const questionEndsAtRef = useRef(null);
+  const penaltyCrowsRef = useRef(0);
   const isAnswerProcessingRef = useRef(false);
   const raceEndsAtRef = useRef(null);
   const raceOutcomeRef = useRef(null);
@@ -85,8 +89,10 @@ function AddSubtractGameComponent({ returnToScreen }) {
   const [craneRun, setCraneRun] = useState(0);
   const [ropeBroken, setRopeBroken] = useState(false);
   const [isCrowEnding, setIsCrowEnding] = useState(false);
+  const [penaltyCrows, setPenaltyCrows] = useState(0);
+  const [penaltyCrowFlight, setPenaltyCrowFlight] = useState(1);
   const isSubtraction = selectedMode === 'subtraction';
-  const hasNumberPad = selectedMode === 'addition' && selectedLevel === 'easy';
+  const hasNumberPad = mathGameModes.some(({ id }) => id === selectedMode);
   const isAnswerDisabled = feedback !== 'idle' || correctAnswers === mathRaceSteps || isCrowEnding;
   const generateProblem = useCallback((limit, solved = 0, popped = 0) => isSubtraction
     ? createSubtractionProblem(limit, subtractionBalloonCount - popped, solved)
@@ -97,6 +103,8 @@ function AddSubtractGameComponent({ returnToScreen }) {
   const isHardRace = selectedLevel === 'hard';
   const isCompetitiveRace = isMediumRace || isHardRace;
   const isCrowChallenge = isSubtraction && isMediumRace;
+  const isHardCrowChallenge = isSubtraction && isHardRace;
+  const hasTotalDeadline = isCompetitiveRace && !isHardCrowChallenge;
   const opponentSpeedConfig = additionOpponentSpeeds.find(({ id }) => id === opponentSpeed);
   const answerTimeLimitConfig = additionAnswerTimeLimits.find(({ id }) => id === answerTimeLimit);
   const opponentDuration = opponentSpeedConfig.durationMs;
@@ -121,6 +129,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
     if (raceOutcomeRef.current) return;
 
     raceOutcomeRef.current = outcome;
+    questionEndsAtRef.current = null;
     clearTimeout(feedbackTimerRef.current);
     clearTimeout(movementTimerRef.current);
     clearTimeout(ropeTimerRef.current);
@@ -165,8 +174,66 @@ function AddSubtractGameComponent({ returnToScreen }) {
     }, 1000);
   }, [correctAnswers, feedback, finishRace, generateProblem, isSubtraction, maximum, poppedBalloons]);
 
+  const addTimeoutCrow = useCallback(() => {
+    if (questionEndsAtRef.current === null || playerCompletedRef.current || crowEndingRef.current) return;
+    questionEndsAtRef.current = null;
+    isAnswerProcessingRef.current = true;
+    const nextCrows = penaltyCrowsRef.current + 1;
+    penaltyCrowsRef.current = nextCrows;
+    setPenaltyCrows(nextCrows);
+    setPenaltyCrowFlight(0.01);
+    setTimeRemaining(0);
+    setAnswer('');
+    setFeedback('timeout');
+    clearTimeout(feedbackTimerRef.current);
+
+    if (nextCrows === subtractionHardCrowLimit) {
+      crowEndingRef.current = true;
+      setIsCrowEnding(true);
+      ropeTimerRef.current = setTimeout(() => {
+        setRopeBroken(true);
+        feedbackTimerRef.current = setTimeout(() => finishRace('lost'), subtractionRopeFallMs);
+      }, subtractionCrowFlightMs + subtractionCrowLandingMs);
+    } else {
+      feedbackTimerRef.current = setTimeout(() => {
+        setProblem(generateProblem(maximum, correctAnswers, poppedBalloons));
+        setFeedback('idle');
+        isAnswerProcessingRef.current = false;
+      }, subtractionCrowFlightMs + subtractionCrowLandingMs);
+    }
+  }, [correctAnswers, finishRace, generateProblem, maximum, poppedBalloons]);
+
   useEffect(() => {
-    if (view !== 'additionRace' || !isCompetitiveRace) return undefined;
+    if (view !== 'additionRace' || !isHardCrowChallenge || playerCompletedRef.current) return undefined;
+    questionEndsAtRef.current = Date.now() + answerTimeLimitConfig.durationMs;
+    setTimeRemaining(answerTimeLimitConfig.seconds);
+    const updateQuestionTime = () => {
+      if (questionEndsAtRef.current === null) return;
+      const remaining = questionEndsAtRef.current - Date.now();
+      setTimeRemaining(Math.max(0, Math.ceil(remaining / 1000)));
+      if (remaining <= 0) addTimeoutCrow();
+    };
+    const intervalId = window.setInterval(updateQuestionTime, 100);
+    const timeoutId = window.setTimeout(updateQuestionTime, answerTimeLimitConfig.durationMs);
+    return () => {
+      window.clearInterval(intervalId);
+      window.clearTimeout(timeoutId);
+    };
+  }, [addTimeoutCrow, answerTimeLimitConfig, isHardCrowChallenge, problem, view]);
+
+  useEffect(() => {
+    if (!isHardCrowChallenge || penaltyCrows === 0 || view !== 'additionRace') return undefined;
+    const startedAt = performance.now();
+    const intervalId = window.setInterval(() => {
+      const phase = Math.min(1, (performance.now() - startedAt) / subtractionCrowFlightMs);
+      setPenaltyCrowFlight(phase);
+      if (phase === 1) window.clearInterval(intervalId);
+    }, 100);
+    return () => window.clearInterval(intervalId);
+  }, [isHardCrowChallenge, penaltyCrows, view]);
+
+  useEffect(() => {
+    if (view !== 'additionRace' || !hasTotalDeadline) return undefined;
 
     const updateOpponentProgress = () => {
       if (isCrowChallenge && playerCompletedRef.current) return;
@@ -197,9 +264,10 @@ function AddSubtractGameComponent({ returnToScreen }) {
     updateOpponentProgress();
     const intervalId = window.setInterval(updateOpponentProgress, 100);
     return () => window.clearInterval(intervalId);
-  }, [finishRace, isCompetitiveRace, isCrowChallenge, isHardRace, opponentDuration, view]);
+  }, [finishRace, hasTotalDeadline, isCrowChallenge, isHardRace, opponentDuration, view]);
 
   useEffect(() => {
+    if (isHardCrowChallenge) return undefined;
     if (view !== 'additionRace' || !isHardRace) {
       setTimeRemaining(null);
       return undefined;
@@ -220,9 +288,13 @@ function AddSubtractGameComponent({ returnToScreen }) {
       window.clearInterval(intervalId);
       window.clearTimeout(timeoutId);
     };
-  }, [answerTimeLimitConfig, applyHardPenalty, feedback, isHardRace, problem, view]);
+  }, [answerTimeLimitConfig, applyHardPenalty, feedback, isHardCrowChallenge, isHardRace, problem, view]);
 
   const returnToMenu = () => {
+    questionEndsAtRef.current = null;
+    penaltyCrowsRef.current = 0;
+    setPenaltyCrows(0);
+    setPenaltyCrowFlight(1);
     clearFeedbackTimer();
     clearTimeout(movementTimerRef.current);
     clearTimeout(ropeTimerRef.current);
@@ -250,6 +322,10 @@ function AddSubtractGameComponent({ returnToScreen }) {
   };
 
   const startAdditionRace = () => {
+    questionEndsAtRef.current = null;
+    penaltyCrowsRef.current = 0;
+    setPenaltyCrows(0);
+    setPenaltyCrowFlight(1);
     clearFeedbackTimer();
     clearTimeout(movementTimerRef.current);
     clearTimeout(ropeTimerRef.current);
@@ -260,7 +336,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
     setIsPlayerMoving(false);
     isAnswerProcessingRef.current = false;
     raceOutcomeRef.current = null;
-    raceEndsAtRef.current = isCompetitiveRace ? Date.now() + opponentDuration : null;
+    raceEndsAtRef.current = hasTotalDeadline ? Date.now() + opponentDuration : null;
     opponentProgressRef.current = 0;
     orangePenaltyRef.current = 0;
     lilacPenaltyRef.current = 0;
@@ -281,14 +357,19 @@ function AddSubtractGameComponent({ returnToScreen }) {
   const checkAnswer = (candidateAnswer) => {
     if (!candidateAnswer || feedback !== 'idle' || isAnswerProcessingRef.current || crowEndingRef.current) return;
     if (isCrowChallenge && Date.now() >= raceEndsAtRef.current) return;
+    if (isHardCrowChallenge && questionEndsAtRef.current !== null && Date.now() >= questionEndsAtRef.current) {
+      addTimeoutCrow();
+      return;
+    }
 
-    if (isHardRace && Number(candidateAnswer) !== problem.answer) {
+    if (isHardRace && !isHardCrowChallenge && Number(candidateAnswer) !== problem.answer) {
       applyHardPenalty();
       return;
     }
 
     isAnswerProcessingRef.current = true;
     if (Number(candidateAnswer) === problem.answer) {
+      if (isHardCrowChallenge) questionEndsAtRef.current = null;
       const nextCorrectAnswers = correctAnswers + 1;
       const nextPoppedBalloons = isSubtraction ? poppedBalloons + problem.answer : 0;
       setPoppedBalloons(nextPoppedBalloons);
@@ -301,7 +382,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
       if (nextCorrectAnswers === mathRaceSteps) {
         playerCompletedRef.current = true;
         feedbackTimerRef.current = setTimeout(() => {
-          if (isCompetitiveRace && !isCrowChallenge && Date.now() >= raceEndsAtRef.current) {
+          if (hasTotalDeadline && !isCrowChallenge && Date.now() >= raceEndsAtRef.current) {
             finishRace('lost');
           } else {
             finishRace('won');
@@ -338,7 +419,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
     if (isAnswerDisabled || isAnswerProcessingRef.current) return;
     updateAnswer(key === 'erase'
       ? answer.slice(0, -1)
-      : (answer + key).slice(0, String(maximum).length));
+      : (answer + key).slice(0, String(Math.max(maximum, problem.answer)).length));
     answerInputRef.current?.focus({ preventScroll: true });
   };
 
@@ -406,12 +487,21 @@ function AddSubtractGameComponent({ returnToScreen }) {
 
   const renderRaceTracks = () => isSubtraction ? (
     <div className="subtraction-stage">
-      <SubtractionCraneScene key={craneRun} completed={correctAnswers} popped={poppedBalloons} animatePops={view === 'additionRace'} showCrows={isCrowChallenge} celebrate={view === 'additionComplete'} crowElapsedMs={orangeProgress * opponentDuration / 100} crowDurationMs={opponentDuration} ropeBroken={ropeBroken} label={t('subtractionCraneProgress', { remaining: subtractionBalloonCount - poppedBalloons })} />
-      {isCrowChallenge && <p className="addition-race__screen-reader-title" role="status">{ropeBroken ? t('subtractionRopeBroken') : t('subtractionCrowsStatus', { count: Math.min(subtractionCrowCount, Math.floor(orangeProgress / 10)), total: subtractionCrowCount })}</p>}
-      {isHardRace && view === 'additionRace' && <div className="subtraction-deadline" role="timer" aria-live="off">
-        <span>{t('subtractionChallengeTime', { seconds: Math.max(0, Math.ceil((100 - Math.min(100, orangeProgress + orangePenaltyProgress)) * opponentDuration / 100000)) })}</span>
-        <div className="subtraction-deadline__bar" aria-hidden="true"><span style={{ width: `${Math.max(0, 100 - orangeProgress - orangePenaltyProgress)}%` }} /></div>
-      </div>}
+      <SubtractionCraneScene
+        key={craneRun}
+        completed={correctAnswers}
+        popped={poppedBalloons}
+        animatePops={view === 'additionRace'}
+        showCrows={isCrowChallenge || isHardCrowChallenge}
+        celebrate={view === 'additionComplete'}
+        crowElapsedMs={orangeProgress * opponentDuration / 100}
+        crowDurationMs={opponentDuration}
+        crowLimit={isHardCrowChallenge ? subtractionHardCrowLimit : subtractionCrowCount}
+        crowPhases={isHardCrowChallenge ? Array.from({ length: penaltyCrows }, (_, index) => index === penaltyCrows - 1 ? penaltyCrowFlight : 1) : undefined}
+        ropeBroken={ropeBroken}
+        label={t('subtractionCraneProgress', { remaining: subtractionBalloonCount - poppedBalloons })}
+      />
+      {(isCrowChallenge || isHardCrowChallenge) && <p className="addition-race__screen-reader-title" role="status">{ropeBroken ? t('subtractionRopeBroken') : t('subtractionCrowsStatus', { count: isHardCrowChallenge ? penaltyCrows : Math.min(subtractionCrowCount, Math.floor(orangeProgress / 10)), total: isHardCrowChallenge ? subtractionHardCrowLimit : subtractionCrowCount })}</p>}
     </div>
   ) : (
     <div className="addition-race__tracks">
@@ -442,7 +532,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
         <div className="buttons-position-absolute">
           <ButtonReturnComponent returnToScreen={returnToScreen} />
         </div>
-        <div className="addition-setup">
+        <div className={`addition-setup${isHardCrowChallenge ? ' addition-setup--crow-limit' : ''}`}>
           <button className="add-subtract-game__back" type="button" onClick={returnToMenu}>
             <i className="fa-solid fa-arrow-left" aria-hidden="true" />
             {t('addSubtractBackToChoices')}
@@ -468,7 +558,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
               ))}
             </div>
           </div>
-          {isCompetitiveRace && (
+          {hasTotalDeadline && (
             <div className="addition-setup__field">
               <h3 className="addition-setup__opponent-title">{t(isCrowChallenge ? 'subtractionChooseCrowSpeed' : isSubtraction ? 'subtractionChoosePace' : isHardRace ? 'additionChooseCarsSpeed' : 'additionChooseOpponentSpeed')}</h3>
               <select className="addition-setup__compact-select" aria-label={t(isCrowChallenge ? 'subtractionChooseCrowSpeed' : isSubtraction ? 'subtractionChoosePace' : isHardRace ? 'additionChooseCarsSpeed' : 'additionChooseOpponentSpeed')} value={opponentSpeed} onChange={(event) => setOpponentSpeed(event.target.value)}>
@@ -561,7 +651,7 @@ function AddSubtractGameComponent({ returnToScreen }) {
               )}
             </div>
             <p id="addition-answer-feedback" className="addition-race__feedback" role="status">
-              {feedback === 'incorrect' ? t(isHardRace ? (isSubtraction ? 'subtractionHardPenalty' : 'additionHardPenalty') : 'additionIncorrectAnswer') : isPlayerMoving ? t('additionCorrectAnswer') : ''}
+              {feedback === 'timeout' ? t('subtractionHardPenalty') : feedback === 'incorrect' ? t(isHardRace && !isHardCrowChallenge ? 'additionHardPenalty' : 'additionIncorrectAnswer') : isPlayerMoving ? t('additionCorrectAnswer') : ''}
             </p>
             {hasNumberPad && <div className="addition-number-pad" role="group" aria-label={t('additionNumberPad')}>
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((number) => <button key={number} type="button" disabled={isAnswerDisabled} onClick={() => editNumberPadAnswer(String(number))}>{number}</button>)}

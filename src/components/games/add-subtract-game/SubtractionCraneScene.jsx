@@ -4,9 +4,9 @@ import { getSubtractionCrowPhase, mathRaceSteps, subtractionBalloonCount, subtra
 import './subtractionCrane.css';
 import FinishConfetti from './FinishConfetti';
 
-function CraneCrow({ index, phase, celebrate }) {
+function CraneCrow({ index, phase, celebrate, total }) {
   if (phase <= 0) return null;
-  const x = 314 + index * 34.5;
+  const x = 314 + index * (310.5 / (total - 1));
   const flightX = (1 - phase) * (790 - x);
   const flightY = -(1 - phase) * 75 - Math.sin(phase * Math.PI) * 35;
 
@@ -31,9 +31,9 @@ function CraneCrow({ index, phase, celebrate }) {
   );
 }
 
-CraneCrow.propTypes = { index: PropTypes.number.isRequired, phase: PropTypes.number.isRequired, celebrate: PropTypes.bool.isRequired };
+CraneCrow.propTypes = { index: PropTypes.number.isRequired, phase: PropTypes.number.isRequired, celebrate: PropTypes.bool.isRequired, total: PropTypes.number.isRequired };
 
-function SubtractionCraneScene({ completed = 0, popped = 0, preview = false, animatePops = true, showCrows = false, celebrate = false, crowElapsedMs = 0, crowDurationMs = 60000, ropeBroken = false, label }) {
+function SubtractionCraneScene({ completed = 0, popped = 0, preview = false, animatePops = true, showCrows = false, celebrate = false, crowElapsedMs = 0, crowDurationMs = 60000, crowLimit = subtractionCrowCount, crowPhases, ropeBroken = false, label }) {
   const id = useId().replace(/:/g, '');
   const rise = (completed / mathRaceSteps) * 165;
   const cableScale = Math.max(0, (161 - rise) / 161);
@@ -101,7 +101,7 @@ function SubtractionCraneScene({ completed = 0, popped = 0, preview = false, ani
               );
             })}
           </g>
-          {showCrows && Array.from({ length: subtractionCrowCount }, (_, index) => <CraneCrow key={index} index={index} phase={getSubtractionCrowPhase(index, crowElapsedMs, crowDurationMs)} celebrate={celebrate} />)}
+          {showCrows && Array.from({ length: crowLimit }, (_, index) => <CraneCrow key={index} index={index} total={crowLimit} phase={crowPhases ? crowPhases[index] ?? 0 : getSubtractionCrowPhase(index, crowElapsedMs, crowDurationMs)} celebrate={celebrate} />)}
         </g>
       </g>
       {completed === mathRaceSteps && <g fill="#ffbd35" stroke="#d68b15" strokeWidth="2">
@@ -120,6 +120,8 @@ SubtractionCraneScene.propTypes = {
   celebrate: PropTypes.bool,
   crowElapsedMs: PropTypes.number,
   crowDurationMs: PropTypes.number,
+  crowLimit: PropTypes.number,
+  crowPhases: PropTypes.arrayOf(PropTypes.number),
   ropeBroken: PropTypes.bool,
   label: PropTypes.string.isRequired,
 };

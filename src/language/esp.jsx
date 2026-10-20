@@ -170,8 +170,8 @@ timer:{
   subtractionRopeBroken: "¡La cuerda se ha roto!",
   subtractionStart: "Levantar la carga",
   subtractionRule: "Cada acierto explota tantos globos como la respuesta. ¡Llega arriba con 5 aciertos!",
-  subtractionHardRule: "Llega arriba con 5 aciertos. Responde a tiempo: cada fallo o tiempo agotado reduce el tiempo del reto.",
-  subtractionHardPenalty: "¡Se reduce el tiempo del reto!",
+  subtractionHardRule: "Llega arriba con 5 aciertos. Si se agota el tiempo de una respuesta, llega un cuervo. Con 5 cuervos, pierdes.",
+  subtractionHardPenalty: "¡Se acabó el tiempo! Llega un cuervo.",
   subtractionChallengeTime: "Para subir: {{seconds}} s",
   subtractionComplete: "¡La carga ha llegado arriba!",
   subtractionPlayAgain: "Volver a levantar la carga",
@@ -241,6 +241,8 @@ timer:{
   // infos
 
   typeOfGameI: `Temática`,
+  gameInformation: 'Información del juego',
+  closeGameInformation: 'Cerrar información',
   objectiveOfGameI: `Objetivos`,
   ruleOfGameI: `Juego básico`,
   modeOfGameI: `Otras formas de jugar`,

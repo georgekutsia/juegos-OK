@@ -156,8 +156,8 @@ export const ger = {
   subtractionRopeBroken: "Das Seil ist gerissen!",
   subtractionStart: "Last hochziehen",
   subtractionRule: "Bei jeder richtigen Antwort platzen so viele Ballons wie das Ergebnis. Mit 5 richtigen Antworten kommst du nach oben!",
-  subtractionHardRule: "Mit 5 richtigen Antworten kommst du nach oben. Antworte rechtzeitig: Fehler und Zeitüberschreitungen verkürzen die Gesamtzeit.",
-  subtractionHardPenalty: "Die Gesamtzeit wird kürzer!",
+  subtractionHardRule: "Mit 5 richtigen Antworten kommst du nach oben. Läuft die Zeit für eine Antwort ab, kommt ein Rabe. Bei 5 Raben verlierst du.",
+  subtractionHardPenalty: "Die Zeit ist um! Ein Rabe kommt.",
   subtractionChallengeTime: "Zum Hochziehen: {{seconds}} Sek.",
   subtractionComplete: "Die Last ist ganz oben!",
   subtractionPlayAgain: "Die Last noch einmal hochziehen",
@@ -227,6 +227,8 @@ export const ger = {
   // infos
   // infos
   typeOfGameI: `Thematik`,
+  gameInformation: 'Spielinformationen',
+  closeGameInformation: 'Informationen schließen',
   objectiveOfGameI: `Ziele`,
   ruleOfGameI: `Grundspiel`,
   modeOfGameI: `Andere Spielweisen`,

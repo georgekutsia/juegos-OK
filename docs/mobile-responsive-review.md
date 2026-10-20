@@ -47,7 +47,7 @@ Falta validar en un teléfono físico, especialmente Safari y el teclado virtual
 
 ## Prueba de teclado integrado — 20/10/2026
 
-Sumas, nivel fácil: teclado de 0 a 9 y borrado de la última cifra. La respuesta correcta se valida inmediatamente al teclear, sin esperar a Enter; Enter sigue disponible para comprobar una respuesta. El recuadro es de solo lectura con `inputMode="none"` para evitar abrir el teclado virtual. Se puede usar también el teclado físico. Los demás niveles y restas conservan su entrada anterior.
+El teclado se probó primero en sumas fáciles y ahora se aplica a todos los niveles implementados de sumas y restas: números de 0 a 9 y borrado de la última cifra. La respuesta correcta se valida inmediatamente al teclear, sin esperar a Enter; Enter sigue disponible para comprobar una respuesta. El recuadro es de solo lectura con `inputMode="none"` para evitar abrir el teclado virtual. Se puede usar también el teclado físico. La ampliación y sus comprobaciones están documentadas en [la revisión de matemáticas e información](math-mobile-and-info-review.md).
 
 Las teclas se distribuyen en tres columnas; con poca altura pasan a dos filas. La pista continúa por encima de la operación y del teclado. Se comprobaron 41 casos en Chrome: todos los números, borrado, error, confirmación, cinco aciertos, victoria, reinicio, teclado físico y aislamiento de los otros modos. Sin scroll ni controles recortados en 390 × 844, 320 × 568, 768 × 1024, 844 × 390, 568 × 320, 390 × 300 y 1542 × 787. Etiquetas verificadas en español y alemán. Pendiente de probar en un teléfono físico.
 

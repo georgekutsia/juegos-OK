@@ -28,6 +28,7 @@ export const mathRaceSteps = 5;
 export const additionPlayerMoveDurationMs = 1920;
 export const subtractionBalloonCount = 30;
 export const subtractionCrowCount = 10;
+export const subtractionHardCrowLimit = 5;
 export const subtractionCrowFlightMs = 900;
 export const subtractionCrowLandingMs = 200;
 export const subtractionRopeFallMs = 800;
