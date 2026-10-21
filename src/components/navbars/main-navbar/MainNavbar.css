@@ -1,4 +1,5 @@
 .mainNavbar {
+  box-sizing: border-box;
   position: absolute;
   display: flex;
   justify-content: left;
