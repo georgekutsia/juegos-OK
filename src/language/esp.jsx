@@ -323,7 +323,8 @@ timer:{
   elMasPesado: 'Cual es el animal más pesado?',
   elMasVeloz: 'Cual es el animal más rápido?',
 
-  welcome: '¡Bienvenidos!',
+  welcome: '¡Bienvenidos a Okinaland!',
+  welcomeOkinalandImage: 'Okina entre las letras de Okinaland.',
   mobileWarning: 'Estos juegos están pensados para ser usados en pantalla grande, no están preparados para ser jugados en móviles.',
   welcomeTo: 'Diviérte y aprende con tus amigos con los juegos de ',
   showAllAnimalTitle: 'Todos los animales jugables',

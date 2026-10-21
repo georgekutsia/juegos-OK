@@ -29,6 +29,14 @@ function WelcomeScreen() {
     <div className="screens-box welcome-screen">
       <p className="mobile-warning">{t("mobileWarning")}</p>
       <BigTitleComponent text="welcome" />
+      <img
+        className="welcome-screen-logo"
+        src={`${import.meta.env.BASE_URL}img/okina/okinaland-welcome.webp`}
+        alt={t('welcomeOkinalandImage')}
+        width={640}
+        height={478}
+        fetchPriority="high"
+      />
       <ScreenTitleComponent text="welcomeTo" />
       <section className="welcome-screen-box">
         {dataNavbarImg.slice(1, 6).map((imgSrc, index) => (

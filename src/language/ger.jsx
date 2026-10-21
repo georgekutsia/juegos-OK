@@ -309,7 +309,8 @@ export const ger = {
   elMasPesado: 'Welches ist das schwerste Tier?',
   elMasVeloz: 'Welches ist das schnellste Tier?',
 
-  welcome: 'Willkommen!',
+  welcome: 'Willkommen in Okinaland!',
+  welcomeOkinalandImage: 'Okina zwischen den Buchstaben von Okinaland.',
   mobileWarning: 'Diese Spiele sind für die Nutzung auf einem großen Bildschirm gedacht und nicht für das Spielen auf Mobilgeräten geeignet.',
   welcomeTo:
     'Habt Spaß und lernt zusammen mit euren Freunden mit den Spielen von ',

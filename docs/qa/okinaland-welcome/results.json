@@ -1,0 +1,136 @@
+{
+  "checks": [
+    {
+      "name": "Exact Spanish heading",
+      "result": true
+    },
+    {
+      "name": "Artwork directly below heading",
+      "result": true
+    },
+    {
+      "name": "Descriptive Spanish alt",
+      "result": true
+    },
+    {
+      "name": "All five categories present",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 1280x800",
+      "result": true
+    },
+    {
+      "name": "Uncropped logo 1280x800",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 390x844",
+      "result": true
+    },
+    {
+      "name": "Uncropped logo 390x844",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 844x390",
+      "result": true
+    },
+    {
+      "name": "Uncropped logo 844x390",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 320x568",
+      "result": true
+    },
+    {
+      "name": "Uncropped logo 320x568",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 667x375",
+      "result": true
+    },
+    {
+      "name": "Uncropped logo 667x375",
+      "result": true
+    },
+    {
+      "name": "Category navigation preserved",
+      "result": true
+    },
+    {
+      "name": "German title and image description",
+      "result": true
+    },
+    {
+      "name": "Real transparency",
+      "result": true
+    },
+    {
+      "name": "No runtime errors",
+      "result": true
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 800,
+      "clientHeight": 638,
+      "scrollHeight": 696,
+      "lastBottom": 702,
+      "screenBottom": 780,
+      "logoWidth": 280,
+      "logoHeight": 160
+    },
+    {
+      "width": 395,
+      "height": 855,
+      "clientHeight": 673,
+      "scrollHeight": 709,
+      "lastBottom": 785.28125,
+      "screenBottom": 822.890625,
+      "logoWidth": 160,
+      "logoHeight": 119.5
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "clientHeight": 325,
+      "scrollHeight": 403,
+      "lastBottom": 348.109375,
+      "screenBottom": 387.5,
+      "logoWidth": 140,
+      "logoHeight": 78
+    },
+    {
+      "width": 327,
+      "height": 581,
+      "clientHeight": 452,
+      "scrollHeight": 652,
+      "lastBottom": 515.296875,
+      "screenBottom": 553.78125,
+      "logoWidth": 120,
+      "logoHeight": 80
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "clientHeight": 312,
+      "scrollHeight": 453,
+      "lastBottom": 365.546875,
+      "screenBottom": 372.5,
+      "logoWidth": 140,
+      "logoHeight": 75
+    }
+  ],
+  "asset": {
+    "bytes": 49256,
+    "mime": "image/webp",
+    "width": 640,
+    "height": 478,
+    "clearFraction": 0.6460152981171549
+  },
+  "exceptions": []
+}
