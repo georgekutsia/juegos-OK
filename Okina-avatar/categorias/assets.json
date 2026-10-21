@@ -1,0 +1,42 @@
+[
+  {
+    "category": "preguntas",
+    "width": 1254,
+    "height": 1254,
+    "pngBytes": 1428015,
+    "webpBytes": 41520,
+    "transparentFraction": 0.6011391934962824
+  },
+  {
+    "category": "sonidos",
+    "width": 1254,
+    "height": 1254,
+    "pngBytes": 1545577,
+    "webpBytes": 46276,
+    "transparentFraction": 0.58791897824887
+  },
+  {
+    "category": "deportes",
+    "width": 1254,
+    "height": 1254,
+    "pngBytes": 1352435,
+    "webpBytes": 36924,
+    "transparentFraction": 0.6341773311050571
+  },
+  {
+    "category": "dibujos",
+    "width": 1254,
+    "height": 1254,
+    "pngBytes": 1583565,
+    "webpBytes": 45784,
+    "transparentFraction": 0.579891079009689
+  },
+  {
+    "category": "puzles",
+    "width": 1254,
+    "height": 1254,
+    "pngBytes": 1473423,
+    "webpBytes": 40414,
+    "transparentFraction": 0.596128751631144
+  }
+]

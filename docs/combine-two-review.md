@@ -1,6 +1,6 @@
 # Combina-dos
 
-Nuevo juego en Sumas y Restas, inmediatamente después de Restas. Ocupa el primer espacio reservado y deja tres tarjetas con pelota para próximos juegos. El catálogo conserva seis tarjetas.
+Juego en Sumas y Restas, inmediatamente después de Restas. Resta-dos y Asignado ocupan los siguientes espacios reservados y queda una tarjeta con pelota para el próximo juego. El catálogo conserva seis tarjetas.
 
 ## Reglas y decisiones
 
@@ -24,11 +24,13 @@ Nuevo juego en Sumas y Restas, inmediatamente después de Restas. Ocupa el prime
 
 Las rutas se registran en `src/data/gameRoutes.js` y se resuelven en `GameScreen.jsx`. La URL solo cambia al elegir un modo desde el menú; completar o repetir una ronda mantiene esa URL. Recargar inicia de nuevo el modo indicado, mostrando la elección de tiempo si es Difícil.
 
-`CombineTwoGameComponent.jsx` contiene las respuestas y la progresión; `CoasterScene.jsx` dibuja la montaña rusa, el vagón y su único pasajero en SVG. La escena usa el mismo trazado para dibujar la vía y posicionar el vagón durante la animación. `combineTwoGameData.js` define los niveles, colores y validación. Se reutilizan el botón de retorno y el confeti de Sumas, con textos `combineTwo*` y `mathFutureSoon` en español y alemán.
+`CombineTwoGameComponent.jsx` configura el motor compartido `TwoNumberGameComponent.jsx`, que contiene las respuestas y la progresión de Combina-dos y Resta-dos; `CoasterScene.jsx` dibuja la montaña rusa y el vagón en SVG, y `MathPassenger.jsx` dibuja su único pasajero. La escena usa el mismo trazado para dibujar la vía y posicionar el vagón durante la animación. `combineTwoGameData.js` define los niveles, colores y validación. Se reutilizan el botón de retorno y el confeti de Sumas, con textos `combineTwo*` y `mathFutureSoon` en español y alemán.
 
 Los fotogramas de animación y los temporizadores de respuesta se cancelan al salir. Con movimiento reducido se muestran las posiciones finales de subida y bajada sin desplazamiento continuo. No se muestra un contador 0/5. La selección de tiempo se guarda solo en el estado del componente; no se añaden ni modifican claves de localStorage.
 
 La rotura y el derrumbe respetan también la preferencia de movimiento reducido, mostrando el resultado estático. La escena describe las vigas rotas para lectores de pantalla, el fallo se anuncia con texto y el foco pasa al botón de reinicio al terminar. El intervalo queda detenido durante el derrumbe y la derrota; salir cancela tanto la caída del vagón como el cierre pendiente de la ronda.
+
+Durante el derrumbe y la derrota, el pasajero baja los brazos, agacha la cabeza y muestra una boca sin sonrisa. Reiniciar recupera su postura inicial.
 
 El vagón comienza más adentro de la vía, con suficiente raíl detrás de la rueda trasera y la carrocería. Los cinco avances siguen llegando exactamente a la cima. Los temporizadores del aviso de respuesta también se cancelan al salir.
 

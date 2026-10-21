@@ -14,6 +14,8 @@ export const mathGameModes = [
   { id: 'addition', nameKey: 'addSubtractAddition', vehicle: 'blueStandard' },
   { id: 'subtraction', nameKey: 'addSubtractSubtraction', illustration: 'crane' },
   { id: 'combineTwo', nameKey: 'combineTwo', illustration: 'coaster' },
+  { id: 'subtractTwo', nameKey: 'subtractTwo', illustration: 'balloon' },
+  { id: 'assigned', nameKey: 'assigned', illustration: 'train' },
   { id: 'multiplication', nameKey: 'addSubtractMultiplication', vehicle: 'blueStandard', available: false },
   { id: 'division', nameKey: 'addSubtractDivision', vehicle: 'blueStandard', available: false },
 ];
@@ -21,8 +23,8 @@ export const mathGameModes = [
 export const mathGameGroups = {
   addSubtract: {
     titleKey: 'interactiveAddSubtract',
-    modes: ['addition', 'subtraction', 'combineTwo'],
-    futureGames: Array.from({ length: 3 }, (_, index) => ({
+    modes: ['addition', 'subtraction', 'combineTwo', 'subtractTwo', 'assigned'],
+    futureGames: Array.from({ length: 1 }, (_, index) => ({
       id: `add-subtract-future-${index + 1}`,
       image: '/img/games/add-subtract/future-game-ball.png',
     })),

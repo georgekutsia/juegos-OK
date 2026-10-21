@@ -1,4 +1,5 @@
 const navbarCreatures = {
+  okina: ['preguntasOkina', 'sonidosOkina', 'deportesOkina', 'dibujosOkina', 'puzlesOkina'],
   ranita:[
     "preguntasNito",
     "cancionesCroqui",

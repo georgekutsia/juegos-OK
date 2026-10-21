@@ -7,13 +7,14 @@ import {
   RuntocolorGameComponent, SearchRoomGame, ShadowGamesComponent,
   SizeGameComponent, SlidingPuzzleGameComponent, SoundGameComponent,
   SpecialStoryGameComponent, StoriesBookComponent, StoryGameComponent,
-  CombineTwoGameComponent,
+  CombineTwoGameComponent, SubtractTwoGameComponent, AssignedGameComponent,
 } from '../../components';
 import { gameRoutes, getMathGamePath, resolveGameRoute } from '../../data/gameRoutes';
 import storyTree from '../../data/storyTreeData';
 import { Context } from '../../shared/context';
 import Error404 from '../error-screen/Error404';
 import './gamesScreen.css';
+import GameLoadingGate from '../../components/loaders/GameLoadingGate';
 
 const components = {
   electionGame: ElectionGamesComponent,
@@ -34,6 +35,8 @@ const components = {
   jifiStory: StoryGameComponent,
   schoolStory: ChooseStoryComp,
   combineTwo: CombineTwoGameComponent,
+  subtractTwo: SubtractTwoGameComponent,
+  assigned: AssignedGameComponent,
 };
 
 function GameScreen() {
@@ -45,7 +48,7 @@ function GameScreen() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    screenRef.current?.focus({ preventScroll: true });
+    if (!document.querySelector('.ok-game-loader')) screenRef.current?.focus({ preventScroll: true });
   }, [pathname]);
 
   if (!route) return <Error404 />;
@@ -56,20 +59,22 @@ function GameScreen() {
 
   return (
     <div ref={screenRef} tabIndex={-1} className="screens-box setting-screen game-screen game-screen--playing" aria-label={t(route.game in gameRoutes ? route.game : 'storyGame')}>
-      {route.game === 'drawShapes' && (
-        <div className="buttons-position-absolute redlight-return">
-          <ButtonReturnComponent returnToScreen={returnToScreen} />
-        </div>
-      )}
-      <GameComponent
-        key={pathname}
-        returnToScreen={returnToScreen}
-        initialMode={route.mode}
-        initialLevel={route.level}
-        onSelectLevel={(mode, level) => navigate(getMathGamePath(mode, level))}
-        onReturnToMenu={() => navigate(gameRoutes.interactiveAddSubtract.path)}
-        {...(route.game === 'schoolStory' ? { data: storyTree } : {})}
-      />
+      <GameLoadingGate key={pathname} screenRef={screenRef} onReturn={returnToScreen}>
+        {route.game === 'drawShapes' && (
+          <div className="buttons-position-absolute redlight-return">
+            <ButtonReturnComponent returnToScreen={returnToScreen} />
+          </div>
+        )}
+        <GameComponent
+          key={pathname}
+          returnToScreen={returnToScreen}
+          initialMode={route.mode}
+          initialLevel={route.level}
+          onSelectLevel={(mode, level) => navigate(getMathGamePath(mode, level))}
+          onReturnToMenu={() => navigate(gameRoutes.interactiveAddSubtract.path)}
+          {...(route.game === 'schoolStory' ? { data: storyTree } : {})}
+        />
+      </GameLoadingGate>
     </div>
   );
 }

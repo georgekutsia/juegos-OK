@@ -1,12 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
 import './redlight.css';
+import { useGameReady } from '../../shared/gameReadyContext';
 
 function RedLight() {
+  const gameReady = useGameReady();
   const [position, setPosition] = useState('center');
   const [showButton, setShowButton] = useState(false);
   const audioRef = useRef("../../../src/audio/¡Chuchuwa _ Chu Chu Uá _ Canciones y clásicos infantiles _ Canciones Infantiles LooLoo.mp3");
 
   useEffect(() => {
+    if (!gameReady) return undefined;
     const timeouts = [
       setTimeout(() => setPosition('right'), 5000),
       setTimeout(() => setPosition('top'), 6000),
@@ -25,7 +28,7 @@ function RedLight() {
     ];
 
     return () => timeouts.forEach(clearTimeout);
-  }, []);
+  }, [gameReady]);
 
   const handlePlay = () => {
     audioRef.current?.play();

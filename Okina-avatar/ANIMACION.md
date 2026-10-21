@@ -1,0 +1,17 @@
+# Okina: entrada, saludo y despedida
+
+El saludo automático está desactivado por petición del usuario. Las animaciones y sus fuentes se conservan en esta carpeta como material de trabajo. Las cinco imágenes que utiliza actualmente el inicio están en `categorias/`.
+
+Abre `Okina-saludo.mp4` para ver el vídeo (720 × 720, aproximadamente 6,6 segundos, sin sonido).
+
+Abre `Okina-saludo.html` para ver la versión interactiva: permite repetir, pausar y continuar. Mantén junto a ella `Okina-saludo.js` y `Okina-saludo-fotogramas.png`. Funciona sin instalar nada y sin conexión.
+
+Secuencia: entra por la izquierda, levanta la mano y saluda, baja la mano y sonríe con un parpadeo, sale por la derecha. Se reproduce una vez; no se repite automáticamente. La preferencia de movimiento reducido muestra inicialmente una pose estática.
+
+Arte creado con la herramienta integrada de generación de imágenes, tomando `Okina-1.png` como referencia. Ocho poses en una lámina transparente. Movimiento y reproducción mediante Canvas; vídeo exportado en MP4. Es una animación por fotogramas, sin modelo 3D articulado. La aplicación reproduce una copia de este MP4 (`public/video/okina-welcome.mp4`) al abrir o recargar la página, mediante `StartupIntro.jsx`.
+
+Comprobada en escritorio y en pantallas de 390 × 844, 844 × 390 y 320 × 568, sin desbordamiento horizontal ni vertical. También se revisaron la carga desde un archivo local, la reproducción, pausa, continuación y movimiento reducido.
+
+## Prompt de los fotogramas
+
+Use case: identity-preserve. Asset type: transparent animation sprite sheet, precisely 4 columns by 2 rows, 8 full-body animation frames in reading order. Reference image is Okina-1, the single supplied image. Preserve EXACTLY this girl's face, large brown eyes, tousled chestnut bob, thin yellow headband, yellow oversized shirt with white black-smiley circle, denim shorts, striped knee socks, red high top shoes and polished 3D family animation rendering. Remove ALL floating symbols and mint background. True transparent background. Each equal rectangular cell contains the SAME character, SAME height, SAME frontal camera, SAME feet baseline and head position, equally centered with generous margin; whole body visible including shoes and raised hand, zero cropping or overlap between cells. 2048x2048 square sprite sheet, 4 columns x 2 rows; each cell is 512 wide x1024 high. No grid lines, labels, captions, text, extra characters or props. Maintain identical body, proportions, lighting, facial identity and clothing between cells. Only change arm and expression as specified. Frame1: standing relaxed both arms at sides, small closed-mouth friendly smile. Frame2: character's left arm (viewer right) raised halfway, elbow bent, palm forward, neutral friendly smile. Frame3: raised waving hand at head level, forearm tilted inward, fingers together relaxed, small smile. Frame4: same elbow position but raised forearm upright palm open towards viewer, small smile. Frame5: same elbow position but forearm tilted outward, palm open, small smile. Frame6: waving arm lowered halfway, small smile. Frame7: both arms down, BIG warm joyful toothy smile, happy closed eyes. Frame8: both arms down, BIG warm joyful toothy smile, bright eyes open. Other arm remains resting at her side. Frames3,4,5 should be a coherent wave with wrist/hand changing position, not whole body moving. No contact shadow beyond subtle transparent shadow immediately under shoes.

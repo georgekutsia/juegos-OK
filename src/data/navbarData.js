@@ -1,4 +1,9 @@
+const okinaImages = ['preguntas', 'sonidos', 'deportes', 'dibujos', 'puzles'].map(
+  category => `${import.meta.env.BASE_URL}img/okina/categories/okina-${category}.webp`
+);
+
 const navbarCreatures = {
+  okina: [okinaImages[0], ...okinaImages],
   ranita:[
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529846/ranita1_nhjyhu.png",
     "https://res.cloudinary.com/dtv1oj9bq/image/upload/v1726529847/ranita3_du2o6y.png",

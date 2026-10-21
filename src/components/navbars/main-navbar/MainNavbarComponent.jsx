@@ -7,9 +7,8 @@ import SettingComponent from "../../settings/SettingComponent.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function MainNavbarComponent() {
-  const { dataNavbarName, dataNavbarImg, handleChangeCreature } = useContext(Context);
+  const { t, dataNavbarName, dataNavbarImg, currentCreatureType } = useContext(Context);
   const [showSettings, setshowSettings] = useState(false);
-  const [menuIcon, setMenuIcon] = useState(dataNavbarImg[0]); // Estado para el ícono del menú
   const settingsRef = useRef(null);
   const menuRef = useRef(null);
   const lastTouchTimeRef = useRef(0);
@@ -39,24 +38,6 @@ function MainNavbarComponent() {
     }
   }, [location]);
 
-  // ✅ Recuperar el valor de LocalStorage al cargar
-  useEffect(() => {
-    const savedCreature = localStorage.getItem("selectedCreature");
-    if (savedCreature) {
-      handleChangeCreature(savedCreature);
-    }
-  }, [handleChangeCreature]);
-
-  // ✅ Recuperar el icono desde el LocalStorage
-  useEffect(() => {
-    const savedIconIndex = localStorage.getItem("selectedCreatureIndex");
-    if (savedIconIndex) {
-      setMenuIcon(dataNavbarImg[parseInt(savedIconIndex)]);
-    } else {
-      setMenuIcon(dataNavbarImg[0]); // Valor por defecto si no hay en localStorage
-    }
-  }, [dataNavbarImg]);
-
   // ✅ Manejo del clic fuera del componente
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -73,10 +54,11 @@ function MainNavbarComponent() {
 
   return (
     <>
-      <nav className="mainNavbar">
+      <nav className={`mainNavbar${currentCreatureType === 'okina' ? ' mainNavbar--okina' : ''}`} aria-label={t('categoryNavigation')}>
         <input
           id="mainNavbarMenu"
           type="checkbox"
+          aria-label={t('mainMenuToggle')}
           ref={menuRef}
           onClick={() => setshowSettings(false)}
         />
@@ -84,9 +66,9 @@ function MainNavbarComponent() {
           htmlFor="mainNavbarMenu"
           onDoubleClick={handleNavbarDoubleClick}
           onTouchEnd={handleNavbarTouchEnd}
-          title="Doble clic para volver al inicio"
+          title={t('mainMenuHomeHint')}
         >
-          <img className="mainNavbarMenu-img" src={menuIcon} alt="menu" />
+          <img className="mainNavbarMenu-img" src={dataNavbarImg[0]} alt="" />
         </label>
         <ul className="mainNavbarMenu">
           <MainNavbarButtonComponent

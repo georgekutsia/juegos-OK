@@ -1,7 +1,7 @@
 import './App.css'
 import MainNavbarComponent from './components/navbars/main-navbar/MainNavbarComponent'
 import { Context } from './shared/context'
-import { useState, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Routers from './Routers'
 import objectsDataList from './data/objectsData'
 import animalsDataEsp from './data/animalsDataEsp'
@@ -10,6 +10,7 @@ import animalsDataGer from './data/animalsDataGer'
 import { useTranslation } from 'react-i18next'
 import dataNavbarCreatures from './data/navbarData'
 import dataNavbarCreaturesNames from './data/navbarNamesData'
+import { DEFAULT_MASCOT, getSavedMascot, saveMascot } from './shared/mascotPreferences'
 
 function App() {
   const { t, i18n } = useTranslation(['translation'])
@@ -26,15 +27,15 @@ function App() {
   const [vertical, setvertical] = useState(savedVertical);
   const [horizontal, sethorizontal] = useState(savedHorizontal);
 
-  const creatureTypes = Object.keys(dataNavbarCreatures)
-  const creatureNames = Object.keys(dataNavbarCreaturesNames)
   const [objectsData, setobjectsData] = useState(objectsDataList)
   const [animalList, setanimalList] = useState(animalsDataEsp)
 
-  const [currentCreatureType, setCurrentCreatureType] = useState(creatureTypes[0])
-  const [currentCreatureName, setCurrentCreatureName] = useState(creatureNames[0])
-  const [dataNavbarImg, setDataNavbarImg] = useState(dataNavbarCreatures[currentCreatureType])
-  const [dataNavbarName, setDataNavbarName] = useState(dataNavbarCreaturesNames[currentCreatureName])
+  const [currentCreatureType, setCurrentCreatureType] = useState(getSavedMascot)
+  const currentCreatureName = currentCreatureType
+  const dataNavbarImg = dataNavbarCreatures[currentCreatureType]
+  const dataNavbarName = dataNavbarCreaturesNames[currentCreatureType]
+
+  useEffect(() => { saveMascot(currentCreatureType) }, [currentCreatureType])
 
   const changeLanguage = (code) => {
     i18n.changeLanguage(code)
@@ -45,12 +46,9 @@ function App() {
     }
   }
 
-  const handleChangeCreature = (newCreatureType) => {
-    setCurrentCreatureType(newCreatureType)
-    setDataNavbarImg(dataNavbarCreatures[newCreatureType])
-    setCurrentCreatureName(newCreatureType)
-    setDataNavbarName(dataNavbarCreaturesNames[newCreatureType])
-  }
+  const handleChangeCreature = useCallback(newCreatureType => {
+    setCurrentCreatureType(Object.hasOwn(dataNavbarCreatures, newCreatureType) ? newCreatureType : DEFAULT_MASCOT)
+  }, [])
 
   return (
     <Context.Provider

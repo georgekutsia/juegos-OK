@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "name": "Canvas starts automatically with transparent pixels",
+      "result": true
+    },
+    {
+      "name": "Game waits for intro",
+      "result": true
+    },
+    {
+      "name": "Skip has initial keyboard focus",
+      "result": true
+    },
+    {
+      "name": "Greeting completes naturally",
+      "result": true
+    },
+    {
+      "name": "Internal navigation does not repeat intro",
+      "result": true
+    },
+    {
+      "name": "Reload repeats intro",
+      "result": true
+    },
+    {
+      "name": "Tab stays on skip",
+      "result": true
+    },
+    {
+      "name": "Escape preserves route",
+      "result": true
+    },
+    {
+      "name": "Direct game route waits",
+      "result": true
+    },
+    {
+      "name": "Button skips into requested game",
+      "result": true
+    },
+    {
+      "name": "Fits 390x844",
+      "result": true
+    },
+    {
+      "name": "Fits 844x390",
+      "result": true
+    },
+    {
+      "name": "Fits 320x568",
+      "result": true
+    },
+    {
+      "name": "German skip text",
+      "result": true
+    },
+    {
+      "name": "Enter skips greeting",
+      "result": true
+    },
+    {
+      "name": "Reduced motion skips greeting",
+      "result": true
+    },
+    {
+      "name": "Reduced motion does not download atlas",
+      "result": true
+    },
+    {
+      "name": "Missing atlas never blocks app",
+      "result": true
+    },
+    {
+      "name": "WebP serves with correct MIME and size",
+      "result": true
+    },
+    {
+      "name": "14 distinct poses",
+      "result": true
+    },
+    {
+      "name": "Every cell has transparent gutters",
+      "result": true
+    },
+    {
+      "name": "Changing poses leaves no previous pixels",
+      "result": true
+    },
+    {
+      "name": "No old MP4 requests",
+      "result": true
+    },
+    {
+      "name": "No runtime exceptions",
+      "result": true
+    }
+  ],
+  "diagnostics": {
+    "width": 1024,
+    "height": 1536,
+    "decodeMs": 38.80000001192093,
+    "averageDrawMs": 0.006999999980131785,
+    "transparentFraction": 0.6739158630371094,
+    "gutterOpaque": 0,
+    "independentFrames": true,
+    "uniquePoses": 14,
+    "rgbaBytes": 6291456
+  },
+  "exceptions": []
+}

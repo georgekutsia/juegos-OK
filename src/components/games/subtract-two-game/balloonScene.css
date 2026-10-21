@@ -1,0 +1,27 @@
+.subtract-balloon { display: block; width: 100%; height: 100%; overflow: hidden; }
+.subtract-balloon__weight--dropped { animation: subtract-balloon-drop var(--balloon-weight-drop) ease-in forwards; }
+.subtract-balloon__crow-flight { animation: subtract-balloon-crow-arrive var(--balloon-crow-flight) ease-out both; }
+.subtract-balloon__crow-wing { transform-origin: 3px -12px; animation: subtract-balloon-wing 180ms ease-in-out 5 alternate; }
+.subtract-balloon--flying .subtract-balloon__aircraft { transform-origin: 330px 238px; animation: subtract-balloon-depart var(--balloon-flight) var(--balloon-weight-drop) ease-in forwards; }
+.subtract-balloon--deflating .subtract-balloon__envelope { transform-origin: 330px 169px; animation: subtract-balloon-deflate var(--balloon-deflation) linear forwards; }
+.subtract-balloon--deflating .subtract-balloon__crow-body { transform-origin: 0 0; animation: subtract-balloon-peck 220ms 3 alternate; }
+.subtract-balloon--deflating .subtract-balloon__crow-flight { animation: subtract-balloon-crows-leave 1200ms 660ms ease-in forwards; }
+.add-subtract-game__mode .math-balloon-preview { display: block; width: 120px; height: 72px; }
+@keyframes subtract-balloon-drop { to { transform: translateY(48px) rotate(20deg); opacity: 0; } }
+@keyframes subtract-balloon-crow-arrive { from { transform: translate(var(--crow-start-x), var(--crow-start-y)); } to { transform: translate(0, 0); } }
+@keyframes subtract-balloon-wing { to { transform: rotate(55deg) scaleY(.35); } }
+@keyframes subtract-balloon-depart { to { transform: translate(110px, -280px) scale(.65); } }
+@keyframes subtract-balloon-deflate {
+  0%, 12% { transform: scale(1); }
+  40% { transform: scale(.8, .72); }
+  70% { transform: scale(.56, .4); }
+  100% { transform: scale(.4, .12); }
+}
+@keyframes subtract-balloon-peck { to { transform: rotate(32deg) translateY(4px); } }
+@keyframes subtract-balloon-crows-leave { to { transform: translate(350px, -150px); } }
+@media (prefers-reduced-motion: reduce) {
+  .subtract-balloon__weight--dropped { animation: none; opacity: 0; }
+  .subtract-balloon__crow-flight, .subtract-balloon__crow-wing, .subtract-balloon--deflating .subtract-balloon__crow-body, .subtract-balloon--deflating .subtract-balloon__crow-flight { animation: none; }
+  .subtract-balloon--deflating .subtract-balloon__envelope { animation: none; transform: scale(.4, .12); }
+  .subtract-balloon--flying .subtract-balloon__aircraft { animation: none; opacity: 0; }
+}

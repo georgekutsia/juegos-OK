@@ -1,0 +1,21 @@
+.ok-game-loader { position: fixed; inset: 0; z-index: 4000; display: grid; place-items: center; overflow: hidden; background: rgb(255 255 255 / 10%); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--dark-violet); }
+.ok-game-loader:focus { outline: none; }
+.ok-game-loader__center { display: grid; justify-items: center; align-content: center; gap: clamp(10px, 3vmin, 20px); padding: 20px; max-width: 100%; text-align: center; }
+.ok-game-loader__breath { display: grid; place-items: center; width: 2em; height: 2em; font-size: clamp(64px, 18vmin, 132px); animation: ok-game-breathe 1800ms 1000ms ease-in-out infinite; }
+.ok-game-loader__orbit { display: flex; gap: .02em; align-items: center; justify-content: center; line-height: 1.1; animation: ok-game-orbit 650ms 350ms ease-in-out both; }
+.ok-game-loader__letter { display: block; font-weight: 900; text-shadow: 0 3px 0 white, 0 0 12px rgb(255 255 255 / 90%), 0 7px 12px rgb(69 42 90 / 15%); }
+.ok-game-loader__letter--o { color: var(--dark-violet); animation: ok-game-enter-left 350ms ease-out both; }
+.ok-game-loader__letter--k { color: var(--dark-blue); animation: ok-game-enter-right 350ms ease-out both; }
+.ok-game-loader__center > p { margin: 0; max-width: 30ch; font-size: clamp(1rem, 3vmin, 1.25rem); font-weight: 600; text-shadow: 0 1px 3px white, 0 0 12px white; }
+.ok-game-loader .button-return { width: 44px; height: 44px; }
+.ok-game-loader__retry { min-height: 44px; padding: 8px 20px; border: 2px solid var(--dark-violet); border-radius: 999px; background: white; color: var(--dark-violet); font: inherit; font-weight: 700; }
+.ok-game-loader__retry:focus-visible { outline: 3px solid var(--dark-blue); outline-offset: 3px; }
+.ok-game-loader--failed .ok-game-loader__breath { animation: none; }
+.game-screen--loading > :not(.ok-game-loader), .game-screen--loading > :not(.ok-game-loader) * { animation-play-state: paused; }
+@keyframes ok-game-enter-left { from { transform: translateX(calc(-50vw - 100%)) rotate(-24deg); opacity: 0; } to { transform: translateX(0) rotate(0); opacity: 1; } }
+@keyframes ok-game-enter-right { from { transform: translateX(calc(50vw + 100%)) rotate(24deg); opacity: 0; } to { transform: translateX(0) rotate(0); opacity: 1; } }
+@keyframes ok-game-orbit { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes ok-game-breathe { 0%, 100% { transform: scale(.97); } 50% { transform: scale(1.04); } }
+@media (prefers-reduced-motion: reduce) {
+  .ok-game-loader__breath, .ok-game-loader__orbit, .ok-game-loader__letter { animation: none; }
+}

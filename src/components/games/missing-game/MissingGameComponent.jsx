@@ -9,9 +9,11 @@ import InfoComponent from "../../info/InfoComponent";
 import { Form } from "react-bootstrap";
 import "./missingGame.css";
 import ButtonTypeComponent from "../../buttons/button-type/ButtonTypeComponent";
+import { useGameReady } from '../../../shared/gameReadyContext';
 
 function MissingGameComponent({ returnToScreen }) {
   const { t, animalList } = useContext(Context);
+  const gameReady = useGameReady();
   const [rotationSpeed, setRotationSpeed] = useState(5); 
   const [imgChangeSpeed, setImgChangeSpeed] = useState(5000); 
   const [listOfImgs, setListOfImgs] = useState([]);
@@ -32,6 +34,7 @@ function MissingGameComponent({ returnToScreen }) {
   }, []);
   
   useEffect(() => {
+    if (!gameReady) return undefined;
     const interval = setInterval(() => {
       setListOfImgs((prevImages) => {
         const newOrder = [...prevImages];
@@ -41,7 +44,7 @@ function MissingGameComponent({ returnToScreen }) {
       });
     }, imgChangeSpeed);
     return () => clearInterval(interval); 
-  }, [imgChangeSpeed]);
+  }, [gameReady, imgChangeSpeed]);
   
   const handleNext = () => {
     handleRandom();

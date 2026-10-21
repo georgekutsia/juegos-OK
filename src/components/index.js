@@ -21,6 +21,7 @@ export { default as AddSubtractGameComponent } from "./games/add-subtract-game/A
 export { default as MultiplyDivideGameComponent } from "./games/multiply-divide-game/MultiplyDivideGameComponent.jsx";
 export { default as AnimalsListComponent } from "./listas/AnimalsListComponent.jsx";
 export { default as LoaderCarComponent } from "./loaders/LoaderCarComponent.jsx";
+export { default as OkGameLoader } from './loaders/OkGameLoader';
 export { default as TimerComponent } from "./timer/TimerComponent.jsx";
 export { default as TimerButtonComponent } from "./timer/TimerButtonComponent.jsx";
 export { default as RedLight } from "./redlight/RedLight.jsx";
@@ -59,3 +60,5 @@ export { default as ButtonTypeComponent } from "./buttons/button-type/ButtonType
 
 export { default as SubtractionCraneScene } from './games/add-subtract-game/SubtractionCraneScene';
 export { default as CombineTwoGameComponent } from './games/combine-two-game/CombineTwoGameComponent';
+export { default as SubtractTwoGameComponent } from './games/subtract-two-game/SubtractTwoGameComponent';
+export { default as AssignedGameComponent } from './games/assigned-game/AssignedGameComponent';

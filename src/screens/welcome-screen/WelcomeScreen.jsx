@@ -40,6 +40,7 @@ function WelcomeScreen() {
             }`}
             key={imgSrc}
             to={creatureRoutes[index]}
+            aria-label={t(`${currentCreatureName}${index + 1}`)}
             state={{ openNavbar: true }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -48,7 +49,9 @@ function WelcomeScreen() {
               <img
                 className="welcome-screen-img"
                 src={imgSrc}
-                alt={t(`${currentCreatureName}${index + 1}`)}
+                alt={t(currentCreatureName === 'okina' ? `okinaCategoryAlt${index + 1}` : `${currentCreatureName}${index + 1}`)}
+                width={512}
+                height={512}
               />
               <h3 className="welcome-screen-name">
                 {t(`${currentCreatureName}${index + 1}`)}

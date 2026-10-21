@@ -1,19 +1,31 @@
 .character-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
   text-align: center;
   margin: 10px 0px;
 }
 .character-box-button{
-  margin: 20px;
-  width: 100px;
+  margin: 0;
+  width: 88px;
+  min-height: 44px;
+  padding: 4px;
+  border: 2px solid transparent;
   border-radius: 20px;
 }
 .character-box-button-img{
-  width: 100px;
+  width: 100%;
+  height: 64px;
+  object-fit: contain;
   transition: 0.3s ease-in-out;
 }
 .character-box-button:hover .character-box-button-img{
   filter: drop-shadow(2px 3px 5px rgb(68, 98, 109));
 }
+.character-box > h2 { flex-basis: 100%; font-size: 1.25rem; }
+.character-box-button[aria-pressed="true"] { border-color: var(--dark-violet); background: white; }
+.character-box-button:focus-visible { outline: 3px solid var(--dark-blue); outline-offset: 2px; }
 
 .character-box-h2-img{
   width: 100px;

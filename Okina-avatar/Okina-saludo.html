@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Okina · Un saludo</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #34234e; background: #f9f5ee; }
+    body { margin: 0; min-height: 100svh; display: grid; place-items: center; padding: 16px; }
+    main { display: grid; justify-items: center; gap: 14px; max-width: 100%; }
+    h1 { font-size: 1.35rem; margin: 0; }
+    .stage { width: min(560px, calc(100vw - 32px), calc(100svh - 162px)); aspect-ratio: 1; overflow: hidden; border-radius: 28px; border: 2px solid #a9d8d0; background: #c9f4ed; box-shadow: 0 12px 35px #344a4220; }
+    canvas { display: block; width: 100%; height: 100%; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    button, a { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 14px; padding: 10px 16px; font: inherit; font-weight: 650; }
+    button { border: 0; background: #743292; color: white; cursor: pointer; }
+    button:hover { background: #592570; }
+    button:disabled { opacity: .55; cursor: default; }
+    a { color: #51236a; text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid #156c83; outline-offset: 4px; }
+    p { margin: 0; font-size: .88rem; text-align: center; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    @media (max-height: 450px) { body { padding: 10px; } main { gap: 8px; } h1 { font-size: 1rem; } .stage { width: min(500px, calc(100vw - 24px), calc(100svh - 130px)); } }
+  </style>
+  <script src="Okina-saludo.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Un saludo de Okina</h1>
+    <div class="stage"><canvas width="720" height="720" role="img" aria-label="Okina entra en el cuadro, saluda con la mano, sonríe y sale."></canvas></div>
+    <div class="controls">
+      <button id="replay" type="button">Repetir</button>
+      <button id="pause" type="button" disabled>Pausar</button>
+      <a href="Okina-saludo.mp4" download>Descargar vídeo</a>
+    </div>
+    <p>Entra, saluda, sonríe… ¡hasta pronto!</p>
+    <p id="status" class="sr-only" role="status">Preparando a Okina.</p>
+  </main>
+</body>
+</html>

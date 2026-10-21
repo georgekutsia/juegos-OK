@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "name": "First visit autoplays muted inline",
+      "result": true
+    },
+    {
+      "name": "Games and navigation wait until greeting finishes",
+      "result": true
+    },
+    {
+      "name": "Skip receives keyboard focus",
+      "result": true
+    },
+    {
+      "name": "Full greeting ends naturally",
+      "result": true
+    },
+    {
+      "name": "Internal navigation does not replay greeting",
+      "result": true
+    },
+    {
+      "name": "Reload plays greeting again",
+      "result": true
+    },
+    {
+      "name": "Tab stays on skip button",
+      "result": true
+    },
+    {
+      "name": "Escape opens requested page",
+      "result": true
+    },
+    {
+      "name": "Direct game reload displays greeting first",
+      "result": true
+    },
+    {
+      "name": "Skip preserves requested game URL",
+      "result": true
+    },
+    {
+      "name": "Fits 390x844",
+      "result": true
+    },
+    {
+      "name": "Fits 844x390",
+      "result": true
+    },
+    {
+      "name": "Fits 320x568",
+      "result": true
+    },
+    {
+      "name": "German greeting and skip labels",
+      "result": true
+    },
+    {
+      "name": "Enter skips with keyboard",
+      "result": true
+    },
+    {
+      "name": "Reduced motion opens page directly",
+      "result": true
+    },
+    {
+      "name": "Failed video does not block app",
+      "result": true
+    },
+    {
+      "name": "Video asset serves correctly",
+      "result": true
+    },
+    {
+      "name": "No runtime exceptions",
+      "result": true
+    }
+  ],
+  "exceptions": []
+}

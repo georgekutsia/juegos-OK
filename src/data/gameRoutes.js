@@ -15,6 +15,8 @@ export const gameRoutes = {
   interactiveAddSubtract: { path: '/puzzles/sumas-y-restas', interactive: true },
   interactiveMultiplyDivide: { path: '/puzzles/multiplicaciones-y-divisiones', interactive: true },
   combineTwo: { path: '/puzzles/sumas-y-restas/combina-dos', interactive: true, parent: '/puzzles/sumas-y-restas' },
+  subtractTwo: { path: '/puzzles/sumas-y-restas/resta-dos', interactive: true, parent: '/puzzles/sumas-y-restas' },
+  assigned: { path: '/puzzles/sumas-y-restas/asignado', interactive: true, parent: '/puzzles/sumas-y-restas' },
 };
 
 export const storyRoutes = [
@@ -30,7 +32,7 @@ export const mathModeSlugs = { addition: 'sumas', subtraction: 'restas' };
 export const mathLevelSlugs = { easy: 'facil', medium: 'medio', hard: 'dificil' };
 
 export const getMathGamePath = (mode, level) =>
-  mode === 'combineTwo' ? `${gameRoutes.combineTwo.path}/${mathLevelSlugs[level]}`
+  ['combineTwo', 'subtractTwo', 'assigned'].includes(mode) ? `${gameRoutes[mode].path}/${mathLevelSlugs[level]}`
     : `${gameRoutes.interactiveAddSubtract.path}/${mathModeSlugs[mode]}/${mathLevelSlugs[level]}`;
 
 const mathRoutes = Object.entries(mathModeSlugs).flatMap(([mode, slug]) => [
@@ -43,9 +45,9 @@ const routes = [
   ...storyRoutes,
   ...choiceStoryRoutes,
   ...mathRoutes,
-  ...Object.keys(mathLevelSlugs).map(level => ({
-    ...gameRoutes.combineTwo, path: getMathGamePath('combineTwo', level), game: 'combineTwo', level,
-  })),
+  ...['combineTwo', 'subtractTwo', 'assigned'].flatMap(game => Object.keys(mathLevelSlugs).map(level => ({
+    ...gameRoutes[game], path: getMathGamePath(game, level), game, level,
+  }))),
 ];
 
 export const resolveGameRoute = pathname => routes.find(({ path }) => path === pathname.replace(/\/+$/, ''));

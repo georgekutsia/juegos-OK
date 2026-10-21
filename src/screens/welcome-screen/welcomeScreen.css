@@ -20,7 +20,10 @@
 }
 
 .welcome-screen-box{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: min(100%, 1050px);
+  margin: auto;
   justify-content: center;
   gap: calc(10px + 2vw);
 }
@@ -33,11 +36,16 @@
 
 .welcome-screen-link figure{
   position: relative;
-  width: calc(30px + 7vw);
+  width: 100%;
+  margin: 0;
 }
 
 .welcome-screen-img{
-  width: calc(30px + 7vw);
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
   border-radius: 20px;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -55,7 +63,7 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  width: calc(120px + 8vw);
+  width: 100%;
   margin: 12px 0 0;
   transform: translateX(-50%);
   opacity: 0;
@@ -103,4 +111,29 @@
 .welcome-screen-link:nth-child(5):hover .welcome-screen-img{
   outline: 3px solid var(--nav-blue);
   outline-offset: 5px;
+}
+.welcome-screen-name { font-size: clamp(1rem, 1.6vw, 1.4rem); }
+.welcome-screen-link:focus-visible { outline: 3px solid var(--dark-violet); outline-offset: 4px; border-radius: 16px; }
+
+@media (max-width: 768px) {
+  .welcome-screen-box { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .welcome-screen-link:last-child { grid-column: 1 / -1; width: 50%; justify-self: center; }
+  .welcome-screen-img { width: min(100%, clamp(64px, calc((80dvh - 260px) / 3), 135px)); }
+  .welcome-screen .mobile-warning { padding: 0; margin-bottom: 8px; font-size: .8rem; line-height: 1.2; }
+  .welcome-screen .big-title-box { margin-top: 8px; font-size: 1.4rem; line-height: 1.2; }
+  .welcome-screen .screen-title-box { margin: 8px 0 12px; font-size: .9rem; line-height: 1.25; }
+  .welcome-screen-link.move-left, .welcome-screen-link.move-right { transform: none; }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .welcome-screen-box { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+  .welcome-screen-link:last-child { grid-column: auto; width: 100%; }
+  .welcome-screen-img { width: min(100%, 130px, calc(80dvh - 160px)); }
+  .welcome-screen .big-title-box { margin-top: 4px; font-size: 1.4rem; line-height: 1.2; }
+  .welcome-screen .screen-title-box { margin: 6px 0 12px; font-size: .95rem; line-height: 1.2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-screen-link, .welcome-screen-img { transition: none; }
+  .welcome-screen-link.move-left, .welcome-screen-link.move-right, .welcome-screen-link:hover .welcome-screen-img { transform: none; }
 }

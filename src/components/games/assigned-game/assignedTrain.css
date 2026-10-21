@@ -1,0 +1,17 @@
+.assigned-train { display: block; width: 100%; height: 100%; overflow: hidden; border-radius: 20px; }
+.assigned-train__wagon-position { transition: transform var(--assigned-couple) ease-in-out; }
+.assigned-train__wagon--lost { animation: assigned-wagon-exit var(--assigned-exit) ease-in forwards; }
+.assigned-train--departing .assigned-train__convoy { animation: assigned-train-depart var(--assigned-departure) var(--assigned-couple) ease-in forwards; }
+.assigned-train--departing .assigned-train__wheel { animation: assigned-train-wheel 650ms linear infinite; }
+.assigned-train__steam { animation: assigned-train-steam 850ms ease-out infinite; }
+.add-subtract-game__mode .math-train-preview { display: block; width: 120px; height: 64px; }
+@keyframes assigned-wagon-exit { to { transform: translateX(-720px); opacity: 0; } }
+@keyframes assigned-train-depart { to { transform: translateX(720px); } }
+@keyframes assigned-train-wheel { to { transform: rotate(360deg); } }
+@keyframes assigned-train-steam { to { transform: translate(-12px, -10px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .assigned-train__wagon-position { transition: none; }
+  .assigned-train__wagon--lost { animation: none; opacity: 0; }
+  .assigned-train--departing .assigned-train__convoy { animation: none; opacity: 0; }
+  .assigned-train--departing .assigned-train__wheel, .assigned-train__steam { animation: none; }
+}

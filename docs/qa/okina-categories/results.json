@@ -1,0 +1,156 @@
+{
+  "checks": [
+    {
+      "name": "Fresh visit uses five local Okina images",
+      "result": true
+    },
+    {
+      "name": "No startup animation",
+      "result": true
+    },
+    {
+      "name": "Default mascot persisted",
+      "result": true
+    },
+    {
+      "name": "Navbar matches all five home pictures",
+      "result": true
+    },
+    {
+      "name": "Category link /questions",
+      "result": true
+    },
+    {
+      "name": "Category link /sounds",
+      "result": true
+    },
+    {
+      "name": "Category link /sports",
+      "result": true
+    },
+    {
+      "name": "Category link /drawings",
+      "result": true
+    },
+    {
+      "name": "Category link /puzzles",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 390x844",
+      "result": true
+    },
+    {
+      "name": "Complete, square images 390x844",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 844x390",
+      "result": true
+    },
+    {
+      "name": "Complete, square images 844x390",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 320x568",
+      "result": true
+    },
+    {
+      "name": "Complete, square images 320x568",
+      "result": true
+    },
+    {
+      "name": "Okina is available and selected in settings",
+      "result": true
+    },
+    {
+      "name": "Choosing another mascot updates navbar and home",
+      "result": true
+    },
+    {
+      "name": "Explicit mascot choice survives reload",
+      "result": true
+    },
+    {
+      "name": "Return to Okina updates both areas",
+      "result": true
+    },
+    {
+      "name": "Legacy mascot defaults migrate to Okina",
+      "result": true
+    },
+    {
+      "name": "Other preferences remain intact",
+      "result": true
+    },
+    {
+      "name": "Corrupt mascot recovers safely",
+      "result": true
+    },
+    {
+      "name": "German category labels",
+      "result": true
+    },
+    {
+      "name": "German navbar accessible name",
+      "result": true
+    },
+    {
+      "name": "All assets have real transparency and correct dimensions",
+      "result": true
+    },
+    {
+      "name": "No automatic animation requests",
+      "result": true
+    },
+    {
+      "name": "No JavaScript runtime exceptions",
+      "result": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "preguntas",
+      "bytes": 41520,
+      "width": 512,
+      "height": 512,
+      "cornerAlpha": 0,
+      "mime": "image/webp"
+    },
+    {
+      "name": "sonidos",
+      "bytes": 46276,
+      "width": 512,
+      "height": 512,
+      "cornerAlpha": 0,
+      "mime": "image/webp"
+    },
+    {
+      "name": "deportes",
+      "bytes": 36924,
+      "width": 512,
+      "height": 512,
+      "cornerAlpha": 0,
+      "mime": "image/webp"
+    },
+    {
+      "name": "dibujos",
+      "bytes": 45784,
+      "width": 512,
+      "height": 512,
+      "cornerAlpha": 0,
+      "mime": "image/webp"
+    },
+    {
+      "name": "puzles",
+      "bytes": 40414,
+      "width": 512,
+      "height": 512,
+      "cornerAlpha": 0,
+      "mime": "image/webp"
+    }
+  ],
+  "totalBytes": 210918,
+  "exceptions": []
+}

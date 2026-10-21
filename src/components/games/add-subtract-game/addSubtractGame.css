@@ -679,7 +679,7 @@
   width: min(100%, 228px);
 }
 
-/* Four reserved cards share the menu without adding inactive level controls. */
+/* Reserved cards share the menu without adding inactive level controls. */
 .add-subtract-game__mode-picker--expanded .add-subtract-game__mode--placeholder {
   grid-template-columns: clamp(48px, 15cqw, 84px) minmax(0, 1fr);
   min-height: 0;
@@ -747,18 +747,43 @@
 
   .add-subtract-game__mode-picker--expanded .add-subtract-game__mode {
     grid-template-columns: minmax(0, 1fr) 44px;
-    padding: 4px;
+    padding: 2px;
+    row-gap: 2px;
   }
 
   .add-subtract-game__mode-picker--expanded .add-subtract-game__mode .math-crane-preview,
-  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode .math-coaster-preview {
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode .math-coaster-preview,
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode .math-balloon-preview,
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode .math-train-preview {
     width: 44px;
-    height: 40px;
+    height: 30px;
   }
 
   .add-subtract-game__mode-picker--expanded .add-subtract-game__mode--placeholder {
     grid-template-columns: 44px minmax(0, 1fr);
   }
+}
+
+/* Five active games use two columns on short portrait screens. */
+@container addition-game-viewport (max-width: 600px) and (min-height: 421px) and (max-height: 700px) {
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__modes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__mode:not(.add-subtract-game__mode--placeholder) { grid-column: auto; grid-template-columns: minmax(0, 1fr); padding: 4px; gap: 3px; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__mode h3 { font-size: .85rem; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__mode .math-car { width: 70px; height: 24px; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__levels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__level { min-height: 36px; padding: 2px; font-size: .75rem; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__level:last-child { grid-column: 1 / -1; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__mode--placeholder { grid-template-columns: minmax(0, 1fr); align-content: center; justify-items: center; }
+  .add-subtract-game__mode-picker--with-assigned .add-subtract-game__ball { width: 44px; }
+}
+
+@container addition-game-viewport (max-width: 600px) and (min-height: 421px) and (max-height: 620px) {
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__modes { gap: 4px; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode:not(.add-subtract-game__mode--placeholder) { padding: 2px 6px; row-gap: 2px; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode .math-car { height: 32px; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode--placeholder { grid-template-columns: 28px minmax(0, 1fr); gap: 4px; padding: 2px; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__ball { width: 28px; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode--placeholder h3 { font-size: .7rem; }
 }
 
 @container addition-game-viewport (max-width: 600px) and (max-height: 600px) {

@@ -113,6 +113,8 @@ width: calc(30px + 5vw);
 
 
 .mainNavbarMenu li img {
+  aspect-ratio: 1;
+  object-fit: contain;
   width: 1vw;
   transition: 0.6s ease-in-out;
   
@@ -259,6 +261,9 @@ scale: 1.05;
 }
 
 .navbar-setting-box{
+  width: min(600px, calc(100vw - 24px));
+  max-height: calc(100dvh - 100px);
+  overflow: auto;
   position: absolute;
   top: 50px;
   right: 0px;
@@ -266,3 +271,8 @@ scale: 1.05;
   border-radius: 20px;
   z-index: 160;
 }
+.mainNavbar input:focus-visible + label { outline: 3px solid var(--dark-blue); outline-offset: 3px; }
+.mainNavbarMenu a:focus-visible { outline: 3px solid var(--dark-blue); outline-offset: 3px; border-radius: 12px; }
+.mainNavbar--okina .inactiveButton { opacity: 1; }
+.mainNavbarMenu li { visibility: hidden; }
+.mainNavbar input:checked ~ .mainNavbarMenu li { visibility: visible; }

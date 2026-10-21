@@ -1,17 +1,13 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext } from 'react';
 import './buttonColored.css';
 import { Context } from "../../../shared/context";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
 function ButtonColoredComponent({ imgGame, to, text, disabled = false, statusText, descriptionText }) {
-  const navigate = useNavigate();
   const { t } = useContext(Context);
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const buttonRef = useRef(null);
 
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" className="mainNavbarMenu-li-span" {...props}>
@@ -19,33 +15,6 @@ function ButtonColoredComponent({ imgGame, to, text, disabled = false, statusTex
     </Tooltip>
   );
 
-
-  useEffect(() => {
-    if (isButtonClicked && !disabled) {
-      setIsExpanded(true);
-      const buttonTimeout = setTimeout(() => {
-        setIsButtonClicked(false);
-      }, 1300);
-
-      const expandTimeout = setTimeout(() => {
-        setIsExpanded(false);
-        navigate(to);
-
-      }, 1100);
-
-      return () => {
-        clearTimeout(buttonTimeout);
-        clearTimeout(expandTimeout);
-      };
-    }
-  }, [isButtonClicked, disabled, navigate, to]);
-
-  const handleButtonClick = (e) => {
-    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    e.preventDefault();
-    if (disabled) return;
-    setIsButtonClicked(true);
-  };
 
   const cardVisual = imgGame ? (
     <img src={imgGame} alt="" className="colored-img imageRotate" />
@@ -72,7 +41,7 @@ function ButtonColoredComponent({ imgGame, to, text, disabled = false, statusTex
         </OverlayTrigger>
       ) : (
         <OverlayTrigger placement="bottom" delay={{ show: 50, hide: 200 }} overlay={renderTooltip}>
-          <Link className={`btn-colored ${isButtonClicked ? 'btn-co--clicked' : ''}`} to={to} onClick={handleButtonClick} ref={buttonRef} aria-label={t(text)}>
+          <Link className="btn-colored" to={to} aria-label={t(text)}>
             <div className="containerRotate">
               <div className="left-half"></div>
               <div className="right-half"></div>
@@ -82,16 +51,6 @@ function ButtonColoredComponent({ imgGame, to, text, disabled = false, statusTex
         </OverlayTrigger>
       )}
       <p className="mobile-game-description">{t(text)}{disabled && statusText ? ` — ${t(statusText)}` : ''}</p>
-      <span className={`color-colored color--blue ${isExpanded ? 'expanded' : ''}`} data-value="1"
-      ></span>
-      <span className={`color-colored color--orange ${isExpanded ? 'expanded' : ''}`} data-value="1"
-      ></span>
-      <span className={`color-colored color--green ${isExpanded ? 'expanded' : ''}`} data-value="1"
-      ></span>
-      <span className={`color-colored color--white ${isExpanded ? 'expanded' : ''}`} data-value="1"
-      ></span>
-      <span className={`color-colored color--violet ${isExpanded ? 'expanded' : ''}`} data-value="1"
-      ></span>
     </div>
   );
 }
