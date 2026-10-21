@@ -7,6 +7,7 @@ import {
   RuntocolorGameComponent, SearchRoomGame, ShadowGamesComponent,
   SizeGameComponent, SlidingPuzzleGameComponent, SoundGameComponent,
   SpecialStoryGameComponent, StoriesBookComponent, StoryGameComponent,
+  CombineTwoGameComponent,
 } from '../../components';
 import { gameRoutes, getMathGamePath, resolveGameRoute } from '../../data/gameRoutes';
 import storyTree from '../../data/storyTreeData';
@@ -32,6 +33,7 @@ const components = {
   okinaStory: SpecialStoryGameComponent,
   jifiStory: StoryGameComponent,
   schoolStory: ChooseStoryComp,
+  combineTwo: CombineTwoGameComponent,
 };
 
 function GameScreen() {

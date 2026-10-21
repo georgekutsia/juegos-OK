@@ -58,3 +58,4 @@ export { default as ButtonColoredComponent } from "./buttons/button-colored/Butt
 export { default as ButtonTypeComponent } from "./buttons/button-type/ButtonTypeComponent";
 
 export { default as SubtractionCraneScene } from './games/add-subtract-game/SubtractionCraneScene';
+export { default as CombineTwoGameComponent } from './games/combine-two-game/CombineTwoGameComponent';

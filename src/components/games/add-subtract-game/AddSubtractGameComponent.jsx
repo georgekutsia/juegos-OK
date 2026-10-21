@@ -23,6 +23,7 @@ import { Context } from '../../../shared/context';
 import './addSubtractGame.css';
 import SubtractionCraneScene from './SubtractionCraneScene';
 import FinishConfetti from './FinishConfetti';
+import CoasterScene from '../combine-two-game/CoasterScene';
 
 const createAdditionProblem = (maximum) => {
   const firstNumber = Math.floor(Math.random() * (maximum - 1)) + 1;
@@ -57,6 +58,7 @@ function MathCar({ vehicle, className = '', style, isMoving = false, isEngineRun
 function AddSubtractGameComponent({ returnToScreen, gameGroup = 'addSubtract', initialMode = null, initialLevel = null, onSelectLevel, onReturnToMenu }) {
   const { t } = useContext(Context);
   const currentGroup = mathGameGroups[gameGroup] ?? mathGameGroups.addSubtract;
+  const futureGames = currentGroup.futureGames ?? [];
   const visibleModes = mathGameModes.filter(({ id }) => currentGroup.modes.includes(id));
   const answerInputRef = useRef(null);
   const feedbackTimerRef = useRef(null);
@@ -708,7 +710,7 @@ function AddSubtractGameComponent({ returnToScreen, gameGroup = 'addSubtract', i
       <div className="buttons-position-absolute">
         <ButtonReturnComponent returnToScreen={returnToScreen} />
       </div>
-      <div className="add-subtract-game__mode-picker">
+      <div className={`add-subtract-game__mode-picker${futureGames.length ? ' add-subtract-game__mode-picker--expanded' : ''}${currentGroup.modes.includes('combineTwo') ? ' add-subtract-game__mode-picker--with-combine' : ''}`}>
         <header>
           <h2 id="add-subtract-game-title">{t(currentGroup.titleKey)}</h2>
           <p>{t('addSubtractChooseMode')}</p>
@@ -717,7 +719,9 @@ function AddSubtractGameComponent({ returnToScreen, gameGroup = 'addSubtract', i
           {visibleModes.map(({ id, nameKey, vehicle, illustration, available = true }) => (
             <article key={id} className="add-subtract-game__mode">
               <h3>{t(nameKey)}</h3>
-              {illustration === 'crane' ? <span className="math-car math-crane-preview"><SubtractionCraneScene preview label={t('subtractionCraneDescription')} /></span> : <MathCar vehicle={vehicle} />}
+              {illustration === 'crane' ? <span className="math-car math-crane-preview"><SubtractionCraneScene preview label={t('subtractionCraneDescription')} /></span>
+                : illustration === 'coaster' ? <span className="math-car math-coaster-preview"><CoasterScene preview label={t('combineTwoScene')} /></span>
+                  : <MathCar vehicle={vehicle} />}
               <div className="add-subtract-game__levels" aria-label={`${t(nameKey)}: ${t('addSubtractChooseLevel')}`}>
                 {mathDifficultyLevels.map(({ id: levelId, nameKey: levelNameKey }) => (
                   <button
@@ -733,6 +737,12 @@ function AddSubtractGameComponent({ returnToScreen, gameGroup = 'addSubtract', i
                 ))}
               </div>
               {!available && <p className="add-subtract-game__coming-soon">{t('interactiveGameComingSoon')}</p>}
+            </article>
+          ))}
+          {futureGames.map(({ id, image }, index) => (
+            <article key={id} className="add-subtract-game__mode add-subtract-game__mode--placeholder" aria-label={t('addSubtractFutureGame', { number: index + 1 })}>
+              <img className="add-subtract-game__ball" src={image} alt={t('addSubtractBallAlt')} />
+              <h3><span className="math-future-full">{t('interactiveGameComingSoon')}</span><span className="math-future-short">{t('mathFutureSoon')}</span></h3>
             </article>
           ))}
         </div>

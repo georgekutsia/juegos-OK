@@ -1,0 +1,58 @@
+.screens-box.game-screen--playing:has(.combine-two-game) { container: combine-two-viewport / size; }
+.combine-two-game { box-sizing: border-box; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 0; padding: 52px 12px 8px; }
+.combine-two-game *, .combine-two-game *::before, .combine-two-game *::after { box-sizing: border-box; }
+.combine-two-game__panel { display: grid; grid-template-rows: auto minmax(70px, 1fr) auto; gap: 8px; width: min(100%, 900px); height: min(100%, 620px); min-height: 0; padding: 16px; border: 3px solid var(--white); border-radius: 24px; background: rgb(255 255 255 / 88%); box-shadow: 1px 7px 16px rgb(0 0 0 / 20%); text-align: center; }
+.combine-two-game__header { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 16px; color: var(--dark-violet); }
+.combine-two-game__header h2 { margin: 0; font-size: clamp(1.1rem, 3cqw, 1.65rem); }
+.combine-two-game__level { padding: 2px 12px; border: 2px solid var(--dark-violet); border-radius: 999px; font-size: 0.9rem; }
+.combine-two-game__timer { padding: 2px 10px; border: 2px solid #d18c31; border-radius: 999px; background: #fff0dc; color: #69400f; font-size: 0.85rem; font-weight: 700; }
+.combine-two-game__scene { position: relative; min-height: 0; }
+.combine-two-game__controls { display: grid; justify-items: center; gap: 5px; min-width: 0; }
+.combine-two-game__instruction { margin: 0; font-size: 0.95rem; }
+.combine-two-game__equation { display: flex; align-items: center; justify-content: center; gap: clamp(5px, 2cqw, 18px); color: var(--dark-violet); font-size: clamp(1.5rem, 5cqh, 2.5rem); font-weight: 800; }
+.combine-two-game__operand { display: flex; align-items: center; gap: clamp(5px, 2cqw, 18px); }
+.combine-two-game__input { width: clamp(62px, 14cqw, 100px); height: 58px; min-width: 0; border: 3px solid var(--dark-violet); border-radius: 15px; background: white; color: var(--dark-violet); font: inherit; text-align: center; cursor: pointer; }
+.combine-two-game__input--active { background: #f1e7fb; box-shadow: 0 0 0 3px #d4b8ed; }
+.combine-two-game__input--given { border-color: #7890ab; background: #e7eef7; color: #34485e; opacity: 1; cursor: default; }
+.combine-two-game__input--correct { border-color: #24743f; background: #e0f5e5; color: #195b30; box-shadow: 0 0 0 3px #b6ddc1; }
+.combine-two-game__input--incorrect { border-color: #b83232; background: #ffe3e3; color: #8f2424; box-shadow: 0 0 0 3px #f1bcbc; }
+.combine-two-game__input:focus-visible { outline: 3px solid var(--dark-blue); outline-offset: 3px; }
+.combine-two-game__target { min-width: 50px; padding: 0 8px; border-radius: 12px; background: #ffefb3; color: #6d3d18; }
+.combine-two-game__feedback { min-height: 1.25em; margin: 0; font-size: 0.85rem; line-height: 1.25; color: var(--dark-violet); }
+.combine-two-game__keypad { width: min(100%, 384px); grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.combine-two-game__keypad .addition-number-pad__erase { grid-column: 6; grid-row: 1; }
+.combine-two-game__keypad .addition-number-pad__zero { grid-column: 5; grid-row: 2; }
+.combine-two-game__keypad .addition-number-pad__enter { grid-column: 6; grid-row: 2; font-size: 1.35rem; }
+.combine-two-game__confetti { position: absolute; top: 50%; left: 50%; width: 1px; height: 1px; }
+.combine-two-game__complete h3 { margin: 0; color: var(--dark-violet); font-size: 1.35rem; }
+.combine-two-game__complete .addition-setup__start { margin-top: 12px; }
+.combine-two-game__setup > p { margin: 0 0 8px; }
+.combine-two-game__setup fieldset { margin: 0; padding: 0; border: 0; }
+.combine-two-game__setup legend { float: none; margin: 0 0 8px; font-size: 1rem; font-weight: 700; }
+.combine-two-game__time-options { display: flex; justify-content: center; gap: 8px; }
+.combine-two-game__time-options button { min-width: 64px; min-height: 44px; padding: 4px 12px; border: 2px solid var(--dark-violet); border-radius: 999px; background: white; color: var(--dark-violet); font: inherit; font-weight: 700; }
+.combine-two-game__time-options button[aria-pressed="true"] { background: #e1cef6; box-shadow: 0 0 0 2px #c5a4e5; }
+.combine-two-game__time-options button:focus-visible { outline: 3px solid var(--dark-blue); outline-offset: 3px; }
+.combine-two-game__setup .addition-setup__start { margin-top: 12px; }
+@container combine-two-viewport (max-width: 500px) and (min-height: 600px) {
+  .combine-two-game__keypad { width: min(100%, 228px); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .combine-two-game__keypad .addition-number-pad__erase,
+  .combine-two-game__keypad .addition-number-pad__zero,
+  .combine-two-game__keypad .addition-number-pad__enter { grid-column: auto; grid-row: auto; }
+}
+@container combine-two-viewport (max-height: 420px) {
+  .combine-two-game { padding: 46px 6px 4px; }
+  .combine-two-game__panel { gap: 3px; padding: 6px; border-radius: 18px; grid-template-rows: auto minmax(54px, 1fr) auto; }
+  .combine-two-game__header h2 { font-size: 1rem; }
+  .combine-two-game__level { font-size: 0.75rem; padding: 0 8px; }
+  .combine-two-game__timer { font-size: 0.75rem; padding: 0 8px; }
+  .combine-two-game__setup > p { margin-bottom: 4px; font-size: 0.8rem; }
+  .combine-two-game__setup legend { margin-bottom: 4px; font-size: 0.85rem; }
+  .combine-two-game__setup .addition-setup__start { min-height: 40px; margin-top: 6px; padding: 4px 12px; font-size: 1rem; }
+  .combine-two-game__instruction { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .combine-two-game__controls { gap: 3px; }
+  .combine-two-game__equation { font-size: 1.6rem; }
+  .combine-two-game__input { height: 36px; width: 64px; border-radius: 10px; }
+  .combine-two-game__keypad button { min-height: 36px; }
+  .combine-two-game__feedback { font-size: 0.75rem; }
+}

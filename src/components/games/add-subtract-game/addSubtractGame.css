@@ -679,6 +679,93 @@
   width: min(100%, 228px);
 }
 
+/* Four reserved cards share the menu without adding inactive level controls. */
+.add-subtract-game__mode-picker--expanded .add-subtract-game__mode--placeholder {
+  grid-template-columns: clamp(48px, 15cqw, 84px) minmax(0, 1fr);
+  min-height: 0;
+  gap: 8px;
+}
+
+.add-subtract-game__ball {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.add-subtract-game__mode--placeholder h3 {
+  text-align: center;
+  overflow-wrap: normal;
+}
+
+.math-future-short { display: none; }
+.add-subtract-game__mode-picker--with-combine .add-subtract-game__modes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.add-subtract-game__mode-picker--with-combine .add-subtract-game__mode { grid-template-columns: minmax(0, 1fr); }
+.add-subtract-game__mode-picker--with-combine .add-subtract-game__mode h3 { text-align: center; }
+.add-subtract-game__mode-picker--with-combine .math-car { justify-self: center; }
+.add-subtract-game__mode-picker--with-combine .add-subtract-game__mode--placeholder { grid-template-columns: 64px minmax(0, 1fr); }
+.add-subtract-game__mode-picker--with-combine .add-subtract-game__levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+.add-subtract-game__mode-picker--with-combine .add-subtract-game__level { min-width: 0; padding: 4px; font-size: 0.85rem; }
+.add-subtract-game__mode-picker--with-combine .add-subtract-game__level:last-child { grid-column: auto; }
+
+@container addition-game-viewport (min-width: 601px) and (min-height: 421px) {
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode--placeholder { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__ball { width: 64px; }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .add-subtract-game__mode-picker--with-combine { padding: 8px; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode:not(.add-subtract-game__mode--placeholder) {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) 80px;
+    padding: 4px 8px;
+    gap: 3px 8px;
+  }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode .math-car { display: block; width: 70px; height: 36px; aspect-ratio: auto; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__levels { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__level:last-child { grid-column: auto; }
+  .add-subtract-game__mode-picker--with-combine .add-subtract-game__mode--placeholder { padding: 4px; }
+  .add-subtract-game__mode-picker--with-combine .math-future-full { display: none; }
+  .add-subtract-game__mode-picker--with-combine .math-future-short { display: inline; }
+}
+
+@media (max-width: 600px), (orientation: landscape) and (max-height: 600px) {
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode--placeholder {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 4px;
+  }
+
+  .add-subtract-game__ball { width: min(100%, 48px); }
+  .add-subtract-game__mode--placeholder h3 { font-size: 0.8rem; }
+}
+
+@container addition-game-viewport (max-height: 420px) and (min-width: 450px) {
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__modes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode {
+    grid-template-columns: minmax(0, 1fr) 44px;
+    padding: 4px;
+  }
+
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode .math-crane-preview,
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode .math-coaster-preview {
+    width: 44px;
+    height: 40px;
+  }
+
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode--placeholder {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+}
+
+@container addition-game-viewport (max-width: 600px) and (max-height: 600px) {
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__mode--placeholder { padding: 6px; }
+  .add-subtract-game__mode-picker--expanded .add-subtract-game__ball { width: 44px; }
+}
+
 .addition-number-pad button {
   min-width: 0;
   min-height: 38px;

@@ -33,3 +33,16 @@ Edit the referenced children's game catalogue cover. Preserve the existing squar
 - [Las dos carátulas en el catálogo](qa/math-groups/catalogue-desktop.png)
 - [Menú de sumas y restas](qa/math-groups/add-subtract-mobile.png)
 - [Menú de multiplicaciones y divisiones](qa/math-groups/multiply-divide-mobile.png)
+
+## Cuatro espacios adicionales en Sumas y Restas
+
+El menú `/puzzles/sumas-y-restas` contiene seis tarjetas: las dos operaciones existentes y cuatro espacios con la misma pelota y la etiqueta «Próximamente». Las nuevas tarjetas no abren partidas ni añaden botones de nivel sin implementar. Multiplicaciones y Divisiones conserva sus dos tarjetas.
+
+La pelota reutiliza el recurso de fútbol que ya aparece en `src/data/objectsData.js` (Cloudinary, identificador `pkuraj_eu7ceu`), guardado localmente en `public/img/games/add-subtract/future-game-ball.png` (175 kB). Las cuatro tarjetas comparten el archivo. Se añaden `addSubtractFutureGame` y `addSubtractBallAlt` en español y alemán, con un nombre accesible distinto para cada espacio.
+
+Menú sin scroll ni recortes a 1542 × 787, 1024 × 768, 768 × 1024, 390 × 844, 320 × 568, 844 × 390 y 568 × 320. Etiquetas alemanas comprobadas también en los cuatro tamaños de teléfono. Sumas y Restas siguen abriendo sus niveles con URL propia y validando respuestas inmediatamente. Compilación y lint de los archivos modificados correctos; el lint global conserva sus 26 errores y 8 avisos anteriores.
+
+- [Escritorio con seis tarjetas](qa/math-future-cards/menu-1542.png)
+- [Móvil vertical](qa/math-future-cards/menu-390.png)
+- [Móvil horizontal](qa/math-future-cards/menu-568.png)
+- [Alemán en pantalla estrecha](qa/math-future-cards/german-320.png)
