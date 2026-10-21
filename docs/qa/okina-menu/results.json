@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "name": "Separate waving menu portrait",
+      "result": true
+    },
+    {
+      "name": "Five category illustrations preserved",
+      "result": true
+    },
+    {
+      "name": "Startup animation remains disabled",
+      "result": true
+    },
+    {
+      "name": "Keyboard opens menu 1280x800",
+      "result": true
+    },
+    {
+      "name": "Small coloured circles 1280x800",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 1280x800",
+      "result": true
+    },
+    {
+      "name": "Uncropped pictures 1280x800",
+      "result": true
+    },
+    {
+      "name": "Keyboard opens menu 390x844",
+      "result": true
+    },
+    {
+      "name": "Small coloured circles 390x844",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 390x844",
+      "result": true
+    },
+    {
+      "name": "Uncropped pictures 390x844",
+      "result": true
+    },
+    {
+      "name": "Keyboard opens menu 844x390",
+      "result": true
+    },
+    {
+      "name": "Small coloured circles 844x390",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 844x390",
+      "result": true
+    },
+    {
+      "name": "Uncropped pictures 844x390",
+      "result": true
+    },
+    {
+      "name": "Keyboard opens menu 320x568",
+      "result": true
+    },
+    {
+      "name": "Small coloured circles 320x568",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 320x568",
+      "result": true
+    },
+    {
+      "name": "Uncropped pictures 320x568",
+      "result": true
+    },
+    {
+      "name": "Category navigation works",
+      "result": true
+    },
+    {
+      "name": "Double click returns home",
+      "result": true
+    },
+    {
+      "name": "Real transparency and optimized dimensions",
+      "result": true
+    },
+    {
+      "name": "No runtime exceptions",
+      "result": true
+    }
+  ],
+  "asset": {
+    "bytes": 36814,
+    "mime": "image/webp",
+    "width": 512,
+    "height": 512,
+    "alpha": 0
+  },
+  "exceptions": []
+}

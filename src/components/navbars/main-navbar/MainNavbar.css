@@ -276,3 +276,38 @@ scale: 1.05;
 .mainNavbar--okina .inactiveButton { opacity: 1; }
 .mainNavbarMenu li { visibility: hidden; }
 .mainNavbar input:checked ~ .mainNavbarMenu li { visibility: visible; }
+
+/* A smaller backplate keeps Okina outside the circle without shrinking the control. */
+.mainNavbar--okina .mainNavbarMenu li:nth-child(1) { --okina-circle-color: var(--nav-violet); }
+.mainNavbar--okina .mainNavbarMenu li:nth-child(2) { --okina-circle-color: var(--nav-green); }
+.mainNavbar--okina .mainNavbarMenu li:nth-child(3) { --okina-circle-color: var(--nav-yellow); }
+.mainNavbar--okina .mainNavbarMenu li:nth-child(4) { --okina-circle-color: var(--nav-red); }
+.mainNavbar--okina .mainNavbarMenu li:nth-child(5) { --okina-circle-color: var(--nav-blue); }
+.mainNavbar--okina input:checked ~ .mainNavbarMenu li:nth-child(-n+5) {
+  background: radial-gradient(circle closest-side, var(--okina-circle-color) 0 84%, transparent 85%);
+}
+
+/* Keep the top free, and crop only the lower silhouette to its circular backplate. */
+.mainNavbar--okina .mainNavbarMenu > li:nth-child(-n+5) > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainNavbar--okina .mainNavbarMenu > li:nth-child(-n+5) img {
+  --okina-lower-radius: calc((20px + 4vw) * .42);
+}
+.mainNavbar--okina .mainNavbarMenu > li:nth-child(-n+5) > a.activeButton img {
+  --okina-lower-radius: calc((20px + 4vw) * .42 / 1.05);
+}
+.mainNavbar--okina .mainNavbarMenu-img {
+  --okina-lower-radius: calc((15px + 5vw) / 2);
+}
+.mainNavbar--okina .mainNavbarMenu > li:nth-child(-n+5) img,
+.mainNavbar--okina .mainNavbarMenu-img {
+  --okina-lower-mask: linear-gradient(to bottom, #000 0 50%, transparent 50% 100%),
+    radial-gradient(circle var(--okina-lower-radius) at center, #000 calc(100% - .5px), transparent 100%);
+  -webkit-mask-image: var(--okina-lower-mask);
+  mask-image: var(--okina-lower-mask);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}

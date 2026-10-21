@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "name": "Menu opens 1280x800",
+      "result": true
+    },
+    {
+      "name": "Lower mask and free upper half 1280x800",
+      "result": true
+    },
+    {
+      "name": "Home pictures stay unmasked 1280x800",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 1280x800",
+      "result": true
+    },
+    {
+      "name": "Menu opens 390x844",
+      "result": true
+    },
+    {
+      "name": "Lower mask and free upper half 390x844",
+      "result": true
+    },
+    {
+      "name": "Home pictures stay unmasked 390x844",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 390x844",
+      "result": true
+    },
+    {
+      "name": "Menu opens 844x390",
+      "result": true
+    },
+    {
+      "name": "Lower mask and free upper half 844x390",
+      "result": true
+    },
+    {
+      "name": "Home pictures stay unmasked 844x390",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 844x390",
+      "result": true
+    },
+    {
+      "name": "Menu opens 320x568",
+      "result": true
+    },
+    {
+      "name": "Lower mask and free upper half 320x568",
+      "result": true
+    },
+    {
+      "name": "Home pictures stay unmasked 320x568",
+      "result": true
+    },
+    {
+      "name": "No horizontal overflow 320x568",
+      "result": true
+    },
+    {
+      "name": "Category links still work",
+      "result": true
+    },
+    {
+      "name": "Active image compensates link scale",
+      "result": true
+    },
+    {
+      "name": "Translated menu label preserved",
+      "result": true
+    },
+    {
+      "name": "Other mascots are not masked",
+      "result": true
+    },
+    {
+      "name": "No runtime exceptions",
+      "result": true
+    }
+  ],
+  "views": [
+    {
+      "width": 1280,
+      "height": 800,
+      "mask": "linear-gradient(rgb(0, 0, 0) 0px, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), radial-gradient(29.904px, rgb(0, 0, 0) calc(100% - 0.5px), rgba(0, 0, 0, 0) 100%)"
+    },
+    {
+      "width": 395,
+      "height": 855,
+      "mask": "linear-gradient(rgb(0, 0, 0) 0px, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), radial-gradient(14.952px, rgb(0, 0, 0) calc(100% - 0.5px), rgba(0, 0, 0, 0) 100%)"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "mask": "linear-gradient(rgb(0, 0, 0) 0px, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), radial-gradient(22.5792px, rgb(0, 0, 0) calc(100% - 0.5px), rgba(0, 0, 0, 0) 100%)"
+    },
+    {
+      "width": 327,
+      "height": 581,
+      "mask": "linear-gradient(rgb(0, 0, 0) 0px, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), radial-gradient(13.776px, rgb(0, 0, 0) calc(100% - 0.5px), rgba(0, 0, 0, 0) 100%)"
+    }
+  ],
+  "exceptions": []
+}
